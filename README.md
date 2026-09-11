@@ -110,6 +110,9 @@ A lightweight, native YouTube client for iOS 12+ — no ads, no tracking, no dep
 ### <a href="https://github.com/Eslzzyl/Pixiv-SwiftUI"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/Pixiv-SwiftUI/icon.png" alt="Pixiv-SwiftUI icon" width="24" align="top"> Pixiv-SwiftUI</a>
 基于 SwiftUI 的 Pixiv 第三方客户端，支持 iOS/iPadOS/macOS。
 
+### <a href="https://github.com/leminlimez/Pocket-Poster"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/Pocket-Poster/icon.png" alt="Pocket Poster icon" width="24" align="top"> Pocket Poster</a>
+Custom PosterBoard animated wallpapers for iOS 17+ — browse and download community wallpapers, or import your own videos and images.
+
 ### <a href="https://github.com/xmiguel911x/PSX3IOS"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/PSX3IOS/icon.png" alt="PSX3IOS icon" width="24" align="top"> PSX3IOS</a>
 A PlayStation 3 emulator for iPhone and iPad, built on RPCS3.
 
