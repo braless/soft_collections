@@ -7,6 +7,26 @@
   "tintColor": "#3B82F6",
   "apps": [
     {
+      "name": "Infuse",
+      "bundleIdentifier": "com.firecore.infuse",
+      "developerName": "Local",
+      "subtitle": "Locally committed IPA",
+      "localizedDescription": "Infuse — committed to this repository as an IPA under apps/Local/.",
+      "tintColor": "#3B82F6",
+      "versions": [
+        {
+          "version": "8.3.5",
+          "date": "2026-09-11",
+          "localizedDescription": "Locally committed build: Infuse_8.3.5.ipa (72.0 MB). Build 8.3.5459.",
+          "downloadURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Local/Infuse_8.3.5.ipa",
+          "size": 75480684,
+          "buildVersion": "8.3.5459",
+          "minOSVersion": "10.0"
+        }
+      ],
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Local/icons/com.firecore.infuse.png"
+    },
+    {
       "name": "KMusic",
       "bundleIdentifier": "com.macxk.KMusic",
       "developerName": "Mac-XK",
@@ -76,30 +96,6 @@
           "downloadURL": "https://github.com/ResistanceTo/MiniWatts/releases/download/v1.0/MiniWatts-unsigned.ipa",
           "size": 2905109,
           "minOSVersion": "17.0"
-        }
-      ]
-    },
-    {
-      "name": "Musly",
-      "bundleIdentifier": "com.dddevid.musly",
-      "developerName": "dddevid",
-      "subtitle": "Free Navidrome client & Subsonic music player",
-      "localizedDescription": "Musly is a free Navidrome client and Subsonic music player with an Apple Music-inspired interface. Stream your self-hosted library from Navidrome, Subsonic, or Airsonic servers on iOS, Android, desktop, and more.",
-      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Musly/icon.png",
-      "screenshots": [
-        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Musly/images/home.png",
-        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Musly/images/detail.png",
-        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Musly/images/player.png"
-      ],
-      "tintColor": "#FA243C",
-      "versions": [
-        {
-          "version": "2.0.2",
-          "date": "2026-08-26",
-          "localizedDescription": "## 🎉 Musly v2.0.2\n\n### 📦 Downloads\n\n**Android:**\n- `app-release.apk` (universal APK for all devices)\n\n**iOS:**\n- `musly-ios.ipa` (sideload with AltStore, Sideloadly, or similar — not signed)\n\n**Windows:**\n- `musly-setup.exe` (setup installer, run to install Musly)\n- `musly-windows.zip` (portable version, extract and run)\n\n**macOS:**\n- `musly-macos.dmg` (drag Musly.app to Applications — not notarized)\n\n**Linux:**\n- `musly-linux-x64.tar.gz` (extract and run musly)\n\n### 📝 Changelog\nSee [CHANGELOG.md](https://github.com/dddevid/Musly/blob/master/CHANGELOG.md)\n\n### 🌍 Translations\nContribute translations at [Crowdin](https://crowdin.com/project/musly)",
-          "downloadURL": "https://github.com/dddevid/Musly/releases/download/v2.0.2/musly-ios.ipa",
-          "size": 13928367,
-          "minOSVersion": "15.0"
         }
       ]
     },
@@ -256,17 +252,6 @@
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PiliPlus/images/news.png",
       "notify": true,
       "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.3.1"
-    },
-    {
-      "appID": "com.dddevid.musly",
-      "title": "Musly 2.0.2 · 26 Aug 2026",
-      "identifier": "Musly-release-v2.0.2",
-      "caption": "Musly 2.0.2 is available.",
-      "date": "2026-08-26T20:40:22Z",
-      "tintColor": "#FA243C",
-      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Musly/images/news.png",
-      "notify": true,
-      "url": "https://github.com/dddevid/Musly/releases/tag/v2.0.2"
     },
     {
       "appID": "com.macxk.KMusic",

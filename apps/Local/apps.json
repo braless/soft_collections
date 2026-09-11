@@ -7,6 +7,26 @@
   "tintColor": "#3B82F6",
   "apps": [
     {
+      "name": "Infuse",
+      "bundleIdentifier": "com.firecore.infuse",
+      "developerName": "Local",
+      "subtitle": "Locally committed IPA",
+      "localizedDescription": "Infuse — committed to this repository as an IPA under apps/Local/.",
+      "tintColor": "#3B82F6",
+      "versions": [
+        {
+          "version": "8.3.5",
+          "date": "2026-09-11",
+          "localizedDescription": "Locally committed build: Infuse_8.3.5.ipa (72.0 MB). Build 8.3.5459.",
+          "downloadURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Local/Infuse_8.3.5.ipa",
+          "size": 75480684,
+          "buildVersion": "8.3.5459",
+          "minOSVersion": "10.0"
+        }
+      ],
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Local/icons/com.firecore.infuse.png"
+    },
+    {
       "name": "多多阅读",
       "bundleIdentifier": "com.duoduomsoft.dudureader",
       "developerName": "Local",
