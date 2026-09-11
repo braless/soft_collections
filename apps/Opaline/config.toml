@@ -1,0 +1,45 @@
+# altgen config for the Opaline AltStore source.
+# Run: uvx altgen -c config.toml
+# App fields extracted from the project's own AltStore source
+# (https://github.com/verback2308/Opaline/blob/main/source/apps.json).
+
+[github]
+repo = "verback2308/Opaline"
+
+[source]
+name = "Opaline"
+subtitle = "Opaline AltStore source by soft_collections & altgen"
+description = "Auto-updated AltStore source for Opaline"
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Opaline/icon.png"
+website = "https://github.com/verback2308/Opaline"
+tint_color = "#FF0000"
+
+[app]
+name = "Opaline"
+bundle_identifier = "com.verback.YTLite"
+developer_name = "verback2308"
+subtitle = "YouTube client for iOS 12+"
+description = "A lightweight, privacy-focused YouTube client for iOS, built with UIKit. SponsorBlock, Return YouTube Dislike, up to 1080p playback, background audio, Picture-in-Picture, subtitles and offline downloads — no ads, no tracking, no dependencies."
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Opaline/icon.png"
+screenshots = [
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Opaline/images/home.jpeg",
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Opaline/images/player.jpeg",
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Opaline/images/channel.jpeg",
+]
+tint_color = "#FF0000"
+min_os_version = "12.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# asset_pattern is a regex (not glob): every release ships Opaline_x.y.z.ipa
+# plus two .deb packages for jailbroken devices — match only the IPA.
+asset_pattern = "Opaline_.*\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+# shared promo image rendered by templates/render_news.py
+image_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Opaline/images/news.png"
+
+[output]
+path = "apps.json"

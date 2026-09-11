@@ -98,6 +98,9 @@ Free Navidrome client & Subsonic music player with an Apple Music-inspired inter
 ### <a href="https://github.com/celia-sh/Novella"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/Novella/icon.png" alt="Novella icon" width="24" align="top"> Novella</a>
 轻书架第三方客户端，基于 React Native 构建，面向 iOS / iPadOS，支持小说与漫画阅读与社区。
 
+### <a href="https://github.com/verback2308/Opaline"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/Opaline/icon.png" alt="Opaline icon" width="24" align="top"> Opaline</a>
+A lightweight, native YouTube client for iOS 12+ — no ads, no tracking, no dependencies.
+
 ### <a href="https://github.com/bggRGjQaUbCoE/PiliPlus"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/PiliPlus/icon.png" alt="PiliPlus icon" width="24" align="top"> PiliPlus</a>
 使用Flutter开发的BiliBili第三方客户端。
 
