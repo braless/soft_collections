@@ -1,0 +1,42 @@
+{
+  "name": "Pocket Poster",
+  "subtitle": "Pocket Poster AltStore source by soft_collections & altgen",
+  "description": "Auto-updated AltStore source for Pocket Poster",
+  "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Pocket-Poster/icon.png",
+  "website": "https://github.com/leminlimez/Pocket-Poster",
+  "tintColor": "#DD94F3",
+  "apps": [
+    {
+      "name": "Pocket Poster",
+      "bundleIdentifier": "com.lemin.Pocket-Poster",
+      "developerName": "LeminLimez",
+      "subtitle": "Custom PosterBoard animated wallpapers for iOS 17.0+",
+      "localizedDescription": "Custom PosterBoard animated wallpapers for iOS 17.0+. Browse community wallpapers in the built-in explore page, import your own videos and images, and apply them as animated posters — including CarPlay and per-collection sets.",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Pocket-Poster/icon.png",
+      "tintColor": "#DD94F3",
+      "versions": [
+        {
+          "version": "3.0",
+          "date": "2025-08-29",
+          "localizedDescription": "# Features\r\n- Added an in-app explore page for finding and downloading wallpapers\r\n- Added custom CarPlay wallpapers (will not work on iOS 26.0)\r\n- *Preliminary* iOS 16 support (not all wallpapers will work)\r\n- Improved certain error messages\r\n\r\n# Bug Fixes\r\n- Fixed the aspect ratio/rotation of imported custom videos\r\n- Fixed the update API not being called correctly\r\n- Fixed issues with some alerts not popping up\r\n- Other various app stability improvements",
+          "downloadURL": "https://github.com/leminlimez/Pocket-Poster/releases/download/v3.0/Pocket_Poster.ipa",
+          "size": 13686800,
+          "minOSVersion": "17.0"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "appID": "com.lemin.Pocket-Poster",
+      "title": "Pocket Poster 3.0 · 29 Aug 2025",
+      "identifier": "Pocket Poster-release-v3.0",
+      "caption": "Pocket Poster 3.0 is available.",
+      "date": "2025-08-29T21:35:36Z",
+      "tintColor": "#DD94F3",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Pocket-Poster/images/news.png",
+      "notify": true,
+      "url": "https://github.com/leminlimez/Pocket-Poster/releases/tag/v3.0"
+    }
+  ]
+}
