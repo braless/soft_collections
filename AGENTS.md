@@ -35,6 +35,27 @@ apps/<AppName>/
 
 Each folder's `apps.json` is an independent AltStore source.
 
+## apps/Local — hand-committed IPAs
+
+`apps/Local/` is the one folder that is **not** an altgen source. It holds
+`.ipa` files committed by hand, and its `config.toml` carries defaults for the
+offline generator rather than altgen settings.
+
+- **Never run `uvx altgen -c config.toml` inside `apps/Local`** — `update.sh`
+  skips the folder for exactly that reason.
+- `scripts/local_source.py` (Python standard library only, no network) reads
+  each IPA's `Info.plist` for name/bundle id/version/build/min iOS version,
+  extracts an icon into `apps/Local/icons/`, and writes
+  `apps/Local/apps.json`. Never hand-write those entries.
+- `.github/workflows/local.yml` runs that script and merges the result into
+  `all-apps.json`; `update.yml` ignores the folder (`paths-ignore`) but still
+  merges `apps/Local/apps.json` with every other source, because `update.sh`
+  collects all `apps/*/apps.json`.
+- `apps/Local/apps.json` is gitignored like every other generated source;
+  `apps/Local/icons/` is committed.
+- A bundle identifier that already exists in another folder is a hard error:
+  the merge rejects duplicates.
+
 ## Generating apps.json
 
 `./update.sh` regenerates every app source and merges them into

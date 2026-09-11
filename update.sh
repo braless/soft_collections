@@ -18,9 +18,23 @@ if [[ -n "$target" && ! -f "apps/$target/config.toml" ]]; then
   exit 1
 fi
 
+# apps/Local holds committed IPAs rather than a GitHub repo. A full run leaves
+# it alone (local.yml regenerates it on every apps/Local change), but asking
+# for it explicitly regenerates it offline.
+if [[ "$target" == "Local" ]]; then
+  echo "==> Updating apps/Local (offline, from the committed IPAs)"
+  "${PYTHON:-python3}" scripts/local_source.py
+fi
+
 # 1. Regenerate each apps/<AppName>/apps.json from its config.toml —
 #    every app, or only the targeted one.
+#    apps/Local/ is skipped on purpose: it holds committed IPAs rather than a
+#    GitHub repo, and scripts/local_source.py builds its source offline
+#    (.github/workflows/local.yml runs it on every apps/Local change).
 for app_dir in apps/*/; do
+  if [[ "$app_dir" == "apps/Local/" ]]; then
+    continue
+  fi
   if [[ -f "$app_dir/config.toml" ]]; then
     name="${app_dir%/}"
     if [[ -n "$target" && "$name" != "apps/$target" ]]; then

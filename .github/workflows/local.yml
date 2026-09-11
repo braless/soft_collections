@@ -1,0 +1,66 @@
+name: Update Local source
+
+# apps/Local/ holds IPAs that are committed here instead of being released on
+# GitHub. scripts/local_source.py reads each IPA (name, bundle id, version,
+# icon) offline, and this job merges the result into all-apps.json. The
+# altgen-based update.yml deliberately ignores this folder.
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'apps/Local/**'
+      - 'scripts/local_source.py'
+      - '.github/workflows/local.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: altstore-sources
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          # Full history: each version's date is the commit date of its IPA,
+          # which a shallow clone cannot resolve.
+          fetch-depth: 0
+
+      # `uvx altgen merge` needs uv; the source itself is built with Python's
+      # standard library only.
+      - uses: astral-sh/setup-uv@v7
+
+      - name: Build apps/Local/apps.json from the committed IPAs
+        run: python3 scripts/local_source.py
+
+      - name: Merge every source into all-apps.json
+        run: uvx altgen merge -c assets/merge.toml apps/*/apps.json
+
+      - name: Stage generated files
+        run: |
+          git add -A apps/Local
+          git add -f apps/Local/apps.json all-apps.json
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and push
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: update Local source"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

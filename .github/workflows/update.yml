@@ -7,9 +7,19 @@ on:
   push:
     branches:
       - main
+    # apps/Local is handled by local.yml: it needs no GitHub release lookup,
+    # so a Local-only push should not spin up this job.
+    paths-ignore:
+      - 'apps/Local/**'
 
 permissions:
   contents: write
+
+# Shared with local.yml: both regenerate all-apps.json, so they must not run
+# (and push) at the same time.
+concurrency:
+  group: altstore-sources
+  cancel-in-progress: false
 
 jobs:
   update:

@@ -1,0 +1,14 @@
+# Optional defaults for the Local source. Nothing here is required: the app
+# name, bundle identifier, version and icon are all read from each IPA itself
+# by scripts/local_source.py.
+#
+# This file is NOT an altgen config — the altgen workflow skips apps/Local on
+# purpose, and the Local source is generated offline by scripts/local_source.py
+# (see .github/workflows/local.yml).
+
+[defaults]
+# Shown as the developer of every app in this folder: an IPA carries no author
+# metadata, so there is nothing to read it from.
+developer_name = "Local"
+# Accent colour AltStore uses for these entries.
+tint_color = "#3B82F6"
