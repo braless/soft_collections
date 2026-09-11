@@ -89,6 +89,9 @@ Read manga, novels, and watch anime.
 ### <a href="https://github.com/Manic-EMU/ManicEMU"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/ManicEMU/icon.png" alt="ManicEMU icon" width="24" align="top"> ManicEMU</a>
 All-in-one retro game emulator for iOS, with a clean interface and broad platform support.
 
+### <a href="https://github.com/ResistanceTo/MiniWatts"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/MiniWatts/icon.png" alt="MiniWatts icon" width="24" align="top"> MiniWatts</a>
+An iPhone battery, charging and thermal instrument built on Apple's private iOS APIs — real charger watts, what reaches the cell, 30 temperature sensors and the USB-PD handshake.
+
 ### <a href="https://github.com/singleton-altman/MoviePilotLite"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/MoviePilotLite/icon.png" alt="MoviePilotLite icon" width="24" align="top"> MoviePilotLite</a>
 MoviePilot 移动端，基于 Flutter 实现。
 
