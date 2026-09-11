@@ -1,0 +1,48 @@
+{
+  "name": "VeneraNext",
+  "subtitle": "VeneraNext AltStore source by soft_collections & altgen",
+  "description": "Auto-updated AltStore source for VeneraNext",
+  "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Venera-Next/icon.png",
+  "website": "https://github.com/CyrilPeng/Venera-Next",
+  "tintColor": "#2090E0",
+  "apps": [
+    {
+      "name": "VeneraNext",
+      "bundleIdentifier": "com.github.cyrilpeng.veneranext",
+      "developerName": "CyrilPeng",
+      "subtitle": "跨平台漫画阅读器",
+      "localizedDescription": "基于 Flutter 的跨平台漫画阅读器，支持本地漫画、WebDAV 漫画源与第三方网络漫画源，支持 Android、iOS、Windows、Linux、macOS 平台。",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Venera-Next/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Venera-Next/images/home.jpg",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Venera-Next/images/explorer.jpg",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Venera-Next/images/search.jpg"
+      ],
+      "tintColor": "#2090E0",
+      "versions": [
+        {
+          "version": "1.15.0",
+          "buildVersion": "223",
+          "date": "2026-08-31",
+          "localizedDescription": "### 新增\n\n- 阅读器新增跨平台夜间调光与自定义亮度控制，支持在阅读设置和底部快捷面板中实时调整，并沿用全局、设备及漫画专属设置优先级。",
+          "downloadURL": "https://github.com/CyrilPeng/Venera-Next/releases/download/v1.15.0/VeneraNext-ios-1.15.0%2B223.ipa",
+          "size": 19875257,
+          "minOSVersion": "14.0"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "appID": "com.github.cyrilpeng.veneranext",
+      "title": "VeneraNext 1.15.0 · 31 Aug 2026",
+      "identifier": "VeneraNext-release-v1.15.0",
+      "caption": "VeneraNext 1.15.0 is available.",
+      "date": "2026-08-31T02:23:17Z",
+      "tintColor": "#2090E0",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Venera-Next/images/news.png",
+      "notify": true,
+      "url": "https://github.com/CyrilPeng/Venera-Next/releases/tag/v1.15.0"
+    }
+  ]
+}
