@@ -23,7 +23,9 @@ jobs:
       - uses: astral-sh/setup-uv@v7
 
       - name: Run update.sh
-        run: ./update.sh
+        # Invoke through bash so the step works even if the executable bit is
+        # lost (the repo is maintained on Windows, where Git does not track it).
+        run: bash update.sh
         env:
           GITHUB_TOKEN: ${{ github.token }}
 
