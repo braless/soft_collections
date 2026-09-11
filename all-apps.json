@@ -172,6 +172,26 @@
       ]
     },
     {
+      "name": "多多阅读",
+      "bundleIdentifier": "com.duoduomsoft.dudureader",
+      "developerName": "Local",
+      "subtitle": "Locally committed IPA",
+      "localizedDescription": "多多阅读 — committed to this repository as an IPA under apps/Local/.",
+      "tintColor": "#3B82F6",
+      "versions": [
+        {
+          "version": "5.9",
+          "date": "2026-09-11",
+          "localizedDescription": "Locally committed build: 多多阅读.ipa (20.3 MB). Build 5.9.",
+          "downloadURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Local/%E5%A4%9A%E5%A4%9A%E9%98%85%E8%AF%BB.ipa",
+          "size": 21285673,
+          "buildVersion": "5.9",
+          "minOSVersion": "10.0"
+        }
+      ],
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Local/icons/com.duoduomsoft.dudureader.png"
+    },
+    {
       "name": "威锋",
       "bundleIdentifier": "com.feng.New.WPForumClient",
       "developerName": "Local",
