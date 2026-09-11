@@ -1,0 +1,1137 @@
+{
+  "name": "soft_collections",
+  "subtitle": "Curated AltStore sources for IPA projects on GitHub",
+  "description": "AltStore sources generated from GitHub Releases by soft_collections",
+  "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/assets/icon.png",
+  "website": "https://github.com/braless/soft_collections",
+  "tintColor": "#3B82F6",
+  "apps": [
+    {
+      "name": "Aidoku",
+      "bundleIdentifier": "app.aidoku.Aidoku",
+      "developerName": "Skitty",
+      "subtitle": "Free and open source manga reader for iOS and iPadOS",
+      "localizedDescription": "A free and open source manga reading application for iOS and iPadOS.",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Aidoku/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Aidoku/images/library.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Aidoku/images/source.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Aidoku/images/reader.png"
+      ],
+      "tintColor": "#FF375F",
+      "versions": [
+        {
+          "version": "0.9",
+          "date": "2026-09-03",
+          "localizedDescription": "- OCR dictionary support (iOS 18+): import Yomitan-compatible dictionaries in the app and look up words while reading.\r\n- Suwayomi built-in source: read and track from a Suwayomi instance, just like Komga and Kavita.\r\n- Auto scroll for webtoon reader: enable and press the play button to scroll without touching your device.\r\n- Fixed CloudFlare handling: CloudFlare issues that caused external sources to break should be resolved.\r\n- Overall performance improvements: the library loads much faster (@Amqx), and the webtoon reader was improved.\r\n- Source stability fixes and disable option: the issue where sources were causing the app to crash should not happen again, and now you can even disable a source that is broken until it receives an update.\r\n- Many more things: see [the website](https://aidoku.app/release-notes/) for a more complete list.",
+          "downloadURL": "https://github.com/Aidoku/Aidoku/releases/download/v0.9/Aidoku.ipa",
+          "size": 14731108,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
+      "name": "AniBaka",
+      "bundleIdentifier": "ani.baka",
+      "developerName": "AniBakaBaka",
+      "subtitle": "跨平台番剧聚合、媒体播放与弹幕客户端",
+      "localizedDescription": "AniBaka 是一个基于 Flutter 的跨平台番剧聚合与媒体播放客户端，支持多番剧源、弹幕、字幕、离线缓存与本地媒体库，并提供动漫实时超分辨率画质增强。",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/AniBaka/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/AniBaka/images/home.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/AniBaka/images/detail.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/AniBaka/images/player.png"
+      ],
+      "tintColor": "#0077B6",
+      "versions": [
+        {
+          "version": "5.1.0",
+          "buildVersion": "0823",
+          "date": "2026-08-26",
+          "localizedDescription": "* 新增**一起看**功能，支持创建或加入房间、同步播放进度与选集，并支持成员列表、播放控制、延迟显示及断线重连\r\n* 支持连接**其他 Syncplay 服务端**，按软件内提示填写对应服务端信息即可一起观看；同时支持 **AniBaka 站内用户聊天**\r\n* 支持通过**邀请码、邀请链接和二维码**加入房间，Android、iOS、macOS、Windows 和 Linux 均支持邀请链接唤起\r\n* Baka 页面新增**正在播放的一起看房间**展示\r\n* 新增**播放数据悬浮窗**，可查看分辨率、帧率、编码、码率、掉帧及音频等信息\r\n* 重新调整 Windows 播放器、选集、侧边栏及全屏交互\r\n* 优化**弹幕与播放状态同步、播放源解析、自动匹配及 BT 分片调度**\r\n* 优化网络请求、缓存及首页、搜索、收藏、播放记录等数据处理，提升整体性能与流畅度\r\n* 修复部分页面状态异常、播放器生命周期等问题\r\n\r\n**Full Changelog**: https://github.com/AniBakaBaka/AniBaka/compare/5.0.7+0811...5.1.0+0823",
+          "downloadURL": "https://github.com/AniBakaBaka/AniBaka/releases/download/5.1.0%2B0823/baka-5.1.0%2B0823-ios-unsigned.ipa",
+          "size": 20904015,
+          "minOSVersion": "13.0"
+        }
+      ]
+    },
+    {
+      "name": "AnimeFlow",
+      "bundleIdentifier": "com.ligg.anime_flow",
+      "developerName": "openAnimeFlow",
+      "subtitle": "跨平台动漫视频播放器，支持多数据源、实时 4K 超分辨率与弹幕",
+      "localizedDescription": "AnimeFlow 是一个跨平台动漫视频播放应用，支持 Android、iOS、Windows、macOS 与 Linux。内置多数据源与自定义 XPath 爬虫配置，支持基于 Anime4K 的实时视频 4K 超分辨率，对接 Bangumi 同步收藏与追番数据，并支持多平台弹幕源与丰富的弹幕设置。",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/AnimeFlow/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/AnimeFlow/images/home.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/AnimeFlow/images/detail.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/AnimeFlow/images/comment.png"
+      ],
+      "tintColor": "#124EB3",
+      "versions": [
+        {
+          "version": "2.5.0",
+          "date": "2026-09-09",
+          "localizedDescription": "### 🔄 更新内容\n\n## 2.5.0 更新\n\n## 新增\n\n- 新增多播放器内核，可在播放设置页面或播放页面切换(解决ios巨魔越狱环境mpv内核闪退问题)\n- 播放页、用户收藏页现在都可以修改或添加条目收藏\n- 现在下载页面也可以补全未下载弹幕资源的剧集\n- 点击播放页简介中的番剧名称，可在简介区域查看详情，并支持直接切集播放\n- 新增开/关播放器硬件解码设置\n\n## 修复\n\n- 修复修改条目收藏时收藏页面收藏状态没有同步问题\n- 修复下载视频资源时下载状态错误导致无法继续下载更多视频资源\n- 修复不同播放页面之间控制栏、手势和加载提示状态相互影响的问题，退出播放页时正确清理定时器、电量订阅并恢复亮度\n- 修复剧集分页请求并发重复、加载失败或无新增数据时持续请求的问题，支持失败后重试\n\n## 优化\n\n- 优化设置页导航：宽屏下左侧菜单常驻，窄屏下支持逐级返回，调整窗口大小时保留当前子页面和表单状态\n- 优化剧集评论加载，仅在当前剧集变化时自动重新请求，避免分页和已看状态变化导致重复加载\n- 优化下载页局部刷新，下载进度和状态变化仅更新相关区域；恢复下载时自动展开对应番剧卡片\n- 开启 Windows 平台 Impeller 渲染\n\n---\n\n### 📦 下载\n- 每个设备的安装包后缀: ``苹果手机(.ipa)、 安卓手机(.apk)、windows电脑(.zip或.exe)、mac电脑(.dmg)、linux电脑(.tar.gz或.deb)``\n- android分多个包: ``v7a(旧手机)、arm64(新手机,推荐用这个)、x86(模拟器) ``\n- windows分多个包: ``.zip(解压直接使用)、.exe(安装后使用) ``",
+          "downloadURL": "https://github.com/openAnimeFlow/AnimeFlow/releases/download/v2.5.0/AnimeFlow-ios-2.5.0.ipa",
+          "size": 28180022,
+          "minOSVersion": "13.0"
+        }
+      ]
+    },
+    {
+      "name": "Animeko",
+      "bundleIdentifier": "org.animeko.animeko",
+      "developerName": "open-ani",
+      "subtitle": "一站式弹幕追番平台",
+      "localizedDescription": "Animeko 是一个 Kotlin/Compose Multiplatform 打造的一站式弹幕追番平台，集找番、追番、看番于一体，支持 Bangumi 云同步观看记录、多视频数据源聚合（含 BitTorrent、Jellyfin、Emby）、离线缓存与弹幕云过滤。",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Animeko/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Animeko/images/home.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Animeko/images/subject-details.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Animeko/images/episode.png"
+      ],
+      "tintColor": "#0050A0",
+      "versions": [
+        {
+          "version": "6.1.0",
+          "date": "2026-08-28",
+          "localizedDescription": "- 新增画质增强(超分)，支持 Android, Windows 和 macOS (#3291 by @black4der)\r\n- 新增在线源查询缓存，有缓存时跳过查源步骤，大幅加速开播速度\r\n- 播放页新增一起看入口，全屏时隐藏悬浮窗\r\n- 优化评论功能和 UI\r\n- 支持使用 PikPak 加速缓存 BT 源 (#3141 by @NihilDigit)\r\n- 新缓存管理页面\r\n\r\n----\r\n\r\n- 条目详情页封面与角色/制作人员图片支持点击放大查看\r\n- 修复 Windows mpv 画面偏暗\r\n- 支持鼠标侧键返回上一页\r\n- 支持 mpv 内核播放器设置自定义参数\r\n- 优化 jellyfin (#3190 by @jxing7036, #3244, #3248 by @IT-BillDeng)\r\n- 修复 Windows 原生触屏一系列问题 (#3223, #3234 by @NihilDigit)\r\n- 修复 Windows 10 可能会窗口透明 (#3319 by @myouo)\r\n- 优化性能 (#3236 by @NihilDigit)\r\n- 修复 macOS x86 无法打开或闪退\r\n- 修复 macOS 可能因为音频而崩溃\r\n- 修复 BT 源播放错误或无法开始播放 (#3337 by @GrahamZen)\r\n- 支持为 BT 下载设置额外的 trackers\r\n- 修复桌面端图片比较糊\r\n- 修复一系列 Linux 问题 (#3261 by @NihilDigit)\r\n- 修复手动匹配的弹幕请求会随着换集失效 (#3254 by @GrahamZen)\r\n- 优化数据源管理页长按批量编辑功能\r\n- 修复条目详情页的剧集卡片无法长按标记看过\r\n- 修复条目详情页 Tab 换行问题 (#3229 by @arpitagarwal1301)\r\n- 修复 Windows 托盘状态下再次启动会卡死 (#3317 by @Tantless)\r\n- 修复播放器倍速状态与 UI 不一致 (#3323 by @SXP-Simon)\r\n- 新增数据源工作原理示意动画\r\n- 为 macOS 暂时禁用 Accessibility 以修复闪退 (#3325 by @black4der)\r\n- 支持配置 ExoPlayer 的画质增强预热，解决黑屏或系统增强功能失效\r\n- 新增开源许可页面，可在设置 - 关于 - 鸣谢中查看\r\n- 修复异常指纹过滤默认生效且关闭开关无效的问题 (#3338 by @GrahamZen)\r\n- 修复 BT 缓存统计不准确 (#3339 by @GrahamZen)\r\n- Android 修复 WebView 正常无法释放 (#3340 by @GrahamZen)\r\n- 修复 Toast 配色没有跟随应用主题 (#3347 by @GrahamZen)\r\n\r\n**Full Changelog**: https://github.com/open-ani/animeko/compare/v6.0.0...v6.1.0\r\n\r\n[//]: # (ANI-SERVER-MAGIC-SEPARATOR)\r\n\r\n[//]: # (注意: api server 依赖这个特殊分隔符)\r\n\r\n[//]: # (对于所有可用的变量列表, 参考 CI release.yml 的 step release-notes)\r\n\r\n[github-win-x64]: https://github.com/open-ani/ani/releases/download/v6.1.0/ani-6.1.0-windows-x86_64.zip\r\n\r\n[github-win-aarch64]: https://github.com/open-ani/ani/releases/download/v6.1.0/ani-6.1.0-windows-aarch64.zip\r\n\r\n[github-mac-x64]: https://github.com/open-ani/ani/releases/download/v6.1.0/ani-6.1.0-macos-x86_64.dmg\r\n\r\n[github-mac-aarch64]: https://github.com/open-ani/ani/releases/download/v6.1.0/ani-6.1.0-macos-aarch64.dmg\r\n\r\n[github-android]: https://github.com/open-ani/ani/releases/download/v6.1.0/ani-6.1.0-universal.apk\r\n\r\n[github-android-arm64-v8a]: https://github.com/open-ani/ani/releases/download/v6.1.0/ani-6.1.0-arm64-v8a.apk\r\n\r\n[github-android-armeabi-v7a]: https://github.com/open-ani/ani/releases/download/v6.1.0/ani-6.1.0-armeabi-v7a.apk\r\n\r\n[github-android-x86_64]: https://github.com/open-ani/ani/releases/download/v6.1.0/ani-6.1.0-x86_64.apk\r\n\r\n[cf-win-x64]: https://d.myani.org/v6.1.0/ani-6.1.0-windows-x86_64.zip\r\n\r\n[cf-win-aarch64]: https://d.myani.org/v6.1.0/ani-6.1.0-windows-aarch64.zip\r\n\r\n[cf-linux-x64]: https://d.myani.org/v6.1.0/ani-6.1.0-linux-x86_64.appimage\r\n\r\n[cf-mac-x64]: https://d.myani.org/v6.1.0/ani-6.1.0-macos-x86_64.zip\r\n\r\n[cf-mac-aarch64]: https://d.myani.org/v6.1.0/ani-6.1.0-macos-aarch64.dmg\r\n\r\n[cf-ios]: https://d.myani.org/v6.1.0/ani-6.1.0.ipa\r\n\r\n[cf-android]: https://d.myani.org/v6.1.0/ani-6.1.0-universal.apk\r\n\r\n[cf-android-arm64-v8a]: https://d.myani.org/v6.1.0/ani-6.1.0-arm64-v8a.apk\r\n\r\n[cf-android-armeabi-v7a]: https://d.myani.org/v6.1.0/ani-6.1.0-armeabi-v7a.apk\r\n\r\n[cf-android-x86_64]: https://d.myani.org/v6.1.0/ani-6.1.0-x86_64.apk\r\n\r\n[ghproxy-win-x64]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.1.0%2Fani-6.1.0-windows-x86_64.zip\r\n\r\n[ghproxy-win-aarch64]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.1.0%2Fani-6.1.0-windows-aarch64.zip\r\n\r\n[ghproxy-mac-x64]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.1.0%2Fani-6.1.0-macos-x86_64.zip\r\n\r\n[ghproxy-linux-x64]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.1.0%2Fani-6.1.0-linux-x86_64.appimage\r\n\r\n[ghproxy-mac-aarch64]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.1.0%2Fani-6.1.0-macos-aarch64.dmg\r\n\r\n[ghproxy-ios]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.1.0%2Fani-6.1.0.ios\r\n\r\n[ghproxy-android]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.1.0%2Fani-6.1.0-universal.apk\r\n\r\n[ghproxy-android-arm64-v8a]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.1.0%2Fani-6.1.0-arm64-v8a.apk\r\n\r\n[ghproxy-android-armeabi-v7a]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.1.0%2Fani-6.1.0-armeabi-v7a.apk\r\n\r\n[ghproxy-android-x86_64]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.1.0%2Fani-6.1.0-x86_64.apk\r\n\r\n[macOS 无法打开解决方案]: https://myani.org/wiki/macos-unable-to-open\r\n\r\n[Windows下字体与背景颜色异常解决方案]: https://myani.org/wiki/windows-font-bg-color-issue\r\n\r\n[Linux 安装说明]: https://myani.org/wiki/linux-install\r\n\r\n[macOS Intel芯片版本安装教程]: https://myani.org/wiki/macos-intel-install\r\n\r\n[macos-intel-issue]: https://github.com/open-ani/animeko/issues/1345\r\n\r\n[linux-issue]: https://github.com/open-ani/animeko/issues/944\r\n\r\n[iOS 自签]: https://myani.org/wiki/ios-install\r\n\r\n|                  | 下载                                               | 常见问题                                        |\r\n|------------------|--------------------------------------------------|---------------------------------------------|\r\n| 安卓 手机/平板         | [主线][cf-android] / [备线][ghproxy-android]         |                                             |\r\n| 安卓 电视            | 仍在开发中                                            | 现在可以使用平板版接鼠标使用                              |\r\n| iOS              | [主线][cf-ios] / [备线][ghproxy-ios]                 | 需要[自签][iOS 自签]                                  |\r\n| Windows          | [主线][cf-win-x64] / [备线][ghproxy-win-x64]         | 1. 目录不要有中文或者空格 <br/> 2. [显示异常][Windows下字体与背景颜色异常解决方案] |\r\n| Windows (ARM64)  | [主线][cf-win-aarch64] / [备线][ghproxy-win-aarch64] | 同 Windows                                                             |\r\n| macOS (M 系列芯片)   | [主线][cf-mac-aarch64] / [备线][ghproxy-mac-aarch64] | ⚠️ [安装后打不开][macOS 无法打开解决方案]                      |\r\n| macOS (Intel 芯片) | [主线][cf-mac-x64] / [备线][ghproxy-mac-x64]         | ⚠️ [安装教程][macOS Intel芯片版本安装教程]                    |\r\n| Linux AppImage   | [主线][cf-linux-x64] / [备线][ghproxy-linux-x64]     | ⚠️ [安装教程][Linux 安装说明]                        |\r\n\r\n[github-android-qr]: https://github.com/open-ani/ani/releases/download/v6.1.0/ani-6.1.0-universal.apk.github.qrcode.png\r\n\r\n[cf-android-qr]: https://d.myani.org/v6.1.0/ani-6.1.0-universal.apk.cloudflare.qrcode.png\r\n\r\n[cf-ios-qr]: https://d.myani.org/v6.1.0/ani-6.1.0.ipa.cloudflare.qrcode.png\r\n\r\n| 安卓 手机/平板                     | iOS IPA (需要[自签][iOS 自签])     | \r\n|------------------------------|--------------------------|\r\n| ![Cloudflare][cf-android-qr] | ![Cloudflare][cf-ios-qr] |\r\n\r\n\r\n<details>\r\n<summary> Android 细分架构下载 </summary>\r\n\r\n[//]: # (@formatter:off  因为\"版本\"前面不能换行)\r\n\r\n如果不知道自己是什么架构，建议下载 `universal` 版本。\r\n\r\n[//]: # (@formatter:on)\r\n\r\n| 处理器架构              | 适用于             | 下载                                                                                                      |\r\n|--------------------|-----------------|---------------------------------------------------------------------------------------------------------|\r\n| universal (推荐)     | 所有设备            | [主线][cf-android] / [备线][ghproxy-android] / [GitHub][github-android]                                     |\r\n| arm64-v8a (64 位)   | 几乎所有手机和平板       | [主线][cf-android-arm64-v8a] / [备线][ghproxy-android-arm64-v8a] / [GitHub][github-android-arm64-v8a]       |\r\n| armeabi-v7a (32 位) | 旧手机             | [主线][cf-android-armeabi-v7a] / [备线][ghproxy-android-armeabi-v7a] / [GitHub][github-android-armeabi-v7a] |\r\n| x86_64             | Chromebook 及模拟器 | [主线][cf-android-x86_64] / [备线][ghproxy-android-x86_64] / [GitHub][github-android-x86_64]                |\r\n\r\n</details>",
+          "downloadURL": "https://github.com/open-ani/animeko/releases/download/v6.1.0/ani-6.1.0.ipa",
+          "size": 44425669,
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "Apollo for Reddit - GLASS",
+      "bundleIdentifier": "com.christianselig.Apollo",
+      "developerName": "Christian Selig (& Apollo-Reborn contributors)",
+      "subtitle": "Apollo-Reborn build with Liquid Glass patch",
+      "localizedDescription": "Apollo-Reborn is the community-maintained Apollo sideload build powered by the Apollo-Reborn tweak.\n\nIt restores custom API support, media fixes, uploads, inline media, translation, saved categories, Home Screen and Lock Screen widgets, Liquid Glass support on iOS 26+, and the rest of the project’s ongoing fixes and enhancements.\n\nThese sources are intended for AltStore Classic, SideStore, and Feather. Apollo-Reborn is not compatible with AltStore PAL.\n\nChoose the source variant that matches how you sideload:\n\n• Standard: full app bundle with Apollo’s working extensions plus Apollo-Reborn widgets\n• No Extensions: strips app extensions, including widgets, to reduce App ID usage on free Apple IDs\n• GLASS: adds the Liquid Glass iOS 26 patch and bundled Liquid Glass icon catalog\n• No Extensions + GLASS: combines both options\n\nThe extension-bearing builds (Standard and GLASS) register about 7 App IDs, one per bundled app extension. A free Apple ID can register 10 App IDs per 7 days, so a clean single install fits, but it is easy to exceed if you install under more than one bundle ID, reinstall within the same week, or sideload other extension-bearing apps. If an install fails with an App ID error, use a No Extensions build (1 App ID) or wait for older App IDs to expire. A paid Apple Developer account has a much higher cap.\n\nThis project is not affiliated with Apollo or Christian Selig.",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Apollo-Reborn/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Apollo-Reborn/images/avatar-profile.jpg",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Apollo-Reborn/images/settings.jpg",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Apollo-Reborn/images/custom.jpg",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Apollo-Reborn/images/recents.jpg",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Apollo-Reborn/images/lg-icons.jpg"
+      ],
+      "tintColor": "#6050F0",
+      "versions": [
+        {
+          "version": "3.7.0",
+          "date": "2026-09-11",
+          "localizedDescription": "### Features\n\n- Add **Floating Post Tabs** (Posts & Feeds → Floating Tabs, off by default) — keep up to five posts open as draggable bubbles from any post or feed ⋯ menu, and tap one to land exactly where you left off (#984, #1061: @icpryde)\n  - Bubbles snap to the screen edges, tuck away when dragged past them, stack magnetically, and hold-to-preview the post; drop one on the ✕ to close it\n  - Match threads wear the two teams' crests on their bubble, and two text posts from the same subreddit get a big letter each so they don't look like twins\n- Add a **Feed Shortcuts** screen (Features → Subreddits) with Classic, Circle, Tinted, Soft Tile, and Solid Tile icon styles, Rows, Grid, Side-by-Side, and Icon Dock layouts, a live preview, and visibility toggles for Popular, All, and Moderator Posts (#988: @IllIIllIllIllII)\n- Add a **Subreddit Sections** screen (Features → Subreddits) — give followed users their own FOLLOWING section with **Separate Followed Users**, drag Favorites, Multireddits, Moderator, and Following into any order, and watch a pinned live preview follow every change (#997, #1020: @icpryde)\n  - Subreddit List Enhancements, Modern Subreddit Dividers, and Hide Multireddit Descriptions move here, and the A–Z index stays visible and themed with Enhancements off\n- Add **Per-Account Favorites** and **Sort Favorites Alphabetically** (Subreddits → Favorites), so each account can keep its own subreddit favorites and keep them in A–Z order (#1017, #1042: @IllIIllIllIllII)\n- Add Fade, Down, and Off styles to **Hide Bars on Scroll** for the Liquid Glass tab bar alongside Left and Right, plus a **Scroll Behavior** picker that restores Apollo's Classic one-gesture hide next to the Two-Gesture default (#972: @IllIIllIllIllII)\n  - Interface settings regroup into Tab Bar and Display & Navigation, and Profile Layout opens straight from the Apollo Reborn hub\n- Rework **Liquid Glass navigation** around a collapsible action pill — the ⋯ button expands into translate, moderator, sort, and more actions, so titles stay centered and stop resizing between screens (#1035, #1047: @IllIIllIllIllII)\n  - Navigation buttons match the back button and title, moderator controls turn a brighter green with readable menu text, the pill collapses while subreddit search is open, and a cancelled swipe-back no longer jumps the page\n  - Replaces the Center Title Between Buttons setting with automatic placement; standard builds keep their expanded actions\n- Replace the Liquid Glass **feed search bar** with the native glass pill — it activates in place, compresses as you scroll, and reveals on a pull at the top, fixing the feed sliding under the field and the bar floating detached after cancel (#1002, #1026: @icpryde)\n  - Results and the query survive opening a post, the quick-switcher's autocomplete highlight stays legible on near-white accents, and the bar is in place from the first frame when a feed re-appears at its top\n  - Tapping the Posts tab scrolls to the top and a second tap returns to the subreddit list, including from followed-user profiles (#1021, #1040: @IllIIllIllIllII)\n  - The Keep Search Bar Visible setting is retired; in-place activation is simply how glass search works now\n- Add **Bold Post Titles** (Appearance → Posts) — feed post titles in Semibold for large and compact posts, every theme and theme font, Liquid Glass or legacy chrome; flips live without a relaunch (#1033: @icpryde)\n- Show read state on **Community Highlights** — unread dots, a New badge for posts under 24 hours old, a theme-colored +N count for comments added since your last visit, and dimmed titles once a highlight is read (#1041: @IllIIllIllIllII)\n- Add a live **Profile Layout** preview for Immersive, Compact, and a restored Native layout that updates as you change avatar and visibility options, with optional pinning (#1034: @IllIIllIllIllII)\n  - Also fixes copying your username on Immersive and Compact layouts and removes duplicated usernames on profiles\n- Add pinned live previews to **Subreddit Layout** too — a header preview for the Immersive, Compact, and Native **Header Style**, a Community Highlights preview for Full, Partial, and Off, and separate User Flair, Sidebar, Subtitle, and Description toggles that update open subreddits without reopening them (#1019: @IllIIllIllIllII)\n- Add **Microsoft Translator** as a bring-your-own-key translation provider, retry Google through a second endpoint when its free one rate-limits you, and show a Translation Limit Reached notice instead of silently giving up (#998: @icpryde)\n  - Moves off the shut-down default LibreTranslate instance and names dead or redirected instances instead of failing quietly\n- Add a **Source** picker to the Feed and Post **widgets** — Home, Popular, All, or a subreddit — and let every widget's subreddit field take several subreddits at once, a pasted link, or a multireddit (#1051: @icpryde)\n  - Copy Widget Setup Code now offers a with-account code, which is what unlocks Home and your private multireddits\n- Add pinned live previews to the **Inline Media** and **Rich Link Previews** settings screens that follow every control as you scroll, with tap to pin or unpin, and let the size and Apollo AI sliders select a stop from a tap (#1022, #1023, #1025: @icpryde)\n- Add **Forget Forward Swipe After Scrolling** (Posts & Feeds, off by default) so a forward swipe stops reopening a post you backed out of many posts ago; **Swipe Past Gallery to Navigate** now defaults to off (#996: @icpryde)\n- Improve **Find in Comments** — the selected match stays in view while rows load in, a comma-separated query matches any of its terms, and the docked bar follows the theme (#992, #1036: @icpryde)\n  - On Liquid Glass it is now the same native search bar the feed uses: it activates in place, the match count sits inside the field, and the More pill turns into up and down chevrons while a search is live\n- Add nine never-released **Ultra** icons — Safari, Space Paws, Grumpy Space Paws, and sequels to Explorer of Smiles, Gorilla Gus, The Little Prince, Under the Tree, and Wish Maker — move SPCA into Ultra, and list the EverythingApplePro Icons Drop Test icon in Sekrit (#969, #971, #989: @IllIIllIllIllII)\n\n### Fixes\n\n- Fix Apollo **freezing** on a loading spinner or a loaded comments screen when navigating between subreddits or opening posts on iOS 26 and later (#1024: @IllIIllIllIllII)\n- Fix **Gallery View** getting killed for memory on animated GIFs — GIFs now stream instead of holding every frame in RAM, and oversized stills are downsampled (#1001: @icpryde)\n- Fix a launch crash when the trending-subreddits table can't be written (LiveContainer and other read-only setups), and a crash opening a feed on older iOS versions that lack ActivityKit, WeatherKit, or VisionKit (#968: @icpryde)\n- Fix **Live Interactive Posts** — post-match threads render as normal text posts instead of an endless spinner, finished match threads no longer leave a hole in feed cards, the external-link confirmation works, and rotation relays out (#991, #1046: @icpryde)\n  - Opening a live post from the feed hands its already-loaded widget to the thread instead of reloading it, widgets stay warm between feed and thread, and Apollo AI no longer tries to summarize the hidden fallback text under one\n- Fix the in-app **Safari** browser flashing a white page while a link loads in dark mode; it stays black until content paints (#1052: @icpryde)\n- Fix **Liquid Glass** top fades vanishing during tab switches, and make swipe-back track the nav bar so the title and search bar no longer snap to the previous screen the moment a swipe starts (#1018: @icpryde)\n- Fix **Account Switcher** reordering quietly switching the signed-in account, plus drag handles that scrolled the page and rows that overlapped (#1011: @IllIIllIllIllII)\n- Fix duplicate items in **Saved** after a pull-to-refresh (#1005: @Thetromboneman1)\n- Fix the **subreddit list**'s section headers overlapping rows and labels sliding into place during the launch animation (#979: @icpryde)\n- Fix a subreddit's header and Community Highlights going missing after swiping forward back into it (#1037: @IllIIllIllIllII)\n- Fix the **translate globe** missing from search results under Liquid Glass (#1012: @icpryde)\n- Keep **custom theme separators** themed — the comments action bar lines no longer revert to gray once the thread loads, and separators no longer reset after returning from the background (#990: @icpryde)\n- Fix the **composer quick-bar** icons staying Apollo blue next to a themed GIF chip (#966, #987: @icpryde)\n- Fix **Share > Copy Link** ignoring the Share Link Host setting (#970: @icpryde)\n- Fix **Swipe Past Gallery to Navigate** missing real flicks on device (#974: @icpryde)\n- Stop **Autoplay Inline GIFs** treating Low Power Mode as Tap to Play — Always and WiFi Only now keep GIFs animating in Low Power Mode, and Tap to Play or Never remain the battery-saving choices (#1016: @icpryde)\n- Give **Show/Hide Deleted Comments** in the comments ⋯ menu custom icons that match Apollo's own artwork, and restore Apollo's original icon weight across the ⋯ menus, which the Liquid Glass menu had been downscaling (#985: @AcornElf, @icpryde)\n- Fix the **Theme Manager** row in Appearance reverting to \"Themes\" after the Post Size sheet, and match its weight to the rows around it (#1032: @icpryde)\n- Fix the oversized paragraph gaps in posts written with Reddit's fancy-pants editor, left behind when a zero-width space is stripped (#1050: @icpryde)\n- Make the **Settings** search bar scroll away with the list again while staying visible on arrival, keep pull-to-search, and pad the first settings group (#975: @icpryde)\n- Make the Inbox swipes track your finger, and swipe back inside a **Chat** conversation one level to the chat list instead of leaving the Inbox (#965: @icpryde)\n- Show each **Chat** conversation once on the Inbox's Notifications side and open it in modern Chat instead of Apollo's legacy thread when Use Modern Reddit Chat is on, with the Inbox badge no longer counting an unread chat twice (#1038: @icpryde)\n- Make the inline feed search bar usable on **Apple Vision Pro** (#978: @rebelancap)\n- Center the subreddit list's A–Z index labels and keep the favorite star's touch area clear of the index (#981: @IllIIllIllIllII)",
+          "downloadURL": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.7.0/Apollo-Reborn-3.7.0-GLASS.ipa",
+          "size": 124696561
+        }
+      ]
+    },
+    {
+      "name": "ARMSX2",
+      "bundleIdentifier": "com.armsx2.ios",
+      "developerName": "ARMSX2",
+      "subtitle": "PlayStation 2 emulator for ARM64",
+      "localizedDescription": "A free and open-source PlayStation 2 (PS2) emulator based on PCSX2, with native ARM64 JIT recompilers. Play PS2 games on your phone, PC, or gaming handheld.",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/ARMSX2/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/ARMSX2/images/game.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/ARMSX2/images/list.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/ARMSX2/images/settings.png"
+      ],
+      "tintColor": "#3CAEFF",
+      "versions": [
+        {
+          "version": "nightly-20260909",
+          "date": "2026-09-09",
+          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- ImGui: don't abort when a font resource is missing\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260908...cb6f53582a1319f9754ab2d427794ac62b46cb8c",
+          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20260909/ARMSX2-nightly-20260909-cb6f53582a-iOS-arm64.ipa",
+          "size": 26819639,
+          "minOSVersion": "17.0"
+        }
+      ]
+    },
+    {
+      "name": "Doer",
+      "bundleIdentifier": "com.naine.doer",
+      "developerName": "moliango",
+      "subtitle": "A native iOS client for Linux.do",
+      "localizedDescription": "A native iOS client for Linux.do — UIKit + Swift, no SwiftUI in the main app.",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Doer/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Doer/images/home.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Doer/images/detail.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Doer/images/me.png"
+      ],
+      "tintColor": "#4080E0",
+      "versions": [
+        {
+          "version": "1.8.5.1",
+          "date": "2026-09-11",
+          "localizedDescription": "**Full Changelog**: https://github.com/moliango/doer/compare/v1.8.5...v1.8.5.1",
+          "downloadURL": "https://github.com/moliango/doer/releases/download/v1.8.5.1/doer-unsigned.ipa",
+          "size": 28070169,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
+      "name": "DolphiniOS",
+      "bundleIdentifier": "me.oatmealdome.DolphiniOS-njb-patreon-beta",
+      "developerName": "OatmealDome",
+      "subtitle": "GameCube and Wii emulator for iOS/iPadOS",
+      "localizedDescription": "Dolphin for iOS, reborn. A GameCube and Wii emulator for iPhone and iPad.",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/DolphiniOS/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/DolphiniOS/images/home.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/DolphiniOS/images/game.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/DolphiniOS/images/settings.png"
+      ],
+      "tintColor": "#E0B030",
+      "versions": [
+        {
+          "version": "5.0.0b6",
+          "date": "2026-06-20",
+          "localizedDescription": "* Fixed JIT support on A13/A14/M1 devices running iOS 27 beta. (@CelloSerenity)\r\n* Fixed wrong app version number introduced in 5.0.0b5. (@CelloSerenity)\r\n\r\nThe next update will be sometime after the next official Dolphin release. It will include a core update.\r\n\r\n**Full Changelog**: https://github.com/OatmealDome/dolphin-ios/compare/v5.0.0b5...v5.0.0b6",
+          "downloadURL": "https://github.com/OatmealDome/dolphin-ios/releases/download/v5.0.0b6/Non-Jailbroken.ipa",
+          "size": 17963367,
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "DukeX",
+      "bundleIdentifier": "com.mafty.dukex",
+      "developerName": "Manic EMU Development Team",
+      "subtitle": "Original Xbox emulation for iOS",
+      "localizedDescription": "DukeX is an experimental iOS-focused frontend for xemu. It embeds the xemu core in a native Swift shell and presents the Vulkan renderer through MoltenVK and native Metal.",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/DukeX/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/DukeX/images/library.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/DukeX/images/activity.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/DukeX/images/game.png"
+      ],
+      "tintColor": "#8FCA39",
+      "versions": [
+        {
+          "version": "1.0.2",
+          "date": "2026-06-30",
+          "localizedDescription": "# DukeX v1.0.2 - Expanding the Xbox Experience\n\nDukeX v1.0.2 is our biggest step yet toward preserving the full original Xbox\nexperience, not just the games. This release introduces the first native macOS\nbuild, expands XB.Live integration, and brings richer community features to both\niOS and macOS.\n\n## What's New\n\n- Native macOS release: DukeX is now available as a Mac Catalyst desktop build\n  packaged with a nested Xemu fork, pairing desktop Xemu compatibility with the\n  DukeX interface.\n- XB.Live Rich Presence and playtime tracking: friends can see what you are\n  playing while DukeX tracks supported playtime sessions.\n- XB.Live messaging: threaded conversations, friend messaging, unread\n  indicators, supported game invites, and existing Xbox inbox support now live\n  inside DukeX.\n- XB.Live social expansion: friend requests, friend management, online presence,\n  and deeper community integration are available from the Profile experience.\n- Activity Feed: XB.Live news, friend online status, friend achievement unlocks,\n  and community updates now appear in a continuously refreshed timeline.\n- Controller Landscape Mode: on iOS, compatible controllers can switch DukeX\n  into a controller-first browsing and launch experience.\n- Expanded AirPlay and external display support: big-screen play is more\n  reliable across supported display configurations.\n\n## Improvements\n\n- Improved achievements with Games, Apps, and Cores grouping plus updated\n  artwork handling for XB.Live Core, DukeX Core, and special test titles.\n- Improved game tile spacing and cover handling across iOS and macOS.\n- Improved XB.Live cloud-save sync metadata with console identity v2,\n  content-hash dedupe, and server-assisted cross-console restore handling.\n- Fixed achievement progress rounding so time-based achievements do not show\n  100% before they are actually complete.\n\n## Availability\n\n- iOS: install `DukeX.v1.0.2.ipa` through StikStore, SideStore, or another\n  supported sideloading workflow.\n- macOS: install `DukeX.macOS.v1.0.2.dmg` by dragging DukeX to Applications.\n- Hardware requirements on iOS remain Apple A14 Bionic or Apple M1 hardware or\n  newer.\n- iOS 16.0 or later is supported, with iOS 16 support remaining experimental.\n\n## Important\n\nDukeX does not include Xbox system files, game images, BIOS files, copyrighted\ncontent, signing certificates, or user games. Users must provide their own\nlegally obtained files. DukeX is intended for legitimate emulation,\npreservation, testing, and personal library use.",
+          "downloadURL": "https://github.com/MaftyManicEMU/DukeX/releases/download/v1.0.2/DukeX.v1.0.2.ipa",
+          "size": 20345841,
+          "minOSVersion": "16.0"
+        }
+      ]
+    },
+    {
+      "name": "EhPanda",
+      "bundleIdentifier": "app.ehpanda",
+      "developerName": "EhPanda-Team",
+      "subtitle": "An unofficial E-Hentai App for iOS built with SwiftUI & TCA",
+      "localizedDescription": "EhPanda is an unofficial E-Hentai app for iOS & iPadOS built with SwiftUI & TCA. It supports almost all E-Hentai gallery categories, gallery browsing with filters, gallery details with tags & related galleries, posting / editing / replying to comments, H@H archiving, torrent listing, E-Hentai settings, and SNI-bypass (domain fronting) for restricted networks. Localization is built in and the app icon and accent color are customizable.",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/EhPanda/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/EhPanda/images/home.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/EhPanda/images/detail.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/EhPanda/images/comment.png"
+      ],
+      "tintColor": "#0f766e",
+      "versions": [
+        {
+          "version": "2.8.1",
+          "date": "2026-07-20",
+          "localizedDescription": "1. feat: Adapt to the new Liquid Glass design.\r\n3. fix: Gesture issue in the reading page.\r\n4. fix: Crash issue in eh setting page.\r\n5. fix: A minor issue in search page.",
+          "downloadURL": "https://github.com/EhPanda-Team/EhPanda/releases/download/v2.8.1/EhPanda.ipa",
+          "size": 7352364,
+          "minOSVersion": "26.0"
+        }
+      ]
+    },
+    {
+      "name": "iTorrent",
+      "bundleIdentifier": "com.xitrix.iTorrent2",
+      "developerName": "XITRIX",
+      "subtitle": "Torrent client for iOS",
+      "localizedDescription": "iTorrent is an ordinary torrent client for iOS with Files app support and much more.\n\nWhat can this app do:\n\n• Download in the background\n• Live Activity and Dynamic Island progress bar\n• Downloading on external drives\n• Sequential download (use VLC to watch films while loading)\n• Add torrent files from Share menu (Safari and other apps)\n• Add magnet links directly from Safari\n• Store files in Files app\n• File sharing directly from app\n• Download torrent by url\n• Download torrent by magnet\n• Send notification on torrent downloaded\n• Web/WebDav Server\n• Select files download priority\n• Change UI to dark theme\n• Color personalization\n• RSS Feed",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/iTorrent/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/iTorrent/images/home.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/iTorrent/images/detail.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/iTorrent/images/player.png"
+      ],
+      "tintColor": "#F19E69",
+      "versions": [
+        {
+          "version": "2.2.0-1",
+          "date": "2026-07-19",
+          "localizedDescription": "## What's new:\r\n* Meet the new built-in VLC player. Play compatible video and audio files directly in iTorrent, even while they are still downloading.\r\n* Enjoy Picture in Picture, playback speeds from 0.5x to 2x, audio and subtitle track selection, precise seeking, and system media controls.\r\n* Take playback to a bigger screen with AirPlay or a compatible player discovered on your local network.\r\n* Choose how pieces are downloaded with Sequential and First & Last priority modes, making it easier to start watching sooner.\r\n* Select and share multiple completed files or entire folders in one go.\r\n\r\n## Improvements:\r\n* Refreshed the interface for iOS 26, with Liquid Glass styling, cleaner dialogs, and more polished navigation.\r\n* Made torrent details smoother and easier to use, with clearer download-priority controls and private-torrent information.\r\n* Improved media previewing so iTorrent can offer the best available player for each file.\r\n* Updated the torrent and media engines for better compatibility, stability, and recovery from unexpected errors.\r\n* Expanded and refined translations across all supported languages.\r\n\r\n## Fixes:\r\n* Fixed cases where magnet links could be saved incorrectly.\r\n* Fixed a startup race condition that could interfere with launching the app or completing initial setup.\r\n* Fixed toolbars and navigation behaving incorrectly in iPad split-screen mode.\r\n* Fixed RSS downloads returning to the wrong screen.\r\n* Fixed torrent details sometimes getting stuck in a continuous update loop.\r\n* Fixed several playback, AirPlay, and local-device connection issues.\r\n\r\n**Full Changelog**: https://github.com/XITRIX/iTorrent/compare/v2.1.1-1...v2.2.0-1",
+          "downloadURL": "https://github.com/XITRIX/iTorrent/releases/download/v2.2.0-1/iTorrent.ipa",
+          "size": 24288935,
+          "minOSVersion": "16.0"
+        }
+      ]
+    },
+    {
+      "name": "Kazumi",
+      "bundleIdentifier": "com.example.kazumi",
+      "developerName": "Predidit",
+      "subtitle": "基于自定义规则的番剧采集APP，支持流媒体在线观看，支持弹幕，支持实时超分辨率。",
+      "localizedDescription": "使用 Flutter 开发的基于自定义规则的番剧采集与在线观看程序。使用最多五行基于 Xpath 语法的选择器构建自己的规则，支持规则导入与规则分享，支持基于 Anime4K 的实时超分辨率。\n\n其他特性：番剧目录与搜索、分集播放、番剧弹幕、追番列表、历史记录、倍速播放、多视频源支持、配色方案等。",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kazumi/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kazumi/images/home.jpg",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kazumi/images/timetable.jpg",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kazumi/images/details.jpg",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kazumi/images/selection.jpg",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kazumi/images/rules.jpg",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kazumi/images/rules_edit.jpg"
+      ],
+      "tintColor": "#4CAF50",
+      "versions": [
+        {
+          "version": "2.3.1",
+          "date": "2026-09-07",
+          "localizedDescription": "- 重新设计的时间表页面 (@Predidit)\r\n- 重新设计的追番页面 (@Predidit)\r\n- 重新设计的我的页面 (@Predidit)\r\n- 重新设计的视频播放页面 (@Predidit)\r\n- 重新设计的规则管理页面 (@Predidit)\r\n- 重新设计的同步设置页面 (@Predidit)\r\n- 改进Bangumi同步流程 (@zhn1100)",
+          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.3.1/Kazumi_ios_2.3.1_no_sign.ipa",
+          "size": 29812172,
+          "minOSVersion": "13.0"
+        }
+      ]
+    },
+    {
+      "name": "KMusic",
+      "bundleIdentifier": "com.macxk.KMusic",
+      "developerName": "Mac-XK",
+      "subtitle": "基于 SwiftUI 的多源音乐聚合播放器",
+      "localizedDescription": "基于 SwiftUI 开发的多源音乐聚合播放器，支持 iOS/macOS。内置酷我、酷狗、QQ 音乐、网易云、咪咕等多平台音源，支持 LRC 歌词同步、全局搜索、后台播放与深色主题，并可通过 JS 脚本导入自定义音源。",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/KMusic/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/KMusic/images/recommendation.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/KMusic/images/playlist.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/KMusic/images/play.png"
+      ],
+      "tintColor": "#F03050",
+      "versions": [
+        {
+          "version": "2.3.0",
+          "date": "2026-03-12",
+          "localizedDescription": "- 优化增加各种问题",
+          "downloadURL": "https://github.com/Mac-XK/KMusic/releases/download/%E6%AD%8C%E4%B8%80%E5%88%802.3.0/_2.3.0_22.2.ipa",
+          "size": 3836900,
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "Kumone",
+      "bundleIdentifier": "sb.moe.kumone",
+      "developerName": "missuo",
+      "subtitle": "原生 NetEase Cloud Music iOS 客户端（雲の音）",
+      "localizedDescription": "Kumone（雲の音）— native NetEase Cloud Music client for iOS. Talks directly to NetEase's real API with no third-party server: QR-code login, gray-track unblocking, synced lyrics with translation, immersive artwork-tinted now-playing, and playlist management.\n\nSupports English and Simplified Chinese localization.",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kumone/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kumone/images/home.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kumone/images/search.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kumone/images/featured.png"
+      ],
+      "tintColor": "#F0D060",
+      "versions": [
+        {
+          "version": "0.3.17",
+          "date": "2026-09-10",
+          "localizedDescription": "### Added / 新增\n\n- **macOS**: a 「减少推荐」 (reduce recommendation) right-click action on un-liked songs in 每日推荐 and 私人雷达 lists — it asks NetEase to swap the song out and replaces it in place. Thanks @yamakze (#84, closes #74).\n- **macOS**：每日推荐 / 私人雷达 列表里,未收藏歌曲的右键菜单新增「减少推荐」——会请求网易云替换该歌曲并就地替换。感谢 @yamakze（#84，关闭 #74）。\n\n### Fixed / 修复\n\n- **iOS**: the lock screen and Dynamic Island Now Playing controls show previous/next track again instead of back-15s/forward-15s. Registering the ±15s skip commands (added for CarPlay in 0.3.15) made iOS pick the podcast-style skip layout system-wide and hid the track buttons; those commands are removed, so previous/next are the media buttons everywhere (CarPlay included). (#83, #87)\n- **iOS**：锁屏与灵动岛的「正在播放」控制重新显示上一首 / 下一首，而不是后退 15 秒 / 前进 15 秒。此前为 CarPlay 注册的 ±15 秒快进快退命令（0.3.15 引入）让 iOS 在全局采用了播客式布局、把切歌按钮挤掉了；现已移除这两个命令，上一首 / 下一首恢复为各处（含 CarPlay）的系统媒体按钮。（#83、#87）\n- **macOS**: the search results page no longer shows a second, empty system search box on top of the toolbar search field — the page's `.searchable` bar is now iOS-only. Thanks @yamakze (#90, closes #89).\n- **macOS**：搜索结果页不再在工具栏搜索框之外多出一个空的系统搜索框——结果页的 `.searchable` 搜索栏改为仅 iOS 使用。感谢 @yamakze（#90，关闭 #89）。",
+          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.17/Kumone-iOS-0.3.17.ipa",
+          "size": 7248832,
+          "minOSVersion": "16.0"
+        }
+      ]
+    },
+    {
+      "name": "LiveContainer+SideStore",
+      "bundleIdentifier": "com.kdt.livecontainer",
+      "developerName": "LiveContainer Team",
+      "subtitle": "Run iOS apps without actually installing them!",
+      "localizedDescription": "An app launcher that runs iOS apps without actually installing them. This build of LiveContainer comes with a built-in SideStore for refreshing your apps.",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/main/apps/LiveContainer+SideStore/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/main/apps/LiveContainer+SideStore/images/apps.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/main/apps/LiveContainer+SideStore/images/sources.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/main/apps/LiveContainer+SideStore/images/settings.png"
+      ],
+      "tintColor": "#0784FC",
+      "versions": [
+        {
+          "version": "3.8.0",
+          "date": "2026-07-17",
+          "localizedDescription": "# LiveContainer 3.8.0\r\n\r\n> [!Warning]\r\n> The standalone version requires **SideStore 0.6.2+** or **AltStore 2.2.1+** for installation.\r\n> To install LiveContainer with built-in SideStore (`LiveContainer+SideStore.ipa`), please use [Impactor](https://github.com/khcrysalis/Impactor) or [iloader](https://github.com/nab138/iloader). See [our installation guide](https://livecontainer.github.io/docs/installation/lc_sidestore) for details.\r\n\r\n# New Features\r\n\r\n## Storage Management\r\n\r\n- Added a new storage management view with a breakdown of app bundles, containers, temporary files, app group data, tweaks, and other files. (Hidden apps' size is included in \"other\" section until unlocked)\r\n- Added per-app storage details, including app bundle size, container sizes, and last-used date.\r\n- Added actions to clean temporary files and caches, including guest app caches and LiveContainer's own caches.\r\n\r\n## Multiple LiveContainers\r\n- Added configurable launch priority for multiple LiveContainer instances, making shared-app shortcuts choose available instances in the order you prefer. (#1367)\r\n\r\n## Share to Apps in LiveContainer\r\nAdded a share extension to LiveContainer. When you share a URL or a file from iOS's share sheet, LiveContainer will ask which app you would like to open the URL/file in, so the old share to LiveContainer shortcut method is no longer needed. When an ipa file is shared in this way, LiveContainer will ask if you want to install it in LiveContainer or in the built-in SideStore (if installed) (#1357)\r\n\r\n## Multitasking\r\n\r\n- Added per-app multitask preferences. Each app can now follow the global setting, always launch in multitask mode, or avoid multitask mode. (#1208)\r\n- Improved multitask dock behavior: the dock can be made smaller, hidden more cleanly, and has improved padding. (#1228, #1250)\r\n- Added more multitask window animations and improved native-window scene handling.\r\n- URL schemes and `open-url` payloads can be passed to already-running multitask apps and native windows.\r\n\r\n## JIT\r\n- Added StosDebug support as a JIT enabler.\r\n\r\n## TweakLoader\r\nYou can now disable tweaks in the \"Tweaks\" page in LiveContainer's UI. by @SAOMDVN\r\n\r\n# Improvements\r\n- Added support for manually setting a container's IDFV. (#1194)\r\n- IDFV spoofing works even when Tweakloader is not loaded.\r\n- Reworked signing logic for tweaks and app installation, with multithreaded signing support.\r\n- Download alerts now block tab switching while a download is in progress.\r\n- Crash reports are shown in a sheet instead of a large alert for better performance on newer iOS versions.\r\n- Add a \"Clear Notification\" button (#1388)\r\n- Added some popular NSBonjourServices keys so apps can discover AirPlay devices and remote pairing pairable hosts in the local network. (#1417)\r\n\r\n# Bug Fixes\r\n\r\n- Fixed `livecontainer://open-url` dropping the deep link when launching an app from a cold start. (#1339)\r\n- Fixed the Add to Home Screen menu failing or behaving incorrectly by replacing the SwiftUI context menu implementation. (#1209)\r\n- Fixed a crash when opening Container Preferences if the app did not contain an `en.lproj` path. (#1239)\r\n- Fixed apps and AltStore sources not being searchable in some cases. (#1365, #1368)\r\n- Fixed converting a shared app back to private after aborting an install with the same bundle identifier, which could leave stale container state behind. (#1347)\r\n- Fixed shortcuts and JIT flows getting stuck on a busy LiveContainer instance instead of using another available instance. (#1386)\r\n- Fixed file picker not workings for some apps because Tweakloader is not loaded after enabling \"Hide LiveContainer from dyld API\". (#1430)\r\n- Fixed several app launch compatibility issues on iOS 26.5 beta, and some multitask/JIT app launches. (#1300, #1310, #1329)\r\n- Fixed multitask keyboard focus issues on iOS 17.4+, including cases where the keyboard would not appear, Passwords would immediately close, or video playback would freeze in multitask mode. (#1402, #844, #870)\r\n- Added support for iOS 27 developer beta. (#1394, #1417, #1416)\r\n- Fix background downloads in multitask apps (choosing \"Keep App Extensions (Register App ID for Each Extension)\" is required). (#1415)\r\n\r\n# Localization\r\n\r\n- Updated translations. Added Spanish translation by @Deci8BelioS\r\n\r\n# Credits\r\n\r\nThanks to everyone who contributed code, fixes, testing, and reports for this release, including @boa-z, @ruri1208, @Project516, @yazdipour, @stossy11, and @SAOMDVN.\r\n\r\nGreat thanks to everyone who helped translate LiveContainer.",
+          "downloadURL": "https://github.com/LiveContainer/LiveContainer/releases/download/3.8.0/LiveContainer%2BSideStore.ipa",
+          "size": 35403538,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
+      "name": "Mangayomi",
+      "bundleIdentifier": "com.kodjodevf.mangayomi",
+      "developerName": "Moustapha Kodjo Amadou",
+      "subtitle": "Read manga, novels, and watch anime",
+      "localizedDescription": "Mangayomi is an open-source Flutter app for reading manga, novels, and watching anime across multiple platforms.",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Mangayomi/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Mangayomi/images/screenshot1.jpg",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Mangayomi/images/screenshot2.jpg",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Mangayomi/images/screenshot3.jpg"
+      ],
+      "tintColor": "#EF4444",
+      "versions": [
+        {
+          "version": "0.9.2",
+          "date": "2026-09-03",
+          "localizedDescription": "## What's Changed\r\n* Add assets to constant file by @NBA2K1 in https://github.com/kodjodevf/mangayomi/pull/968\r\n* fix: triage error reports and resolve reported crashes by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/970\r\n* feat(experimental): add support for Aidoku extensions by @kodjodevf in https://github.com/kodjodevf/mangayomi/pull/969\r\n* Optimize local image-folder pages and image handling by @NBA2K1 in https://github.com/kodjodevf/mangayomi/pull/973\r\n\r\n\r\n**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.1...v0.9.2",
+          "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.2/Mangayomi-v0.9.2-ios.ipa",
+          "size": 114010180
+        }
+      ]
+    },
+    {
+      "name": "ManicEMU",
+      "bundleIdentifier": "com.aoshuang.manicemu",
+      "developerName": "Manic EMU Development Team",
+      "subtitle": "All-in-one retro game emulator for iOS",
+      "localizedDescription": "All-in-one retro game emulator for iOS, bringing console, arcade, computer, and mobile Java systems into one clean app with saves, cheats, custom skins, RetroAchievements, and more.",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/ManicEMU/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/ManicEMU/images/library.jpg",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/ManicEMU/images/landscape.jpg",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/ManicEMU/images/achievements.jpg"
+      ],
+      "tintColor": "#F02040",
+      "versions": [
+        {
+          "version": "2.0.0",
+          "date": "2026-09-03",
+          "localizedDescription": "> [!NOTE]\r\n> Starting from version 2.0.0, we no longer provide builds of TrollStore JIT. You can package it yourself by following the [guide](https://github.com/Rednick16/TrollStoreJITEnabler).\r\n\r\nThis is a major release focused on a redesigned interface, expanded platform support, and advanced features. Landscape browsing, library management, and external controller navigation have been rebuilt. It also adds several new systems and brings Netplay to eligible Libretro cores.\r\n\r\n\r\n### Before You Update\r\n\r\n- Dreamcast (Flycast): Existing save states will no longer work as of 2.0.0. Convert important save states to in-game saves before updating, or back up the `Flycast/dc` folder yourself.\r\n- Wii: A BootMii-format `keys.bin` is required.\r\n- Symbian: Install firmware in Settings first (`.ROM`; S60v2 and later also need `.RPKG`).\r\n- GameCube / Wii: The core is still being optimized, so heat and frame drops should still be expected.\r\n- MAME: A number of lesser-used arcade systems have been trimmed. Some obscure titles may no longer run.\r\n\r\n### Interface\r\n\r\nLandscape\r\n\r\n- A new landscape library, with most landscape pages redesigned.\r\n- Built-in dynamic backgrounds. You can use or upload ShaderToy (GLSL) scripts to customize them. Only single-Image scripts are supported; complex scripts may increase battery use or heat.\r\n- Multiple customizable card carousel styles.\r\n- Focused background: when a game is selected, its banner can be used as the landscape focus backdrop.\r\n- background music feature in landscape mode—besides built-in tracks, you can upload your own music files to use as background music.\r\n- built in 12 sets of navigation and focus sound effects.\r\n\r\nGame Options and Shortcuts\r\n\r\n- A unified options list and interaction model throughout the app.\r\n- Available actions are automatically arranged and regrouped for the current context.\r\n- Advanced reordering: customize the order and grouping of options.\r\n- A redesigned in-game shortcut menu. Shortcuts can appear on supported skins and in the in-game menu.\r\n\r\nNavigation and Input\r\n\r\n- A global focus and navigation system for iPhone and iPad. You can browse and interact entirely with a controller or keyboard.\r\n- Hold Command or the controller’s Select button to view the shortcut cheatsheet.\r\n- A unified navigation bar for more consistent browsing and editing.\r\n- Many long-press and hidden actions have been replaced with more conventional, iOS-style interactions.\r\n- Batch management and actions.\r\n- Adaptive rotation throughout the app.\r\n- Controllers can be assigned to a player slot. On cores that expect a keyboard, controller inputs can be mapped to keyboard events.\r\n\r\n### Features\r\n\r\nLibrary and Artwork\r\n\r\n- Covers now support separate icon and banner artwork. Box art is used in regular lists, icons in square layouts, and banners as the landscape focus backdrop.\r\n- Online artwork from Libretro Thumbnails and SteamGridDB (Grids / Heroes / Logos / Icons; SteamGridDB requires your own API key).\r\n- Switching platform or category rematches cover art.\r\n\r\nGame Data\r\n\r\n- Game metadata: auto-match, search the database, or edit it yourself (developer, publisher, series, genre, release date, region, overview, and more).\r\n- ESRB ratings and matching icons. Rating icons can be hidden in Settings.\r\n- A redesigned save-state manager with import and export.\r\n- Scoped settings: the same option can be stored at game, platform, or global level, and each can be cleared or reset independently.\r\n- batch scraping for covers, icons, and banners.\r\n- \r\n\r\nShaders and Skins\r\n\r\n- Real-time shader preview, without loading the shader first.\r\n- Redesigned default GBA skin.\r\n- Flex skins now support customizing button size and position.\r\n\r\nAchievements, Cheats, and Netplay\r\n\r\n- RetroAchievements pages are easier to read and load faster.\r\n- MultiSet support: earn subset achievements without a patched ROM. Switching the achievement list only changes what is shown; it does not affect which sets you can unlock while playing.\r\n- Online cheat database: search, multi-select add, and bookmarks.\r\n- Netplay for many Libretro cores: host or join a room, public lobby, LAN scan, relay, spectator mode, and room password. Your Adventurer Card nickname is used as the Netplay display name. You can now trade treasured Pokémon with friends over the network, or go head-to-head on arcade systems.\r\n- Rewind: add it to the shortcut menu, a controller mapping, or TriggerPro, then touch and hold to use it.\r\n\r\nAdvanced Features and Import\r\n\r\n- Core Settings: intended for advanced users. Incorrect values may prevent games from launching. Settings can be reset per game or per platform.\r\n- Settings now include an Adventurer Card, with a customizable nickname and avatar.\r\n- Import games from DukeX.\r\n- Import games from Armsx2.\r\n- PS1 now supports importing `.bin` files directly.\r\n\r\n\r\n### New Systems and Cores\r\n\r\nSymbian (EKA2L1)\r\n\r\n- Supports S60v1, N-Gage 1.0, S60v2, S60v3, N-Gage 2.0, S60v5, and Symbian^3.\r\n- Touch input, firmware management, and system apps.\r\n- Legacy / PPL / TXM JIT.\r\n\r\nPC Engine (Beetle PCE)\r\n\r\n- Supports TurboGrafx-16, TurboGrafx-CD, and SuperGrafx, with subcategory switching.\r\n\r\nNeo Geo Pocket / Color (Beetle NeoPop)\r\n\r\n- Supports Neo Geo Pocket and Neo Geo Pocket Color, with subcategory switching.\r\n\r\nCommodore 64 (VICE x64sc)\r\n\r\n- Full keyboard support, with switching between gamepad and keyboard skins.\r\n\r\nAmiga (PUAE)\r\n\r\n- Full keyboard support, with switching between gamepad and keyboard skins.\r\n\r\nGameCube / Wii (Dolphin)\r\n\r\n- Legacy / PPL / TXM JIT.\r\n- Wii: Wiimote sideways mode.\r\n- Dolphin cheats, including Action Replay Max decryption.\r\n- Wiimote skins for Wii\r\n\r\nOther Cores\r\n\r\n- Mesen-S added for SNES / GB / GBC.\r\n- gpSP added for GBA, and can be switched with mGBA and VBA-M.\r\n\r\n### JIT Fixes and Improvements\r\n\r\n- Fixed JIT failing on TXM devices running iOS 26.6 and later.\r\n- Revised TXM device detection.\r\n- N64 GLideN64 and ParaLLEl RDP now both support JIT.\r\n\r\n### Core Updates\r\n\r\nThe following cores have been updated to the latest upstream stable releases.\r\n\r\n- 3DS (Azahar, Citra)\r\n- PS1 (Beetle PSX HW)\r\n- DOS (DOSBox Pure)\r\n- Dreamcast (Flycast) — see the save-state migration note above\r\n- NDS (melonDS)\r\n- PSP (PPSSPP)\r\n- N64 (Mupen64Plus)\r\n\r\n### Fixes\r\n\r\n- Numerous bug fixes and performance optimizations",
+          "downloadURL": "https://github.com/Manic-EMU/ManicEMU/releases/download/v2.0.0/ManicEMU.v2.0.0.SideloadJIT.ipa",
+          "size": 273393210,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
+      "name": "MoviePilotLite",
+      "bundleIdentifier": "com.altman.moviepilot",
+      "developerName": "singleton-altman",
+      "subtitle": "MoviePilot 移动端，基于 Flutter 实现",
+      "localizedDescription": "基于 MoviePilot 的 Flutter 跨端客户端，对接 MoviePilot v2 API，在手机上完成订阅、搜索、下载、整理与系统运维等常用操作。",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/MoviePilotLite/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/MoviePilotLite/images/home.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/MoviePilotLite/images/recommend.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/MoviePilotLite/images/explorer.png"
+      ],
+      "tintColor": "#8050F0",
+      "versions": [
+        {
+          "version": "1.2.5",
+          "date": "2026-09-11",
+          "localizedDescription": "MoviePilot Release\n\n- Version: 1.2.5\n- Build Date: 2026-09-11\n- Android: Signed universal APK\n- Android: Signed arm64-v8a APK\n- iOS: Unsigned IPA\n\niOS 安装说明：\n- IPA 为未签名包\n- 请使用自己的 Apple Developer 账号通过 AltStore、Sideloadly 或 Xcode 进行签名安装\n\n\n## What's Changed\n* Add arm64 APK release artifact and proxy update downloads by @singleton-altman in https://github.com/singleton-altman/MoviePilotLite/pull/104\n\n\n**Full Changelog**: https://github.com/singleton-altman/MoviePilotLite/compare/release-v1.2.5-2026-09-07...release-v1.2.5-2026-09-11",
+          "downloadURL": "https://github.com/singleton-altman/MoviePilotLite/releases/download/release-v1.2.5-2026-09-11/ios-v1.2.5-2026-09-11.ipa",
+          "size": 35225061,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
+      "name": "Musly",
+      "bundleIdentifier": "com.dddevid.musly",
+      "developerName": "dddevid",
+      "subtitle": "Free Navidrome client & Subsonic music player",
+      "localizedDescription": "Musly is a free Navidrome client and Subsonic music player with an Apple Music-inspired interface. Stream your self-hosted library from Navidrome, Subsonic, or Airsonic servers on iOS, Android, desktop, and more.",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Musly/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Musly/images/home.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Musly/images/detail.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Musly/images/player.png"
+      ],
+      "tintColor": "#FA243C",
+      "versions": [
+        {
+          "version": "2.0.2",
+          "date": "2026-08-26",
+          "localizedDescription": "## 🎉 Musly v2.0.2\n\n### 📦 Downloads\n\n**Android:**\n- `app-release.apk` (universal APK for all devices)\n\n**iOS:**\n- `musly-ios.ipa` (sideload with AltStore, Sideloadly, or similar — not signed)\n\n**Windows:**\n- `musly-setup.exe` (setup installer, run to install Musly)\n- `musly-windows.zip` (portable version, extract and run)\n\n**macOS:**\n- `musly-macos.dmg` (drag Musly.app to Applications — not notarized)\n\n**Linux:**\n- `musly-linux-x64.tar.gz` (extract and run musly)\n\n### 📝 Changelog\nSee [CHANGELOG.md](https://github.com/dddevid/Musly/blob/master/CHANGELOG.md)\n\n### 🌍 Translations\nContribute translations at [Crowdin](https://crowdin.com/project/musly)",
+          "downloadURL": "https://github.com/dddevid/Musly/releases/download/v2.0.2/musly-ios.ipa",
+          "size": 13928367,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
+      "name": "Novella",
+      "bundleIdentifier": "sh.celia.novella",
+      "developerName": "CELIA",
+      "subtitle": "轻书架第三方客户端",
+      "localizedDescription": "使用 React Native 构建的轻书架第三方客户端，面向 iOS、iPadOS。",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Novella/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Novella/images/home.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Novella/images/shelf.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Novella/images/detail.png"
+      ],
+      "tintColor": "#2E2E2E",
+      "versions": [
+        {
+          "version": "2.4.0",
+          "date": "2026-09-06",
+          "localizedDescription": "<img width=\"800\" alt=\"Banner\" src=\"https://github.com/user-attachments/assets/4e4a4477-316a-49bc-8f97-22455f3ef327\" />\r\n\r\n## **What's Changed 🧐**\r\n\r\n本次更新主要完善了 **漫画、社区和账户相关功能**，并改进了 **连接稳定性和更新体验**。\r\n**仅支持 iOS / iPadOS**。\r\n\r\n### **⚡️ 内容概要**\r\n\r\n* **书籍**\r\n  跟进了新 API，小说和漫画阅读已经恢复。\r\n  漫画详情、阅读、历史、书架、搜索、排行和版本切换改用具体作品。\r\n  通知支持自动识别小说和漫画。\r\n  优化漫画图片预加载。\r\n\r\n* **社区**\r\n  支持锁定和解除锁定帖子。\r\n  锁定后禁止点赞、收藏和回复。\r\n  改进评论无限滚动和加载重试。\r\n  高亮用户参与过的回复。\r\n  改进通知页面的样式。\r\n\r\n* **账户与商城**\r\n  区分永久漫画额度和每日漫画额度。\r\n  支持漫画额度卡。\r\n  完善商城购买限制状态。\r\n  修复切换账号后的商城缓存。\r\n  成长值支持实时刷新。\r\n\r\n* **通知与连接**\r\n  改进通知和成长值实时更新。\r\n  请求和实时连接增加超时保护。\r\n  短暂切后台不再断开连接。\r\n  增加 30 秒后台宽限期。\r\n  长时间后台返回后自动重新连接。\r\n\r\n* **编辑器**\r\n  改进富文本编辑器键盘跟随。\r\n  修复关闭键盘时页面回弹和跳动。\r\n  保留编辑器内部滚动。\r\n\r\n* **阅读器与界面**\r\n  移除旧的脚注弹窗。\r\n  修复部分脚注章节被错误过滤。\r\n  统一部分 Sheet 背景颜色。\r\n  调整回复高亮和界面间距。\r\n\r\n* **登录与更新**\r\n  改进冷启动、登录、注册、Token 刷新和退出登录时的路由切换。\r\n  更新检查不再受登录页面限制。\r\n  支持使用 `GitHub`、`AltStore`、`SideStore` 和 `Feather` 打开更新。\r\n  设置中新增侧载入口。\r\n\r\n* **项目整理**\r\n  移除停止维护的 Novella 下载网页和部署流程。\r\n  请切换侧载源到 [sideload.celia.sh](https://sideload.celia.sh)。\r\n  移除软件公告，该变动不影响站点公告。\r\n  更新项目横幅并清理废弃资源。\r\n\r\n方便的管理更新：[**添加到侧载工具**](https://sideload.celia.sh) ↗️\r\n了解其它项目：[**celia-sh/Hana**](https://github.com/celia-sh/Hana) 🌸\r\n闲聊吹水 / 反馈问题：[**点此加入**](https://t.me/+xNDJEfc_naRlMGEx) ✈️\r\n\r\n> [!CAUTION]\r\n> **本应用与网站没有直接关系**，所以**不要在**社区发布和**本软件**相关的帖子。\r\n> 正确反馈渠道：在仓库开 Issues，或者加入交流群。\r\n> 记得**看完公告和发帖前提示**，以免被网站封禁；如果不看，我只能说：非我封禁，无能为力。\r\n> 请记清楚，这不是官方软件。",
+          "downloadURL": "https://github.com/celia-sh/Novella/releases/download/v2.4.0/Novella-2.4.0-release.ipa",
+          "size": 25323737,
+          "minOSVersion": "16.4"
+        }
+      ]
+    },
+    {
+      "name": "Opaline",
+      "bundleIdentifier": "com.verback.YTLite",
+      "developerName": "verback2308",
+      "subtitle": "YouTube client for iOS 12+",
+      "localizedDescription": "A lightweight, privacy-focused YouTube client for iOS, built with UIKit. SponsorBlock, Return YouTube Dislike, up to 1080p playback, background audio, Picture-in-Picture, subtitles and offline downloads — no ads, no tracking, no dependencies.",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Opaline/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Opaline/images/home.jpeg",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Opaline/images/player.jpeg",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Opaline/images/channel.jpeg"
+      ],
+      "tintColor": "#FF0000",
+      "versions": [
+        {
+          "version": "1.12.0",
+          "date": "2026-09-10",
+          "localizedDescription": "**New**\n\n- Hold anywhere on the video to seek ([#116](https://github.com/verback2308/Opaline/issues/116)). Press and hold on the picture, then drag sideways. The seek bar follows your finger and the video jumps where you let go, so you no longer have to hit the thin bar at the bottom. The taps you already know still work: the sides seek, the middle pauses.\n- Search inside a channel ([#117](https://github.com/verback2308/Opaline/issues/117)). Channel pages have a magnifier now, and whatever you type there searches that channel only. YouTube serves no filters for this kind of search, so there are none in the app either.\n- Get a downloaded video out of the app ([#115](https://github.com/verback2308/Opaline/issues/115)). The menu on a downloaded video has a new \"Save to Files\" row that hands the file to the usual iOS share sheet, so it can go to Files, Photos, AirDrop or another app. It is named after the video, and only the video leaves: subtitles, comments and the saved page stay where they were.\n- Clear the whole search history at once ([#121](https://github.com/verback2308/Opaline/issues/121)). The last row under Recent searches wipes the list, and it asks first.\n\n**Fixes**\n\n- The mini player no longer sits on top of the tab bar ([#118](https://github.com/verback2308/Opaline/issues/118)). Tapping a tab behind the collapsed player switches to that tab instead of reopening the video.\n- Stereo no longer gets spatialized on AirPods ([#119](https://github.com/verback2308/Opaline/issues/119)). Ordinary two-channel sound was being turned into a fake surround field that moved when you turned your head. Video that really is multichannel still spatializes.\n- The \"...\" menu stops closing on its own ([#128](https://github.com/verback2308/Opaline/issues/128)). It was reacting to the device being tilted or put down, which made it look random when you held the phone in your hand.\n\n**Also**\n\n- If your device is older than Opaline supports, the README now points at [a downport for iOS 9](https://github.com/Joeviocoe/Opaline) by another developer, which runs on the iPad 2, iPad 3, iPad mini and iPhone 4S ([#125](https://github.com/verback2308/Opaline/issues/125)).",
+          "downloadURL": "https://github.com/verback2308/Opaline/releases/download/1.12.0/Opaline_1.12.0.ipa",
+          "size": 6685919,
+          "minOSVersion": "12.0"
+        }
+      ]
+    },
+    {
+      "name": "PiliPlus",
+      "bundleIdentifier": "com.example.piliplus",
+      "developerName": "bggRGjQaUbCoE",
+      "subtitle": "使用Flutter开发的BiliBili第三方客户端",
+      "localizedDescription": "使用Flutter开发的BiliBili第三方客户端",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PiliPlus/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PiliPlus/images/home.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PiliPlus/images/bangumi.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PiliPlus/images/dynamic.png"
+      ],
+      "tintColor": "#73b480",
+      "versions": [
+        {
+          "version": "2.1.3",
+          "buildVersion": "5315",
+          "date": "2026-09-05",
+          "localizedDescription": "限制直播聊天缓存条目\r\n音频播放页配置音量均衡 #2598 by @Eazed-Yu\r\n限制离线弹幕下载并发 #2800 by @KIDA-MNESIA\r\n关注分组支持切换排序方式 #2772 co-by @defghy\r\nLinux 支持 WebView #2843 by @Tobiichi-Origuchi\r\n支持显示定时关闭剩余时间 #2461 co-by @SXP-Simon\r\n更新直播弹幕屏蔽页面，实现直播弹幕屏蔽 #2821 by @Starfallan\r\niOS 设置 `ITSAppUsesNonExemptEncryption` 属性 #2789 by @maoawa\r\n评论输入框增加 LaTeX 公式转 Unicode 开关 #2792 by @milk2715093695\r\n修复部分视频画质切换问题 #2810 #2828 by @TomorrowX6 co-by @My-Responsitories\r\n\r\n优化字体自重 #2787 by @My-Responsitories\r\n优化/修复账号逻辑 #2794 #2797 by @KIDA-MNESIA #2817 by @My-Responsitories\r\n\r\n修复 #2709 #2816 #2836 #2837",
+          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.3.1/PiliPlus_ios_2.1.3%2B5315.ipa",
+          "size": 23970852,
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "Pixiv-SwiftUI",
+      "bundleIdentifier": "org.eu.eslzzyl.Pixiv-SwiftUI",
+      "developerName": "Eslzzyl",
+      "subtitle": "基于 SwiftUI 的 Pixiv 第三方客户端",
+      "localizedDescription": "基于 SwiftUI 开发的 Pixiv 第三方客户端，支持 iOS/iPadOS/macOS。提供插画、漫画与小说的推荐、排行榜、搜索与收藏，内置评论系统、批量下载、数据导入导出、深色模式与主题自定义。",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Pixiv-SwiftUI/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Pixiv-SwiftUI/images/recommend.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Pixiv-SwiftUI/images/detail.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Pixiv-SwiftUI/images/search.png"
+      ],
+      "tintColor": "#13A1FD",
+      "versions": [
+        {
+          "version": "0.15.0",
+          "date": "2026-08-16",
+          "localizedDescription": "## 新功能\r\n\r\n- 插画详情和全屏查看新增图片文字翻译，基于 Apple Vision OCR 识别图片文字并显示原文与译文。\r\n- 新增 VLM 图片解释功能，可使用视觉语言模型分析插画内容；设置中支持配置模型、温度、图像细节并测试服务。\r\n- 设置中新增图片磁盘缓存上限选项，超过上限则自动清理。\r\n- 用户详情页新增骨架屏加载动画。\r\n\r\n## 优化\r\n\r\n- 重构全屏图片预览，支持更高效的懒加载、分页和缩放，改善大图及多图浏览性能。\r\n- 优化相关推荐图片预取，减少重复请求并提升滑动浏览体验。\r\n- 统一加载失败提示、错误状态和重试入口，并增加全局 Toast 反馈。\r\n- 优化登录页面布局、文案和输入体验。\r\n- 更新说明弹窗支持本地化 Markdown 内容。\r\n- 优化卡片阴影渲染，降低 GPU 离屏渲染开销。\r\n\r\n## 问题修复\r\n\r\n- 修复 Bing 翻译接口失效问题，并修复小说内容接口请求问题。\r\n- 修复网页登录流程在切换应用、登录失败或已有账号登录时的状态处理问题。\r\n- 修复 macOS 插画详情滚动对齐、图片缩放更新和窗口控件图标请求问题。\r\n- 修复图片淡入动画丢失问题。\r\n- 修复 iOS 插画卡片上下文菜单无法显示的问题。\r\n- 修复推荐页和动态页用户头像点击无响应的问题。\r\n- 修复关注和取消关注用户时请求返回 400 的问题。\r\n- 修复导航返回后多个瀑布流页面滚动位置丢失的问题。\r\n- 修复分页请求使用错误账号令牌的问题。\r\n- 修复切换账号时收藏、关注、下载和阅读等异步状态串用或显示旧数据的问题。\r\n- 修复网络模式切换后请求未取消、页面未刷新的问题。\r\n- 改善并发下载文件完整性校验，并在失败时提供回退处理。\r\n- 修复部分 API 端点及数据解码问题，降低内容加载失败概率。\r\n- 修复 Ugoira 动图播放中的数组越界问题，并将部分缓存初始化失败改为降级处理。",
+          "downloadURL": "https://github.com/Eslzzyl/Pixiv-SwiftUI/releases/download/v0.15.0/Pixiv-SwiftUI.ipa",
+          "size": 10437618,
+          "minOSVersion": "17.0"
+        }
+      ]
+    },
+    {
+      "name": "PSX3IOS",
+      "bundleIdentifier": "com.miguel.psx3ios",
+      "developerName": "xmiguel911x",
+      "subtitle": "PlayStation 3 emulator for iPhone and iPad",
+      "localizedDescription": "A PlayStation 3 emulator for iPhone and iPad, built on RPCS3. Real games boot and play — the whole emulator core is exposed, with community game patches, trophies, play time, save data and 14 languages. Works with or without JIT.",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PSX3IOS/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PSX3IOS/images/home.jpg",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PSX3IOS/images/install.jpg",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PSX3IOS/images/settings.jpg"
+      ],
+      "tintColor": "#5080D0",
+      "versions": [
+        {
+          "version": "0.2.7-beta",
+          "date": "2026-09-01",
+          "localizedDescription": "Various improvements added, jit fixed A15 iOS 17.0 TrollStore Go to settings, JIT mode detected, and leave it on automatic, and bugs fixed",
+          "downloadURL": "https://github.com/xmiguel911x/PSX3IOS/releases/download/v0.2.7-beta/PSX3IOS-beta.0.2.7-unsigned.ipa",
+          "size": 67644766,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
+      "name": "PureLive",
+      "bundleIdentifier": "com.mystyle.purelive.liu",
+      "developerName": "liuchuancong",
+      "subtitle": "基于 Flutter 的开源多平台直播聚合播放器",
+      "localizedDescription": "纯粹直播（Pure Live）是一款基于 Flutter 的开源第三方多平台直播聚合播放器，支持 Bilibili、虎牙、斗鱼、快手、抖音、网易 CC、Twitch 等平台，以及自定义 M3U/M3U8 直播源。",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PureLive/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PureLive/images/list.jpg",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PureLive/images/area.jpg",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PureLive/images/auth.jpg"
+      ],
+      "tintColor": "#50B0F0",
+      "versions": [
+        {
+          "version": "3.1.2",
+          "date": "2026-09-04",
+          "localizedDescription": "# 纯粹直播 v3.1.2\n\n|版本|下载地址|\n|---|---|\n|TV版|[pure_live_TV](https://github.com/liuchuancong/pure_live_TV/releases/latest)|\n|Windows/macOS/Android/iOS版|[pure_live](https://github.com/liuchuancong/pure_live/releases/latest)|\n\n### 🖥️ Windows 版\n\n- **Portable ZIP**：解压即用，无需安装\n- **EXE 安装包**：适合所有用户\n- **MSIX 包**：现代应用格式，支持干净卸载\n- 适配：Windows 10/11 x64\n\n### 🍎 macOS 版\n\n- macOS 桌面版\n- Universal：Apple Silicon + Intel\n- ZIP / DMG\n\n### 📱 Android 版\n\n- Android 8.0+（API 26，FFmpegKit 录制依赖要求）\n- ARM64-v8a\n- ARMv7\n- x86_64\n- 统一 SHA256 校验文件：[**ANDROID_SHA256SUM.txt**](https://github.com/liuchuancong/pure_live/releases/download/v3.1.2/ANDROID_SHA256SUM.txt)\n\n### 🐧 Linux 版\n\n- Linux x64\n- Portable tar.gz\n\n### 🍎 iOS 版\n\n- unsigned iOS device application\n- TrollStore / ad-hoc IPA\n- ARM64\n\n### 🔧 Build Metadata\n\n[**BUILD_METADATA.json**](https://github.com/liuchuancong/pure_live/releases/download/v3.1.2/BUILD_METADATA.json)\n\n### 📝 本次更新\n\nversion: 3.1.2\n版本更新：\n- 修复ijk播放器黑屏。\n- 添加多画面静音。\n- 其他bug。",
+          "downloadURL": "https://github.com/liuchuancong/pure_live/releases/download/v3.1.2/PureLive-3.1.2-4100-ios-arm64-trollstore.ipa",
+          "size": 59369697,
+          "minOSVersion": "15.6"
+        }
+      ]
+    },
+    {
+      "name": "SceneBox",
+      "bundleIdentifier": "app.scenebox.SceneBox",
+      "developerName": "donbytyqi",
+      "subtitle": "Torrent streaming client",
+      "localizedDescription": "Torrent streaming client for iOS, iPadOS, tvOS and Mac (Catalyst), written in SwiftUI. Streams come from Stremio-compatible addons and play through a vendored libtorrent engine feeding VLC.",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/SceneBox/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/SceneBox/images/home.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/SceneBox/images/search.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/SceneBox/images/profile.png"
+      ],
+      "tintColor": "#E0E000",
+      "versions": [
+        {
+          "version": "1.0.2",
+          "date": "2026-08-22",
+          "localizedDescription": "Mostly stuff you asked for.\n\n- You don't need an account anymore. There's a \"Continue as guest\" button on the login screen. Everything you watch is saved on the device, and if you make an account later it all gets moved over.\n- The iPhone app rotates now. Before it was stuck in portrait unless you were in the player.\n- Cleaned up the Profile tab. Email is readable now, there's one Edit Profile button, and switching/adding profiles and signing out moved into the menu at the top right.\n- Also has the fixes from 1.0.1 (play button missing on iOS 18, \"don't have permission to save the file\" on Apple TV).\n\nInstall\n\nMac: open the dmg, drag to Applications. It's notarized so it just opens.\n\niPhone/iPad: the ipa isn't signed, use Sideloadly, AltStore, SideStore, Feather or ESign with your own Apple ID. Free Apple ID = resign every 7 days (AltStore/SideStore do it for you), paid dev account = one year.\n\nApple TV: Sideloadly works over Wi-Fi. On the TV go to Settings > Remotes and Devices > Remote App and Devices so it shows up, then pick it in Sideloadly.",
+          "downloadURL": "https://github.com/donbytyqi/scenebox/releases/download/v1.0.2/SceneBox-1.0.2.ipa",
+          "size": 30349738,
+          "minOSVersion": "18.0"
+        }
+      ]
+    },
+    {
+      "name": "TiebaPure",
+      "bundleIdentifier": "dev.infinityf4p.tiebapure",
+      "developerName": "infinityf4p",
+      "subtitle": "基于 SwiftUI 的第三方百度贴吧客户端",
+      "localizedDescription": "原生 SwiftUI 构建的非官方贴吧 iOS 客户端。未登录访客即可浏览首页推荐、进吧与吧内列表、帖子详情与楼中楼、搜索、图片缩放与视频播放；登录后支持消息、关注与粉丝、收藏帖子（与官方客户端同步）、每日签到、点赞与发帖回复。另有关键词/用户/贴吧屏蔽、浏览历史与阅读位置恢复、iPad 双栏布局，以及 `tiebapure://` 深链接。",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/TiebaPure/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/TiebaPure/images/home.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/TiebaPure/images/thread.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/TiebaPure/images/search.png"
+      ],
+      "tintColor": "#708070",
+      "versions": [
+        {
+          "version": "1.4.14",
+          "date": "2026-08-24",
+          "localizedDescription": "## 修改内容\n\n- 新增帖子本地保存：支持完整楼层和楼中楼离线阅读、媒体下载、搜索、回复更新、存储管理及备份导入导出。\n- 新增内置与自定义阅读字体，并完善首页重复点击刷新。\n- 自动检测账号登录失效，提示后清理当前登录态，同时避免旧请求或网络中断误触发退出。\n- 修复 iOS 16 嵌套搜索布局递归卡死、文字选择与导航手势冲突，并将媒体、字体、语音和存储文件 I/O 移出主线程。\n- 加固本地帖子并发写入、媒体事务崩溃恢复、备份校验与字体目录一致性。\n\n## 验证\n\n- GitHub Actions ci-ok 全部通过，包含单元测试、iOS 16 兼容检查、iPhone/iPad UI 测试和 Release 构建。\n- App 与扩展均为 1.4.14 (58)、arm64、最低 iOS 16.4；IPA 压缩结构正常且未签名。\n- 发帖和回帖夹具 UI 测试通过；本次未改动认证写入路径，因此未重复进行真实账号写入测试。",
+          "downloadURL": "https://github.com/infinityf4p/TiebaPure-iOS/releases/download/v1.4.14/TiebaPure-v1.4.14-unsigned.ipa",
+          "size": 3787516,
+          "minOSVersion": "16.4"
+        }
+      ]
+    },
+    {
+      "name": "Tsumiru",
+      "bundleIdentifier": "com.suwayomi.tachideskSorayomi",
+      "developerName": "Suwayomi",
+      "subtitle": "Native manga & manhwa reader for Suwayomi-Server",
+      "localizedDescription": "Tsumiru is a native client for reading manga & manhwa from a Suwayomi-Server instance, built for long webtoon binges. Offline downloads with an on-device catalog, a rebuilt continuous-scroll webtoon reader, incognito mode, and 13 built-in themes.",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Suwayomi-Tsumiru/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Suwayomi-Tsumiru/images/list.jpg",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Suwayomi-Tsumiru/images/update.jpg"
+      ],
+      "tintColor": "#7c7bff",
+      "versions": [
+        {
+          "version": "1.2.1",
+          "date": "2026-09-08",
+          "localizedDescription": "A manga and webtoon reader for your [Suwayomi](https://suwayomi.org/) server.\n\nA hotfix for v1.2.0, which would not open on the Linux Flatpak.\n\n### 🧩 Fixes\n\n- Fixed the Linux Flatpak showing **Tsumiru couldn't start** instead of opening (@aaronbamblett)\n- Fixed categories added on another device not appearing until the app was restarted (@aaronbamblett)\n- Fixed the storage limit being ignored on Windows (@yohanim)\n- Fixed downloads leaving folders behind on Windows when a file was briefly locked (@yohanim)\n\n## Install\n\nYou'll need a running Suwayomi server. See [Getting started](https://tsumiru.app/docs/guides/getting-started).\n\n### Mobile\n\n**Android:** download the universal APK below and open it to install. Smaller APKs for specific chip types are also attached.\n\n**iOS:** the `…-ios.ipa` below is unsigned and has to be sideloaded. Add `https://tsumiru.app/apps.json` as a source in [SideStore](https://sidestore.io/) or [AltStore](https://altstore.io/) to install it and get later releases as updates.\n\n<details>\n<summary>Which sideloading tool should I use?</summary>\n\n- **[SideStore](https://sidestore.io/)** signs and refreshes the app on the device itself, with no computer needed after setup. Best for most people.\n- **[AltStore](https://altstore.io/)** expires every 7 days and only refreshes while a computer running AltServer is switched on and on the same Wi-Fi as your phone.\n- **[TrollStore](https://ios.cfw.guide/installing-trollstore/)** installs permanently with no expiry, but only works on older iPhones and iOS versions with the required vulnerability.\n\nWith SideStore or AltStore the app is re-signed periodically, which those tools automate. There is no App Store build.\n</details>\n\n### Desktop\n\n**Windows:** download `…-windows-x64.zip`, extract it anywhere, and run `tsumiru.exe`.\n\n**macOS:** download `…-macos-x64.zip`, extract it, and move the app to Applications. If macOS blocks the first launch, approve it under System Settings → Privacy & Security.\n\n**Linux:** the Flatpak is recommended and auto-updates.\n\n```sh\nflatpak remote-add --if-not-exists tsumiru https://suwayomi.github.io/Suwayomi-Tsumiru/index.flatpakrepo\nflatpak install tsumiru io.github.aaronbamblett.tsumiru\n```\n\nFor a portable option, download `…-linux-x86_64.AppImage`, mark it executable with `chmod +x`, and run it.\n\n### Web\n\nDownload `…-web.zip` and serve its contents with any static web server.\n\n[Full documentation](https://tsumiru.app/)",
+          "downloadURL": "https://github.com/Suwayomi/Suwayomi-Tsumiru/releases/download/v1.2.1/tsumiru-v1.2.1-ios.ipa",
+          "size": 19252031,
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "UTM",
+      "bundleIdentifier": "com.utmapp.UTM",
+      "developerName": "osy",
+      "subtitle": "Virtual machines for iOS",
+      "localizedDescription": "UTM is a full featured virtual machine host for iOS. In short, it allows you to run Windows, Android, and more on your iPhone and iPad.\n\nThis version requires using AltJIT. Install UTM SE for slower emulation without JIT.\n\nMore information at https://getutm.app/\n\nFeatures:\n\n• Emulate any Processor\n30+ processors supported by qemu including x86_64, ARM64, and RISC-V\n• Run any Operating System\nWindows, Linux, and more natively and securely on iOS within an App\n• Fast Emulation\nPara-virtualization with SPICE and JIT compilation with TCG\n• High Compatibility\niOS 14+ supported. Works on iPhone and iPad. No jailbreak needed\n• Free and Open Source\nUTM and its dependencies are all free and open source\n• Easy to Use\nConfigure and customize your VM in a native UI",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/UTM/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/UTM/images/home.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/UTM/images/settings.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/UTM/images/display.png"
+      ],
+      "tintColor": "#1a2cc2",
+      "versions": [
+        {
+          "version": "4.7.5",
+          "date": "2026-01-03",
+          "localizedDescription": "## Highlights\r\n* **QEMU v10.0.2**: The backend has been updated to the latest upstream QEMU which brings with it a variety of bug fixes and performance improvements.\r\n* **Liquid Glass**: UTM adopts the Liquid Glass design on *OS 26.\r\n* **App Intents**: New support for automation with Shortcuts.\r\n* **Keyboard Shortcuts**: Define custom key combinations (such as Ctrl+Alt+Del) that can be sent to the VM from the new Keyboard menu.\r\n* **Improved Wizard**: Simplify the creation of emulated machines by selecting from a list of well-supported configurations. The updated wizard can create more working configurations such as RISC-V64 Ubuntu, classic Mac OS 8.x/9.x, and Windows 95/98.\r\n\r\n## Changes (v4.7.5)\r\n* Fixed some rare conditions that could lead to a VM fail to start and spin infinitely\r\n* Fixed some rare crashes that can happen after a VM stops\r\n* Fixed parsing of file paths with commas in the name (thanks @nikolan123)\r\n* ANGLE: Fixed a memory leak issue in the GLES backend (#7546) (thanks @cnnn)\r\n* ANGLE: Fixed a memory leak issue in the Metal backend (#4958)\r\n* Localization: Updated Chinese (Hong Kong, Simplified) (thanks @changanmoon)\r\n* (macOS) Fixed App Intents on macOS 26 (#7412) (thanks @peterneutron)\r\n* (macOS) Fixed an error when file locking is disabled and a removable drive with no image selected is started (#7527)\r\n* (macOS) AVF: Fixed shared directory disconnecting when window is resized (#7488) (thanks @evan314159)\r\n* Hotfix: (1/3/25) An earlier release of v4.7.5 has an issue that prevented VMs from starting. Make sure you are on build 118.\r\n\r\n## Changes (v4.7.4)\r\n* (macOS) Fixed a crash on VM start when a toolbar menu was reinitialized (note v4.7.4 was re-released to address this) (#7408)\r\n* Home: Fixed layout issue with button titles\r\n* (macOS) Fixed a crash when VM exits while USB is active\r\n* (iOS) Support for StikDebug on iOS 26 (non-SE only)\r\n\r\n## Changes (v4.7.3)\r\n* Fixed a crash when starting a VM results in a block device error\r\n* Stop button can now be used a second time to force kill a VM if it is unresponsive after stopping for the first time\r\n* libusb: Fixed multiple race conditions that caused crashes when using USB capture\r\n* CocoaSpice: Fixed multiple race conditions that caused crashes during VM start\r\n* Localization: Updated Chinese (Hong Kong, Simplified) (thanks @changanmoon)\r\n* (macOS) Scripting: Fixed broken commands due to name collision (#7360)\r\n* (macOS) Fixed crash when exiting full screen (#7377)\r\n\r\n## Changes (v4.7.2)\r\n* (macOS) AVF: Fixed a crash when starting any Apple Virtualization VM (#7355) (We are re-releasing v4.7.2 with build 112 due to this critical bug.)\r\n* Home: Display network details and active IP addresses on the home details screen (thanks @gabefair)\r\n* Home: Show a security warning message when importing a .utm with custom arguments (#6252)\r\n* Config: Option to reset UEFI without pre-loading Secure Boot keys (useful for custom TPM configurations) (#7005)\r\n* Config: Pre-loading Secure Boot keys will now install Microsoft UEFI 2023 certificates (#7257)\r\n* Config: When PS/2 device is enabled, no longer create USB mouse and keyboard devices. This allows older Windows install to work out of the box.\r\n* Config: Quotes in custom arguments are no longer stripped (unless the only quotes wrap the entire argument) (#6343)\r\n* Config: Provide a fixed serial number for VirtIO block devices (#7332)\r\n* QEMU: Fixed an issue which causes Windows 98 to BSoD (#7342)\r\n* QEMU: Do not create a default floppy drive when -nodefaults is used. UTM configuration will set up a FDC device and this is the only way to set up bootindex for floppy.\r\n* Wizard: Legacy Windows configurations will now use PS/2 controller by default\r\n* Wizard: Update OS logos to be consistent with other icons\r\n* Wizard: Windows + i440fx hardware will now instantiate default devices (sound, VGA, networking) that should work with Windows 95/98\r\n* Wizard: Add additional supported hardware configurations for running older Windows\r\n* Wizard: Support floppy boot for Windows configuration\r\n* Scripting: New input automation suite for sending keyboard and mouse input (#6462)\r\n* USB: Fixed a rare crash when initializing the USB devices list (#5811)\r\n* SPICE: Fixed an issue where monitor configuration sent to spice-vdagent contains an invalid size (#5832)\r\n* Localization: Updated Chinese (Hong Kong, Simplified) (thanks @changanmoon)\r\n* (iOS) Toolbar: Fix foreground issue on iOS 26 beta 5 and higher\r\n* (macOS) Added ability to auto-connect USB devices on start (#3400)\r\n* (macOS) Fixed connecting USB devices from secondary windows\r\n* (macOS) New \"Virtual Machine\" menu which mirrors the actions accessible through the toolbar\r\n* (macOS) Keyboard Shortcuts toolbar icon is no longer shown by default (it can be placed on the toolbar through View -> Customize Toolbar). It is also accessible through the \"Virtual Machine\" menu.\r\n* (macOS) Fixed sending simultaneous mouse button presses (#7068)\r\n* (macOS) utmctl: Add `version` command to detect current UTM version\r\n* (macOS) Settings: New option to disable key swapping on ISO keyboards (#6976)\r\n* (macOS) Settings: New option to randomize network MAC addresses on clone (#7035)\r\n\r\n## Changes (v4.7.1)\r\n* New Liquid Glass icon thanks to @forcequitOS\r\n* Added App Intents for VM operations (#6245)\r\n* Added UEFI boot support for RISC-V64 and LoongArch64. This allows Ubuntu for RISC-V64 to work out of the box. (#7183)\r\n* QEMU PPC: Disable `bootindex` when `boot-device` is used in prom-env. This allows Yellow Dog Linux for PPC to work out of the box. (#6436)\r\n* QEMU x86_64: Fixed floppy boot order configuration for other PC models (isapc, i440fx) (#7166)\r\n* QEMU PPC/M68K: Includes classicvirtio drivers to support cursor input without capture and directory sharing (#6520)\r\n* QEMU M68K: Fixed virtio drive config (#7008)\r\n* Fixed a rare crash after stopping VM due to a race condition in libusb\r\n* Home: improve screenshot contrast in Dark Mode (#6894)\r\n* Config: Fixed a crash when trying to enter a large size value when creating a new drive (#7295)\r\n* Config: Corrected the default host IP address in port forwarding config to \"0.0.0.0\" when it incorrectly displayed \"127.0.0.1\" (#7132)\r\n* Keyboard Shortcuts: Create custom combinations of keyboard shortcuts from either Settings -> Input or via the Keyboard icon in the VM (press and hold on iOS/visionOS). This will allow you to easily send key commands such as Ctrl+Alt+Del or Stop+A to the VM. (#5698, #6310, #6757)\r\n* Wizard: New option to import an existing drive image when setting up a Linux VM. This allows Ubuntu for RISC-V64 to work out of the box. (#7183)\r\n* Wizard: New option to create a serial port only Linux VM. This allows Ubuntu for RISC-V64 to work out of the box. (#7183)\r\n* Wizard: Removed VHDX import option because Microsoft now provides ARM64 ISO images. Note: You can still create manually import an VHDX after creating a new VM.\r\n* Wizard: New template to create classic Mac OS VMs for M68K and PPC (#3504, #6890)\r\n* Wizard: Most common and supported machines for emulation are now listed prominently with the full list of supported QEMU architectures/targets hidden behind an \"Expert\" mode. This is necessary because most of the QEMU targets are not properly supported by the wizard anyways and does not generate a bootable config. They usually require a lot more manual tinkering. The page order of the wizard is also tweaked so the hardware config comes before the boot config now.\r\n* Localization: Updated Chinese (Hong Kong, Simplified) (thanks @changanmoon)\r\n* (iOS SE) Fixed a crash when launching ArchLinux due to mis-handling of REV32\r\n* (iOS SE) Fixed a crash when the first instruction executed is a goto\r\n* (iOS SE) Removed ARM32, RISC-V32, and added M68K. There is little use for ARM32 and RISC-V32 as they cannot boot anything useful that cannot also be booted by the 64-bit variant (which is still included). If you have a counter example of this, please open an issue on GitHub and we can consider re-adding it back in the future. However, removing these will make the app size a lot smaller. M68K is added to support classic Mac OS.\r\n* (macOS 11) Fixed guest tools mounting (#7297)\r\n* (macOS 11) Fixed stop button not working (#7298)\r\n* (macOS) Fixed a bug where an error message on startup leads to the window being stuck (#7161)\r\n* (macOS) Settings: New setting to disable file locking so VMs can be launched from a network share or a filesystem that does not support locking (#7211)\r\n* (macOS) Settings: New setting to disable screenshots completely for privacy reasons (#6620)\r\n* (macOS) Settings: New setting to swap Ctrl and Cmd keys in VMs (#4003)\r\n* (macOS 26) Settings: Brand new layout with a sidebar to match other native apps\r\n* (macOS) AVF: Added clearer message when trying to install macOS beta without having the latest beta support tools installed\r\n* (macOS) AVF: New option to resize (expand) disk images (#6891)\r\n* (macOS 26) Fixed a layout issue with the resize image popover\r\n* (macOS) Home: Fixed hide sidebar button\r\n* (macOS) Config: Show localized network adapter names when available (#7287) (thanks @Schamper)\r\n* (macOS) Scripting: Fixed an issue where wrong UUIDs were generated for display configs (#7145)\r\n\r\n## Changes (v4.7.0)\r\n* Updated to QEMU v10.0.2\r\n* Config: In the RAM slider, the maximum value has been increased to 64GiB (note that you can always go above the slider limit by typing in the text box) (#7234)\r\n* Localization: Updated Chinese (Hong Kong, Simplified) (thanks @changanmoon)\r\n* Wizard: Fixed crash when VM name is empty (#7245)\r\n* (iOS) Toolbar: Refactored toolbar button layout code\r\n* (macOS) Host only networks: you can set up multiple host-only networks (including ones shared by VMware) and have multiple VMs on the same virtual network (thanks @Schamper)\r\n* (macOS) utmctl: added option to boot Apple VMs into recovery mode (thanks @cees-elzinga)\r\n* (macOS) ~~Enable QEMU support for vmapple (#7150)~~ Machine model is removed for stability reasons but `apple-gfx-pci` is still supported for Intel VMs\r\n* (macOS) Rename the main window to 'UTM Library' (#7264)\r\n* (macOS) Display an error when IPSW install fails to load the file (instead of crashing) (#6855)\r\n* (macOS) Settings: Fixed a layout issue (#7117)\r\n* (macOS) Apple Virtualization: Add support for ASIF drive images. On macOS 26, ASIF drives will be created by default.\r\n\r\n## Issues\r\nPlease check the full list on [Github](https://github.com/utmapp/UTM/issues) and help report any bug you find that is not listed.\r\n\r\n## Installation\r\n\r\n* [iOS](https://docs.getutm.app/installation/ios/)\r\n* [macOS](https://docs.getutm.app/installation/macos/)\r\n\r\n| File | Description | Installation | JIT | Hypervisor | USB |\r\n|------|------------|--------------|-----|-----------|-----|\r\n| UTM.deb | Jailbroken iOS version | Open in Cydia, dpkg, or Sileo | Yes | Yes(1) | Yes |\r\n| UTM.dmg | macOS version | Mounting and copying UTM.app to /Applications | Yes | Yes | Yes |\r\n| UTM.ipa | Non-jailbroken iOS version (sideloading) | AltStore, etc (see guide) | Yes(2) | No | No |\r\n| UTM-HV.ipa | Non-jailbroken iOS version (TrollStore) | TrollStore | Yes | Yes(1) | Yes |\r\n| UTM-SE.ipa | Non-jailbroken iOS version (sideloading) | AltStore, enterprise signing, etc | No | No | No |\r\n| UTM-Remote.ipa | Remote client | Any | No | No | No |\r\n\r\n1. Hypervisor on iOS requires an M1 iPad or newer.\r\n2. Enabling JIT may require a separate JIT enabler such as [Jitterbug][2] or Jitstreamer.\r\n\r\n[1]: https://getutm.app/install/\r\n[2]: https://github.com/osy/Jitterbug",
+          "downloadURL": "https://github.com/utmapp/UTM/releases/download/v4.7.5/UTM.ipa",
+          "size": 130058389,
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "VeneraNext",
+      "bundleIdentifier": "com.github.cyrilpeng.veneranext",
+      "developerName": "CyrilPeng",
+      "subtitle": "跨平台漫画阅读器",
+      "localizedDescription": "基于 Flutter 的跨平台漫画阅读器，支持本地漫画、WebDAV 漫画源与第三方网络漫画源，支持 Android、iOS、Windows、Linux、macOS 平台。",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Venera-Next/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Venera-Next/images/home.jpg",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Venera-Next/images/explorer.jpg",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Venera-Next/images/search.jpg"
+      ],
+      "tintColor": "#2090E0",
+      "versions": [
+        {
+          "version": "1.15.0",
+          "buildVersion": "223",
+          "date": "2026-08-31",
+          "localizedDescription": "### 新增\n\n- 阅读器新增跨平台夜间调光与自定义亮度控制，支持在阅读设置和底部快捷面板中实时调整，并沿用全局、设备及漫画专属设置优先级。",
+          "downloadURL": "https://github.com/CyrilPeng/Venera-Next/releases/download/v1.15.0/VeneraNext-ios-1.15.0%2B223.ipa",
+          "size": 19875257,
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "YouProEXTRA",
+      "bundleIdentifier": "com.google.ios.youtube",
+      "developerName": "alibusut",
+      "subtitle": "YouTube mod with customizable tweaks",
+      "localizedDescription": "YouPro mod of YouTube for iOS. Includes no ads, background playback, downloads, iSponsorBlock, PiP, and a host of customizable tweaks.",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/YouProEXTRA/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/YouProEXTRA/images/list.jpg",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/YouProEXTRA/images/play.jpg"
+      ],
+      "tintColor": "#FF0000",
+      "versions": [
+        {
+          "version": "21.36.6",
+          "buildVersion": "21.36.6",
+          "date": "2026-09-10",
+          "localizedDescription": "### Latest Release, ENJOY!!\r\n> [!NOTE]\r\n> - **YTUHD** is not included. 4K is available for A16+ devices.\r\n> - if you're signed out you can sign in manually. \r\n> - no iSponsorBlock. \r\n> - for <A15 devices press share button in the arrow down panel and use external player for downloaded videos.\r\n> - - -\r\n> #### Extra Tweaks:\r\n> - `YouPip` `YouSlider` `YTweaks` `YouSpeed` `YouMute` `YouLoop` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` \r\n> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino` \r\n\r\n> [!WARNING]\r\n> - 21.34.3+ builds require iOS 17+ now.",
+          "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youproextra-ipa0/YouProExtra_21.36.6_1.3.1.ipa",
+          "size": 129007319,
+          "minOSVersion": "16.0"
+        }
+      ]
+    },
+    {
+      "name": "ZhihuMinusMinus",
+      "bundleIdentifier": "com.huamu013.ZhihuMinusMinus",
+      "developerName": "huamurui",
+      "subtitle": "轻量、纯净的第三方知乎客户端",
+      "localizedDescription": "基于 React Native (Expo) 构建的轻量级第三方知乎客户端，无广告，支持多账号切换、游客模式、全局主题色自定义与深色模式，可查看热榜、推荐、回答、文章、想法与评论区，并支持从 GitHub Releases 自动更新。",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/ZhihuMinusMinus/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/ZhihuMinusMinus/images/home.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/ZhihuMinusMinus/images/detail.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/ZhihuMinusMinus/images/hot.png"
+      ],
+      "tintColor": "#0084ff",
+      "versions": [
+        {
+          "version": "0.5.0",
+          "date": "2026-09-05",
+          "localizedDescription": "auto release by GitHub Actions\r\n\r\n下面看起来好乱我人工写一下吧...\r\n- ios 个人主页的回答/文章可以查看了，吧\r\n- 常规问题修复\r\n- 还有一大批代码方向切入做的优化，主要是\r\n  - 动画换写法（更新后很多地方应该会稍微不那么卡卡的了）\r\n  - 各种弹窗归类，颜色去掉散乱的硬编码做集中配置（之后会考虑多调几个主题看看）\r\n  - 基础的代码检查与修复，补充一些案例、测试和文档\r\n  - 不过这种改法也可能会引入许多新的问题喵喵喵\r\n\r\n## What's Changed\r\n* fix: 同步作者关注状态与提示 by @huamurui in https://github.com/huamurui/zhihu-minus-minus/pull/45\r\n* fix(ios): avoid duplicate cookies in signed API requests by @huamurui in https://github.com/huamurui/zhihu-minus-minus/pull/46\r\n* fix: 修复用户主页、关注状态与账号会话问题 by @huamurui in https://github.com/huamurui/zhihu-minus-minus/pull/47\r\n* fix(comments): confirm copy from action sheet by @huamurui in https://github.com/huamurui/zhihu-minus-minus/pull/49\r\n* refactor(ui): unify dialogs and bottom sheets by @huamurui in https://github.com/huamurui/zhihu-minus-minus/pull/50\r\n* fix: 完善问题详情页回答列表与类型安全 by @huamurui in https://github.com/huamurui/zhihu-minus-minus/pull/51\r\n* feat: centralize design tokens and add theme customization by @huamurui in https://github.com/huamurui/zhihu-minus-minus/pull/54\r\n* perf: smooth animations and gestures across app by @huamurui in https://github.com/huamurui/zhihu-minus-minus/pull/55\r\n* Fix rich content rendering and API fixture coverage by @huamurui in https://github.com/huamurui/zhihu-minus-minus/pull/53\r\n\r\n\r\n**Full Changelog**: https://github.com/huamurui/zhihu-minus-minus/compare/v0.4.2...v0.5.0",
+          "downloadURL": "https://github.com/huamurui/zhihu-minus-minus/releases/download/v0.5.0/zhihu-minus-minus-v0.5.0-unsigned.ipa",
+          "size": 15639485,
+          "minOSVersion": "15.1"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "appID": "com.naine.doer",
+      "title": "Doer 1.8.5.1 · 11 Sep 2026",
+      "identifier": "Doer-release-v1.8.5.1",
+      "caption": "Doer 1.8.5.1 is available.",
+      "date": "2026-09-11T03:31:11Z",
+      "tintColor": "#4080E0",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Doer/images/news.png",
+      "notify": true,
+      "url": "https://github.com/moliango/doer/releases/tag/v1.8.5.1"
+    },
+    {
+      "appID": "com.altman.moviepilot",
+      "title": "MoviePilotLite 1.2.5 · 11 Sep 2026",
+      "identifier": "MoviePilotLite-release-release-v1.2.5-2026-09-11",
+      "caption": "MoviePilotLite 1.2.5 is available.",
+      "date": "2026-09-11T03:14:57Z",
+      "tintColor": "#8050F0",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/MoviePilotLite/images/news.png",
+      "notify": true,
+      "url": "https://github.com/singleton-altman/MoviePilotLite/releases/tag/release-v1.2.5-2026-09-11"
+    },
+    {
+      "appID": "com.christianselig.Apollo",
+      "title": "Apollo for Reddit - GLASS 3.7.0 · 11 Sep 2026",
+      "identifier": "Apollo for Reddit - GLASS-release-v1.15.11_3.7.0",
+      "caption": "Apollo for Reddit - GLASS 3.7.0 is available.",
+      "date": "2026-09-11T01:34:25Z",
+      "tintColor": "#6050F0",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Apollo-Reborn/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/tag/v1.15.11_3.7.0"
+    },
+    {
+      "appID": "sb.moe.kumone",
+      "title": "Kumone 0.3.17 · 10 Sep 2026",
+      "identifier": "Kumone-release-v0.3.17",
+      "caption": "Kumone 0.3.17 is available.",
+      "date": "2026-09-10T14:03:06Z",
+      "tintColor": "#F0D060",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kumone/images/news.png",
+      "notify": true,
+      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.17"
+    },
+    {
+      "appID": "com.verback.YTLite",
+      "title": "Opaline 1.12.0 · 10 Sep 2026",
+      "identifier": "Opaline-release-1.12.0",
+      "caption": "Opaline 1.12.0 is available.",
+      "date": "2026-09-10T02:02:27Z",
+      "tintColor": "#FF0000",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Opaline/images/news.png",
+      "notify": true,
+      "url": "https://github.com/verback2308/Opaline/releases/tag/1.12.0"
+    },
+    {
+      "appID": "com.google.ios.youtube",
+      "title": "YouProEXTRA 21.36.6 · 10 Sep 2026",
+      "identifier": "YouProEXTRA-release-youproextra-ipa0",
+      "caption": "YouProEXTRA 21.36.6 is available.",
+      "date": "2026-09-10T01:19:05Z",
+      "tintColor": "#FF0000",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/YouProEXTRA/images/news.png",
+      "notify": true,
+      "url": "https://github.com/mrdrvt99/YouProEXTRA/releases/tag/youproextra-ipa0"
+    },
+    {
+      "appID": "com.armsx2.ios",
+      "title": "ARMSX2 nightly-20260909 · 09 Sep 2026",
+      "identifier": "ARMSX2-release-nightly-20260909",
+      "caption": "ARMSX2 nightly-20260909 is available.",
+      "date": "2026-09-09T13:26:38Z",
+      "tintColor": "#3CAEFF",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/ARMSX2/images/news.png",
+      "notify": true,
+      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260909"
+    },
+    {
+      "appID": "com.ligg.anime_flow",
+      "title": "AnimeFlow 2.5.0 · 09 Sep 2026",
+      "identifier": "AnimeFlow-release-v2.5.0",
+      "caption": "AnimeFlow 2.5.0 is available.",
+      "date": "2026-09-09T07:52:14Z",
+      "tintColor": "#124EB3",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/AnimeFlow/images/news.png",
+      "notify": true,
+      "url": "https://github.com/openAnimeFlow/AnimeFlow/releases/tag/v2.5.0"
+    },
+    {
+      "appID": "com.suwayomi.tachideskSorayomi",
+      "title": "Tsumiru 1.2.1 · 08 Sep 2026",
+      "identifier": "Tsumiru-release-v1.2.1",
+      "caption": "Tsumiru 1.2.1 is available.",
+      "date": "2026-09-08T05:12:30Z",
+      "tintColor": "#7c7bff",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Suwayomi-Tsumiru/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Suwayomi/Suwayomi-Tsumiru/releases/tag/v1.2.1"
+    },
+    {
+      "appID": "com.example.kazumi",
+      "title": "Kazumi 2.3.1 · 07 Sep 2026",
+      "identifier": "Kazumi-release-2.3.1",
+      "caption": "Kazumi 2.3.1 is available.",
+      "date": "2026-09-07T14:33:57Z",
+      "tintColor": "#4CAF50",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kazumi/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Predidit/Kazumi/releases/tag/2.3.1"
+    },
+    {
+      "appID": "sh.celia.novella",
+      "title": "Novella 2.4.0 · 06 Sep 2026",
+      "identifier": "Novella-release-v2.4.0",
+      "caption": "Novella 2.4.0 is available.",
+      "date": "2026-09-06T07:59:03Z",
+      "tintColor": "#2E2E2E",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Novella/images/news.png",
+      "notify": true,
+      "url": "https://github.com/celia-sh/Novella/releases/tag/v2.4.0"
+    },
+    {
+      "appID": "com.example.piliplus",
+      "title": "PiliPlus 2.1.3 · 05 Sep 2026",
+      "identifier": "PiliPlus-release-2.1.3.1",
+      "caption": "PiliPlus 2.1.3 is available.",
+      "date": "2026-09-05T04:43:21Z",
+      "tintColor": "#73b480",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PiliPlus/images/news.png",
+      "notify": true,
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.3.1"
+    },
+    {
+      "appID": "com.huamu013.ZhihuMinusMinus",
+      "title": "ZhihuMinusMinus 0.5.0 · 05 Sep 2026",
+      "identifier": "ZhihuMinusMinus-release-v0.5.0",
+      "caption": "ZhihuMinusMinus 0.5.0 is available.",
+      "date": "2026-09-05T04:25:01Z",
+      "tintColor": "#0084ff",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/ZhihuMinusMinus/images/news.png",
+      "notify": true,
+      "url": "https://github.com/huamurui/zhihu-minus-minus/releases/tag/v0.5.0"
+    },
+    {
+      "appID": "com.mystyle.purelive.liu",
+      "title": "PureLive 3.1.2 · 04 Sep 2026",
+      "identifier": "PureLive-release-v3.1.2",
+      "caption": "PureLive 3.1.2 is available.",
+      "date": "2026-09-04T03:52:13Z",
+      "tintColor": "#50B0F0",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PureLive/images/news.png",
+      "notify": true,
+      "url": "https://github.com/liuchuancong/pure_live/releases/tag/v3.1.2"
+    },
+    {
+      "appID": "app.aidoku.Aidoku",
+      "title": "Aidoku 0.9 · 03 Sep 2026",
+      "identifier": "Aidoku-release-v0.9",
+      "caption": "Aidoku 0.9 is available.",
+      "date": "2026-09-03T20:17:08Z",
+      "tintColor": "#FF375F",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Aidoku/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Aidoku/Aidoku/releases/tag/v0.9"
+    },
+    {
+      "appID": "com.kodjodevf.mangayomi",
+      "title": "Mangayomi 0.9.2 · 03 Sep 2026",
+      "identifier": "Mangayomi-release-v0.9.2",
+      "caption": "Mangayomi 0.9.2 is available.",
+      "date": "2026-09-03T13:58:24Z",
+      "tintColor": "#EF4444",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Mangayomi/images/news.png",
+      "notify": true,
+      "url": "https://github.com/kodjodevf/mangayomi/releases/tag/v0.9.2"
+    },
+    {
+      "appID": "com.aoshuang.manicemu",
+      "title": "ManicEMU 2.0.0 · 03 Sep 2026",
+      "identifier": "ManicEMU-release-v2.0.0",
+      "caption": "ManicEMU 2.0.0 is available.",
+      "date": "2026-09-03T10:06:18Z",
+      "tintColor": "#F02040",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/ManicEMU/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Manic-EMU/ManicEMU/releases/tag/v2.0.0"
+    },
+    {
+      "appID": "com.miguel.psx3ios",
+      "title": "PSX3IOS 0.2.7-beta · 01 Sep 2026",
+      "identifier": "PSX3IOS-release-v0.2.7-beta",
+      "caption": "PSX3IOS 0.2.7-beta is available.",
+      "date": "2026-09-01T12:12:58Z",
+      "tintColor": "#5080D0",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PSX3IOS/images/news.png",
+      "notify": true,
+      "url": "https://github.com/xmiguel911x/PSX3IOS/releases/tag/v0.2.7-beta"
+    },
+    {
+      "appID": "com.github.cyrilpeng.veneranext",
+      "title": "VeneraNext 1.15.0 · 31 Aug 2026",
+      "identifier": "VeneraNext-release-v1.15.0",
+      "caption": "VeneraNext 1.15.0 is available.",
+      "date": "2026-08-31T02:23:17Z",
+      "tintColor": "#2090E0",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Venera-Next/images/news.png",
+      "notify": true,
+      "url": "https://github.com/CyrilPeng/Venera-Next/releases/tag/v1.15.0"
+    },
+    {
+      "appID": "org.animeko.animeko",
+      "title": "Animeko 6.1.0 · 28 Aug 2026",
+      "identifier": "Animeko-release-v6.1.0",
+      "caption": "Animeko 6.1.0 is available.",
+      "date": "2026-08-28T16:41:30Z",
+      "tintColor": "#0050A0",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Animeko/images/news.png",
+      "notify": true,
+      "url": "https://github.com/open-ani/animeko/releases/tag/v6.1.0"
+    },
+    {
+      "appID": "com.dddevid.musly",
+      "title": "Musly 2.0.2 · 26 Aug 2026",
+      "identifier": "Musly-release-v2.0.2",
+      "caption": "Musly 2.0.2 is available.",
+      "date": "2026-08-26T20:40:22Z",
+      "tintColor": "#FA243C",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Musly/images/news.png",
+      "notify": true,
+      "url": "https://github.com/dddevid/Musly/releases/tag/v2.0.2"
+    },
+    {
+      "appID": "ani.baka",
+      "title": "AniBaka 5.1.0 · 26 Aug 2026",
+      "identifier": "AniBaka-release-5.1.0+0823",
+      "caption": "AniBaka 5.1.0 is available.",
+      "date": "2026-08-26T11:58:52Z",
+      "tintColor": "#0077B6",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/AniBaka/images/news.png",
+      "notify": true,
+      "url": "https://github.com/AniBakaBaka/AniBaka/releases/tag/5.1.0+0823"
+    },
+    {
+      "appID": "dev.infinityf4p.tiebapure",
+      "title": "TiebaPure 1.4.14 · 24 Aug 2026",
+      "identifier": "TiebaPure-release-v1.4.14",
+      "caption": "TiebaPure 1.4.14 is available.",
+      "date": "2026-08-24T01:40:29Z",
+      "tintColor": "#708070",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/TiebaPure/images/news.png",
+      "notify": true,
+      "url": "https://github.com/infinityf4p/TiebaPure-iOS/releases/tag/v1.4.14"
+    },
+    {
+      "appID": "app.scenebox.SceneBox",
+      "title": "SceneBox 1.0.2 · 22 Aug 2026",
+      "identifier": "SceneBox-release-v1.0.2",
+      "caption": "SceneBox 1.0.2 is available.",
+      "date": "2026-08-22T09:45:48Z",
+      "tintColor": "#E0E000",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/SceneBox/images/news.png",
+      "notify": true,
+      "url": "https://github.com/donbytyqi/scenebox/releases/tag/v1.0.2"
+    },
+    {
+      "appID": "org.eu.eslzzyl.Pixiv-SwiftUI",
+      "title": "Pixiv-SwiftUI 0.15.0 · 16 Aug 2026",
+      "identifier": "Pixiv-SwiftUI-release-v0.15.0",
+      "caption": "Pixiv-SwiftUI 0.15.0 is available.",
+      "date": "2026-08-16T12:56:24Z",
+      "tintColor": "#13A1FD",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Pixiv-SwiftUI/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Eslzzyl/Pixiv-SwiftUI/releases/tag/v0.15.0"
+    },
+    {
+      "appID": "app.ehpanda",
+      "title": "EhPanda 2.8.1 · 20 Jul 2026",
+      "identifier": "EhPanda-release-v2.8.1",
+      "caption": "EhPanda 2.8.1 is available.",
+      "date": "2026-07-20T12:12:04Z",
+      "tintColor": "#0f766e",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/EhPanda/images/news.png",
+      "notify": true,
+      "url": "https://github.com/EhPanda-Team/EhPanda/releases/tag/v2.8.1"
+    },
+    {
+      "appID": "com.xitrix.iTorrent2",
+      "title": "iTorrent 2.2.0-1 · 19 Jul 2026",
+      "identifier": "iTorrent-release-v2.2.0-1",
+      "caption": "iTorrent 2.2.0-1 is available.",
+      "date": "2026-07-19T09:59:41Z",
+      "tintColor": "#F19E69",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/iTorrent/images/news.png",
+      "notify": true,
+      "url": "https://github.com/XITRIX/iTorrent/releases/tag/v2.2.0-1"
+    },
+    {
+      "appID": "com.kdt.livecontainer",
+      "title": "LiveContainer+SideStore 3.8.0 · 17 Jul 2026",
+      "identifier": "LiveContainer+SideStore-release-3.8.0",
+      "caption": "LiveContainer+SideStore 3.8.0 is available.",
+      "date": "2026-07-17T07:44:20Z",
+      "tintColor": "#0784FC",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/main/apps/LiveContainer+SideStore/images/news.png",
+      "notify": true,
+      "url": "https://github.com/LiveContainer/LiveContainer/releases/tag/3.8.0"
+    },
+    {
+      "appID": "com.mafty.dukex",
+      "title": "DukeX 1.0.2 · 30 Jun 2026",
+      "identifier": "DukeX-release-v1.0.2",
+      "caption": "DukeX 1.0.2 is available.",
+      "date": "2026-06-30T12:21:27Z",
+      "tintColor": "#8FCA39",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/DukeX/images/news.png",
+      "notify": true,
+      "url": "https://github.com/MaftyManicEMU/DukeX/releases/tag/v1.0.2"
+    },
+    {
+      "appID": "me.oatmealdome.DolphiniOS-njb-patreon-beta",
+      "title": "DolphiniOS 5.0.0b6 · 20 Jun 2026",
+      "identifier": "DolphiniOS-release-v5.0.0b6",
+      "caption": "DolphiniOS 5.0.0b6 is available.",
+      "date": "2026-06-20T07:01:54Z",
+      "tintColor": "#E0B030",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/DolphiniOS/images/news.png",
+      "notify": true,
+      "url": "https://github.com/OatmealDome/dolphin-ios/releases/tag/v5.0.0b6"
+    },
+    {
+      "appID": "com.macxk.KMusic",
+      "title": "KMusic 2.3.0 · 12 Mar 2026",
+      "identifier": "KMusic-release-歌一刀2.3.0",
+      "caption": "KMusic 2.3.0 is available.",
+      "date": "2026-03-12T08:39:59Z",
+      "tintColor": "#F03050",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/KMusic/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Mac-XK/KMusic/releases/tag/歌一刀2.3.0"
+    },
+    {
+      "appID": "com.utmapp.UTM",
+      "title": "UTM 4.7.5 · 03 Jan 2026",
+      "identifier": "UTM-release-v4.7.5",
+      "caption": "UTM 4.7.5 is available.",
+      "date": "2026-01-03T17:51:54Z",
+      "tintColor": "#1a2cc2",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/UTM/images/news.png",
+      "notify": true,
+      "url": "https://github.com/utmapp/UTM/releases/tag/v4.7.5"
+    }
+  ]
+}

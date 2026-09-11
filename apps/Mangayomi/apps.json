@@ -1,0 +1,46 @@
+{
+  "name": "Mangayomi",
+  "subtitle": "Mangayomi AltStore source by soft_collections & altgen",
+  "description": "Auto-updated AltStore source for Mangayomi",
+  "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Mangayomi/icon.png",
+  "website": "https://github.com/kodjodevf/mangayomi",
+  "tintColor": "#EF4444",
+  "apps": [
+    {
+      "name": "Mangayomi",
+      "bundleIdentifier": "com.kodjodevf.mangayomi",
+      "developerName": "Moustapha Kodjo Amadou",
+      "subtitle": "Read manga, novels, and watch anime",
+      "localizedDescription": "Mangayomi is an open-source Flutter app for reading manga, novels, and watching anime across multiple platforms.",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Mangayomi/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Mangayomi/images/screenshot1.jpg",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Mangayomi/images/screenshot2.jpg",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Mangayomi/images/screenshot3.jpg"
+      ],
+      "tintColor": "#EF4444",
+      "versions": [
+        {
+          "version": "0.9.2",
+          "date": "2026-09-03",
+          "localizedDescription": "## What's Changed\r\n* Add assets to constant file by @NBA2K1 in https://github.com/kodjodevf/mangayomi/pull/968\r\n* fix: triage error reports and resolve reported crashes by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/970\r\n* feat(experimental): add support for Aidoku extensions by @kodjodevf in https://github.com/kodjodevf/mangayomi/pull/969\r\n* Optimize local image-folder pages and image handling by @NBA2K1 in https://github.com/kodjodevf/mangayomi/pull/973\r\n\r\n\r\n**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.1...v0.9.2",
+          "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.2/Mangayomi-v0.9.2-ios.ipa",
+          "size": 114010180
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "appID": "com.kodjodevf.mangayomi",
+      "title": "Mangayomi 0.9.2 · 03 Sep 2026",
+      "identifier": "Mangayomi-release-v0.9.2",
+      "caption": "Mangayomi 0.9.2 is available.",
+      "date": "2026-09-03T13:58:24Z",
+      "tintColor": "#EF4444",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Mangayomi/images/news.png",
+      "notify": true,
+      "url": "https://github.com/kodjodevf/mangayomi/releases/tag/v0.9.2"
+    }
+  ]
+}

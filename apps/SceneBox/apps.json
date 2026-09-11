@@ -1,0 +1,47 @@
+{
+  "name": "SceneBox",
+  "subtitle": "SceneBox AltStore source by soft_collections & altgen",
+  "description": "Auto-updated AltStore source for SceneBox",
+  "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/SceneBox/icon.png",
+  "website": "https://github.com/donbytyqi/scenebox",
+  "tintColor": "#E0E000",
+  "apps": [
+    {
+      "name": "SceneBox",
+      "bundleIdentifier": "app.scenebox.SceneBox",
+      "developerName": "donbytyqi",
+      "subtitle": "Torrent streaming client",
+      "localizedDescription": "Torrent streaming client for iOS, iPadOS, tvOS and Mac (Catalyst), written in SwiftUI. Streams come from Stremio-compatible addons and play through a vendored libtorrent engine feeding VLC.",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/SceneBox/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/SceneBox/images/home.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/SceneBox/images/search.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/SceneBox/images/profile.png"
+      ],
+      "tintColor": "#E0E000",
+      "versions": [
+        {
+          "version": "1.0.2",
+          "date": "2026-08-22",
+          "localizedDescription": "Mostly stuff you asked for.\n\n- You don't need an account anymore. There's a \"Continue as guest\" button on the login screen. Everything you watch is saved on the device, and if you make an account later it all gets moved over.\n- The iPhone app rotates now. Before it was stuck in portrait unless you were in the player.\n- Cleaned up the Profile tab. Email is readable now, there's one Edit Profile button, and switching/adding profiles and signing out moved into the menu at the top right.\n- Also has the fixes from 1.0.1 (play button missing on iOS 18, \"don't have permission to save the file\" on Apple TV).\n\nInstall\n\nMac: open the dmg, drag to Applications. It's notarized so it just opens.\n\niPhone/iPad: the ipa isn't signed, use Sideloadly, AltStore, SideStore, Feather or ESign with your own Apple ID. Free Apple ID = resign every 7 days (AltStore/SideStore do it for you), paid dev account = one year.\n\nApple TV: Sideloadly works over Wi-Fi. On the TV go to Settings > Remotes and Devices > Remote App and Devices so it shows up, then pick it in Sideloadly.",
+          "downloadURL": "https://github.com/donbytyqi/scenebox/releases/download/v1.0.2/SceneBox-1.0.2.ipa",
+          "size": 30349738,
+          "minOSVersion": "18.0"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "appID": "app.scenebox.SceneBox",
+      "title": "SceneBox 1.0.2 · 22 Aug 2026",
+      "identifier": "SceneBox-release-v1.0.2",
+      "caption": "SceneBox 1.0.2 is available.",
+      "date": "2026-08-22T09:45:48Z",
+      "tintColor": "#E0E000",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/SceneBox/images/news.png",
+      "notify": true,
+      "url": "https://github.com/donbytyqi/scenebox/releases/tag/v1.0.2"
+    }
+  ]
+}

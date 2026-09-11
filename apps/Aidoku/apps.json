@@ -1,0 +1,47 @@
+{
+  "name": "Aidoku",
+  "subtitle": "Home of Aidoku, free and open source manga reader for iOS and iPadOS",
+  "description": "This is the AltStore Source for Aidoku, free and open source manga reader for iOS and iPadOS.\n\nFor full details on what's included, check the website: https://aidoku.app/",
+  "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Aidoku/icon.png",
+  "website": "https://aidoku.app/",
+  "tintColor": "#FF375F",
+  "apps": [
+    {
+      "name": "Aidoku",
+      "bundleIdentifier": "app.aidoku.Aidoku",
+      "developerName": "Skitty",
+      "subtitle": "Free and open source manga reader for iOS and iPadOS",
+      "localizedDescription": "A free and open source manga reading application for iOS and iPadOS.",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Aidoku/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Aidoku/images/library.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Aidoku/images/source.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Aidoku/images/reader.png"
+      ],
+      "tintColor": "#FF375F",
+      "versions": [
+        {
+          "version": "0.9",
+          "date": "2026-09-03",
+          "localizedDescription": "- OCR dictionary support (iOS 18+): import Yomitan-compatible dictionaries in the app and look up words while reading.\r\n- Suwayomi built-in source: read and track from a Suwayomi instance, just like Komga and Kavita.\r\n- Auto scroll for webtoon reader: enable and press the play button to scroll without touching your device.\r\n- Fixed CloudFlare handling: CloudFlare issues that caused external sources to break should be resolved.\r\n- Overall performance improvements: the library loads much faster (@Amqx), and the webtoon reader was improved.\r\n- Source stability fixes and disable option: the issue where sources were causing the app to crash should not happen again, and now you can even disable a source that is broken until it receives an update.\r\n- Many more things: see [the website](https://aidoku.app/release-notes/) for a more complete list.",
+          "downloadURL": "https://github.com/Aidoku/Aidoku/releases/download/v0.9/Aidoku.ipa",
+          "size": 14731108,
+          "minOSVersion": "15.0"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "appID": "app.aidoku.Aidoku",
+      "title": "Aidoku 0.9 · 03 Sep 2026",
+      "identifier": "Aidoku-release-v0.9",
+      "caption": "Aidoku 0.9 is available.",
+      "date": "2026-09-03T20:17:08Z",
+      "tintColor": "#FF375F",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Aidoku/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Aidoku/Aidoku/releases/tag/v0.9"
+    }
+  ]
+}
