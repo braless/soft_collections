@@ -1,0 +1,43 @@
+# altgen config for the Pixiv-SwiftUI AltStore source.
+# Run: uvx altgen -c config.toml
+
+[github]
+repo = "Eslzzyl/Pixiv-SwiftUI"
+
+[source]
+name = "Pixiv-SwiftUI"
+subtitle = "Pixiv-SwiftUI AltStore source by soft_collections & altgen"
+description = "Auto-updated AltStore source for Pixiv-SwiftUI"
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Pixiv-SwiftUI/icon.png"
+website = "https://github.com/Eslzzyl/Pixiv-SwiftUI"
+tint_color = "#13A1FD"
+
+[app]
+name = "Pixiv-SwiftUI"
+bundle_identifier = "org.eu.eslzzyl.Pixiv-SwiftUI"
+developer_name = "Eslzzyl"
+subtitle = "基于 SwiftUI 的 Pixiv 第三方客户端"
+description = "基于 SwiftUI 开发的 Pixiv 第三方客户端，支持 iOS/iPadOS/macOS。提供插画、漫画与小说的推荐、排行榜、搜索与收藏，内置评论系统、批量下载、数据导入导出、深色模式与主题自定义。"
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Pixiv-SwiftUI/icon.png"
+screenshots = [
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Pixiv-SwiftUI/images/recommend.png",
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Pixiv-SwiftUI/images/detail.png",
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Pixiv-SwiftUI/images/search.png",
+]
+tint_color = "#13A1FD"
+min_os_version = "17.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# asset_pattern is a regex (not glob): each release ships exactly one ipa (Pixiv-SwiftUI.ipa);
+# the macOS builds (.dmg) must not match.
+asset_pattern = "Pixiv-SwiftUI\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+# shared promo image rendered by templates/render_news.py
+image_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Pixiv-SwiftUI/images/news.png"
+
+[output]
+path = "apps.json"

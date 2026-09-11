@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06B6D4"/>
+      <stop offset="0.55" stop-color="#3B82F6"/>
+      <stop offset="1" stop-color="#4F46E5"/>
+    </linearGradient>
+    <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="26" stdDeviation="34" flood-color="#1e1b4b" flood-opacity="0.32"/>
+    </filter>
+    <clipPath id="iconClip"><rect width="1024" height="1024" rx="228"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#iconClip)">
+    <!-- background -->
+    <rect width="1024" height="1024" fill="url(#bg)"/>
+
+    <!-- soft decorative light blobs -->
+    <circle cx="852" cy="168" r="300" fill="#ffffff" opacity="0.08"/>
+    <circle cx="120" cy="900" r="380" fill="#ffffff" opacity="0.06"/>
+
+    <!-- top gloss -->
+    <rect width="1024" height="560" fill="url(#gloss)"/>
+
+    <!-- gallery: stacked photo cards -->
+    <g filter="url(#cardShadow)">
+      <!-- back card -->
+      <g transform="translate(512 500) rotate(9)">
+        <rect x="-270" y="-195" width="540" height="390" rx="48" fill="#ffffff" opacity="0.55"/>
+      </g>
+
+      <!-- front card with app mosaic -->
+      <g transform="translate(512 512) rotate(-6)">
+        <rect x="-280" y="-200" width="560" height="400" rx="52" fill="#ffffff"/>
+
+        <!-- 2x3 app mosaic, vivid iOS palette -->
+        <g>
+          <rect x="-234" y="-154" width="142" height="144" rx="28" fill="#FF453A"/>
+          <rect x="-72"  y="-154" width="142" height="144" rx="28" fill="#FFD60A"/>
+          <rect x="90"   y="-154" width="142" height="144" rx="28" fill="#30D158"/>
+          <rect x="-234" y="10"   width="142" height="144" rx="28" fill="#FF9F0A"/>
+          <rect x="-72"  y="10"   width="142" height="144" rx="28" fill="#0A84FF"/>
+          <rect x="90"   y="10"   width="142" height="144" rx="28" fill="#BF5AF2"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

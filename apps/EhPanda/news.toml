@@ -1,0 +1,17 @@
+# render_news.py config: python3 templates/render_news.py --out apps/EhPanda
+# Colors left unset are auto-derived: tint from config.toml, background as
+# a light shade of the icon's dominant color.
+
+name = "EhPanda"
+tagline = "An unofficial E-Hentai App for iOS"
+
+# Color notes — each key below controls one element of the image. All are
+# optional: unset keys are auto-derived. Shown values are the current result.
+[colors]
+# tint = "#0F766E"          # NEW UPDATE badge + top-left glow (default: [app] tint_color)
+# tint_alt = "#0F766E"      # bottom-right glow (default: [source] tint_color)
+# background = "#D9E8E4"    # gradient base (derived from the icon's dominant color)
+# bg_mid = "#E9F2EF"        # gradient mid stop (derived from background)
+# bg_dark = "#C0D9D2"       # gradient end stop (derived from background)
+# text_color = "#111111"    # app name (auto white/black)
+# tagline_color = "#58B79D" # tagline text (derived from background)

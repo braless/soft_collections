@@ -1,0 +1,17 @@
+# render_news.py config: ./.venv/bin/python templates/render_news.py --out apps/Venera-Next
+# Colors left unset are auto-derived: tint from config.toml, background as
+# a light shade of the icon's dominant color.
+
+name = "VeneraNext"
+tagline = "跨平台漫画阅读器"
+
+# Color notes — each key below controls one element of the image. All are
+# optional: unset keys are auto-derived. Shown values are the current result.
+[colors]
+# tint = "#2090E0"           # NEW UPDATE badge + top-left glow (default: [app] tint_color)
+# tint_alt = "#2090E0"       # bottom-right glow (default: [source] tint_color)
+# background = "#CFE9F9"     # gradient base (derived from the icon's dominant color)
+# bg_mid = "#E3F3FC"         # gradient mid stop (derived from background)
+# bg_dark = "#BADFF6"        # gradient end stop (derived from background)
+# text_color = "#111111"     # app name (auto white/black)
+# tagline_color = "#2E95D9"  # tagline text (derived from background)

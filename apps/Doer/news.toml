@@ -1,0 +1,17 @@
+# render_news.py config: .venv/bin/python templates/render_news.py --out apps/Doer
+# Colors left unset are auto-derived: tint from config.toml, background as
+# a light shade of the icon's dominant color.
+
+name = "Doer"
+tagline = "A native iOS client for Linux.do"
+
+# Color notes — each key below controls one element of the image. All are
+# optional: unset keys are auto-derived. Shown values are the current result.
+[colors]
+# tint = "#4080E0"          # NEW UPDATE badge + top-left glow (default: [app] tint_color)
+# tint_alt = "#4080E0"      # bottom-right glow (default: [source] tint_color)
+# background = "#D8E4F7"    # gradient base (derived from the icon's dominant color)
+# bg_mid = "#E6EEFA"        # gradient mid stop (derived from background)
+# bg_dark = "#C3D6F0"       # gradient end stop (derived from background)
+# text_color = "#111111"    # app name (auto white/black)
+# tagline_color = "#4080E0" # tagline text (derived from background)

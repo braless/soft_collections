@@ -1,0 +1,44 @@
+# altgen config for the PureLive AltStore source.
+# Run: uvx altgen -c config.toml
+# Fields derived from the liuchuancong/pure_live repo (no AltStore source in the repo).
+
+[github]
+repo = "liuchuancong/pure_live"
+
+[source]
+name = "PureLive"
+subtitle = "PureLive AltStore source by soft_collections & altgen"
+description = "Auto-updated AltStore source for PureLive"
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PureLive/icon.png"
+website = "https://github.com/liuchuancong/pure_live"
+tint_color = "#50B0F0"
+
+[app]
+name = "PureLive"
+bundle_identifier = "com.mystyle.purelive.liu"
+developer_name = "liuchuancong"
+subtitle = "基于 Flutter 的开源多平台直播聚合播放器"
+description = "纯粹直播（Pure Live）是一款基于 Flutter 的开源第三方多平台直播聚合播放器，支持 Bilibili、虎牙、斗鱼、快手、抖音、网易 CC、Twitch 等平台，以及自定义 M3U/M3U8 直播源。"
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PureLive/icon.png"
+screenshots = [
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PureLive/images/list.jpg",
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PureLive/images/area.jpg",
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PureLive/images/auth.jpg",
+]
+tint_color = "#50B0F0"
+min_os_version = "15.6"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# Releases ship an iOS ipa only on some tags, named like
+# PureLive-<version>-<build>-ios-arm64-trollstore.ipa; match any ipa asset.
+asset_pattern = ".*\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+# shared promo image rendered by templates/render_news.py
+image_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PureLive/images/news.png"
+
+[output]
+path = "apps.json"

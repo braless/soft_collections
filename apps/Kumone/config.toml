@@ -1,0 +1,44 @@
+# altgen config for the Kumone AltStore source.
+# Run: uvx altgen -c config.toml
+# Fields derived from the missuo/kumone repo (no AltStore source in the repo).
+
+[github]
+repo = "missuo/kumone"
+
+[source]
+name = "Kumone"
+subtitle = "Kumone AltStore source by soft_collections & altgen"
+description = "Auto-updated AltStore source for Kumone"
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kumone/icon.png"
+website = "https://github.com/missuo/kumone"
+tint_color = "#F0D060"
+
+[app]
+name = "Kumone"
+bundle_identifier = "sb.moe.kumone"
+developer_name = "missuo"
+subtitle = "原生 NetEase Cloud Music iOS 客户端（雲の音）"
+description = "Kumone（雲の音）— native NetEase Cloud Music client for iOS. Talks directly to NetEase's real API with no third-party server: QR-code login, gray-track unblocking, synced lyrics with translation, immersive artwork-tinted now-playing, and playlist management.\n\nSupports English and Simplified Chinese localization."
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kumone/icon.png"
+screenshots = [
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kumone/images/home.png",
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kumone/images/search.png",
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kumone/images/featured.png",
+]
+tint_color = "#F0D060"
+min_os_version = "16.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# asset_pattern is a regex (not glob): each release ships exactly one ipa
+# named Kumone-iOS-x.y.z.ipa
+asset_pattern = "Kumone-iOS-.*\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+# shared promo image rendered by templates/render_news.py
+image_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kumone/images/news.png"
+
+[output]
+path = "apps.json"

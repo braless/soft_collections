@@ -1,0 +1,11 @@
+# render_news.py config: .venv/bin/python templates/render_news.py --out apps/Animeko
+# Colors left unset are auto-derived: tint from config.toml, background as
+# a light shade of the icon's dominant color.
+
+name = "Animeko"
+tagline = "一站式弹幕追番平台"
+
+[colors]
+# tint = "#0050A0"        # NEW UPDATE badge + top-left glow (default: [app] tint_color)
+# tint_alt = "#0050A0"    # bottom-right glow (default: [source] tint_color)
+# background = "#D6E3F0"  # gradient base (derived from the icon's dominant color)

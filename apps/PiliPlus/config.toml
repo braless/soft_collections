@@ -1,0 +1,45 @@
+# altgen config for the PiliPlus AltStore source.
+# Run: uvx altgen -c config.toml
+
+[github]
+repo = "bggRGjQaUbCoE/PiliPlus"
+
+[source]
+name = "PiliPlus"
+subtitle = "PiliPlus AltStore source by soft_collections & altgen"
+description = "Auto-updated AltStore source for PiliPlus"
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PiliPlus/icon.png"
+website = "https://github.com/bggRGjQaUbCoE/PiliPlus"
+tint_color = "#00AEEF"
+
+[app]
+name = "PiliPlus"
+bundle_identifier = "com.example.piliplus"
+developer_name = "bggRGjQaUbCoE"
+subtitle = "使用Flutter开发的BiliBili第三方客户端"
+description = "使用Flutter开发的BiliBili第三方客户端"
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PiliPlus/icon.png"
+screenshots = [
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PiliPlus/images/home.png",
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PiliPlus/images/bangumi.png",
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PiliPlus/images/dynamic.png",
+]
+tint_color = "#73b480"
+min_os_version = "14.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+version_pattern = "^(\\d+\\.\\d+\\.\\d+)"
+# asset_pattern is a regex (not glob): .*\.ipa$ matches all ipa assets
+# Compatible with two historical naming schemes: PiliPlus_ios_*.ipa and ios-release-no-sign.ipa
+asset_pattern = ".*\\.ipa$"
+build_version_pattern = "\\+(\\d+)\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+# shared promo image rendered by templates/render_news.py
+image_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PiliPlus/images/news.png"
+
+[output]
+path = "apps.json"

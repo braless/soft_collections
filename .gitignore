@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+
+# Editors / IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# Generated AltStore sources — never committed by contributors; regenerated
+# and committed by .github/workflows/update.yml
+/all-apps.json
+/apps/*/apps.json

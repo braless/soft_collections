@@ -1,0 +1,44 @@
+# altgen config for the Aidoku AltStore source.
+# Run: uvx altgen -c config.toml
+# Mirrors the official source (https://github.com/Aidoku/Aidoku/tree/altstore)
+# but tracks every GitHub release, not just the latest.
+
+[github]
+repo = "Aidoku/Aidoku"
+
+[source]
+name = "Aidoku"
+subtitle = "Home of Aidoku, free and open source manga reader for iOS and iPadOS"
+description = "This is the AltStore Source for Aidoku, free and open source manga reader for iOS and iPadOS.\n\nFor full details on what's included, check the website: https://aidoku.app/"
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Aidoku/icon.png"
+website = "https://aidoku.app/"
+tint_color = "#FF375F"
+
+[app]
+name = "Aidoku"
+bundle_identifier = "app.aidoku.Aidoku"
+developer_name = "Skitty"
+subtitle = "Free and open source manga reader for iOS and iPadOS"
+description = "A free and open source manga reading application for iOS and iPadOS."
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Aidoku/icon.png"
+screenshots = [
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Aidoku/images/library.png",
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Aidoku/images/source.png",
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Aidoku/images/reader.png",
+]
+tint_color = "#FF375F"
+min_os_version = "15.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# Every release ships a single asset named Aidoku.ipa.
+asset_pattern = "Aidoku\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+# shared promo image rendered by templates/render_news.py
+image_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Aidoku/images/news.png"
+
+[output]
+path = "apps.json"

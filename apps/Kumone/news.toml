@@ -1,0 +1,17 @@
+# render_news.py config: .venv/bin/python templates/render_news.py --out apps/Kumone
+# Colors left unset are auto-derived: tint from config.toml, background as
+# a light shade of the icon's dominant color.
+
+name = "Kumone"
+tagline = "雲の音 · 原生 NetEase Cloud Music 客户端"
+
+# Color notes — each key below controls one element of the image. All are
+# optional: unset keys are auto-derived. Shown values are the current result.
+[colors]
+# tint = "#F0D060"          # NEW UPDATE badge + top-left glow (default: [app] tint_color)
+# tint_alt = "#F0D060"      # bottom-right glow (default: [source] tint_color)
+# background = "#0C111D"    # gradient base (derived from the icon's dominant color)
+# bg_mid = "#0C111D"        # gradient mid stop (derived from background)
+# bg_dark = "#0C111D"       # gradient end stop (derived from background)
+# text_color = "#111111"    # app name (auto white/black)
+# tagline_color = "#F0D060" # tagline text (derived from background)

@@ -1,0 +1,43 @@
+# altgen config for the TiebaPure AltStore source.
+# Run: uvx altgen -c config.toml
+# TiebaPure: 基于 SwiftUI 的第三方百度贴吧客户端
+
+[github]
+repo = "infinityf4p/TiebaPure-iOS"
+
+[source]
+name = "TiebaPure"
+subtitle = "TiebaPure AltStore source by soft_collections & altgen"
+description = "Auto-updated AltStore source for TiebaPure"
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/TiebaPure/icon.png"
+website = "https://github.com/infinityf4p/TiebaPure-iOS"
+tint_color = "#708070"
+
+[app]
+name = "TiebaPure"
+bundle_identifier = "dev.infinityf4p.tiebapure"
+developer_name = "infinityf4p"
+subtitle = "基于 SwiftUI 的第三方百度贴吧客户端"
+description = "原生 SwiftUI 构建的非官方贴吧 iOS 客户端。未登录访客即可浏览首页推荐、进吧与吧内列表、帖子详情与楼中楼、搜索、图片缩放与视频播放；登录后支持消息、关注与粉丝、收藏帖子（与官方客户端同步）、每日签到、点赞与发帖回复。另有关键词/用户/贴吧屏蔽、浏览历史与阅读位置恢复、iPad 双栏布局，以及 `tiebapure://` 深链接。"
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/TiebaPure/icon.png"
+screenshots = [
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/TiebaPure/images/home.png",
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/TiebaPure/images/thread.png",
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/TiebaPure/images/search.png",
+]
+tint_color = "#708070"
+min_os_version = "16.4"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# Each release contains a single unsigned ipa: TiebaPure-v<version>-unsigned.ipa
+asset_pattern = "TiebaPure-v.*-unsigned\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+# shared promo image rendered by templates/render_news.py
+image_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/TiebaPure/images/news.png"
+
+[output]
+path = "apps.json"

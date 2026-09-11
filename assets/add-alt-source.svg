@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 200" width="640" height="200">
+  <defs>
+    <linearGradient id="btnBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06B6D4"/>
+      <stop offset="0.55" stop-color="#3B82F6"/>
+      <stop offset="1" stop-color="#4F46E5"/>
+    </linearGradient>
+    <linearGradient id="btnGloss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="iconBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06B6D4"/>
+      <stop offset="0.55" stop-color="#3B82F6"/>
+      <stop offset="1" stop-color="#4F46E5"/>
+    </linearGradient>
+    <filter id="btnShadow" x="-20%" y="-40%" width="140%" height="180%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#1e1b4b" flood-opacity="0.35"/>
+    </filter>
+    <filter id="iconShadow" x="-30%" y="-40%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#1e1b4b" flood-opacity="0.35"/>
+    </filter>
+    <clipPath id="iconClip"><rect x="30" y="30" width="140" height="140" rx="32"/></clipPath>
+  </defs>
+
+  <!-- button body -->
+  <g filter="url(#btnShadow)">
+    <rect width="640" height="200" rx="44" fill="url(#btnBg)"/>
+    <rect width="640" height="200" rx="44" fill="url(#btnGloss)"/>
+  </g>
+
+  <!-- app icon -->
+  <g filter="url(#iconShadow)">
+    <rect x="26" y="26" width="148" height="148" rx="36" fill="#ffffff"/>
+  </g>
+  <g clip-path="url(#iconClip)">
+    <rect x="30" y="30" width="140" height="140" fill="url(#iconBg)"/>
+
+    <!-- gallery: stacked photo cards (scaled from icon.svg) -->
+    <g transform="translate(100 100) scale(0.1367) translate(-512 -512)">
+      <!-- back card -->
+      <g transform="translate(512 500) rotate(9)">
+        <rect x="-270" y="-195" width="540" height="390" rx="48" fill="#ffffff" opacity="0.55"/>
+      </g>
+
+      <!-- front card with app mosaic -->
+      <g transform="translate(512 512) rotate(-6)">
+        <rect x="-280" y="-200" width="560" height="400" rx="52" fill="#ffffff"/>
+
+        <!-- 2x3 app mosaic, vivid iOS palette -->
+        <g>
+          <rect x="-234" y="-154" width="142" height="144" rx="28" fill="#FF453A"/>
+          <rect x="-72"  y="-154" width="142" height="144" rx="28" fill="#FFD60A"/>
+          <rect x="90"   y="-154" width="142" height="144" rx="28" fill="#30D158"/>
+          <rect x="-234" y="10"   width="142" height="144" rx="28" fill="#FF9F0A"/>
+          <rect x="-72"  y="10"   width="142" height="144" rx="28" fill="#0A84FF"/>
+          <rect x="90"   y="10"   width="142" height="144" rx="28" fill="#BF5AF2"/>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- label -->
+  <text x="405" y="100" text-anchor="middle" dy="0.35em"
+        font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="700"
+        fill="#ffffff">Add AltSource</text>
+</svg>

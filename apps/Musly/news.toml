@@ -1,0 +1,15 @@
+# render_news.py config: ./.venv/bin/python templates/render_news.py --out apps/Musly
+# Colors left unset are auto-derived: tint from config.toml, background as
+# a light shade of the icon's dominant color.
+
+name = "Musly"
+tagline = "Stream your music from Navidrome & Subsonic"
+
+# Color notes — each key below controls one element of the image. All are
+# optional: unset keys are auto-derived. Shown values are the current result.
+[colors]
+tint = "#FA243C"            # NEW UPDATE badge + top-left glow (default: [app] tint_color)
+tint_alt = "#FA243C"        # bottom-right glow (default: [source] tint_color)
+background = "#1C1C1E"      # gradient base (the app's real icon background; the icon's dominant color #101020 would lighten to a washed-out lavender)
+text_color = "#FFFFFF"
+# tagline_color = "#F2A3AE" # tagline text (derived from background)

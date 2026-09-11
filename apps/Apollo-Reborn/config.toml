@@ -1,0 +1,51 @@
+# altgen config for the Apollo-Reborn (GLASS) AltStore source.
+# Run: uvx altgen -c config.toml
+# Mirrors the official apps_glass.json: only the -GLASS.ipa builds.
+
+[github]
+repo = "Apollo-Reborn/Apollo-Reborn"
+
+[source]
+name = "Apollo-Reborn - GLASS"
+subtitle = "Apollo-Reborn source with Liquid Glass patch"
+description = "GLASS Apollo-Reborn source for AltStore Classic, SideStore, and Feather. Includes Apollo-Reborn widgets, the Liquid Glass iOS 26 patch, and bundled Liquid Glass alternate icons. Registers about 7 App IDs, one per bundled extension; on a free Apple ID (limited to 10 App IDs per 7 days) a clean install fits but leaves little headroom, so use the No Extensions + GLASS source if you hit the App ID limit. Not compatible with AltStore PAL."
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Apollo-Reborn/icon.png"
+website = "https://apolloreborn.app"
+tint_color = "#F0542D"
+
+[app]
+name = "Apollo for Reddit - GLASS"
+bundle_identifier = "com.christianselig.Apollo"
+developer_name = "Christian Selig (& Apollo-Reborn contributors)"
+subtitle = "Apollo-Reborn build with Liquid Glass patch"
+description = "Apollo-Reborn is the community-maintained Apollo sideload build powered by the Apollo-Reborn tweak.\n\nIt restores custom API support, media fixes, uploads, inline media, translation, saved categories, Home Screen and Lock Screen widgets, Liquid Glass support on iOS 26+, and the rest of the project’s ongoing fixes and enhancements.\n\nThese sources are intended for AltStore Classic, SideStore, and Feather. Apollo-Reborn is not compatible with AltStore PAL.\n\nChoose the source variant that matches how you sideload:\n\n• Standard: full app bundle with Apollo’s working extensions plus Apollo-Reborn widgets\n• No Extensions: strips app extensions, including widgets, to reduce App ID usage on free Apple IDs\n• GLASS: adds the Liquid Glass iOS 26 patch and bundled Liquid Glass icon catalog\n• No Extensions + GLASS: combines both options\n\nThe extension-bearing builds (Standard and GLASS) register about 7 App IDs, one per bundled app extension. A free Apple ID can register 10 App IDs per 7 days, so a clean single install fits, but it is easy to exceed if you install under more than one bundle ID, reinstall within the same week, or sideload other extension-bearing apps. If an install fails with an App ID error, use a No Extensions build (1 App ID) or wait for older App IDs to expire. A paid Apple Developer account has a much higher cap.\n\nThis project is not affiliated with Apollo or Christian Selig."
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Apollo-Reborn/icon.png"
+screenshots = [
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Apollo-Reborn/images/avatar-profile.jpg",
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Apollo-Reborn/images/settings.jpg",
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Apollo-Reborn/images/custom.jpg",
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Apollo-Reborn/images/recents.jpg",
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Apollo-Reborn/images/lg-icons.jpg",
+]
+tint_color = "#6050F0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# Only the GLASS build (Apollo-Reborn-<ver>-GLASS.ipa). Excludes
+# GLASS-NOEXTENSIONS, GLASSICONS, NOEXTENSIONS and the plain builds.
+asset_pattern = "-GLASS\\.ipa$"
+# Tags carry a tweak/build pair (e.g. v1.15.11_3.6.0); extract the clean
+# app version (3.6.0) from the asset filename Apollo-Reborn-<ver>-GLASS.ipa.
+version_pattern = "-([0-9.]+)-GLASS\\.ipa$"
+version_source = "filename"
+# Asset names carry no build number, so build_version_pattern keeps the
+# default (matches nothing -> buildVersion omitted).
+
+[news]
+title_template = "{name} {version} · {date}"
+# shared promo image rendered by templates/render_news.py
+image_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Apollo-Reborn/images/news.png"
+
+[output]
+path = "apps.json"

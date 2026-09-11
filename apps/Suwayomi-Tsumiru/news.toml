@@ -1,0 +1,16 @@
+# render_news.py config: ./.venv/bin/python templates/render_news.py --out apps/Suwayomi-Tsumiru
+# Brand: "Indigo Night" — indigo #7c7bff → cyan #33d6ff, navy #02061d / #0b0d1a.
+# The icon's dominant sampled color is the cream stroke, so the navy background
+# is pinned here instead of auto-derived.
+
+name = "Tsumiru"
+tagline = "Native manga & manhwa reader for Suwayomi-Server"
+
+# Color notes — each key below controls one element of the image. All are
+# optional: unset keys are auto-derived. Shown values are the current result.
+[colors]
+# tint = "#7c7bff"          # NEW UPDATE badge + top-left glow (default: [app] tint_color)
+tint_alt = "#33d6ff"        # bottom-right glow (default: [source] tint_color)
+background = "#02061d"      # gradient base (navy, from the brand theme)
+text_color = "#FFFFFF"
+tagline_color = "#AAB8FF"

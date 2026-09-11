@@ -1,0 +1,17 @@
+# render_news.py config: python3 templates/render_news.py --out apps/ARMSX2
+# Colors left unset are auto-derived: tint from config.toml, background as
+# a light shade of the icon's dominant color.
+
+name = "ARMSX2"
+tagline = "PlayStation 2 emulator for ARM64"
+
+# Color notes — each key below controls one element of the image. All are
+# optional: unset keys are auto-derived. Shown values are the current result.
+[colors]
+# tint = "#3CAEFF"            # NEW UPDATE badge + top-left glow (default: [app] tint_color)
+# tint_alt = "#3CAEFF"        # bottom-right glow (default: [source] tint_color)
+# background = "#D9E4F5"      # gradient base (derived from the icon's dominant color)
+# bg_mid = "#E4EDF8"          # gradient mid stop (derived from background)
+# bg_dark = "#C4D8F0"         # gradient end stop (derived from background)
+# text_color = "#111111"      # app name (auto white/black)
+# tagline_color = "#2E7FD1"   # tagline text (derived from background)

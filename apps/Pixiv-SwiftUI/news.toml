@@ -1,0 +1,17 @@
+# render_news.py config: ./.venv/bin/python templates/render_news.py --out apps/Pixiv-SwiftUI
+# Colors left unset are auto-derived: tint from config.toml, background as
+# a light shade of the icon's dominant color.
+
+name = "Pixiv-SwiftUI"
+tagline = "基于 SwiftUI 的 Pixiv 第三方客户端"
+
+# Color notes — each key below controls one element of the image. All are
+# optional: unset keys are auto-derived. Shown values are the current result.
+[colors]
+# tint = "#13A1FD"          # NEW UPDATE badge + top-left glow (default: [app] tint_color)
+# tint_alt = "#13A1FD"      # bottom-right glow (default: [source] tint_color)
+# background = "#D6E7F5"    # gradient base (derived from the icon's dominant color)
+# bg_mid = "#E7F1FA"        # gradient mid stop (derived from background)
+# bg_dark = "#BFD9EF"       # gradient end stop (derived from background)
+# text_color = "#111111"    # app name (auto white/black)
+# tagline_color = "#3FA8E0" # tagline text (derived from background)

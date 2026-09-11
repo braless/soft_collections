@@ -1,0 +1,19 @@
+# altgen merge config for soft_collections.
+# Run: uvx altgen merge -c assets/merge.toml apps/PiliPlus/apps.json
+# (append more apps/<AppName>/apps.json inputs as they are generated)
+#
+# Merge mode only reads [source] (root source metadata) and [output];
+# the apps and news entries are extracted from the input apps.json files.
+# Build-mode tables ([github], [app], [versions], [news]) are rejected.
+# Root values also work as CLI flags, e.g. altgen merge --name ... apps/PiliPlus/apps.json
+
+[source]
+name = "soft_collections"
+subtitle = "Curated AltStore sources for IPA projects on GitHub"
+description = "AltStore sources generated from GitHub Releases by soft_collections"
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/assets/icon.png"
+website = "https://github.com/braless/soft_collections"
+tint_color = "#3B82F6"
+
+[output]
+path = "../all-apps.json"   # resolved against THIS file's directory -> repo root all-apps.json

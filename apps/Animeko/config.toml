@@ -1,0 +1,43 @@
+# altgen config for the Animeko AltStore source.
+# Run: uvx altgen -c config.toml
+# Animeko (formerly Ani): one-stop danmaku anime platform (Kotlin/Compose Multiplatform)
+
+[github]
+repo = "open-ani/animeko"
+
+[source]
+name = "Animeko"
+subtitle = "Animeko AltStore source by soft_collections & altgen"
+description = "Auto-updated AltStore source for Animeko"
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Animeko/icon.png"
+website = "https://github.com/open-ani/animeko"
+tint_color = "#0050A0"
+
+[app]
+name = "Animeko"
+bundle_identifier = "org.animeko.animeko"
+developer_name = "open-ani"
+subtitle = "一站式弹幕追番平台"
+description = "Animeko 是一个 Kotlin/Compose Multiplatform 打造的一站式弹幕追番平台，集找番、追番、看番于一体，支持 Bangumi 云同步观看记录、多视频数据源聚合（含 BitTorrent、Jellyfin、Emby）、离线缓存与弹幕云过滤。"
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Animeko/icon.png"
+screenshots = [
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Animeko/images/home.png",
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Animeko/images/subject-details.png",
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Animeko/images/episode.png",
+]
+tint_color = "#0050A0"
+min_os_version = "14.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# Each release ships a single iOS ipa (e.g. ani-6.0.0.ipa)
+asset_pattern = ".*\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+# shared promo image rendered by templates/render_news.py
+image_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Animeko/images/news.png"
+
+[output]
+path = "apps.json"

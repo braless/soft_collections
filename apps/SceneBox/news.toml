@@ -1,0 +1,17 @@
+# render_news.py config: python3 templates/render_news.py --out apps/SceneBox
+# Colors left unset are auto-derived: tint from config.toml, background as
+# a light shade of the icon's dominant color.
+
+name = "SceneBox"
+tagline = "Torrent streaming client"
+
+# Color notes — each key below controls one element of the image. All are
+# optional: unset keys are auto-derived. Shown values are the current result.
+[colors]
+# tint = "#E0E000"          # NEW UPDATE badge + top-left glow (default: [app] tint_color)
+# tint_alt = "#E0E000"      # bottom-right glow (default: [source] tint_color)
+# background = "#111111"    # gradient base (derived from the icon's dominant color)
+# bg_mid = "#1E1E1E"        # gradient mid stop (derived from background)
+# bg_dark = "#0A0A0A"       # gradient end stop (derived from background)
+# text_color = "#FFFFFF"    # app name (auto white/black)
+# tagline_color = "#E0E000" # tagline text (derived from background)

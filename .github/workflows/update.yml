@@ -1,0 +1,52 @@
+name: Update apps.json and all-apps.json
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      # update.sh uses `uvx altgen`
+      - uses: astral-sh/setup-uv@v7
+
+      - name: Run update.sh
+        run: ./update.sh
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
+      # apps.json / all-apps.json are gitignored, so `git add -A` won't pick
+      # them up. Stage them explicitly (force) so the regenerated sources can
+      # be committed here — contributors never commit them.
+      - name: Stage generated sources
+        run: git add -f all-apps.json apps/*/apps.json
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and push
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: update all-apps.json"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
