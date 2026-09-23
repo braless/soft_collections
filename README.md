@@ -44,6 +44,9 @@ Apple Wallet card skins, lock screen passcode themes and PosterBoard wallpapers 
 ### <a href="https://github.com/Lakr233/Asspp"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/Asspp/icon.png" alt="Asspp icon" width="24" align="top"> Asspp</a>
 Manage multiple Apple IDs across App Store regions and download official signed IPAs — no more logging out of your device.
 
+### <a href="https://github.com/TouchFriend/DoubanMApp"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/DoubanMApp/icon.png" alt="DoubanMApp icon" width="24" align="top"> 豆瓣</a>
+无广告版豆瓣客户端（DoubanMApp）：移除绝大多数广告、精简界面，其余功能与官方客户端一致。
+
 ### <a href="https://github.com/Mac-XK/KMusic"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/KMusic/icon.png" alt="KMusic icon" width="24" align="top"> KMusic</a>
 基于 SwiftUI 的多源音乐聚合播放器，支持 iOS/macOS，内置酷我、酷狗、QQ 音乐、网易云等多平台音源与 LRC 歌词同步。
 
