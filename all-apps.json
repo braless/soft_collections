@@ -246,6 +246,32 @@
       "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Local/icons/com.atebits.Tweetie2.png"
     },
     {
+      "name": "WrapPin",
+      "bundleIdentifier": "com.suversal.wrappin",
+      "developerName": "suversal",
+      "subtitle": "本机虚拟定位与步行路线测试工具",
+      "localizedDescription": "在一张地图上选择、测试并移动 iPhone 向系统报告的位置：支持固定位置、步行与驾车路线模拟、收藏与历史记录，结束后可恢复真实位置。它通过本机配对与设备隧道建立开发者定位会话（默认使用 LocalDevVPN）。这是 Roam Control 的非官方中文分支，仅供在你自己拥有并控制的设备上做开发与测试。",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/fixed-location.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/walking-active.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/settings.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/privacy.png"
+      ],
+      "tintColor": "#1060F0",
+      "versions": [
+        {
+          "version": "1.0.11",
+          "buildVersion": "31",
+          "date": "2026-09-23",
+          "localizedDescription": "# WrapPin 1.0.11（Build 31）\n\n## 中文\n\n本版只细化路线模拟的速度调节：自定义步行速度从每次 0.5 公里/小时改为每次 0.1 公里/小时，驾车速度从每次 5 公里/小时改为每次 1 公里/小时。步行仍为 1–12 公里/小时，驾车仍为 5–240 公里/小时，默认值、步行预设、路线规划和恢复逻辑均未改变。\n\n### 下载与验证\n\n- 文件：`WrapPin-1.0.11-build31.ipa`\n- 最低系统：iOS 27.0；架构：arm64；Bundle ID：`com.suversal.wrappin`\n- 签名：未签名，需要由 SideStore 或自己的开发者身份签名安装；建议覆盖安装旧版。\n- SHA-256：`dc0c622184d258341c47bd64356a04834a447eaee1231034de9ec082eac1ab45`\n- 源码检查、Release Archive、IPA 完整性、包内版本与 Bundle ID、arm64 架构、未签名状态、隐私清单及许可证资源均已核对。\n- Build 31 尚未完成独立的 SideStore 安装和真机速度滑杆交互验收。\n\n### 已知边界\n\n本版不修改路线规划、坐标处理或定位连接，也不保证第三方 App 接受软件模拟位置。\n\n## English\n\nWrapPin 1.0.11 changes only the route-speed adjustment increments. Custom walking speed now moves in 0.1 km/h steps instead of 0.5 km/h, and driving speed now moves in 1 km/h steps instead of 5 km/h. The supported ranges, defaults, walking presets, route planning and recovery behavior are unchanged.\n\nThe unsigned `WrapPin-1.0.11-build31.ipa` requires iOS 27.0 or later and has SHA-256 `dc0c622184d258341c47bd64356a04834a447eaee1231034de9ec082eac1ab45`. Source checks, Release Archive and IPA identity/integrity checks passed. Build 31 has not yet been independently installed through SideStore or exercised on a physical iPhone. This release does not change route planning, coordinate handling, location connectivity or third-party simulated-location acceptance.",
+          "downloadURL": "https://github.com/suversal/WrapPin/releases/download/v1.0.11/WrapPin-1.0.11-build31.ipa",
+          "size": 3490313,
+          "minOSVersion": "27.0"
+        }
+      ]
+    },
+    {
       "name": "多多阅读",
       "bundleIdentifier": "com.duoduomsoft.dudureader",
       "developerName": "Local",
@@ -306,6 +332,17 @@
     }
   ],
   "news": [
+    {
+      "appID": "com.suversal.wrappin",
+      "title": "WrapPin 1.0.11 · 23 Sep 2026",
+      "identifier": "WrapPin-release-v1.0.11",
+      "caption": "WrapPin 1.0.11 is available.",
+      "date": "2026-09-23T13:38:00Z",
+      "tintColor": "#1060F0",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/news.png",
+      "notify": true,
+      "url": "https://github.com/suversal/WrapPin/releases/tag/v1.0.11"
+    },
     {
       "appID": "sb.moe.kumone",
       "title": "Kumone 0.3.19 · 23 Sep 2026",
