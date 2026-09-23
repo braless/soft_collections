@@ -1,0 +1,49 @@
+# altgen config for the WrapPin AltStore source.
+# Run: uvx altgen -c config.toml
+# The project ships no AltStore source of its own: identity comes from the
+# released IPA (Payload/WrapPin.app/Info.plist) and from
+# Configuration/Local.xcconfig, the icon from Design/WrapPin-AppIcon-Light.png.
+
+[github]
+repo = "suversal/WrapPin"
+
+[source]
+name = "WrapPin"
+subtitle = "WrapPin AltStore source by soft_collections & altgen"
+description = "Auto-updated AltStore source for WrapPin"
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/icon.png"
+website = "https://github.com/suversal/WrapPin"
+tint_color = "#1060F0"
+
+[app]
+name = "WrapPin"
+bundle_identifier = "com.suversal.wrappin"
+developer_name = "suversal"
+subtitle = "本机虚拟定位与步行路线测试工具"
+description = "在一张地图上选择、测试并移动 iPhone 向系统报告的位置：支持固定位置、步行与驾车路线模拟、收藏与历史记录，结束后可恢复真实位置。它通过本机配对与设备隧道建立开发者定位会话（默认使用 LocalDevVPN）。这是 Roam Control 的非官方中文分支，仅供在你自己拥有并控制的设备上做开发与测试。"
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/icon.png"
+screenshots = [
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/fixed-location.png",
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/walking-active.png",
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/settings.png",
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/privacy.png",
+]
+tint_color = "#1060F0"
+# The README says iOS 27+ and the shipped IPA agrees (MinimumOSVersion 27.0).
+min_os_version = "27.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# asset_pattern is a regex (not glob): every release ships one IPA
+asset_pattern = "^WrapPin-.*\\.ipa$"
+# ... whose name carries the build number, e.g. WrapPin-1.0.11-build31.ipa
+build_version_pattern = "-build(\\d+)\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+# shared promo image rendered by templates/render_news.py
+image_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/news.png"
+
+[output]
+path = "apps.json"

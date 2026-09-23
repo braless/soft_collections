@@ -65,6 +65,9 @@ A lightweight, native YouTube client for iOS 12+ — no ads, no tracking, no dep
 ### <a href="https://github.com/leminlimez/Pocket-Poster"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/Pocket-Poster/icon.png" alt="Pocket Poster icon" width="24" align="top"> Pocket Poster</a>
 Custom PosterBoard animated wallpapers for iOS 17+ — browse and download community wallpapers, or import your own videos and images.
 
+### <a href="https://github.com/suversal/WrapPin"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/WrapPin/icon.png" alt="WrapPin icon" width="24" align="top"> WrapPin</a>
+在手机上选择并移动 iPhone 向系统报告的位置：固定位置、步行与驾车路线模拟，随时可恢复真实定位。Roam Control 的非官方中文分支（iOS 27+）。
+
 IPAs committed under [`apps/Local/`](apps/Local) are part of the `all-apps.json` source as well — see [Local IPAs](#local-ipas).
 
 ## Project Layout
