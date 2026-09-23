@@ -32,33 +32,47 @@ jobs:
       # update.sh uses `uvx altgen`
       - uses: astral-sh/setup-uv@v7
 
-      - name: Run update.sh
-        # Invoke through bash so the step works even if the executable bit is
-        # lost (the repo is maintained on Windows, where Git does not track it).
-        run: bash update.sh
+      - name: Regenerate, commit and push
+        # Everything written here is derived from the configs, so a rejected
+        # push only means rebuilding on top of the new tip. local.yml can start
+        # in the same second as this job — GitHub's concurrency queue is
+        # best-effort — and push first; without this loop that would fail the
+        # run with a non-fast-forward error.
         env:
           GITHUB_TOKEN: ${{ github.token }}
-
-      # apps.json / all-apps.json are gitignored, so `git add -A` won't pick
-      # them up. Stage them explicitly (force) so the regenerated sources can
-      # be committed here — contributors never commit them.
-      - name: Stage generated sources
-        run: git add -f all-apps.json apps/*/apps.json
-
-      - name: Check for changes
-        id: changes
         run: |
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "changed=true" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Commit and push
-        if: steps.changes.outputs.changed == 'true'
-        run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore: update all-apps.json"
-          git push origin "HEAD:${GITHUB_REF_NAME}"
+
+          for attempt in 1 2 3 4; do
+            echo "--- attempt ${attempt}: regenerating the sources"
+
+            # Invoke through bash so the step works even if the executable bit
+            # is lost (the repo is maintained on Windows, where Git does not
+            # track it).
+            bash update.sh
+
+            # apps.json / all-apps.json are gitignored, so `git add -A` won't
+            # pick them up. Stage them explicitly (force) so the regenerated
+            # sources can be committed here — contributors never commit them.
+            git add -f all-apps.json apps/*/apps.json
+
+            if git diff --cached --quiet; then
+              echo "nothing to commit"
+              exit 0
+            fi
+
+            git commit -q -m "chore: update all-apps.json"
+
+            if git push origin "HEAD:${GITHUB_REF_NAME}"; then
+              exit 0
+            fi
+
+            echo "--- push rejected: the other workflow got there first, rebuilding on the new tip"
+            git fetch --quiet origin "${GITHUB_REF_NAME}"
+            git reset --hard FETCH_HEAD
+          done
+
+          echo "could not push after 4 attempts" >&2
+          exit 1

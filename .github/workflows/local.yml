@@ -36,31 +36,40 @@ jobs:
       # standard library only.
       - uses: astral-sh/setup-uv@v7
 
-      - name: Build apps/Local/apps.json from the committed IPAs
-        run: python3 scripts/local_source.py
-
-      - name: Merge every source into all-apps.json
-        run: uvx altgen merge -c assets/merge.toml apps/*/apps.json
-
-      - name: Stage generated files
+      - name: Build Local source, commit and push
+        # The source is rebuilt from scratch when a push is rejected: it is
+        # derived from the committed IPAs, and update.yml may have started in
+        # the same second and pushed first (GitHub's concurrency queue is
+        # best-effort).
         run: |
-          git add -A apps/Local
-          git add -f apps/Local/apps.json all-apps.json
-
-      - name: Check for changes
-        id: changes
-        run: |
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "changed=true" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Commit and push
-        if: steps.changes.outputs.changed == 'true'
-        run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore: update Local source"
-          git push origin "HEAD:${GITHUB_REF_NAME}"
+
+          for attempt in 1 2 3 4; do
+            echo "--- attempt ${attempt}: rebuilding the Local source"
+
+            python3 scripts/local_source.py
+            uvx altgen merge -c assets/merge.toml apps/*/apps.json
+
+            git add -A apps/Local
+            git add -f apps/Local/apps.json all-apps.json
+
+            if git diff --cached --quiet; then
+              echo "nothing to commit"
+              exit 0
+            fi
+
+            git commit -q -m "chore: update Local source"
+
+            if git push origin "HEAD:${GITHUB_REF_NAME}"; then
+              exit 0
+            fi
+
+            echo "--- push rejected: rebuilding on the new tip"
+            git fetch --quiet origin "${GITHUB_REF_NAME}"
+            git reset --hard FETCH_HEAD
+          done
+
+          echo "could not push after 4 attempts" >&2
+          exit 1

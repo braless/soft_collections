@@ -38,6 +38,9 @@ Don't see an app you want? [Create an issue](https://github.com/braless/soft_col
 
 ## Available Apps
 
+### <a href="https://github.com/Mak5er/AirCard-iOS"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/AirCard-iOS/icon.png" alt="AirCard-iOS icon" width="24" align="top"> AirCard-iOS</a>
+Apple Wallet card skins, lock screen passcode themes and PosterBoard wallpapers on device, without a jailbreak (iOS 27+).
+
 ### <a href="https://github.com/Lakr233/Asspp"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/Asspp/icon.png" alt="Asspp icon" width="24" align="top"> Asspp</a>
 Manage multiple Apple IDs across App Store regions and download official signed IPAs — no more logging out of your device.
 

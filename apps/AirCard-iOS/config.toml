@@ -1,0 +1,43 @@
+# altgen config for the AirCard-iOS AltStore source.
+# Run: uvx altgen -c config.toml
+# The project ships no AltStore source of its own: identity comes from
+# project.yml (bundle id) and the released IPA (version), the icon from
+# ios-app/Assets.xcassets/AppIcon.appiconset/AppIcon.png.
+
+[github]
+repo = "Mak5er/AirCard-iOS"
+
+[source]
+name = "AirCard-iOS"
+subtitle = "AirCard-iOS AltStore source by soft_collections & altgen"
+description = "Auto-updated AltStore source for AirCard-iOS"
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/AirCard-iOS/icon.png"
+website = "https://github.com/Mak5er/AirCard-iOS"
+tint_color = "#5020E0"
+
+[app]
+name = "AirCard-iOS"
+bundle_identifier = "com.mak5er.aircard"
+developer_name = "Mak5er"
+subtitle = "Apple Wallet card skins and lock screen themes"
+description = "Customise Apple Wallet card artwork, the lock screen passcode dialer and PosterBoard wallpapers on device, without a jailbreak. AirCard-iOS talks to Apple's internal services through the LocalDevVPN loopback tunnel, which has to be installed as well."
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/AirCard-iOS/icon.png"
+tint_color = "#5020E0"
+# The built IPA declares MinimumOSVersion 18.0 (the Xcode deployment target),
+# but the project requires the iOS 27 services at runtime and says so in both
+# the README and every release note, so the source advertises 27.0.
+min_os_version = "27.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# asset_pattern is a regex (not glob): every release ships one IPA
+asset_pattern = "^AirCard-iOS\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+# shared promo image rendered by templates/render_news.py
+image_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/AirCard-iOS/images/news.png"
+
+[output]
+path = "apps.json"
