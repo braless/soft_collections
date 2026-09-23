@@ -1,0 +1,41 @@
+# altgen config for the Asspp AltStore source.
+# Run: uvx altgen -c config.toml
+# The project ships no AltStore source of its own: identity comes from
+# Configuration/Base.xcconfig (bundle id, deployment target) and the icon from
+# Asspp/App/Assets.xcassets/AppIcon.appiconset/asspp.png.
+
+[github]
+repo = "Lakr233/Asspp"
+
+[source]
+name = "Asspp"
+subtitle = "Asspp AltStore source by soft_collections & altgen"
+description = "Auto-updated AltStore source for Asspp"
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Asspp/icon.png"
+website = "https://github.com/Lakr233/Asspp"
+tint_color = "#3060D0"
+
+[app]
+name = "Asspp"
+bundle_identifier = "wiki.qaq.Asspp"
+developer_name = "Lakr233"
+subtitle = "Multi-region App Store manager"
+description = "Manage multiple Apple IDs across App Store regions from one app: switch stores instantly, browse and search any region, download official signed IPAs for backup or sideloading, and pull older versions of an app when you need them."
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Asspp/icon.png"
+tint_color = "#3060D0"
+min_os_version = "17.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# asset_pattern is a regex (not glob): every release ships Asspp.ipa plus an
+# Asspp.zip of the same build — match only the IPA.
+asset_pattern = "^Asspp\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+# shared promo image rendered by templates/render_news.py
+image_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Asspp/images/news.png"
+
+[output]
+path = "apps.json"
