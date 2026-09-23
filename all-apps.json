@@ -246,26 +246,6 @@
         }
       ],
       "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Local/icons/com.feng.New.WPForumClient.png"
-    },
-    {
-      "name": "应用降级",
-      "bundleIdentifier": "wiki.qaq.Asspp",
-      "developerName": "Local",
-      "subtitle": "Locally committed IPA",
-      "localizedDescription": "应用降级 — committed to this repository as an IPA under apps/Local/.",
-      "tintColor": "#3B82F6",
-      "versions": [
-        {
-          "version": "4.2.0",
-          "date": "2026-09-11",
-          "localizedDescription": "Locally committed build: 应用降级_4.2.0.ipa (15.0 MB). Build 0.",
-          "downloadURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Local/%E5%BA%94%E7%94%A8%E9%99%8D%E7%BA%A7_4.2.0.ipa",
-          "size": 15731645,
-          "buildVersion": "0",
-          "minOSVersion": "17.0"
-        }
-      ],
-      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Local/icons/wiki.qaq.Asspp.png"
     }
   ],
   "news": [
