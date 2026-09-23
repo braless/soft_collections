@@ -1,0 +1,42 @@
+{
+  "name": "豆瓣",
+  "subtitle": "DoubanMApp AltStore source by soft_collections & altgen",
+  "description": "Auto-updated AltStore source for DoubanMApp, the ad-free Douban client",
+  "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/DoubanMApp/icon.png",
+  "website": "https://github.com/TouchFriend/DoubanMApp",
+  "tintColor": "#02AD0A",
+  "apps": [
+    {
+      "name": "豆瓣",
+      "bundleIdentifier": "com.douban.frodo",
+      "developerName": "TouchFriend",
+      "subtitle": "无广告版豆瓣客户端（DoubanMApp）",
+      "localizedDescription": "通过 iOS 逆向改造的豆瓣客户端：移除绝大多数广告、精简界面，其余功能与官方客户端保持一致。发布包基于豆瓣 7.109.0 修改，所以应用内显示的版本号仍是 7.109.0，而本源里的版本号用的是该项目自己的发布号。它的 bundle ID 与官方豆瓣相同，两者不能同时安装。",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/DoubanMApp/icon.png",
+      "tintColor": "#02AD0A",
+      "versions": [
+        {
+          "version": "1.1.0",
+          "date": "2026-05-24",
+          "localizedDescription": "去除底栏市集",
+          "downloadURL": "https://github.com/TouchFriend/DoubanMApp/releases/download/1.1.0/douban-7.109.0.v1.1.0.ipa",
+          "size": 95870836,
+          "minOSVersion": "13.0"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "appID": "com.douban.frodo",
+      "title": "豆瓣 1.1.0 · 24 May 2026",
+      "identifier": "豆瓣-release-1.1.0",
+      "caption": "豆瓣 1.1.0 is available.",
+      "date": "2026-05-24T05:45:17Z",
+      "tintColor": "#02AD0A",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/DoubanMApp/images/news.png",
+      "notify": true,
+      "url": "https://github.com/TouchFriend/DoubanMApp/releases/tag/1.1.0"
+    }
+  ]
+}
