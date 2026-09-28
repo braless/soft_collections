@@ -261,12 +261,12 @@
       "tintColor": "#1060F0",
       "versions": [
         {
-          "version": "1.0.11",
-          "buildVersion": "31",
-          "date": "2026-09-23",
-          "localizedDescription": "# WrapPin 1.0.11（Build 31）\n\n## 中文\n\n本版只细化路线模拟的速度调节：自定义步行速度从每次 0.5 公里/小时改为每次 0.1 公里/小时，驾车速度从每次 5 公里/小时改为每次 1 公里/小时。步行仍为 1–12 公里/小时，驾车仍为 5–240 公里/小时，默认值、步行预设、路线规划和恢复逻辑均未改变。\n\n### 下载与验证\n\n- 文件：`WrapPin-1.0.11-build31.ipa`\n- 最低系统：iOS 27.0；架构：arm64；Bundle ID：`com.suversal.wrappin`\n- 签名：未签名，需要由 SideStore 或自己的开发者身份签名安装；建议覆盖安装旧版。\n- SHA-256：`dc0c622184d258341c47bd64356a04834a447eaee1231034de9ec082eac1ab45`\n- 源码检查、Release Archive、IPA 完整性、包内版本与 Bundle ID、arm64 架构、未签名状态、隐私清单及许可证资源均已核对。\n- Build 31 尚未完成独立的 SideStore 安装和真机速度滑杆交互验收。\n\n### 已知边界\n\n本版不修改路线规划、坐标处理或定位连接，也不保证第三方 App 接受软件模拟位置。\n\n## English\n\nWrapPin 1.0.11 changes only the route-speed adjustment increments. Custom walking speed now moves in 0.1 km/h steps instead of 0.5 km/h, and driving speed now moves in 1 km/h steps instead of 5 km/h. The supported ranges, defaults, walking presets, route planning and recovery behavior are unchanged.\n\nThe unsigned `WrapPin-1.0.11-build31.ipa` requires iOS 27.0 or later and has SHA-256 `dc0c622184d258341c47bd64356a04834a447eaee1231034de9ec082eac1ab45`. Source checks, Release Archive and IPA identity/integrity checks passed. Build 31 has not yet been independently installed through SideStore or exercised on a physical iPhone. This release does not change route planning, coordinate handling, location connectivity or third-party simulated-location acceptance.",
-          "downloadURL": "https://github.com/suversal/WrapPin/releases/download/v1.0.11/WrapPin-1.0.11-build31.ipa",
-          "size": 3490313,
+          "version": "1.0.12",
+          "buildVersion": "32",
+          "date": "2026-09-28",
+          "localizedDescription": "## 主要变化\n\n- 修复步行和驾车路线模拟未应用 GCJ-02/WGS84 选择的问题。\n- 路线起点、移动点、终点、返程和中断恢复现在会继续使用同一坐标模式。\n- MapKit 路线保持原始坐标用于规划和显示，仅转换发送给 iPhone 的模拟坐标。\n\n## 安装\n\n本版提供未签名 IPA，需要使用 SideStore 或自己的开发者身份签名，建议覆盖安装。最低系统为 iOS 27.0。\n\nSHA-256: `6f700a8ce62b2e03e31bb4217d45971b4972b3f62dae8df134091232fc9d9999`\n\n同一功能代码已通过 Build 32 本地测试包的真机验收；正式 IPA 在更新 1.0.12 版本元数据后重新构建，并完成 Archive 和包级校验。",
+          "downloadURL": "https://github.com/suversal/WrapPin/releases/download/v1.0.12/WrapPin-1.0.12-build32.ipa",
+          "size": 3490811,
           "minOSVersion": "27.0"
         }
       ]
@@ -333,6 +333,17 @@
   ],
   "news": [
     {
+      "appID": "com.suversal.wrappin",
+      "title": "WrapPin 1.0.12 · 28 Sep 2026",
+      "identifier": "WrapPin-release-v1.0.12",
+      "caption": "WrapPin 1.0.12 is available.",
+      "date": "2026-09-28T06:36:35Z",
+      "tintColor": "#1060F0",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/news.png",
+      "notify": true,
+      "url": "https://github.com/suversal/WrapPin/releases/tag/v1.0.12"
+    },
+    {
       "appID": "org.zhaohe.MiniWatts",
       "title": "MiniWatts 1.4.1 · 25 Sep 2026",
       "identifier": "MiniWatts-release-v1.4.1",
@@ -353,17 +364,6 @@
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PiliPlus/images/news.png",
       "notify": true,
       "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.5"
-    },
-    {
-      "appID": "com.suversal.wrappin",
-      "title": "WrapPin 1.0.11 · 23 Sep 2026",
-      "identifier": "WrapPin-release-v1.0.11",
-      "caption": "WrapPin 1.0.11 is available.",
-      "date": "2026-09-23T13:38:00Z",
-      "tintColor": "#1060F0",
-      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/news.png",
-      "notify": true,
-      "url": "https://github.com/suversal/WrapPin/releases/tag/v1.0.11"
     },
     {
       "appID": "sb.moe.kumone",
