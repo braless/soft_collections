@@ -16,11 +16,11 @@
       "tintColor": "#5020E0",
       "versions": [
         {
-          "version": "1.3.1",
-          "date": "2026-10-01",
-          "localizedDescription": "## What's Changed in v1.3.1\n\n### 📲 Pairing File Import (iOS 18 – iOS 26 Support!)\n• **SideStore & LiveContainer Pairing File Support**: You can now import pairing files (`.mobiledevicepairing`, `.plist`, `.mobilepair`) directly from SideStore, LiveContainer, iLoader, AltStore, Jitterbug, or PC/Mac.\n• **No iOS 27 Required**: Users on iOS 18.0 through iOS 26 can now fully use AirCard-iOS by simply importing their pairing file from SideStore or LiveContainer.\n• **Safe Unpair / Reset**: Added a dedicated \"Delete Pairing / Unpair\" button to reset or switch pairing configurations without having to reinstall the app.\n• **In-App Pairing Guide**: Added a step-by-step setup guide sheet with exact paths to locate pairing files in the Files app (e.g. `SideStore/ALTPairingFile.mobiledevicepairing`).\n• **iOS 27+ Gated**: The \"Pair on Phone\" developer pairing block is now cleanly gated to iOS 27+, avoiding confusion on older iOS versions.\n\n### 💳 Apple Wallet & Card Customization\n• **Interactive Photo Cropper**: Added custom zoom, pan, and framing when selecting card artwork (PR #29).\n\n### 🔒 Passcode Themes (.passthm)\n• **UTF-8 Encoding Fix**: Fixed filename encoding in generated passcode theme ZIP archives to support non-ASCII characters and localization (PR #12).\n\n### 🖼 Wallpapers (.tendies)\n• **Restored Rock-Solid Wallpaper Engine**: Reverted experimental template tracking to restore proven v1.3 Tendies injection, auto-detection of PosterBoard containers, and instant WebKit NeoSpring resprings.\n\n### ❤️ Developer Support & Links\n• **Donate Tab in Credits**: Added direct donation options (PayPal, TON, USDT TRC-20, BEP-20) with one-tap copy and quick links to developer socials (@mak5er).\n• **Startup Welcome**: Clean notice highlighting developer credits and quick links.\n\n**Full Changelog**: https://github.com/Mak5er/AirCard-iOS/compare/v1.3...v1.3.1",
-          "downloadURL": "https://github.com/Mak5er/AirCard-iOS/releases/download/v1.3.1/AirCard-iOS.ipa",
-          "size": 4597510,
+          "version": "1.3.2",
+          "date": "2026-10-04",
+          "localizedDescription": "## What's Changed in v1.3.2 🚀\n\nThis update brings full feature parity with AirCard macOS v1.2.6, restores robust card discovery across all iOS versions, introduces automatic bank/network recognition with custom card nicknames, delivers an ultra-fast tunnel cache (0.02s connections), and completely resolves wallpaper flashing for Collections and Mercury wallpapers.\n\n### 💳 Wallet Card Discovery & Bank Identification\n• **Universal Wallet Log Parser**: Ported the proven `WalletScanParser` from AirCard macOS. Captures cards from `Dashboard loading (...): for SOO+`, `passIDs[InSession]`, `passIDs[global]`, and modern JSON NFC activations (`\"identifier\": \"HEX\"`).\n• **Automatic Bank & Network Detection**: Recognizes Visa, Mastercard, American Express, UnionPay, Discover, and JCB via applet AIDs during selection.\n• **Card Nicknames (Rename)**: Added a direct **Rename** button (✏️) so you can give your cards friendly names like *\"Monobank\"*, *\"Salary Card\"*, or *\"Revolut\"*, safely persisted in app settings.\n• **28-Character Fallback Token Matcher**: Restores dependable card discovery on devices where standard log patterns are redacted.\n\n### ⚡ Ultra-Fast Tunnel Routing (from 10s to 0.02s!)\n• **Working Route Caching**: `rust-core` now caches the active RSD connection route (`LAST_WORKING_ROUTE`), eliminating repeated port and interface scanning.\n• **RSD-First Priority**: Connects directly via RemoteXPC on port 49152, bypassing slow Lockdown retries and broken pipes on iOS 18+.\n• **Eliminated Loopback Policy Drops**: Removed local loopback attempts that caused `policy drop` control channel errors.\n\n### 🖼 Wallpapers (.tendies) — Collections & Mercury Fixes\n• **Dual Injection on iOS 18+**: Wallpapers are now injected into both their primary bundle (`com.apple.WallpaperKit.CollectionsPoster` or `com.apple.MercuryPoster`) and the modern iOS 18+ application container (`com.apple.Posters.CollectionsPosterApp` / `com.apple.Posters.MercuryPosterApp`).\n• **Metadata Synchronization**: Fixed a critical issue where `Wallpaper.plist`'s numeric identifier was randomized out-of-sync with `suggestionMetadata.plist` (`7400.DYNAMIC`), causing wallpapers like Windows 11 to vanish from the Lock Screen gallery.\n• **Mercury Wallpaper Support**: Added recognition for `mercury-descriptors` container folders and registered `com.apple.Posters.MercuryPosterApp` in `PersistedPosterContainerBundleIdentifiers`.\n• **NeoSpring Respring**: Instant springboard reload to apply wallpaper preferences immediately.\n\n### 🧪 Quality & Testing\n• All 24 unit tests passing (`TendiesEngineTests`, `WalletScanParserTests`, `CardPhotoCropTests`, `CardPhotoPickerTests`).\n\n**Full Changelog**: https://github.com/Mak5er/AirCard-iOS/compare/v1.3.1...v1.3.2",
+          "downloadURL": "https://github.com/Mak5er/AirCard-iOS/releases/download/v1.3.2/AirCard-iOS.ipa",
+          "size": 4638147,
           "minOSVersion": "27.0"
         }
       ]
@@ -261,12 +261,11 @@
       "tintColor": "#1060F0",
       "versions": [
         {
-          "version": "1.0.12",
-          "buildVersion": "32",
-          "date": "2026-09-28",
-          "localizedDescription": "## 主要变化\n\n- 修复步行和驾车路线模拟未应用 GCJ-02/WGS84 选择的问题。\n- 路线起点、移动点、终点、返程和中断恢复现在会继续使用同一坐标模式。\n- MapKit 路线保持原始坐标用于规划和显示，仅转换发送给 iPhone 的模拟坐标。\n\n## 安装\n\n本版提供未签名 IPA，需要使用 SideStore 或自己的开发者身份签名，建议覆盖安装。最低系统为 iOS 27.0。\n\nSHA-256: `6f700a8ce62b2e03e31bb4217d45971b4972b3f62dae8df134091232fc9d9999`\n\n同一功能代码已通过 Build 32 本地测试包的真机验收；正式 IPA 在更新 1.0.12 版本元数据后重新构建，并完成 Archive 和包级校验。",
-          "downloadURL": "https://github.com/suversal/WrapPin/releases/download/v1.0.12/WrapPin-1.0.12-build32.ipa",
-          "size": 3490811,
+          "version": "1.0.13",
+          "date": "2026-10-04",
+          "localizedDescription": "## 主要变化\n\n- 本版开始同时提供**标准版**和**隧道版**两个 IPA，来自同一份源码和同一个版本号。\n- 标准版功能与 1.0.12 相同，继续使用 LocalDevVPN／Shadowrocket 等外部设备隧道。\n- 隧道版内置 Packet Tunnel 设备隧道，不需要另装隧道 App：开始定位时自动连接，停止并恢复真实位置后自动断开；在设置里手动开启的隧道会保持连接，直到手动关闭。\n- 隧道版只路由本机 `10.7.0.1` 的设备连接，不解密 HTTPS、不安装证书、不改变公网出口。\n\n## 该下载哪个\n\n| | 标准版 | 隧道版 |\n|---|---|---|\n| 文件 | `WrapPin-Standard-1.0.13-build41-unsigned.ipa` | `WrapPin-Tunnel-1.0.13-build41-unsigned.ipa` |\n| 适合 | SideStore 或其他自签方式（免费 Apple 账号） | 拥有带 Packet Tunnel（Network Extension）权限的签名证书和描述文件 |\n| 设备隧道 | 外部 App（LocalDevVPN 等） | 内置 |\n| Bundle ID | `com.suversal.wrappin` | `com.suversal.wrappin.selfsigned`，扩展为 `.tunnel` |\n\n免费 Apple 账号和 SideStore 无法签名隧道版，请使用标准版。隧道版的主 App 和扩展都需要各自匹配的描述文件。两个版本可以同时安装，设置和配对记录分别保存。\n\n## 安装\n\n两个文件都是未签名 IPA，最低系统为 iOS 27.0。标准版建议覆盖安装旧版。隧道版暂不显示更新提示，请关注本页面。\n\nSHA-256\n\n- 标准版：`794ce2cc86f27eb1b9d21183db04cddf3ce3608e7393869bb79e9955e316fcbc`\n- 隧道版：`8d4c8f27c3e640d24f5db02b18a4dfc4ee54cb024a48ca982a8f04a912c4ee58`\n\n详细说明见 [Release-1.0.13.md](https://github.com/suversal/WrapPin/blob/main/Documentation/Release-1.0.13.md)。",
+          "downloadURL": "https://github.com/suversal/WrapPin/releases/download/v1.0.13/WrapPin-Standard-1.0.13-build41-unsigned.ipa",
+          "size": 3498655,
           "minOSVersion": "27.0"
         }
       ]
@@ -333,6 +332,28 @@
   ],
   "news": [
     {
+      "appID": "com.suversal.wrappin",
+      "title": "WrapPin 1.0.13 · 04 Oct 2026",
+      "identifier": "WrapPin-release-v1.0.13",
+      "caption": "WrapPin 1.0.13 is available.",
+      "date": "2026-10-04T13:31:05Z",
+      "tintColor": "#1060F0",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/news.png",
+      "notify": true,
+      "url": "https://github.com/suversal/WrapPin/releases/tag/v1.0.13"
+    },
+    {
+      "appID": "com.mak5er.aircard",
+      "title": "AirCard-iOS 1.3.2 · 04 Oct 2026",
+      "identifier": "AirCard-iOS-release-v1.3.2",
+      "caption": "AirCard-iOS 1.3.2 is available.",
+      "date": "2026-10-04T12:22:53Z",
+      "tintColor": "#5020E0",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/AirCard-iOS/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Mak5er/AirCard-iOS/releases/tag/v1.3.2"
+    },
+    {
       "appID": "sb.moe.kumone",
       "title": "Kumone 0.3.20 · 03 Oct 2026",
       "identifier": "Kumone-release-v0.3.20",
@@ -342,28 +363,6 @@
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kumone/images/news.png",
       "notify": true,
       "url": "https://github.com/missuo/kumone/releases/tag/v0.3.20"
-    },
-    {
-      "appID": "com.mak5er.aircard",
-      "title": "AirCard-iOS 1.3.1 · 01 Oct 2026",
-      "identifier": "AirCard-iOS-release-v1.3.1",
-      "caption": "AirCard-iOS 1.3.1 is available.",
-      "date": "2026-10-01T23:01:18Z",
-      "tintColor": "#5020E0",
-      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/AirCard-iOS/images/news.png",
-      "notify": true,
-      "url": "https://github.com/Mak5er/AirCard-iOS/releases/tag/v1.3.1"
-    },
-    {
-      "appID": "com.suversal.wrappin",
-      "title": "WrapPin 1.0.12 · 28 Sep 2026",
-      "identifier": "WrapPin-release-v1.0.12",
-      "caption": "WrapPin 1.0.12 is available.",
-      "date": "2026-09-28T06:36:35Z",
-      "tintColor": "#1060F0",
-      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/news.png",
-      "notify": true,
-      "url": "https://github.com/suversal/WrapPin/releases/tag/v1.0.12"
     },
     {
       "appID": "org.zhaohe.MiniWatts",
