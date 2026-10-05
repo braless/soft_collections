@@ -1,0 +1,19 @@
+# render_news.py config: python3 templates/render_news.py --out apps/coolapk-desktop
+# Colors left unset are auto-derived: tint from config.toml, background as
+# a light shade of the icon's dominant color.
+
+name = "酷安"
+tagline = "非官方酷安客户端（Tauri 跨平台）"
+
+# Color notes — each key below controls one element of the image. All are
+# optional: unset keys are auto-derived. Shown values are the current result.
+[colors]
+# The badge uses a darker green than the app's tint (#12B868): the background
+# below it is a pale green too, and the brand green only reaches ~2.1:1 there.
+tint = "#0E7A45"
+# tint_alt = "#12B868"      # bottom-right glow (default: [source] tint_color)
+# background = "#D6EBE0"    # gradient base (derived from the icon's dominant color)
+# bg_mid = "#E7F3ED"        # gradient mid stop (derived from background)
+# bg_dark = "#BBDECB"       # gradient end stop (derived from background)
+# text_color = "#111111"    # app name (auto white/black)
+# tagline_color = "#51BD85" # tagline text (derived from background)

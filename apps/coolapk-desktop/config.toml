@@ -1,0 +1,54 @@
+# altgen config for the coolapk-desktop (酷安) AltStore source.
+# Run: uvx altgen -c config.toml
+#
+# The project is a Tauri app that also ships Windows/macOS/Linux/Android
+# builds; only the iOS asset is matched below. Identity comes from
+# src-tauri/tauri.conf.json (identifier, version) and was double-checked
+# against the released IPA's Payload/coolapk-desktop.app/Info.plist.
+#
+# Note: the iOS IPA currently carries Tauri's default placeholder icon (white
+# with the Tauri logo) because the CI generates the Xcode project with
+# `tauri ios init` but never runs `tauri icon`. This source uses the project's
+# real app icon instead (src-tauri/icons/icon-macos.png, cropped to full bleed).
+
+[github]
+repo = "daimiaopeng/coolapk-desktop"
+
+[source]
+name = "酷安"
+subtitle = "coolapk-desktop AltStore source by soft_collections & altgen"
+description = "Auto-updated AltStore source for coolapk-desktop, the unofficial cross-platform Coolapk client"
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/coolapk-desktop/icon.png"
+website = "https://github.com/daimiaopeng/coolapk-desktop"
+tint_color = "#12B868"
+
+[app]
+name = "酷安"
+bundle_identifier = "com.coolapk.desktop"
+developer_name = "daimiaopeng"
+subtitle = "非官方酷安客户端（Tauri 跨平台）"
+description = "基于 Tauri 2、Vue 3 和 Rust 的非官方酷安客户端，除 iOS 外还提供 Windows、macOS、Linux 与 Android 版本。iOS 包由项目 CI 构建且未签名，需要用 AltStore 等工具自行签名后安装。"
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/coolapk-desktop/icon.png"
+screenshots = [
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/coolapk-desktop/images/home.png",
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/coolapk-desktop/images/feed.png",
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/coolapk-desktop/images/detail.png",
+]
+tint_color = "#12B868"
+# Read from the released IPA (MinimumOSVersion).
+min_os_version = "14.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# asset_pattern is a regex (not glob): every release also ships Windows, macOS,
+# Linux and Android packages, plus a beta channel — match the stable iOS IPA.
+asset_pattern = "^coolapk-v\\d+\\.\\d+\\.\\d+-ios-arm64-unsigned\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+# shared promo image rendered by templates/render_news.py
+image_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/coolapk-desktop/images/news.png"
+
+[output]
+path = "apps.json"

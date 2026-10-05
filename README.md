@@ -50,6 +50,9 @@ Manage multiple Apple IDs across App Store regions and download official signed 
 ### <a href="https://github.com/Mac-XK/KMusic"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/KMusic/icon.png" alt="KMusic icon" width="24" align="top"> KMusic</a>
 基于 SwiftUI 的多源音乐聚合播放器，支持 iOS/macOS，内置酷我、酷狗、QQ 音乐、网易云等多平台音源与 LRC 歌词同步。
 
+### <a href="https://github.com/daimiaopeng/coolapk-desktop"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/coolapk-desktop/icon.png" alt="coolapk-desktop icon" width="24" align="top"> 酷安</a>
+基于 Tauri 2 / Vue 3 / Rust 的非官方酷安客户端，跨平台（Windows / macOS / Linux / Android / iOS）。iOS 包未签名，需自行签名安装。
+
 ### <a href="https://github.com/missuo/kumone"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/Kumone/icon.png" alt="Kumone icon" width="24" align="top"> Kumone</a>
 原生 NetEase Cloud Music iOS 客户端（雲の音），直连网易云音乐真实 API，支持灰色歌曲解锁与歌词。
 
