@@ -328,6 +328,30 @@
           "minOSVersion": "13.0"
         }
       ]
+    },
+    {
+      "name": "酷安",
+      "bundleIdentifier": "com.coolapk.desktop",
+      "developerName": "daimiaopeng",
+      "subtitle": "非官方酷安客户端（Tauri 跨平台）",
+      "localizedDescription": "基于 Tauri 2、Vue 3 和 Rust 的非官方酷安客户端，除 iOS 外还提供 Windows、macOS、Linux 与 Android 版本。iOS 包由项目 CI 构建且未签名，需要用 AltStore 等工具自行签名后安装。",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/coolapk-desktop/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/coolapk-desktop/images/home.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/coolapk-desktop/images/feed.png",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/coolapk-desktop/images/detail.png"
+      ],
+      "tintColor": "#12B868",
+      "versions": [
+        {
+          "version": "1.31.0",
+          "date": "2026-10-05",
+          "localizedDescription": "# v1.31.0 更新日志\r\n\r\n## 新增\r\n\r\n- 新增测试版更新渠道，侧栏提供快捷开关，开启后可检查测试版本更新。\r\n- 新增官方样式移动端动态详情，包含作者关注入口、关联产品卡片、热门回复、底部操作栏和弹出式评论输入框，可在外观设置中切换。\r\n- 完善动态分享菜单，支持分享到私信、收录到看看号及分享到看看号广场，并提供正文和链接复制入口。\r\n- 新增应用内动态举报页面，支持选择举报原因、填写补充说明和添加图片。\r\n- 数码榜单支持分类切换，展示产品排名、热度和讨论数量。\r\n- 桌面端 CDN 上传支持拖拽添加多个文件。\r\n- Windows 实况照片无法播放 HEVC 视频时，提供视频扩展下载入口。\r\n\r\n## 优化\r\n\r\n- 调整移动端数码页面的顶部入口、推荐轮播、分类网格和产品列表布局。\r\n- 移动端底部导航仅在首页、数码、发现和个人中心显示，为子页面释放内容空间。\r\n- 增加动态详情打开与返回动画；移动端官方详情在已有完整动态信息时并行加载评论。\r\n- 完善外部链接打开失败提示，提供复制链接后手动打开的入口。\r\n- 酷安 CDN 上传结果及历史任务中的相关链接统一使用 HTTPS。\r\n\r\n## 修复\r\n\r\n- 修复点击部分用户名和 @提及链接无法正确进入用户主页的问题。\r\n- 修复首页在桌面与移动布局之间切换时，栏目内容、分页状态和滚动位置丢失的问题。\r\n- 修复装备页内容展示及编辑、添加产品、保存分享流程，完善装备窗口的登录状态同步。",
+          "downloadURL": "https://github.com/daimiaopeng/coolapk-desktop/releases/download/v1.31.0/coolapk-v1.31.0-ios-arm64-unsigned.ipa",
+          "size": 8194492,
+          "minOSVersion": "14.0"
+        }
+      ]
     }
   ],
   "news": [
@@ -341,6 +365,17 @@
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PiliPlus/images/news.png",
       "notify": true,
       "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.6"
+    },
+    {
+      "appID": "com.coolapk.desktop",
+      "title": "酷安 1.31.0 · 05 Oct 2026",
+      "identifier": "酷安-release-v1.31.0",
+      "caption": "酷安 1.31.0 is available.",
+      "date": "2026-10-05T03:36:27Z",
+      "tintColor": "#12B868",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/coolapk-desktop/images/news.png",
+      "notify": true,
+      "url": "https://github.com/daimiaopeng/coolapk-desktop/releases/tag/v1.31.0"
     },
     {
       "appID": "com.suversal.wrappin",
