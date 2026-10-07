@@ -344,17 +344,28 @@
       "tintColor": "#12B868",
       "versions": [
         {
-          "version": "1.31.0",
-          "date": "2026-10-05",
-          "localizedDescription": "# v1.31.0 更新日志\r\n\r\n## 新增\r\n\r\n- 新增测试版更新渠道，侧栏提供快捷开关，开启后可检查测试版本更新。\r\n- 新增官方样式移动端动态详情，包含作者关注入口、关联产品卡片、热门回复、底部操作栏和弹出式评论输入框，可在外观设置中切换。\r\n- 完善动态分享菜单，支持分享到私信、收录到看看号及分享到看看号广场，并提供正文和链接复制入口。\r\n- 新增应用内动态举报页面，支持选择举报原因、填写补充说明和添加图片。\r\n- 数码榜单支持分类切换，展示产品排名、热度和讨论数量。\r\n- 桌面端 CDN 上传支持拖拽添加多个文件。\r\n- Windows 实况照片无法播放 HEVC 视频时，提供视频扩展下载入口。\r\n\r\n## 优化\r\n\r\n- 调整移动端数码页面的顶部入口、推荐轮播、分类网格和产品列表布局。\r\n- 移动端底部导航仅在首页、数码、发现和个人中心显示，为子页面释放内容空间。\r\n- 增加动态详情打开与返回动画；移动端官方详情在已有完整动态信息时并行加载评论。\r\n- 完善外部链接打开失败提示，提供复制链接后手动打开的入口。\r\n- 酷安 CDN 上传结果及历史任务中的相关链接统一使用 HTTPS。\r\n\r\n## 修复\r\n\r\n- 修复点击部分用户名和 @提及链接无法正确进入用户主页的问题。\r\n- 修复首页在桌面与移动布局之间切换时，栏目内容、分页状态和滚动位置丢失的问题。\r\n- 修复装备页内容展示及编辑、添加产品、保存分享流程，完善装备窗口的登录状态同步。",
-          "downloadURL": "https://github.com/daimiaopeng/coolapk-desktop/releases/download/v1.31.0/coolapk-v1.31.0-ios-arm64-unsigned.ipa",
-          "size": 8194492,
+          "version": "1.32.0",
+          "date": "2026-10-07",
+          "localizedDescription": "# v1.32.0 更新日志\r\n\r\n## 新增\r\n\r\n- 发布动态时可选择是否附带设备型号：PC 默认关闭，Android、iOS 获取到真实机型时默认开启。\r\n- 接入 Google 官方 Android 机型表，支持搜索及按品牌、系列、机型、型号逐级选择。\r\n- 动态和评论中的设备型号支持转换为机型名称，鼠标悬停仍显示原始信息；已有机型名称、匹配不明确的型号保留原文。\r\n- 为仅自己可见的动态添加状态提示。\r\n\r\n## 优化\r\n\r\n- 参考官方调整移动端发现页的顶部搜索、热门专区和分类布局，增加频道滑动切换、指示条跟随及点击反馈，并适配桌面多列布局。\r\n- 发现页中的内容分类改为原地切换下方信息流，保留专区与分类入口；独立内容入口继续打开对应页面。\r\n- 优化好物榜首页与详情：展示完整推荐横幅、分类入口及 TOP3 商品预览，详情保留服务端排名，完善商品价格、推荐内容和投票展示。\r\n- 好物详情评论自动加载，调整评论排序与底部操作栏；桌面端操作栏随内容区域居中，写评论时再展开输入框。\r\n- 二手频道进入后自动加载商品信息流，采用移动端双列、桌面端多列瀑布流，展示价格、交易平台、卖家、时间和所在地；同步调整分类入口与安全条款展示。\r\n- Android、iOS、macOS 默认使用本机设备与系统信息，完善自定义设备信息中的品牌、制造商、ROM 设置及 Android／SDK 对应关系提示。\r\n- 优化图片、实况视频、动态列表及预览窗口的内存管理，及时释放离屏和关闭后的资源，限制缓存规模；保留本地图片缓存，方便再次加载。\r\n- 优化图片、视频和文件下载请求的连接复用，减少重复建立网络连接。\r\n- 原图加载成功后隐藏“查看原图”按钮及加载完成提示。\r\n\r\n## 修复\r\n\r\n- 修复 iOS 内容页返回区域受系统安全区影响的问题，并支持从屏幕左边缘向右滑动返回。\r\n- 修复纯文字等较矮动态的操作菜单被裁切，导致删除、编辑等选项无法显示的问题。\r\n- 修复图片放大后出现横向细线和渲染接缝的问题。\r\n- 修复移动端数码库品牌、分类区域无法收起的问题；参考官方布局调整为左侧窄分类栏、右侧产品列表，选择后自动收起。\r\n- 修复移动端详情及部分问答、评分、好物和二手卡片缺少“已编辑”标识的问题。\r\n- 修复关闭话题评论侧栏或页面布局变化时出现尺寸监听循环报错的问题。",
+          "downloadURL": "https://github.com/daimiaopeng/coolapk-desktop/releases/download/v1.32.0/coolapk-v1.32.0-ios-arm64-unsigned.ipa",
+          "size": 8677921,
           "minOSVersion": "14.0"
         }
       ]
     }
   ],
   "news": [
+    {
+      "appID": "com.coolapk.desktop",
+      "title": "酷安 1.32.0 · 07 Oct 2026",
+      "identifier": "酷安-release-v1.32.0",
+      "caption": "酷安 1.32.0 is available.",
+      "date": "2026-10-07T10:24:38Z",
+      "tintColor": "#12B868",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/coolapk-desktop/images/news.png",
+      "notify": true,
+      "url": "https://github.com/daimiaopeng/coolapk-desktop/releases/tag/v1.32.0"
+    },
     {
       "appID": "com.example.piliplus",
       "title": "PiliPlus 2.1.6 · 05 Oct 2026",
@@ -365,17 +376,6 @@
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PiliPlus/images/news.png",
       "notify": true,
       "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.6"
-    },
-    {
-      "appID": "com.coolapk.desktop",
-      "title": "酷安 1.31.0 · 05 Oct 2026",
-      "identifier": "酷安-release-v1.31.0",
-      "caption": "酷安 1.31.0 is available.",
-      "date": "2026-10-05T03:36:27Z",
-      "tintColor": "#12B868",
-      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/coolapk-desktop/images/news.png",
-      "notify": true,
-      "url": "https://github.com/daimiaopeng/coolapk-desktop/releases/tag/v1.31.0"
     },
     {
       "appID": "com.suversal.wrappin",
