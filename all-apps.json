@@ -261,11 +261,11 @@
       "tintColor": "#1060F0",
       "versions": [
         {
-          "version": "1.0.13",
-          "date": "2026-10-04",
-          "localizedDescription": "## 主要变化\n\n- 本版开始同时提供**标准版**和**隧道版**两个 IPA，来自同一份源码和同一个版本号。\n- 标准版功能与 1.0.12 相同，继续使用 LocalDevVPN／Shadowrocket 等外部设备隧道。\n- 隧道版内置 Packet Tunnel 设备隧道，不需要另装隧道 App：开始定位时自动连接，停止并恢复真实位置后自动断开；在设置里手动开启的隧道会保持连接，直到手动关闭。\n- 隧道版只路由本机 `10.7.0.1` 的设备连接，不解密 HTTPS、不安装证书、不改变公网出口。\n\n## 该下载哪个\n\n| | 标准版 | 隧道版 |\n|---|---|---|\n| 文件 | `WrapPin-Standard-1.0.13-build41-unsigned.ipa` | `WrapPin-Tunnel-1.0.13-build41-unsigned.ipa` |\n| 适合 | SideStore 或其他自签方式（免费 Apple 账号） | 拥有带 Packet Tunnel（Network Extension）权限的签名证书和描述文件 |\n| 设备隧道 | 外部 App（LocalDevVPN 等） | 内置 |\n| Bundle ID | `com.suversal.wrappin` | `com.suversal.wrappin.selfsigned`，扩展为 `.tunnel` |\n\n免费 Apple 账号和 SideStore 无法签名隧道版，请使用标准版。隧道版的主 App 和扩展都需要各自匹配的描述文件。两个版本可以同时安装，设置和配对记录分别保存。\n\n## 安装\n\n两个文件都是未签名 IPA，最低系统为 iOS 27.0。标准版建议覆盖安装旧版。隧道版暂不显示更新提示，请关注本页面。\n\nSHA-256\n\n- 标准版：`794ce2cc86f27eb1b9d21183db04cddf3ce3608e7393869bb79e9955e316fcbc`\n- 隧道版：`8d4c8f27c3e640d24f5db02b18a4dfc4ee54cb024a48ca982a8f04a912c4ee58`\n\n详细说明见 [Release-1.0.13.md](https://github.com/suversal/WrapPin/blob/main/Documentation/Release-1.0.13.md)。",
-          "downloadURL": "https://github.com/suversal/WrapPin/releases/download/v1.0.13/WrapPin-Standard-1.0.13-build41-unsigned.ipa",
-          "size": 3498655,
+          "version": "1.0.15",
+          "date": "2026-10-08",
+          "localizedDescription": "## 主要变化\n\n本版只修正连接失败时的提示文字，功能与 1.0.14 相同。\n\n**修复**\n\n- 有四条连接失败提示写死了 LocalDevVPN，使用 Shadowrocket 或隧道版内置隧道时也会出现。现在统一称为“设备隧道”，例如“WrapPin 无法通过设备隧道连接 iPhone”。\n\n1.0.14 的新功能（备选路线、连接中立即停止等）见 [v1.0.14](https://github.com/suversal/WrapPin/releases/tag/v1.0.14)。\n\n## 该下载哪个\n\n| | 标准版 | 隧道版 |\n|---|---|---|\n| 文件 | `WrapPin-Standard-1.0.15-build48-unsigned.ipa` | `WrapPin-Tunnel-1.0.15-build48-unsigned.ipa` |\n| 适合 | SideStore 或其他自签方式（免费 Apple 账号） | 拥有带 Packet Tunnel（Network Extension）权限的签名证书和描述文件 |\n| 设备隧道 | 外部 App（LocalDevVPN、Shadowrocket） | 内置 |\n| Bundle ID | `com.suversal.wrappin` | `com.suversal.wrappin.selfsigned`，扩展为 `.tunnel` |\n\n免费 Apple 账号和 SideStore 无法签名隧道版，请使用标准版。两个版本可以同时安装，设置和配对记录分别保存。\n\n## 安装\n\n两个文件都是未签名 IPA，最低系统为 iOS 27.0。建议覆盖安装旧版，配对记录和收藏会保留。\n\nSHA-256\n\n- 标准版：`58d30ab5801807708b9f0a04d59869cab684465212226b186966b32272a1b84d`\n- 隧道版：`eefaed0ff692454d610ff45b91780a5216d5c63a65001daa425eca5afb894522`\n\n## 已知边界\n\n- 备选路线上的用时按所设模拟速度计算，不是实时路况时间。\n- 异常退出后恢复路线时，会按 Apple 地图的推荐路线重新规划，不一定是之前选择的那条备选路线。\n\n详细说明见 [Release-1.0.15.md](https://github.com/suversal/WrapPin/blob/main/Documentation/Release-1.0.15.md)。",
+          "downloadURL": "https://github.com/suversal/WrapPin/releases/download/v1.0.15/WrapPin-Standard-1.0.15-build48-unsigned.ipa",
+          "size": 3519964,
           "minOSVersion": "27.0"
         }
       ]
@@ -356,6 +356,17 @@
   ],
   "news": [
     {
+      "appID": "com.suversal.wrappin",
+      "title": "WrapPin 1.0.15 · 08 Oct 2026",
+      "identifier": "WrapPin-release-v1.0.15",
+      "caption": "WrapPin 1.0.15 is available.",
+      "date": "2026-10-08T13:24:35Z",
+      "tintColor": "#1060F0",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/news.png",
+      "notify": true,
+      "url": "https://github.com/suversal/WrapPin/releases/tag/v1.0.15"
+    },
+    {
       "appID": "com.coolapk.desktop",
       "title": "酷安 1.32.0 · 07 Oct 2026",
       "identifier": "酷安-release-v1.32.0",
@@ -376,17 +387,6 @@
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PiliPlus/images/news.png",
       "notify": true,
       "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.6"
-    },
-    {
-      "appID": "com.suversal.wrappin",
-      "title": "WrapPin 1.0.13 · 04 Oct 2026",
-      "identifier": "WrapPin-release-v1.0.13",
-      "caption": "WrapPin 1.0.13 is available.",
-      "date": "2026-10-04T13:31:05Z",
-      "tintColor": "#1060F0",
-      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/news.png",
-      "notify": true,
-      "url": "https://github.com/suversal/WrapPin/releases/tag/v1.0.13"
     },
     {
       "appID": "com.mak5er.aircard",
