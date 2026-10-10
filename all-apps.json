@@ -16,11 +16,11 @@
       "tintColor": "#0057D9",
       "versions": [
         {
-          "version": "2.3.0",
-          "date": "2026-10-09",
-          "localizedDescription": "## [2.3.0] - 2026-10-09\r\n\r\n> **English** — Release notes. | **中文** — 发行说明见下方中文版。\r\n\r\n### Fixed\r\n- **iOS 27.0.1 \"AirTraffic did not recover\"** on read: the airlift read probe\r\n  now targets a non-empty payload and emits more diagnostic logging.\r\n\r\n### Added\r\n- Runtime log collection (`AirBeepLog`) with on-device export in the About page\r\n  for easier troubleshooting.\r\n- Manual pairing-file import via `UIDocumentPickerViewController` (`asCopy`),\r\n  avoiding the sandbox security-scope read failure.\r\n- Screen keeps awake and shows a prominent \"do not exit the app\" warning banner\r\n  while a silence / restore operation is running.\r\n\r\n### Security\r\n- Removed the unused `BadQuery` vulnerability; only `airlift` is retained.\r\n\r\n### English / Infrastructure\r\n- Updated supported range to iOS/iPadOS 18.0 – 27.2 B2\r\n\r\n---\r\n\r\n### 已修复\r\n- **修复 iOS 27.0.1 \"AirTraffic did not recover\"**（读取时）：airlift 读取\r\n  探针改为非空 payload，并增加诊断日志。\r\n\r\n### 新增\r\n- **运行时日志采集**（`AirBeepLog`）+ 关于页一键导出，便于排查问题。\r\n- **手动导入配对文件**：改用 `UIDocumentPickerViewController`（`asCopy`），\r\n  规避沙盒安全作用域读取失败。\r\n- **操作中屏幕常亮**，并显示醒目的\"操作中请不要退出软件\"提示横幅。\r\n\r\n### 安全\r\n- 移除未使用的 `BadQuery` 漏洞，仅保留 `airlift`。\r\n\r\n### 基础设施\r\n- 支持范围更新为 **iOS/iPadOS 18.0 – 27.2 B2**\r\n\r\n---\r\n\r\n**Full Changelog**: [v2.2.0...v2.3.0](https://github.com/LinkPass888/AirBeep/compare/v2.2.0...v2.3.0)",
-          "downloadURL": "https://github.com/LinkPass888/AirBeep/releases/download/v2.3.0/airbeep-v2.3.0-unsigned.ipa",
-          "size": 5807349,
+          "version": "2.4.0",
+          "date": "2026-10-10",
+          "localizedDescription": "## [2.4.0] - 2026-10-10\r\n\r\n> **English** — Release notes. | **中文** — 发行说明见下方中文版。\r\n\r\n### English / Changed\r\n- Removed the automatic tone-state check that ran at app launch. The app now restores the\r\n  last known state from cache and performs no file access until the user flips\r\n  the switch.\r\n- If anything goes wrong with the tones, you can force the original system\r\n  tones back by changing the system language on the device.\r\n\r\n---\r\n\r\n### 中文 / 变更\r\n- 移除 app 启动时自动执行的提示音文件状态校验。现在打开 app 不再做任何文件读取，改为从本地缓存恢复\r\n  上次的状态，仅在用户拨动开关时才进行实际操作。\r\n- 若提示音出现异常，可通过**更改系统语言**强制恢复为系统默认提示音。\r\n\r\n---\r\n\r\n**Full Changelog**: [v2.3.0...v2.4.0](https://github.com/LinkPass888/AirBeep/compare/v2.3.0...v2.4.0)",
+          "downloadURL": "https://github.com/LinkPass888/AirBeep/releases/download/v2.4.0/airbeep-v2.4.0-unsigned.ipa",
+          "size": 5806194,
           "minOSVersion": "27.0"
         }
       ]
@@ -167,11 +167,11 @@
       "tintColor": "#30F040",
       "versions": [
         {
-          "version": "1.4.1",
-          "date": "2026-09-25",
-          "localizedDescription": "Unsigned build — sign it with your own Apple ID before installing.\nhttps://github.com/ResistanceTo/MiniWatts#install\n\n## 修复\n\n- **滑动时每秒卡一下**：在 iPhone 15 Pro 等机型上，任何页面匀速滑动时大约每秒会顿一下，插不插充电器都会出现，现已修复。原因有几处叠加：\n  - 表盘中间的数字滚动效果和弧线动画会被放到 CPU 上绘制，页面滚动时每一帧都要重画一次，占用了大量主线程时间。\n  - 悬浮读数（画中画）即使没有打开，也每秒在后台画一帧画面。\n  - 打开过的每个标签页即使不在前台，也会每秒跟着刷新；当前页面的导航栏和工具栏也每秒重建一次。\n  - 读取传感器改到后台线程进行，不再占用界面线程。\n\n## 变化\n\n- 表盘上的功率数字不再有滚动动画，弧线也不再有过渡动画，都和其他读数一样直接更新。\n- 切换到别的标签页再切回来时，页面会回到顶部。\n\n感谢反馈这个问题的用户。\n\n---\n\n## Fixes\n\n- **Scrolling hitched about once a second** on every screen, charging or not (reported on an iPhone 15 Pro). Several causes added up:\n  - The dial's rolling number and arc animations were drawn on the CPU and redrawn on every scroll frame.\n  - The floating meter (Picture in Picture) rendered a frame every second even when it was not open.\n  - Every tab you had visited kept refreshing in the background once a second, and the visible page rebuilt its navigation bar and toolbar on every refresh.\n  - Sensor reads now run off the main thread.\n\n## Changes\n\n- The power reading on the dial no longer rolls and its arcs no longer animate; they update in place like every other reading.\n- A tab returns to the top when you switch back to it.\n\nThanks to the user who reported it.\n\n**Full Changelog**: https://github.com/ResistanceTo/MiniWatts/compare/v1.4.0...v1.4.1",
-          "downloadURL": "https://github.com/ResistanceTo/MiniWatts/releases/download/v1.4.1/MiniWatts-unsigned.ipa",
-          "size": 3270441,
+          "version": "1.5.0",
+          "date": "2026-10-10",
+          "localizedDescription": "Unsigned build — sign it with your own Apple ID before installing.\nhttps://github.com/ResistanceTo/MiniWatts#install\n\n## 改进\n\n- **缺失的读数不再显示成 0。** 某一侧没有读数时（例如无线充电没有输入电流），图表在那一段断开，不再掉到 0；能量统计也只累计真正测到的时间段。\n- **充电效率更准。** \"电芯占比\"和\"负载与损耗\"只按输入侧、电池侧同时有读数的时间段计算，某一侧中途缺失不会再把结果带偏。\n- **两个标签改名。** \"以热量损失\"改为\"负载与损耗\"：这部分是手机自身耗电加上转换损耗，并不全是发热。\"效率 / 往返效率\"改为\"电芯占比\"。\n- **\"暂停充电\"的判断更稳。** 状态切换要持续 30 秒才生效，不再来回跳；没有电池电流读数时显示\"保持状态未知\"，不再直接当成暂停充电。\n- **耗电估算不再因为切到后台而清空。** 短暂离开 App 再回来，估算值还在。\n- **历史文件损坏时不再被直接覆盖。** 读不出来的历史文件会改名保留，并在\"原始数据\"页给出提示。\n- **发热相关的说明更准确。** 系统热状态只说明\"可能\"在限制充电电流，不再说成确定的原因。\n\n## 修复\n\n- 历史记录：没有测到输入侧的记录，\"输入\"和\"充电器峰值\"显示为\"—\"，不再显示 0；列表里的迷你曲线改画电池侧功率，不再空白。\n- 实时活动：灵动岛展开后，右上角的状态文字和\"结束\"按钮不再被圆角裁掉；暂停提示能完整显示。\n- 原始数据：重名的 HID 服务各占一行，不再被合并。\n\n## 注意\n\n- 升级后历史记录的格式有变化，旧版本读不了新格式。**如果从 1.5.0 降级回旧版本，历史记录会丢失。**\n\n---\n\n## Improvements\n\n- **A missing reading is no longer shown as 0.** When a rail has no reading (wireless charging has no input current, for one), the charts break there instead of dropping to zero, and energy is only counted over time that was actually measured.\n- **Charge efficiency is more accurate.** \"Cell share\" and \"Load + loss\" are computed only over the time both the input and the battery side were read, so one side dropping out no longer skews them.\n- **Two labels renamed.** \"Lost as heat\" is now \"Load + loss\": it is the phone's own consumption plus conversion loss, not all heat. \"Efficiency\" / \"Round trip\" is now \"Cell share\".\n- **\"Charging on hold\" is steadier.** A change has to last 30 seconds before it shows, so it no longer flickers; with no battery-current reading at all it says \"hold status unknown\" instead of assuming a hold.\n- **The discharge estimate survives a short trip to the background** instead of being cleared every time.\n- **An unreadable history file is no longer overwritten.** It is renamed and kept, and Raw data says so.\n- **Thermal wording is more careful.** The system thermal state says charging *may* be limited; it is no longer stated as the cause.\n\n## Fixes\n\n- History: a session whose input side was never measured shows \"—\" for Delivered and the charger's peak instead of 0, and its row draws the battery curve instead of nothing.\n- Live Activity: the expanded Dynamic Island no longer clips its status text and End button, and the paused message fits.\n- Raw data: HID services that share a name are listed as separate rows.\n\n## Note\n\n- The history file format changed and older versions cannot read it. **Downgrading from 1.5.0 loses the session history.**\n\n**Full Changelog**: https://github.com/ResistanceTo/MiniWatts/compare/v1.4.1...v1.5.0",
+          "downloadURL": "https://github.com/ResistanceTo/MiniWatts/releases/download/v1.5.0/MiniWatts-unsigned.ipa",
+          "size": 3284306,
           "minOSVersion": "17.0"
         }
       ]
@@ -216,11 +216,11 @@
       "versions": [
         {
           "version": "2.1.6",
-          "buildVersion": "5453",
-          "date": "2026-10-05",
-          "localizedDescription": "支持离线合集归档\r\n支持离线/更新空降片段\r\n添加视频过滤作用域详情\r\n支持切换`番剧`/`剧集`季度\r\n支持横屏时在侧栏显示`番剧`列表\r\n直播聊天显示`主播`标识 #3156\r\n直播聊天只显示点亮的牌子 #3155\r\n用户未直播时在主页显示入口按钮 #3033\r\n从视频切到直播不影响视频倍速 #3112\r\n支持转发同时评论 #3135\r\n@ 用户时置顶被`回复`/`转发`用户 #3123\r\n视频控制栏控件溢出处理 #3085\r\n添加英文文档 #3131 by @maoawa\r\n桌面端画中画记忆窗口位置大小 #2997\r\n收藏夹已满且未收藏时禁用选中 #3113\r\niOS 支持系统 PIP #3160 by @AotianNeo\r\n黑名单屏蔽扩展本地屏蔽，增加过滤搜索、评论\r\n支持按 `Enter` 保存截图 #3101 by @403bug\r\n支持从媒体会话向前/后跳转音视频 #2964 co-by @silverwolf-lv9999\r\n\r\n修复弹幕速度 #3136\r\n修复收藏夹视频跳转 #3137\r\n修复下滑关闭侧栏主页 #3160\r\n修复触控板浏览图片 https://github.com/bggRGjQaUbCoE/PiliPlus/issues/183#issuecomment-5976539299\r\n修复 Windows 26H2 任务栏不在底部时，退出全屏出现窗口偏移 #2901",
-          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.6/PiliPlus_ios_2.1.6%2B5453.ipa",
-          "size": 24083344,
+          "buildVersion": "5471",
+          "date": "2026-10-10",
+          "localizedDescription": "专栏支持跳转至评论 #3213\r\n其他调整 #3208 by @My-Responsitories\r\n\r\n修复 bug\r\n修复搜索风控验证 #3106\r\n修复窗口大小变化时图片闪烁 #2685\r\n修复安卓视频暂停时画面裁切问题 #3034 by @Hdy08",
+          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.6.1/PiliPlus_ios_2.1.6%2B5471.ipa",
+          "size": 24353584,
           "minOSVersion": "14.0"
         }
       ]
@@ -385,11 +385,11 @@
       "tintColor": "#12B868",
       "versions": [
         {
-          "version": "1.32.0",
-          "date": "2026-10-07",
-          "localizedDescription": "# v1.32.0 更新日志\r\n\r\n## 新增\r\n\r\n- 发布动态时可选择是否附带设备型号：PC 默认关闭，Android、iOS 获取到真实机型时默认开启。\r\n- 接入 Google 官方 Android 机型表，支持搜索及按品牌、系列、机型、型号逐级选择。\r\n- 动态和评论中的设备型号支持转换为机型名称，鼠标悬停仍显示原始信息；已有机型名称、匹配不明确的型号保留原文。\r\n- 为仅自己可见的动态添加状态提示。\r\n\r\n## 优化\r\n\r\n- 参考官方调整移动端发现页的顶部搜索、热门专区和分类布局，增加频道滑动切换、指示条跟随及点击反馈，并适配桌面多列布局。\r\n- 发现页中的内容分类改为原地切换下方信息流，保留专区与分类入口；独立内容入口继续打开对应页面。\r\n- 优化好物榜首页与详情：展示完整推荐横幅、分类入口及 TOP3 商品预览，详情保留服务端排名，完善商品价格、推荐内容和投票展示。\r\n- 好物详情评论自动加载，调整评论排序与底部操作栏；桌面端操作栏随内容区域居中，写评论时再展开输入框。\r\n- 二手频道进入后自动加载商品信息流，采用移动端双列、桌面端多列瀑布流，展示价格、交易平台、卖家、时间和所在地；同步调整分类入口与安全条款展示。\r\n- Android、iOS、macOS 默认使用本机设备与系统信息，完善自定义设备信息中的品牌、制造商、ROM 设置及 Android／SDK 对应关系提示。\r\n- 优化图片、实况视频、动态列表及预览窗口的内存管理，及时释放离屏和关闭后的资源，限制缓存规模；保留本地图片缓存，方便再次加载。\r\n- 优化图片、视频和文件下载请求的连接复用，减少重复建立网络连接。\r\n- 原图加载成功后隐藏“查看原图”按钮及加载完成提示。\r\n\r\n## 修复\r\n\r\n- 修复 iOS 内容页返回区域受系统安全区影响的问题，并支持从屏幕左边缘向右滑动返回。\r\n- 修复纯文字等较矮动态的操作菜单被裁切，导致删除、编辑等选项无法显示的问题。\r\n- 修复图片放大后出现横向细线和渲染接缝的问题。\r\n- 修复移动端数码库品牌、分类区域无法收起的问题；参考官方布局调整为左侧窄分类栏、右侧产品列表，选择后自动收起。\r\n- 修复移动端详情及部分问答、评分、好物和二手卡片缺少“已编辑”标识的问题。\r\n- 修复关闭话题评论侧栏或页面布局变化时出现尺寸监听循环报错的问题。",
-          "downloadURL": "https://github.com/daimiaopeng/coolapk-desktop/releases/download/v1.32.0/coolapk-v1.32.0-ios-arm64-unsigned.ipa",
-          "size": 8677921,
+          "version": "1.33.0",
+          "date": "2026-10-10",
+          "localizedDescription": "# 版本更新日志\r\n\r\n## 新增\r\n- 窗口记忆支持保存最大化状态，下次启动恢复最大化，点击还原后回到之前的普通尺寸与位置。\r\n- 完善发现页二手商品流，使用瀑布流展示商品图片、价格、交易平台、卖家和地区信息，支持持续分页加载。\r\n- 好物榜新增商品预览与排名展示，完善详情页评论、收藏和转发入口。\r\n- 在问答、好物和二手卡片中补充“已编辑”标记。\r\n- 网络设置新增全局代理，支持 HTTP、HTTPS、SOCKS4、SOCKS4a、SOCKS5 和 SOCKS5h，并可测试代理连接。\r\n- 移动端数码栏目支持左右滑动切换。\r\n- 设备设置增加苹果设备机型目录，可搜索和选择苹果设备型号。\r\n\r\n## 优化\r\n- 移动端发现页支持左右滑动切换频道，调整顶部搜索入口、分类栏与卡片布局。\r\n- 发现页切换分类时保留顶部入口和分类栏，仅刷新下方信息流。\r\n- 调整桌面端发现页布局，适配不同窗口宽度。\r\n- 完善 Android 软键盘避让，针对部分输入法遮挡输入区域的问题补充原生处理。\r\n- 调整信息流卡片和图片的离屏渲染，改善滚动时的上下跳动。\r\n- 粉丝和关注页面增加“特别关注”“互相关注”等分类，并调整列表布局。\r\n- 诊断日志附件增加 ZIP 格式支持，可在 PNG 附件无法保留日志时使用 ZIP。\r\n- 缩小“我的”页面顶部工具栏与头像区域之间的空白，使布局更加紧凑。\r\n\r\n## 修复\r\n- 修复启动时先显示默认窗口尺寸，再切换到记忆尺寸的闪现问题。\r\n- 修复拉黑、屏蔽确认弹窗被用户操作窗口遮挡的问题，按 Esc 仅关闭最上层弹窗。\r\n- 修复评论输入弹层被桌面侧栏遮挡，以及键盘弹出后的定位问题。\r\n- 修复窗口尺寸监听警告被误报为应用错误的问题。\r\n- 修复长评论点击“查看更多”时跳转到错误页面的问题，改为在原动态中加载完整评论。\r\n- 修复 Android 状态栏与应用界面颜色不一致的问题。\r\n- 修复粉丝简介错误显示为当前账号简介的问题；粉丝没有简介时不再显示简介内容。\r\n- 修复 Android “我的”页面状态栏与页面背景颜色不一致的问题，并同步滚动吸顶及主题切换时的背景颜色。\r\n- 修复设置页开关在窄屏下被说明文字挤压，导致轨道变形、圆点位置异常的问题。",
+          "downloadURL": "https://github.com/daimiaopeng/coolapk-desktop/releases/download/v1.33.0/coolapk-v1.33.0-ios-arm64-unsigned.ipa",
+          "size": 8748794,
           "minOSVersion": "14.0"
         }
       ]
@@ -398,14 +398,47 @@
   "news": [
     {
       "appID": "com.linkpass888.airbeep",
-      "title": "AirBeep 2.3.0 · 09 Oct 2026",
-      "identifier": "AirBeep-release-v2.3.0",
-      "caption": "AirBeep 2.3.0 is available.",
-      "date": "2026-10-09T17:11:05Z",
+      "title": "AirBeep 2.4.0 · 10 Oct 2026",
+      "identifier": "AirBeep-release-v2.4.0",
+      "caption": "AirBeep 2.4.0 is available.",
+      "date": "2026-10-10T08:42:06Z",
       "tintColor": "#0057D9",
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/AirBeep/images/news.png",
       "notify": true,
-      "url": "https://github.com/LinkPass888/AirBeep/releases/tag/v2.3.0"
+      "url": "https://github.com/LinkPass888/AirBeep/releases/tag/v2.4.0"
+    },
+    {
+      "appID": "org.zhaohe.MiniWatts",
+      "title": "MiniWatts 1.5.0 · 10 Oct 2026",
+      "identifier": "MiniWatts-release-v1.5.0",
+      "caption": "MiniWatts 1.5.0 is available.",
+      "date": "2026-10-10T07:18:40Z",
+      "tintColor": "#30F040",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/MiniWatts/images/news.png",
+      "notify": true,
+      "url": "https://github.com/ResistanceTo/MiniWatts/releases/tag/v1.5.0"
+    },
+    {
+      "appID": "com.example.piliplus",
+      "title": "PiliPlus 2.1.6 · 10 Oct 2026",
+      "identifier": "PiliPlus-release-2.1.6.1",
+      "caption": "PiliPlus 2.1.6 is available.",
+      "date": "2026-10-10T07:10:30Z",
+      "tintColor": "#73b480",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PiliPlus/images/news.png",
+      "notify": true,
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.6.1"
+    },
+    {
+      "appID": "com.coolapk.desktop",
+      "title": "酷安 1.33.0 · 10 Oct 2026",
+      "identifier": "酷安-release-v1.33.0",
+      "caption": "酷安 1.33.0 is available.",
+      "date": "2026-10-10T06:22:35Z",
+      "tintColor": "#12B868",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/coolapk-desktop/images/news.png",
+      "notify": true,
+      "url": "https://github.com/daimiaopeng/coolapk-desktop/releases/tag/v1.33.0"
     },
     {
       "appID": "com.suversal.wrappin",
@@ -417,28 +450,6 @@
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/news.png",
       "notify": true,
       "url": "https://github.com/suversal/WrapPin/releases/tag/v1.0.15"
-    },
-    {
-      "appID": "com.coolapk.desktop",
-      "title": "酷安 1.32.0 · 07 Oct 2026",
-      "identifier": "酷安-release-v1.32.0",
-      "caption": "酷安 1.32.0 is available.",
-      "date": "2026-10-07T10:24:38Z",
-      "tintColor": "#12B868",
-      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/coolapk-desktop/images/news.png",
-      "notify": true,
-      "url": "https://github.com/daimiaopeng/coolapk-desktop/releases/tag/v1.32.0"
-    },
-    {
-      "appID": "com.example.piliplus",
-      "title": "PiliPlus 2.1.6 · 05 Oct 2026",
-      "identifier": "PiliPlus-release-2.1.6",
-      "caption": "PiliPlus 2.1.6 is available.",
-      "date": "2026-10-05T12:36:03Z",
-      "tintColor": "#73b480",
-      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PiliPlus/images/news.png",
-      "notify": true,
-      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.6"
     },
     {
       "appID": "com.mak5er.aircard",
@@ -472,17 +483,6 @@
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/placard/images/news.png",
       "notify": true,
       "url": "https://github.com/frs0n/placard/releases/tag/v1.9.2"
-    },
-    {
-      "appID": "org.zhaohe.MiniWatts",
-      "title": "MiniWatts 1.4.1 · 25 Sep 2026",
-      "identifier": "MiniWatts-release-v1.4.1",
-      "caption": "MiniWatts 1.4.1 is available.",
-      "date": "2026-09-25T12:31:59Z",
-      "tintColor": "#30F040",
-      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/MiniWatts/images/news.png",
-      "notify": true,
-      "url": "https://github.com/ResistanceTo/MiniWatts/releases/tag/v1.4.1"
     },
     {
       "appID": "com.verback.YTLite",
