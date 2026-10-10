@@ -38,6 +38,9 @@ Don't see an app you want? [Create an issue](https://github.com/braless/soft_col
 
 ## Available Apps
 
+### <a href="https://github.com/LinkPass888/AirBeep"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/AirBeep/icon.png" alt="AirBeep icon" width="24" align="top"> AirBeep</a>
+把 iOS 通话录音的开始与结束提示音替换成等长静音，可一键还原；自动备份原文件并回读校验（iOS 27+）。
+
 ### <a href="https://github.com/Mak5er/AirCard-iOS"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/AirCard-iOS/icon.png" alt="AirCard-iOS icon" width="24" align="top"> AirCard-iOS</a>
 Apple Wallet card skins, lock screen passcode themes and PosterBoard wallpapers on device, without a jailbreak (iOS 27+).
 
@@ -61,6 +64,9 @@ An iPhone battery, charging and thermal instrument built on Apple's private iOS 
 
 ### <a href="https://github.com/verback2308/Opaline"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/Opaline/icon.png" alt="Opaline icon" width="24" align="top"> Opaline</a>
 A lightweight, native YouTube client for iOS 12+ — no ads, no tracking, no dependencies.
+
+### <a href="https://github.com/frs0n/placard"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/placard/icon.png" alt="Placard icon" width="24" align="top"> Placard</a>
+浏览、导入、制作并管理 PosterBoard 自定义壁纸：社区壁纸、.tendies 包，或把 12 秒内的竖屏视频做成循环锁屏壁纸（iOS 26+）。
 
 ### <a href="https://github.com/bggRGjQaUbCoE/PiliPlus"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/PiliPlus/icon.png" alt="PiliPlus icon" width="24" align="top"> PiliPlus</a>
 使用Flutter开发的BiliBili第三方客户端。

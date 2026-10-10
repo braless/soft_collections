@@ -1,0 +1,46 @@
+# altgen config for the Placard AltStore source.
+# Run: uvx altgen -c config.toml
+# No AltStore source upstream: identity was read from the released IPA
+# (Payload/placard.app/Info.plist) — me.ssus.placard, 1.9.2, iOS 26.0+.
+#
+# Icon: the repo only renders a 256px app-icon.png (the IPA carries 120/152px
+# CgBI icons), so that file is used as-is after repainting the black README
+# background outside the rounded square to the icon's own light fill.
+
+[github]
+repo = "frs0n/placard"
+
+[source]
+name = "Placard"
+subtitle = "Placard AltStore source by soft_collections & altgen"
+description = "Auto-updated AltStore source for Placard"
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/placard/icon.png"
+website = "https://github.com/frs0n/placard"
+tint_color = "#5C79E6"
+
+[app]
+name = "Placard"
+bundle_identifier = "me.ssus.placard"
+developer_name = "frs0n"
+subtitle = "PosterBoard 自定义壁纸管理器"
+description = "浏览、搜索并预览社区制作的交互式 PosterBoard 壁纸，导入 .tendies 壁纸包，或把 12 秒以内的竖屏视频做成循环/往复播放的锁屏壁纸，并直接在设备上安装与清理已装壁纸。安装与管理需要支持 bad_query 的实体设备。"
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/placard/icon.png"
+screenshots = [
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/placard/images/browse-custom.png",
+]
+tint_color = "#5C79E6"
+min_os_version = "26.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# asset_pattern is a regex (not glob): every release ships one IPA
+asset_pattern = "^placard-v.*-unsigned\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+# shared promo image rendered by templates/render_news.py
+image_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/placard/images/news.png"
+
+[output]
+path = "apps.json"

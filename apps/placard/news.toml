@@ -1,0 +1,19 @@
+# render_news.py config: python3 templates/render_news.py --out apps/placard
+# Colors left unset are auto-derived: tint from config.toml, background as
+# a light shade of the icon's dominant color.
+
+name = "Placard"
+tagline = "PosterBoard 自定义壁纸管理器"
+
+# Color notes — each key below controls one element of the image. All are
+# optional: unset keys are auto-derived. Shown values are the current result.
+[colors]
+# The badge uses a darker blue than the app's tint (#5C79E6): the background
+# below it is a pale blue too, and the tint only reaches ~2.8:1 there.
+tint = "#2A3E8F"
+# tint_alt = "#5C79E6"      # bottom-right glow (default: [source] tint_color)
+# background = "#D6DAEB"    # gradient base (derived from the icon's dominant color)
+# bg_mid = "#E7E9F3"        # gradient mid stop (derived from background)
+# bg_dark = "#BBC1DE"       # gradient end stop (derived from background)
+# text_color = "#111111"    # app name (auto white/black)
+# tagline_color = "#5166BD" # tagline text (derived from background)
