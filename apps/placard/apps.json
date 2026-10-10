@@ -1,0 +1,45 @@
+{
+  "name": "Placard",
+  "subtitle": "Placard AltStore source by soft_collections & altgen",
+  "description": "Auto-updated AltStore source for Placard",
+  "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/placard/icon.png",
+  "website": "https://github.com/frs0n/placard",
+  "tintColor": "#5C79E6",
+  "apps": [
+    {
+      "name": "Placard",
+      "bundleIdentifier": "me.ssus.placard",
+      "developerName": "frs0n",
+      "subtitle": "PosterBoard 自定义壁纸管理器",
+      "localizedDescription": "浏览、搜索并预览社区制作的交互式 PosterBoard 壁纸，导入 .tendies 壁纸包，或把 12 秒以内的竖屏视频做成循环/往复播放的锁屏壁纸，并直接在设备上安装与清理已装壁纸。安装与管理需要支持 bad_query 的实体设备。",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/placard/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/placard/images/browse-custom.png"
+      ],
+      "tintColor": "#5C79E6",
+      "versions": [
+        {
+          "version": "1.9.2",
+          "date": "2026-09-26",
+          "localizedDescription": "**Full Changelog**: https://github.com/frs0n/placard/compare/v1.9.1...v1.9.2",
+          "downloadURL": "https://github.com/frs0n/placard/releases/download/v1.9.2/placard-v1.9.2-unsigned.ipa",
+          "size": 9600240,
+          "minOSVersion": "26.0"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "appID": "me.ssus.placard",
+      "title": "Placard 1.9.2 · 26 Sep 2026",
+      "identifier": "Placard-release-v1.9.2",
+      "caption": "Placard 1.9.2 is available.",
+      "date": "2026-09-26T07:37:42Z",
+      "tintColor": "#5C79E6",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/placard/images/news.png",
+      "notify": true,
+      "url": "https://github.com/frs0n/placard/releases/tag/v1.9.2"
+    }
+  ]
+}
