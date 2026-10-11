@@ -302,11 +302,11 @@
       "tintColor": "#1060F0",
       "versions": [
         {
-          "version": "1.0.16",
-          "date": "2026-10-10",
-          "localizedDescription": "## 主要变化\n\n本版在“隧道跳转应用”中加入 Surge 和 Loon，并统一了 Shadowrocket 的启动方式和说明。标准版始终提供这个选项，隧道版在未启用内置隧道时提供。\n\n**新增**\n\n- 可选择 Surge 作为隧道跳转应用。配对设备通道不可用时，WrapPin 通过 `surge:///start` 请求 Surge 启动当前配置。需要 Surge iOS 5.23.0 或更高版本，配置见 [Surge iOS 配置](https://github.com/suversal/WrapPin/blob/main/Documentation/SurgeIntegration.zh-CN.md)。\n- 可选择 Loon 作为隧道跳转应用。配对设备通道不可用时，WrapPin 通过 `loon://on` 请求 Loon 开启 VPN。需要 Loon Build 1007 或更高版本，配置见 [Loon 配置](https://github.com/suversal/WrapPin/blob/main/Documentation/LoonIntegration.zh-CN.md)。\n- 仓库提供可导入的 `WrapPin-Surge.sgmodule` 和 `WrapPin-Loon.lpx`。\n\n**改进**\n\n- Shadowrocket 由“只打开应用”改为通过 `shadowrocket://connect` 请求开启 VPN。它需要在“设置 → 其它”中开启“包含路由 10.7.0.1/32”，见 [Shadowrocket 配置](https://github.com/suversal/WrapPin/blob/main/Documentation/ShadowrocketIntegration.zh-CN.md)。\n- 蜂窝网络下改用 Wi-Fi 的引导和连接检测提示，现在对 Shadowrocket、Surge、Loon 都适用。\n- 设置页里三个应用的说明改为同一结构。\n\nSurge 支持由 @svcvit 在 #27 中贡献。\n\n## 该下载哪个\n\n| | 标准版 | 隧道版 |\n|---|---|---|\n| 文件 | `WrapPin-Standard-1.0.16-build52-unsigned.ipa` | `WrapPin-Tunnel-1.0.16-build52-unsigned.ipa` |\n| 适合 | SideStore 或其他自签方式（免费 Apple 账号） | 拥有带 Packet Tunnel（Network Extension）权限的签名证书和描述文件 |\n| 设备隧道 | 外部 App（LocalDevVPN、Shadowrocket、Surge、Loon） | 内置；未启用内置隧道时也可选择外部 App |\n| Bundle ID | `com.suversal.wrappin` | `com.suversal.wrappin.selfsigned`，扩展为 `.tunnel` |\n\n免费 Apple 账号和 SideStore 无法签名隧道版，请使用标准版。两个版本可以同时安装，设置和配对记录分别保存。\n\n## 安装\n\n两个文件都是未签名 IPA，最低系统为 iOS 27.0。建议覆盖安装旧版，配对记录和收藏会保留。\n\nSHA-256\n\n- 标准版：`653efba12ee92a6a8b6749957850c7ee2f30fe89b6f5276dadd52c680a98ca5e`\n- 隧道版：`1e045e154fc268357fdd5e408c93b1b6b7eefd56529325782b2ef65d00d9d657`\n\n## 已知边界\n\n- 蜂窝网络下，通过 Shadowrocket、Surge、Loon 建立设备连接目前不可靠。这是已知问题，本版尚未修复；使用这三个应用时请连接 Wi-Fi，需要在蜂窝网络下使用时请选 LocalDevVPN。\n- 三个外部应用启动后不会自动返回 WrapPin，需要手动切回。\n- WrapPin 无法读取其他应用的 VPN 开关，只能检测配对设备通道是否可达。\n- Surge 5.22.x 及更早版本不支持 IP Rewrite 的 `reflect`，无法提供设备通道。\n\n详细说明见 [Release-1.0.16.md](https://github.com/suversal/WrapPin/blob/main/Documentation/Release-1.0.16.md)。",
-          "downloadURL": "https://github.com/suversal/WrapPin/releases/download/v1.0.16/WrapPin-Standard-1.0.16-build52-unsigned.ipa",
-          "size": 3522254,
+          "version": "1.0.17",
+          "date": "2026-10-11",
+          "localizedDescription": "## 主要变化\n\n本版让地图上的地点卡片可以收起，给选点留出更多地图空间，回应 #29。\n\n**改进**\n\n- 地点卡片可以收起：在卡片上向下滑，或轻点卡片顶部的横条；向上滑或再点一次横条即可展开。WrapPin 会记住这个选择，首次安装默认展开。\n- 收起后卡片只保留地点名称、一行地址或坐标、收藏和清除按钮，以及主按钮。模拟坐标方式缩成地址旁的小菜单，仍可直接切换，模拟进行中切换照旧立即生效。\n- 收起时隐藏坐标方式的选择器和说明、“复制坐标”、预览步行和预览驾车，以及空闲和正常模拟中的提示文案。未配对、连接中、失败、正在恢复真实位置等状态文案，以及“停止并恢复”按钮始终显示。\n- 开启“减弱动态效果”时，收起和展开只使用短暂的淡入淡出。\n\n## 该下载哪个\n\n| | 标准版 | 隧道版 |\n|---|---|---|\n| 文件 | `WrapPin-Standard-1.0.17-build55-unsigned.ipa` | `WrapPin-Tunnel-1.0.17-build55-unsigned.ipa` |\n| 适合 | SideStore 或其他自签方式（免费 Apple 账号） | 拥有带 Packet Tunnel（Network Extension）权限的签名证书和描述文件 |\n| 设备隧道 | 外部 App（LocalDevVPN、Shadowrocket、Surge、Loon） | 内置；未启用内置隧道时也可选择外部 App |\n| Bundle ID | `com.suversal.wrappin` | `com.suversal.wrappin.selfsigned`，扩展为 `.tunnel` |\n\n免费 Apple 账号和 SideStore 无法签名隧道版，请使用标准版。两个版本可以同时安装，设置和配对记录分别保存。\n\n## 安装\n\n两个文件都是未签名 IPA，最低系统为 iOS 27.0。建议覆盖安装旧版，配对记录和收藏会保留。\n\nSHA-256\n\n- 标准版：`2a2bd8fb1c6462c11baff0bc7e42a7a7d1b02650ab5a1b9a3ac5acc2b718741f`\n- 隧道版：`a0c91e2a215165cc86ff0689d246752db9b974453e6ca7adbd682fa662bdf94f`\n\n## 已知边界\n\n- 辅助功能的超大字号下，卡片本身需要上下滚动，因此只能通过顶部横条收起，不支持滑动。\n- 路线预览卡片不支持收起。\n- Build 55 本身没有装机；维护者在实体 iPhone 上用功能代码相同的本地测试包试用过收起与展开。\n- 1.0.16 的已知边界不变：蜂窝网络下通过 Shadowrocket、Surge、Loon 建立设备连接仍不可靠，使用这三个应用时请连接 Wi-Fi。\n\n详细说明见 [Release-1.0.17.md](https://github.com/suversal/WrapPin/blob/main/Documentation/Release-1.0.17.md)。",
+          "downloadURL": "https://github.com/suversal/WrapPin/releases/download/v1.0.17/WrapPin-Standard-1.0.17-build55-unsigned.ipa",
+          "size": 3534235,
           "minOSVersion": "27.0"
         }
       ]
@@ -398,14 +398,14 @@
   "news": [
     {
       "appID": "com.suversal.wrappin",
-      "title": "WrapPin 1.0.16 · 10 Oct 2026",
-      "identifier": "WrapPin-release-v1.0.16",
-      "caption": "WrapPin 1.0.16 is available.",
-      "date": "2026-10-10T13:39:21Z",
+      "title": "WrapPin 1.0.17 · 11 Oct 2026",
+      "identifier": "WrapPin-release-v1.0.17",
+      "caption": "WrapPin 1.0.17 is available.",
+      "date": "2026-10-11T06:32:32Z",
       "tintColor": "#1060F0",
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/news.png",
       "notify": true,
-      "url": "https://github.com/suversal/WrapPin/releases/tag/v1.0.16"
+      "url": "https://github.com/suversal/WrapPin/releases/tag/v1.0.17"
     },
     {
       "appID": "com.example.piliplus",
