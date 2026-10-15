@@ -21,11 +21,11 @@
       "tintColor": "#12B868",
       "versions": [
         {
-          "version": "1.34.1",
-          "date": "2026-10-13",
-          "localizedDescription": "# v1.34.1 更新日志\r\n\r\n## 优化\r\n- 调整桌面右侧评论栏的默认宽度，随内容区域自适应；打开评论时隐藏首页榜单与热门话题侧栏。\r\n- 右侧评论改为默认关闭，首次升级时同步关闭，之后保留用户手动选择。\r\n- 加强文本处理与外部链接打开的安全校验。\r\n\r\n## 修复\r\n- 恢复 PC 模式设置页的左侧分类栏和页面标题，移动模式保留分类下拉菜单。\r\n- 修复 Linux 跟随系统主题的识别与切换问题。\r\n- 修复部分 Android 设备图标显示为方框的问题。\r\n- 修复 Android 实况播放能力被误判为不支持的问题。\r\n- 修复移动端文字选择菜单遮挡选区、影响拖动选择的问题。\r\n- 修复复制图片失败时意外将图片链接写入剪贴板的问题，并改善图片格式兼容性。\r\n- 修复首页“新机”栏目“更多”入口误跳转产品详情的问题。",
-          "downloadURL": "https://github.com/daimiaopeng/coolapk-desktop/releases/download/v1.34.1/coolapk-v1.34.1-ios-arm64-unsigned.ipa",
-          "size": 8050308,
+          "version": "1.35.0",
+          "date": "2026-10-15",
+          "localizedDescription": "## 更新日志\r\n\r\n### 新增\r\n- 桌面端支持从账号最近发布的动态、评论中识别手机型号和系统信息，自动用于请求设备配置；无可用记录时使用 iPhone 18 Pro Max 兼容模板。\r\n- 设备设置页展示自动识别的机型及来源。自动配置保留手动指纹和已保存的数盟设备 ID，切换账号时重新识别。\r\n- 搜索分类支持拖动排序，并可收起不常用栏目。\r\n- 无图模式新增详情页图片显示开关。\r\n- 新增浅色界面底色自定义和动态背景图显示开关。\r\n- 话题页新增我的点评卡片。\r\n- 设置页新增“液态玻璃”总开关，默认关闭，可统一控制首页和话题导航的液态玻璃效果。\r\n\r\n### 优化\r\n- 移动首页滚动时可自动收起搜索栏和底部导航；详情页底栏支持随滚动隐藏。\r\n- 优化移动端上传、下载布局，并增加 CDN 上传入口。\r\n- 优化首页与话题的沉浸式导航，适配 Android 和 iOS 安全区，并统一上下导航的玻璃效果。\r\n- 优化设置页窄屏和大字体下的布局。\r\n- 设置中心统一使用一个“设置”标签，切换菜单不再新增标签，返回时打开最近访问的栏目；已有固定和收藏的设置标签自动合并。\r\n- 隐藏桌面设置内容区与侧栏重复的栏目标题，保留说明和功能分组。\r\n\r\n### 修复\r\n- 修复私信列表中同一联系人可能重复显示的问题，覆盖缓存恢复、刷新及分页加载场景。\r\n- 修复已安装测试版选择稳定版更新渠道时，错误展示旧稳定版更新日志、发布日期和 Release 链接的问题。\r\n- 修正关于页的版本类型与更新渠道说明，避免测试版安装包被误认为稳定版。\r\n- 修复手机快捷入口图标缺失。\r\n- 修复系统榜首屏内容不足时不继续加载下一页，以及双列瀑布流滚动抽动、短列加载不及时的问题。\r\n- 修复切换应用窗口标签后话题列表意外刷新的问题。\r\n- 修复头条刷新和分页时游标传递异常。\r\n- 修复私信图片预览及输入区高度调节问题。\r\n- 修复详情评论点赞状态的主题色显示，以及话题简介文字与背景对比度不足的问题。\r\n- 修复私信列表已收到新消息、当前聊天窗口却未及时更新的问题，现在会自动同步聊天内容，并在展示后更新已读状态；同步时保留输入草稿和历史消息阅读位置。",
+          "downloadURL": "https://github.com/daimiaopeng/coolapk-desktop/releases/download/v1.35.0/coolapk-v1.35.0-ios-arm64-unsigned.ipa",
+          "size": 8021392,
           "minOSVersion": "14.0"
         }
       ]
@@ -34,14 +34,14 @@
   "news": [
     {
       "appID": "com.coolapk.desktop",
-      "title": "酷安 1.34.1 · 13 Oct 2026",
-      "identifier": "酷安-release-v1.34.1",
-      "caption": "酷安 1.34.1 is available.",
-      "date": "2026-10-13T15:56:17Z",
+      "title": "酷安 1.35.0 · 15 Oct 2026",
+      "identifier": "酷安-release-v1.35.0",
+      "caption": "酷安 1.35.0 is available.",
+      "date": "2026-10-15T03:53:20Z",
       "tintColor": "#12B868",
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/coolapk-desktop/images/news.png",
       "notify": true,
-      "url": "https://github.com/daimiaopeng/coolapk-desktop/releases/tag/v1.34.1"
+      "url": "https://github.com/daimiaopeng/coolapk-desktop/releases/tag/v1.35.0"
     }
   ]
 }
