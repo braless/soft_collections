@@ -16,11 +16,11 @@
       "tintColor": "#0057D9",
       "versions": [
         {
-          "version": "2.4.0",
-          "date": "2026-10-10",
-          "localizedDescription": "## [2.4.0] - 2026-10-10\r\n\r\n> **English** — Release notes. | **中文** — 发行说明见下方中文版。\r\n\r\n### English / Changed\r\n- Removed the automatic tone-state check that ran at app launch. The app now restores the\r\n  last known state from cache and performs no file access until the user flips\r\n  the switch.\r\n- If anything goes wrong with the tones, you can force the original system\r\n  tones back by changing the system language on the device.\r\n\r\n---\r\n\r\n### 中文 / 变更\r\n- 移除 app 启动时自动执行的提示音文件状态校验。现在打开 app 不再做任何文件读取，改为从本地缓存恢复\r\n  上次的状态，仅在用户拨动开关时才进行实际操作。\r\n- 若提示音出现异常，可通过**更改系统语言**强制恢复为系统默认提示音。\r\n\r\n---\r\n\r\n**Full Changelog**: [v2.3.0...v2.4.0](https://github.com/LinkPass888/AirBeep/compare/v2.3.0...v2.4.0)",
-          "downloadURL": "https://github.com/LinkPass888/AirBeep/releases/download/v2.4.0/airbeep-v2.4.0-unsigned.ipa",
-          "size": 5806194,
+          "version": "2.4.1",
+          "date": "2026-10-16",
+          "localizedDescription": "## [2.4.1] - 2026-10-17\r\n\r\n### English / Fixed\r\n- Configure the native Airlift target once from `AIRLIFT_TARGET_HOST` so setup checks and tone operations share the configured LocalDevVPN peer.\r\n- Complete the Lockdown heartbeat handshake before accessing network services. Keep the existing heartbeat client alive for each operation and abort its task when the tunnel is dropped, including cached-route connections.\r\n- Rebuild the pinned native dependency with the file-read and heartbeat patch; retain checksum and exported-symbol verification.\r\n\r\n### 中文 / 修复\r\n- 支持通过构建设置配置 Airlift 连接地址，连接检查与提示音读写共用同一目标。\r\n- 修复网络 Lockdown 路径缺少 heartbeat 导致服务连接被系统关闭的问题；保活仅限本次操作生命周期。\r\n\n\n## What's Changed\n* Fix Lockdown heartbeat and configurable Airlift target by @kaluli123123 in https://github.com/LinkPass888/AirBeep/pull/22\n\n## New Contributors\n* @kaluli123123 made their first contribution in https://github.com/LinkPass888/AirBeep/pull/22\n\n**Full Changelog**: https://github.com/LinkPass888/AirBeep/compare/v2.4.0...v2.4.1",
+          "downloadURL": "https://github.com/LinkPass888/AirBeep/releases/download/v2.4.1/airbeep-v2.4.1-unsigned.ipa",
+          "size": 5834482,
           "minOSVersion": "27.0"
         }
       ]
@@ -29,14 +29,14 @@
   "news": [
     {
       "appID": "com.linkpass888.airbeep",
-      "title": "AirBeep 2.4.0 · 10 Oct 2026",
-      "identifier": "AirBeep-release-v2.4.0",
-      "caption": "AirBeep 2.4.0 is available.",
-      "date": "2026-10-10T08:42:06Z",
+      "title": "AirBeep 2.4.1 · 16 Oct 2026",
+      "identifier": "AirBeep-release-v2.4.1",
+      "caption": "AirBeep 2.4.1 is available.",
+      "date": "2026-10-16T16:45:23Z",
       "tintColor": "#0057D9",
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/AirBeep/images/news.png",
       "notify": true,
-      "url": "https://github.com/LinkPass888/AirBeep/releases/tag/v2.4.0"
+      "url": "https://github.com/LinkPass888/AirBeep/releases/tag/v2.4.1"
     }
   ]
 }
