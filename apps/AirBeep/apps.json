@@ -16,11 +16,11 @@
       "tintColor": "#0057D9",
       "versions": [
         {
-          "version": "2.4.1",
-          "date": "2026-10-16",
-          "localizedDescription": "## [2.4.1] - 2026-10-17\r\n\r\n### English / Fixed\r\n- Configure the native Airlift target once from `AIRLIFT_TARGET_HOST` so setup checks and tone operations share the configured LocalDevVPN peer.\r\n- Complete the Lockdown heartbeat handshake before accessing network services. Keep the existing heartbeat client alive for each operation and abort its task when the tunnel is dropped, including cached-route connections.\r\n- Rebuild the pinned native dependency with the file-read and heartbeat patch; retain checksum and exported-symbol verification.\r\n\r\n### 中文 / 修复\r\n- 支持通过构建设置配置 Airlift 连接地址，连接检查与提示音读写共用同一目标。\r\n- 修复网络 Lockdown 路径缺少 heartbeat 导致服务连接被系统关闭的问题；保活仅限本次操作生命周期。\r\n\n\n## What's Changed\n* Fix Lockdown heartbeat and configurable Airlift target by @kaluli123123 in https://github.com/LinkPass888/AirBeep/pull/22\n\n## New Contributors\n* @kaluli123123 made their first contribution in https://github.com/LinkPass888/AirBeep/pull/22\n\n**Full Changelog**: https://github.com/LinkPass888/AirBeep/compare/v2.4.0...v2.4.1",
-          "downloadURL": "https://github.com/LinkPass888/AirBeep/releases/download/v2.4.1/airbeep-v2.4.1-unsigned.ipa",
-          "size": 5834482,
+          "version": "2.5.1",
+          "date": "2026-10-18",
+          "localizedDescription": "### English / Changed\r\n- **iOS 18 is now supported.** The deployment target drops from iOS 27 to\r\n  iOS 18.0; the supported range is **iOS/iPadOS 18.0 – 27.2 B2**, and later\r\n  versions cannot be supported. Below iOS 27 the system does not support\r\n  on-device pairing — generate a pairing file on a computer with [iloader](https://github.com/nab138/iloader) or [idevice_pair](https://github.com/jkcoxson/idevice_pair) and import it.\r\n- **The switch is gone.** The home screen now shows two independent actions:\r\n  **Silence recording tone**, and either **Back Up Original Tones** (shown\r\n  until a complete backup exists) or **Restore original tone**. The current\r\n  tone state is no longer displayed — detecting it needs a device read that\r\n  is unreliable on some iOS releases. Successful operations confirm with an\r\n  alert instead.\r\n- The home page version line shows the running system version beside the app\r\n  version, e.g. `iOS 27.1  AirBeep v2.5.1 (9)` (`iPadOS` on iPad).\r\n- Backup is a standalone action: back the originals up before silencing so\r\n  they are always recoverable; the button then flips to Restore. The\r\n  automatic-backup note sits under that button.\r\n\r\n### English / Fixed\r\n- **Flaky airlift reads no longer abort the whole operation.** Each tone file\r\n  is read independently; a failed read is skipped and logged instead of\r\n  failing the silence/restore. The write channel's return code is the source\r\n  of truth, and read-back verification degrades to a log entry when a re-read\r\n  is unavailable.\r\n- **Loopback connect no longer falsely demands Wi-Fi.** Wi-Fi presence is now\r\n  read from the live interface table (`getifaddrs`) instead of\r\n  `NWPathMonitor`, which reports unsatisfied once the VPN owns the default\r\n  path. Wi-Fi is still required.\r\n- The third writable tone file `StartDisclosure.caf` is now replaced too\r\n  (skipped automatically on releases that do not ship it).\r\n- Restore without a backup explains the language-change recovery path instead\r\n  of failing with a generic \"no backup\" error.\r\n- Removed the non-public-behavior disclaimer from the bottom of the home page.\r\n\r\n### English / Added\r\n- **Advanced settings** (About page): set a custom device IP for the loopback\r\n  connection, and inspect the live network-interface table with tunnel/Wi-Fi\r\n  state — self-diagnosis for the \"connection refused / wrong subnet\" reports.\r\n- Runtime interface scan: tunnel dials now adapt to the actual network via\r\n  `al_set_target_hosts` without any route probing.\r\n- Localization hardened: two validation scripts keep the EN/zh-Hans catalogs\r\n  in sync (identical keys, matching placeholders, no untranslated UI literals).\r\n\r\n---\r\n\r\n### 中文 / 变更\r\n- **支持 iOS 18。** 最低系统要求由 iOS 27 降至 iOS 18.0，支持范围为\r\n  **iOS/iPadOS 18.0 – 27.2 B2**，之后的版本无法支持。iOS 27 以下的系统\r\n  不支持本机配对，请在电脑上用 [iloader](https://github.com/nab138/iloader) 或\r\n  [idevice_pair](https://github.com/jkcoxson/idevice_pair) 生成配对文件后导入。\r\n- **取消开关设计。** 首页改为两个独立操作：**静音录音提示音**，以及\r\n  **备份原始提示音**（尚无完整备份时显示）或 **恢复原始提示音**。不再显示\r\n  当前提示音状态——检测状态需要在部分 iOS 版本上不可靠的设备读取；操作\r\n  成功后以弹窗提示。\r\n- 首页版本行在软件版本号左侧显示当前系统版本，例如\r\n  `iOS 27.1  AirBeep v2.5.1 (9)`（iPad 上显示 `iPadOS`）。\r\n- 备份成为独立操作：可先备份再静音，原音始终可找回；按钮随后切换为恢复，\r\n  自动备份说明位于该按钮下方。\r\n\r\n### 中文 / 修复\r\n- **airlift 读取偶发失败不再导致整个操作中断。** 每个提示音文件独立读取，\r\n  失败仅跳过并记录日志；以写入通道的返回码为准，回读校验在无法读取时\r\n  降级为日志记录。\r\n- **回环连接不再误报\"需要连接 Wi-Fi\"。** Wi-Fi 状态改由实时接口表\r\n  （`getifaddrs`）判断，不再使用在 VPN 接管默认路由后总报告不可用的\r\n  `NWPathMonitor`。Wi-Fi 仍为必需条件。\r\n- 同时替换第三个可写提示音文件 `StartDisclosure.caf`（未提供该文件的\r\n  系统版本自动跳过）。\r\n- 无备份时的恢复会明确指引\"更改系统语言\"恢复路径，不再报模糊的\r\n  \"无备份\"错误。\r\n- 删除首页底部\"依赖非公开系统行为\"的免责提示。\r\n\r\n### 中文 / 新增\r\n- **高级设置**（关于页）：可为回环连接设置自定义设备 IP，并查看带\r\n  隧道/Wi-Fi 状态的实时网络接口列表，自行排查\"连接被拒绝 / 网段不对\"问题。\r\n- 运行时接口扫描：通过 `al_set_target_hosts` 让隧道拨号适配实际网络，\r\n  不做任何路由探测。\r\n- 本地化加固：新增两个校验脚本保证中英文目录一致（键相同、占位符匹配、\r\n  无未翻译界面文案）。\r\n\r\n---\r\n\r\n**Full Changelog**: https://github.com/LinkPass888/AirBeep/compare/v2.4.1...v2.5.1",
+          "downloadURL": "https://github.com/LinkPass888/AirBeep/releases/download/v2.5.1/airbeep-v2.5.1-unsigned.ipa",
+          "size": 5876450,
           "minOSVersion": "27.0"
         }
       ]
@@ -29,14 +29,14 @@
   "news": [
     {
       "appID": "com.linkpass888.airbeep",
-      "title": "AirBeep 2.4.1 · 16 Oct 2026",
-      "identifier": "AirBeep-release-v2.4.1",
-      "caption": "AirBeep 2.4.1 is available.",
-      "date": "2026-10-16T16:45:23Z",
+      "title": "AirBeep 2.5.1 · 18 Oct 2026",
+      "identifier": "AirBeep-release-v2.5.1",
+      "caption": "AirBeep 2.5.1 is available.",
+      "date": "2026-10-18T05:52:54Z",
       "tintColor": "#0057D9",
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/AirBeep/images/news.png",
       "notify": true,
-      "url": "https://github.com/LinkPass888/AirBeep/releases/tag/v2.4.1"
+      "url": "https://github.com/LinkPass888/AirBeep/releases/tag/v2.5.1"
     }
   ]
 }
