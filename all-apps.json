@@ -16,11 +16,11 @@
       "tintColor": "#0057D9",
       "versions": [
         {
-          "version": "2.5.1",
-          "date": "2026-10-18",
-          "localizedDescription": "### English / Changed\r\n- **iOS 18 is now supported.** The deployment target drops from iOS 27 to\r\n  iOS 18.0; the supported range is **iOS/iPadOS 18.0 – 27.2 B2**, and later\r\n  versions cannot be supported. Below iOS 27 the system does not support\r\n  on-device pairing — generate a pairing file on a computer with [iloader](https://github.com/nab138/iloader) or [idevice_pair](https://github.com/jkcoxson/idevice_pair) and import it.\r\n- **The switch is gone.** The home screen now shows two independent actions:\r\n  **Silence recording tone**, and either **Back Up Original Tones** (shown\r\n  until a complete backup exists) or **Restore original tone**. The current\r\n  tone state is no longer displayed — detecting it needs a device read that\r\n  is unreliable on some iOS releases. Successful operations confirm with an\r\n  alert instead.\r\n- The home page version line shows the running system version beside the app\r\n  version, e.g. `iOS 27.1  AirBeep v2.5.1 (9)` (`iPadOS` on iPad).\r\n- Backup is a standalone action: back the originals up before silencing so\r\n  they are always recoverable; the button then flips to Restore. The\r\n  automatic-backup note sits under that button.\r\n\r\n### English / Fixed\r\n- **Flaky airlift reads no longer abort the whole operation.** Each tone file\r\n  is read independently; a failed read is skipped and logged instead of\r\n  failing the silence/restore. The write channel's return code is the source\r\n  of truth, and read-back verification degrades to a log entry when a re-read\r\n  is unavailable.\r\n- **Loopback connect no longer falsely demands Wi-Fi.** Wi-Fi presence is now\r\n  read from the live interface table (`getifaddrs`) instead of\r\n  `NWPathMonitor`, which reports unsatisfied once the VPN owns the default\r\n  path. Wi-Fi is still required.\r\n- The third writable tone file `StartDisclosure.caf` is now replaced too\r\n  (skipped automatically on releases that do not ship it).\r\n- Restore without a backup explains the language-change recovery path instead\r\n  of failing with a generic \"no backup\" error.\r\n- Removed the non-public-behavior disclaimer from the bottom of the home page.\r\n\r\n### English / Added\r\n- **Advanced settings** (About page): set a custom device IP for the loopback\r\n  connection, and inspect the live network-interface table with tunnel/Wi-Fi\r\n  state — self-diagnosis for the \"connection refused / wrong subnet\" reports.\r\n- Runtime interface scan: tunnel dials now adapt to the actual network via\r\n  `al_set_target_hosts` without any route probing.\r\n- Localization hardened: two validation scripts keep the EN/zh-Hans catalogs\r\n  in sync (identical keys, matching placeholders, no untranslated UI literals).\r\n\r\n---\r\n\r\n### 中文 / 变更\r\n- **支持 iOS 18。** 最低系统要求由 iOS 27 降至 iOS 18.0，支持范围为\r\n  **iOS/iPadOS 18.0 – 27.2 B2**，之后的版本无法支持。iOS 27 以下的系统\r\n  不支持本机配对，请在电脑上用 [iloader](https://github.com/nab138/iloader) 或\r\n  [idevice_pair](https://github.com/jkcoxson/idevice_pair) 生成配对文件后导入。\r\n- **取消开关设计。** 首页改为两个独立操作：**静音录音提示音**，以及\r\n  **备份原始提示音**（尚无完整备份时显示）或 **恢复原始提示音**。不再显示\r\n  当前提示音状态——检测状态需要在部分 iOS 版本上不可靠的设备读取；操作\r\n  成功后以弹窗提示。\r\n- 首页版本行在软件版本号左侧显示当前系统版本，例如\r\n  `iOS 27.1  AirBeep v2.5.1 (9)`（iPad 上显示 `iPadOS`）。\r\n- 备份成为独立操作：可先备份再静音，原音始终可找回；按钮随后切换为恢复，\r\n  自动备份说明位于该按钮下方。\r\n\r\n### 中文 / 修复\r\n- **airlift 读取偶发失败不再导致整个操作中断。** 每个提示音文件独立读取，\r\n  失败仅跳过并记录日志；以写入通道的返回码为准，回读校验在无法读取时\r\n  降级为日志记录。\r\n- **回环连接不再误报\"需要连接 Wi-Fi\"。** Wi-Fi 状态改由实时接口表\r\n  （`getifaddrs`）判断，不再使用在 VPN 接管默认路由后总报告不可用的\r\n  `NWPathMonitor`。Wi-Fi 仍为必需条件。\r\n- 同时替换第三个可写提示音文件 `StartDisclosure.caf`（未提供该文件的\r\n  系统版本自动跳过）。\r\n- 无备份时的恢复会明确指引\"更改系统语言\"恢复路径，不再报模糊的\r\n  \"无备份\"错误。\r\n- 删除首页底部\"依赖非公开系统行为\"的免责提示。\r\n\r\n### 中文 / 新增\r\n- **高级设置**（关于页）：可为回环连接设置自定义设备 IP，并查看带\r\n  隧道/Wi-Fi 状态的实时网络接口列表，自行排查\"连接被拒绝 / 网段不对\"问题。\r\n- 运行时接口扫描：通过 `al_set_target_hosts` 让隧道拨号适配实际网络，\r\n  不做任何路由探测。\r\n- 本地化加固：新增两个校验脚本保证中英文目录一致（键相同、占位符匹配、\r\n  无未翻译界面文案）。\r\n\r\n---\r\n\r\n**Full Changelog**: https://github.com/LinkPass888/AirBeep/compare/v2.4.1...v2.5.1",
-          "downloadURL": "https://github.com/LinkPass888/AirBeep/releases/download/v2.5.1/airbeep-v2.5.1-unsigned.ipa",
-          "size": 5876450,
+          "version": "2.5.2",
+          "date": "2026-10-19",
+          "localizedDescription": "## [2.5.2] - 2026-10-19\r\n\r\n### English / Added\r\n- **Check tone status button.** The current tone state can now be checked on\r\n  demand from the home screen. The read channel is unreliable on some iOS\r\n  releases (the AirTraffic move step never completes there), so the check\r\n  reports one of three outcomes: silenced, originals still in place, or\r\n  unverifiable on this device. It never runs automatically and never gates an\r\n  operation.\r\n\r\n### English / Changed\r\n- After silencing, the success alert no longer claims a verified result when\r\n  the read-back could not confirm it; it says the silence was written but\r\n  unverified and points at the tone status check. This covers the\r\n  [issue #6](https://github.com/LinkPass888/AirBeep/issues/6) report where the\r\n  write channel returns success on iOS 27.x while the tones never change.\r\n\r\n---\r\n\r\n### 中文 / 新增\r\n- **校验提示音状态按钮。** 可在首页按需检测当前提示音状态。部分 iOS 版本上\r\n  读取通道不可靠（AirTraffic 搬运步骤始终无法完成），因此检测结果分为三种：\r\n  已静音、原始提示音仍在、本机无法校验。该检测绝不自动运行，也不会阻断\r\n  任何操作。\r\n\r\n### 中文 / 变更\r\n- 静音后的成功弹窗在回读校验无法确认时不再直接宣称成功，改为提示\"静音\r\n  已写入、结果未经校验\"，并引导使用提示音状态校验。对应\r\n  [issue #6](https://github.com/LinkPass888/AirBeep/issues/6) 反馈的\r\n  iOS 27.x 上写入通道返回成功但提示音实际未变的问题。\r\n\r\n**Full Changelog**: https://github.com/LinkPass888/AirBeep/compare/v2.5.1...v2.5.2",
+          "downloadURL": "https://github.com/LinkPass888/AirBeep/releases/download/v2.5.2/airbeep-v2.5.2-unsigned.ipa",
+          "size": 5880046,
           "minOSVersion": "27.0"
         }
       ]
@@ -142,11 +142,11 @@
       "tintColor": "#F0D060",
       "versions": [
         {
-          "version": "0.3.20",
-          "date": "2026-10-03",
-          "localizedDescription": "### Added\n\n- **macOS** (experimental): AutoMix — an Apple-Music-style continuous-playback mode with beat-matched transitions, optional stem separation, loudness compensation and an output-device picker, on a new dual-deck AVAudioEngine backend. Off by default; turn it on in Settings. Thanks @XerWandeRer (#102).\n- **iOS**: search and sort within the Liked Songs playlist. Thanks @yamakze (#121).\n- **Release**: every release now also ships an AltStore / SideStore source (`altstore.json`) for one-tap sideload updates. Thanks @vancez (#112).\n\n### Fixed\n\n- **iOS + macOS**: home-page loading placeholders and the 新碟上架 album cards stay within the content width instead of overflowing it. Thanks @sld272 (#119).\n\n---\n\n### 新增\n\n- **macOS**（实验性）：AutoMix——类 Apple Music 的连续播放模式,支持节拍对齐的过渡、可选的人声 / 伴奏分离、响度补偿与输出设备选择,基于全新的双 deck AVAudioEngine 后端。默认关闭,可在设置里开启。感谢 @XerWandeRer（#102）。\n- **iOS**：「我喜欢的音乐」歌单内支持搜索与排序。感谢 @yamakze（#121）。\n- **发布**：每次发布额外提供 AltStore / SideStore 源（`altstore.json`),可在 AltStore 里一键更新侧载。感谢 @vancez（#112）。\n\n### 修复\n\n- **iOS + macOS**：首页加载占位与「新碟上架」专辑卡片不再超出内容宽度。感谢 @sld272（#119）。",
-          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.20/Kumone-iOS-0.3.20.ipa",
-          "size": 7546632,
+          "version": "0.3.21",
+          "date": "2026-10-19",
+          "localizedDescription": "### Added\n\n- **iOS + macOS**: offline downloads — download songs and whole playlists for offline listening, with a 「已下载」 library and a storage page to see usage and manage space. Thanks @xyspg (#111).\n- **macOS**: customizable keyboard shortcuts for playback actions, plus optional system-wide (global) hotkeys — set them under Settings → 快捷键. Global hotkeys are off by default. Thanks @WillowBranch127 (#125, closes #122).\n- **iOS + macOS**: iCloud sync (off by default) — continue playback where another device left off, keep settings in sync, and optionally share your sign-in between devices through iCloud Drive or a folder you choose. Shared sign-ins are encrypted with a sync password you set, and signing out revokes the session once no other device is using it. Thanks @yamakze (#138).\n\n### Fixed\n\n- **iOS + macOS**: NetEase audio now retries on the twin CDN host when one host is unreachable — fixing playback that occasionally stalled mid-queue (progress kept running) or wouldn't replay a just-played song on a poor network. Thanks @xyspg (#115, closes #106).\n- **macOS**: AutoMix no longer jumps the playhead backward (misaligning the progress bar and lyrics) when you pause and then resume. Thanks @WillowBranch127 (#126).\n- **macOS**: AutoMix no longer drops out briefly when you resume after a pause. Thanks @XerWandeRer (#140, closes #136).\n- **macOS**: scrolling the lyrics with a trackpad or mouse wheel no longer snaps back to the current line, and lines stay unblurred while you scroll. Thanks @xyspg (#139).\n- **macOS**: the window buttons stay in place on the immersive now-playing page. Thanks @yxxbc (#130, closes #128).\n- **macOS**: the Settings sub-pages (存储空间, 快捷键) have a back button that no longer overlaps the window controls, and Settings reopens on its main page. Thanks @yamakze (#135).\n\n### Improved\n\n- **iOS + macOS**: the now-playing page uses far less CPU — on macOS about 5% of a core while playing instead of about 50% — and frees its memory while the window is minimised. Thanks @yxxbc (#129, closes #131).\n- **macOS**: large playlists such as Liked Songs (1,000+ songs) scroll and load much more smoothly, artwork is decoded at the size it is shown, and the sidebar animates with less work. After updating, each cached song is downloaded once more on its next play. Thanks @morefreefg (#127).\n- **macOS**: Settings is tidier — AutoMix shows its options only when it is on, keyboard shortcuts switch between in-app and global with a segmented control, and clearing the song cache now runs right away without a confirmation. Thanks @yamakze (#135).\n- **macOS**: on macOS 26 and later the app now uses the current system window style. Thanks @yxxbc (#130).\n\n---\n\n### 新增\n\n- **iOS + macOS**：离线下载——可下载单曲和整个歌单离线收听,新增「已下载」库和存储用量 / 管理页。感谢 @xyspg（#111）。\n- **macOS**：可自定义播放等操作的键盘快捷键,并支持可选的全局(系统级)快捷键——在 设置 → 快捷键 里设置,全局快捷键默认关闭。感谢 @WillowBranch127（#125，关闭 #122）。\n- **iOS + macOS**：iCloud 同步(默认关闭)——在另一台设备上接续播放、同步设置,并可通过 iCloud 云盘或自选文件夹在设备间共享登录。共享的登录信息以你设置的同步密码加密,退出登录时若已没有其他设备在用该会话,会一并注销。感谢 @yamakze（#138）。\n\n### 修复\n\n- **iOS + macOS**：网易云音频在某个 CDN 主机不可达时会自动重试其孪生主机——修复了弱网下偶发的「队列中途卡住(进度还在走)」和「刚听过的歌无法重播」。感谢 @xyspg（#115，关闭 #106）。\n- **macOS**：AutoMix 暂停后恢复播放时,播放头不再往回跳(导致进度条和歌词错位)。感谢 @WillowBranch127（#126）。\n- **macOS**：AutoMix 暂停后恢复播放时不再短暂断音。感谢 @XerWandeRer（#140，关闭 #136）。\n- **macOS**：用触控板或鼠标滚轮翻看歌词时不再被拉回当前句,滚动期间歌词也不再模糊。感谢 @xyspg（#139）。\n- **macOS**：沉浸式播放页上的窗口按钮不再错位。感谢 @yxxbc（#130，关闭 #128）。\n- **macOS**：设置的二级页面(存储空间、快捷键)返回按钮不再与窗口控件重叠,重新打开设置时回到首页。感谢 @yamakze（#135）。\n\n### 改进\n\n- **iOS + macOS**：播放页的 CPU 占用大幅降低——macOS 上播放时约占 5% 个核心,此前约 50%——窗口最小化时还会释放内存。感谢 @yxxbc（#129，关闭 #131）。\n- **macOS**：「我喜欢的音乐」等大歌单(1000 首以上)加载和滚动更流畅,封面按显示尺寸解码,侧边栏动画开销更小。更新后,已缓存的歌曲下次播放时会重新下载一次。感谢 @morefreefg（#127）。\n- **macOS**：设置更简洁——AutoMix 仅在开启后显示子选项,快捷键用分段控件切换应用内 / 全局,清除歌曲缓存改为直接执行,不再弹出确认。感谢 @yamakze（#135）。\n- **macOS**：在 macOS 26 及以上版本,应用改用当前的系统窗口样式。感谢 @yxxbc（#130）。",
+          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.21/Kumone-iOS-0.3.21.ipa",
+          "size": 8725929,
           "minOSVersion": "16.0"
         }
       ]
@@ -398,14 +398,25 @@
   "news": [
     {
       "appID": "com.linkpass888.airbeep",
-      "title": "AirBeep 2.5.1 · 18 Oct 2026",
-      "identifier": "AirBeep-release-v2.5.1",
-      "caption": "AirBeep 2.5.1 is available.",
-      "date": "2026-10-18T05:52:54Z",
+      "title": "AirBeep 2.5.2 · 19 Oct 2026",
+      "identifier": "AirBeep-release-v2.5.2",
+      "caption": "AirBeep 2.5.2 is available.",
+      "date": "2026-10-19T11:35:11Z",
       "tintColor": "#0057D9",
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/AirBeep/images/news.png",
       "notify": true,
-      "url": "https://github.com/LinkPass888/AirBeep/releases/tag/v2.5.1"
+      "url": "https://github.com/LinkPass888/AirBeep/releases/tag/v2.5.2"
+    },
+    {
+      "appID": "sb.moe.kumone",
+      "title": "Kumone 0.3.21 · 19 Oct 2026",
+      "identifier": "Kumone-release-v0.3.21",
+      "caption": "Kumone 0.3.21 is available.",
+      "date": "2026-10-19T10:16:25Z",
+      "tintColor": "#F0D060",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kumone/images/news.png",
+      "notify": true,
+      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.21"
     },
     {
       "appID": "com.coolapk.desktop",
@@ -461,17 +472,6 @@
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/AirCard-iOS/images/news.png",
       "notify": true,
       "url": "https://github.com/Mak5er/AirCard-iOS/releases/tag/v1.3.2"
-    },
-    {
-      "appID": "sb.moe.kumone",
-      "title": "Kumone 0.3.20 · 03 Oct 2026",
-      "identifier": "Kumone-release-v0.3.20",
-      "caption": "Kumone 0.3.20 is available.",
-      "date": "2026-10-03T15:42:04Z",
-      "tintColor": "#F0D060",
-      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kumone/images/news.png",
-      "notify": true,
-      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.20"
     },
     {
       "appID": "me.ssus.placard",
