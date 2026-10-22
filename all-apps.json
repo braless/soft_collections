@@ -33,16 +33,7 @@
       "localizedDescription": "Customise Apple Wallet card artwork, the lock screen passcode dialer and PosterBoard wallpapers on device, without a jailbreak. AirCard-iOS talks to Apple's internal services through the LocalDevVPN loopback tunnel, which has to be installed as well.",
       "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/AirCard-iOS/icon.png",
       "tintColor": "#5020E0",
-      "versions": [
-        {
-          "version": "1.3.2",
-          "date": "2026-10-04",
-          "localizedDescription": "## What's Changed in v1.3.2 🚀\n\nThis update brings full feature parity with AirCard macOS v1.2.6, restores robust card discovery across all iOS versions, introduces automatic bank/network recognition with custom card nicknames, delivers an ultra-fast tunnel cache (0.02s connections), and completely resolves wallpaper flashing for Collections and Mercury wallpapers.\n\n### 💳 Wallet Card Discovery & Bank Identification\n• **Universal Wallet Log Parser**: Ported the proven `WalletScanParser` from AirCard macOS. Captures cards from `Dashboard loading (...): for SOO+`, `passIDs[InSession]`, `passIDs[global]`, and modern JSON NFC activations (`\"identifier\": \"HEX\"`).\n• **Automatic Bank & Network Detection**: Recognizes Visa, Mastercard, American Express, UnionPay, Discover, and JCB via applet AIDs during selection.\n• **Card Nicknames (Rename)**: Added a direct **Rename** button (✏️) so you can give your cards friendly names like *\"Monobank\"*, *\"Salary Card\"*, or *\"Revolut\"*, safely persisted in app settings.\n• **28-Character Fallback Token Matcher**: Restores dependable card discovery on devices where standard log patterns are redacted.\n\n### ⚡ Ultra-Fast Tunnel Routing (from 10s to 0.02s!)\n• **Working Route Caching**: `rust-core` now caches the active RSD connection route (`LAST_WORKING_ROUTE`), eliminating repeated port and interface scanning.\n• **RSD-First Priority**: Connects directly via RemoteXPC on port 49152, bypassing slow Lockdown retries and broken pipes on iOS 18+.\n• **Eliminated Loopback Policy Drops**: Removed local loopback attempts that caused `policy drop` control channel errors.\n\n### 🖼 Wallpapers (.tendies) — Collections & Mercury Fixes\n• **Dual Injection on iOS 18+**: Wallpapers are now injected into both their primary bundle (`com.apple.WallpaperKit.CollectionsPoster` or `com.apple.MercuryPoster`) and the modern iOS 18+ application container (`com.apple.Posters.CollectionsPosterApp` / `com.apple.Posters.MercuryPosterApp`).\n• **Metadata Synchronization**: Fixed a critical issue where `Wallpaper.plist`'s numeric identifier was randomized out-of-sync with `suggestionMetadata.plist` (`7400.DYNAMIC`), causing wallpapers like Windows 11 to vanish from the Lock Screen gallery.\n• **Mercury Wallpaper Support**: Added recognition for `mercury-descriptors` container folders and registered `com.apple.Posters.MercuryPosterApp` in `PersistedPosterContainerBundleIdentifiers`.\n• **NeoSpring Respring**: Instant springboard reload to apply wallpaper preferences immediately.\n\n### 🧪 Quality & Testing\n• All 24 unit tests passing (`TendiesEngineTests`, `WalletScanParserTests`, `CardPhotoCropTests`, `CardPhotoPickerTests`).\n\n**Full Changelog**: https://github.com/Mak5er/AirCard-iOS/compare/v1.3.1...v1.3.2",
-          "downloadURL": "https://github.com/Mak5er/AirCard-iOS/releases/download/v1.3.2/AirCard-iOS.ipa",
-          "size": 4638147,
-          "minOSVersion": "27.0"
-        }
-      ]
+      "versions": []
     },
     {
       "name": "Asspp",
@@ -116,16 +107,7 @@
         "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/KMusic/images/play.png"
       ],
       "tintColor": "#F03050",
-      "versions": [
-        {
-          "version": "2.3.0",
-          "date": "2026-03-12",
-          "localizedDescription": "- 优化增加各种问题",
-          "downloadURL": "https://github.com/Mac-XK/KMusic/releases/download/%E6%AD%8C%E4%B8%80%E5%88%802.3.0/_2.3.0_22.2.ipa",
-          "size": 3836900,
-          "minOSVersion": "14.0"
-        }
-      ]
+      "versions": []
     },
     {
       "name": "Kumone",
@@ -140,16 +122,7 @@
         "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kumone/images/featured.png"
       ],
       "tintColor": "#F0D060",
-      "versions": [
-        {
-          "version": "0.3.21",
-          "date": "2026-10-19",
-          "localizedDescription": "### Added\n\n- **iOS + macOS**: offline downloads — download songs and whole playlists for offline listening, with a 「已下载」 library and a storage page to see usage and manage space. Thanks @xyspg (#111).\n- **macOS**: customizable keyboard shortcuts for playback actions, plus optional system-wide (global) hotkeys — set them under Settings → 快捷键. Global hotkeys are off by default. Thanks @WillowBranch127 (#125, closes #122).\n- **iOS + macOS**: iCloud sync (off by default) — continue playback where another device left off, keep settings in sync, and optionally share your sign-in between devices through iCloud Drive or a folder you choose. Shared sign-ins are encrypted with a sync password you set, and signing out revokes the session once no other device is using it. Thanks @yamakze (#138).\n\n### Fixed\n\n- **iOS + macOS**: NetEase audio now retries on the twin CDN host when one host is unreachable — fixing playback that occasionally stalled mid-queue (progress kept running) or wouldn't replay a just-played song on a poor network. Thanks @xyspg (#115, closes #106).\n- **macOS**: AutoMix no longer jumps the playhead backward (misaligning the progress bar and lyrics) when you pause and then resume. Thanks @WillowBranch127 (#126).\n- **macOS**: AutoMix no longer drops out briefly when you resume after a pause. Thanks @XerWandeRer (#140, closes #136).\n- **macOS**: scrolling the lyrics with a trackpad or mouse wheel no longer snaps back to the current line, and lines stay unblurred while you scroll. Thanks @xyspg (#139).\n- **macOS**: the window buttons stay in place on the immersive now-playing page. Thanks @yxxbc (#130, closes #128).\n- **macOS**: the Settings sub-pages (存储空间, 快捷键) have a back button that no longer overlaps the window controls, and Settings reopens on its main page. Thanks @yamakze (#135).\n\n### Improved\n\n- **iOS + macOS**: the now-playing page uses far less CPU — on macOS about 5% of a core while playing instead of about 50% — and frees its memory while the window is minimised. Thanks @yxxbc (#129, closes #131).\n- **macOS**: large playlists such as Liked Songs (1,000+ songs) scroll and load much more smoothly, artwork is decoded at the size it is shown, and the sidebar animates with less work. After updating, each cached song is downloaded once more on its next play. Thanks @morefreefg (#127).\n- **macOS**: Settings is tidier — AutoMix shows its options only when it is on, keyboard shortcuts switch between in-app and global with a segmented control, and clearing the song cache now runs right away without a confirmation. Thanks @yamakze (#135).\n- **macOS**: on macOS 26 and later the app now uses the current system window style. Thanks @yxxbc (#130).\n\n---\n\n### 新增\n\n- **iOS + macOS**：离线下载——可下载单曲和整个歌单离线收听,新增「已下载」库和存储用量 / 管理页。感谢 @xyspg（#111）。\n- **macOS**：可自定义播放等操作的键盘快捷键,并支持可选的全局(系统级)快捷键——在 设置 → 快捷键 里设置,全局快捷键默认关闭。感谢 @WillowBranch127（#125，关闭 #122）。\n- **iOS + macOS**：iCloud 同步(默认关闭)——在另一台设备上接续播放、同步设置,并可通过 iCloud 云盘或自选文件夹在设备间共享登录。共享的登录信息以你设置的同步密码加密,退出登录时若已没有其他设备在用该会话,会一并注销。感谢 @yamakze（#138）。\n\n### 修复\n\n- **iOS + macOS**：网易云音频在某个 CDN 主机不可达时会自动重试其孪生主机——修复了弱网下偶发的「队列中途卡住(进度还在走)」和「刚听过的歌无法重播」。感谢 @xyspg（#115，关闭 #106）。\n- **macOS**：AutoMix 暂停后恢复播放时,播放头不再往回跳(导致进度条和歌词错位)。感谢 @WillowBranch127（#126）。\n- **macOS**：AutoMix 暂停后恢复播放时不再短暂断音。感谢 @XerWandeRer（#140，关闭 #136）。\n- **macOS**：用触控板或鼠标滚轮翻看歌词时不再被拉回当前句,滚动期间歌词也不再模糊。感谢 @xyspg（#139）。\n- **macOS**：沉浸式播放页上的窗口按钮不再错位。感谢 @yxxbc（#130，关闭 #128）。\n- **macOS**：设置的二级页面(存储空间、快捷键)返回按钮不再与窗口控件重叠,重新打开设置时回到首页。感谢 @yamakze（#135）。\n\n### 改进\n\n- **iOS + macOS**：播放页的 CPU 占用大幅降低——macOS 上播放时约占 5% 个核心,此前约 50%——窗口最小化时还会释放内存。感谢 @yxxbc（#129，关闭 #131）。\n- **macOS**：「我喜欢的音乐」等大歌单(1000 首以上)加载和滚动更流畅,封面按显示尺寸解码,侧边栏动画开销更小。更新后,已缓存的歌曲下次播放时会重新下载一次。感谢 @morefreefg（#127）。\n- **macOS**：设置更简洁——AutoMix 仅在开启后显示子选项,快捷键用分段控件切换应用内 / 全局,清除歌曲缓存改为直接执行,不再弹出确认。感谢 @yamakze（#135）。\n- **macOS**：在 macOS 26 及以上版本,应用改用当前的系统窗口样式。感谢 @yxxbc（#130）。",
-          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.21/Kumone-iOS-0.3.21.ipa",
-          "size": 8725929,
-          "minOSVersion": "16.0"
-        }
-      ]
+      "versions": []
     },
     {
       "name": "MiniWatts",
@@ -189,16 +162,7 @@
         "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Opaline/images/channel.jpeg"
       ],
       "tintColor": "#FF0000",
-      "versions": [
-        {
-          "version": "1.12.0",
-          "date": "2026-09-10",
-          "localizedDescription": "**New**\n\n- Hold anywhere on the video to seek ([#116](https://github.com/verback2308/Opaline/issues/116)). Press and hold on the picture, then drag sideways. The seek bar follows your finger and the video jumps where you let go, so you no longer have to hit the thin bar at the bottom. The taps you already know still work: the sides seek, the middle pauses.\n- Search inside a channel ([#117](https://github.com/verback2308/Opaline/issues/117)). Channel pages have a magnifier now, and whatever you type there searches that channel only. YouTube serves no filters for this kind of search, so there are none in the app either.\n- Get a downloaded video out of the app ([#115](https://github.com/verback2308/Opaline/issues/115)). The menu on a downloaded video has a new \"Save to Files\" row that hands the file to the usual iOS share sheet, so it can go to Files, Photos, AirDrop or another app. It is named after the video, and only the video leaves: subtitles, comments and the saved page stay where they were.\n- Clear the whole search history at once ([#121](https://github.com/verback2308/Opaline/issues/121)). The last row under Recent searches wipes the list, and it asks first.\n\n**Fixes**\n\n- The mini player no longer sits on top of the tab bar ([#118](https://github.com/verback2308/Opaline/issues/118)). Tapping a tab behind the collapsed player switches to that tab instead of reopening the video.\n- Stereo no longer gets spatialized on AirPods ([#119](https://github.com/verback2308/Opaline/issues/119)). Ordinary two-channel sound was being turned into a fake surround field that moved when you turned your head. Video that really is multichannel still spatializes.\n- The \"...\" menu stops closing on its own ([#128](https://github.com/verback2308/Opaline/issues/128)). It was reacting to the device being tilted or put down, which made it look random when you held the phone in your hand.\n\n**Also**\n\n- If your device is older than Opaline supports, the README now points at [a downport for iOS 9](https://github.com/Joeviocoe/Opaline) by another developer, which runs on the iPad 2, iPad 3, iPad mini and iPhone 4S ([#125](https://github.com/verback2308/Opaline/issues/125)).",
-          "downloadURL": "https://github.com/verback2308/Opaline/releases/download/1.12.0/Opaline_1.12.0.ipa",
-          "size": 6685919,
-          "minOSVersion": "12.0"
-        }
-      ]
+      "versions": []
     },
     {
       "name": "PiliPlus",
@@ -236,16 +200,7 @@
         "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/placard/images/browse-custom.png"
       ],
       "tintColor": "#5C79E6",
-      "versions": [
-        {
-          "version": "1.9.2",
-          "date": "2026-09-26",
-          "localizedDescription": "**Full Changelog**: https://github.com/frs0n/placard/compare/v1.9.1...v1.9.2",
-          "downloadURL": "https://github.com/frs0n/placard/releases/download/v1.9.2/placard-v1.9.2-unsigned.ipa",
-          "size": 9600240,
-          "minOSVersion": "26.0"
-        }
-      ]
+      "versions": []
     },
     {
       "name": "Pocket Poster",
@@ -255,16 +210,7 @@
       "localizedDescription": "Custom PosterBoard animated wallpapers for iOS 17.0+. Browse community wallpapers in the built-in explore page, import your own videos and images, and apply them as animated posters — including CarPlay and per-collection sets.",
       "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Pocket-Poster/icon.png",
       "tintColor": "#DD94F3",
-      "versions": [
-        {
-          "version": "3.0",
-          "date": "2025-08-29",
-          "localizedDescription": "# Features\r\n- Added an in-app explore page for finding and downloading wallpapers\r\n- Added custom CarPlay wallpapers (will not work on iOS 26.0)\r\n- *Preliminary* iOS 16 support (not all wallpapers will work)\r\n- Improved certain error messages\r\n\r\n# Bug Fixes\r\n- Fixed the aspect ratio/rotation of imported custom videos\r\n- Fixed the update API not being called correctly\r\n- Fixed issues with some alerts not popping up\r\n- Other various app stability improvements",
-          "downloadURL": "https://github.com/leminlimez/Pocket-Poster/releases/download/v3.0/Pocket_Poster.ipa",
-          "size": 13686800,
-          "minOSVersion": "17.0"
-        }
-      ]
+      "versions": []
     },
     {
       "name": "Twitter",
@@ -359,16 +305,7 @@
       "localizedDescription": "通过 iOS 逆向改造的豆瓣客户端：移除绝大多数广告、精简界面，其余功能与官方客户端保持一致。发布包基于豆瓣 7.109.0 修改，所以应用内显示的版本号仍是 7.109.0，而本源里的版本号用的是该项目自己的发布号。它的 bundle ID 与官方豆瓣相同，两者不能同时安装。",
       "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/DoubanMApp/icon.png",
       "tintColor": "#02AD0A",
-      "versions": [
-        {
-          "version": "1.1.0",
-          "date": "2026-05-24",
-          "localizedDescription": "去除底栏市集",
-          "downloadURL": "https://github.com/TouchFriend/DoubanMApp/releases/download/1.1.0/douban-7.109.0.v1.1.0.ipa",
-          "size": 95870836,
-          "minOSVersion": "13.0"
-        }
-      ]
+      "versions": []
     },
     {
       "name": "酷安",
@@ -430,17 +367,6 @@
       "url": "https://github.com/LinkPass888/AirBeep/releases/tag/v2.5.2"
     },
     {
-      "appID": "sb.moe.kumone",
-      "title": "Kumone 0.3.21 · 19 Oct 2026",
-      "identifier": "Kumone-release-v0.3.21",
-      "caption": "Kumone 0.3.21 is available.",
-      "date": "2026-10-19T10:16:25Z",
-      "tintColor": "#F0D060",
-      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kumone/images/news.png",
-      "notify": true,
-      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.21"
-    },
-    {
       "appID": "com.coolapk.desktop",
       "title": "酷安 1.35.0 · 15 Oct 2026",
       "identifier": "酷安-release-v1.35.0",
@@ -472,72 +398,6 @@
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PiliPlus/images/news.png",
       "notify": true,
       "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.6.2"
-    },
-    {
-      "appID": "com.mak5er.aircard",
-      "title": "AirCard-iOS 1.3.2 · 04 Oct 2026",
-      "identifier": "AirCard-iOS-release-v1.3.2",
-      "caption": "AirCard-iOS 1.3.2 is available.",
-      "date": "2026-10-04T12:22:53Z",
-      "tintColor": "#5020E0",
-      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/AirCard-iOS/images/news.png",
-      "notify": true,
-      "url": "https://github.com/Mak5er/AirCard-iOS/releases/tag/v1.3.2"
-    },
-    {
-      "appID": "me.ssus.placard",
-      "title": "Placard 1.9.2 · 26 Sep 2026",
-      "identifier": "Placard-release-v1.9.2",
-      "caption": "Placard 1.9.2 is available.",
-      "date": "2026-09-26T07:37:42Z",
-      "tintColor": "#5C79E6",
-      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/placard/images/news.png",
-      "notify": true,
-      "url": "https://github.com/frs0n/placard/releases/tag/v1.9.2"
-    },
-    {
-      "appID": "com.verback.YTLite",
-      "title": "Opaline 1.12.0 · 10 Sep 2026",
-      "identifier": "Opaline-release-1.12.0",
-      "caption": "Opaline 1.12.0 is available.",
-      "date": "2026-09-10T02:02:27Z",
-      "tintColor": "#FF0000",
-      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Opaline/images/news.png",
-      "notify": true,
-      "url": "https://github.com/verback2308/Opaline/releases/tag/1.12.0"
-    },
-    {
-      "appID": "com.douban.frodo",
-      "title": "豆瓣 1.1.0 · 24 May 2026",
-      "identifier": "豆瓣-release-1.1.0",
-      "caption": "豆瓣 1.1.0 is available.",
-      "date": "2026-05-24T05:45:17Z",
-      "tintColor": "#02AD0A",
-      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/DoubanMApp/images/news.png",
-      "notify": true,
-      "url": "https://github.com/TouchFriend/DoubanMApp/releases/tag/1.1.0"
-    },
-    {
-      "appID": "com.macxk.KMusic",
-      "title": "KMusic 2.3.0 · 12 Mar 2026",
-      "identifier": "KMusic-release-歌一刀2.3.0",
-      "caption": "KMusic 2.3.0 is available.",
-      "date": "2026-03-12T08:39:59Z",
-      "tintColor": "#F03050",
-      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/KMusic/images/news.png",
-      "notify": true,
-      "url": "https://github.com/Mac-XK/KMusic/releases/tag/歌一刀2.3.0"
-    },
-    {
-      "appID": "com.lemin.Pocket-Poster",
-      "title": "Pocket Poster 3.0 · 29 Aug 2025",
-      "identifier": "Pocket Poster-release-v3.0",
-      "caption": "Pocket Poster 3.0 is available.",
-      "date": "2025-08-29T21:35:36Z",
-      "tintColor": "#DD94F3",
-      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Pocket-Poster/images/news.png",
-      "notify": true,
-      "url": "https://github.com/leminlimez/Pocket-Poster/releases/tag/v3.0"
     }
   ]
 }
