@@ -19,8 +19,29 @@
         "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/KMusic/images/play.png"
       ],
       "tintColor": "#F03050",
-      "versions": []
+      "versions": [
+        {
+          "version": "2.3.0",
+          "date": "2026-03-12",
+          "localizedDescription": "- 优化增加各种问题",
+          "downloadURL": "https://github.com/Mac-XK/KMusic/releases/download/%E6%AD%8C%E4%B8%80%E5%88%802.3.0/_2.3.0_22.2.ipa",
+          "size": 3836900,
+          "minOSVersion": "14.0"
+        }
+      ]
     }
   ],
-  "news": []
+  "news": [
+    {
+      "appID": "com.macxk.KMusic",
+      "title": "KMusic 2.3.0 · 12 Mar 2026",
+      "identifier": "KMusic-release-歌一刀2.3.0",
+      "caption": "KMusic 2.3.0 is available.",
+      "date": "2026-03-12T08:39:59Z",
+      "tintColor": "#F03050",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/KMusic/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Mac-XK/KMusic/releases/tag/歌一刀2.3.0"
+    }
+  ]
 }

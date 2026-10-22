@@ -17,8 +17,29 @@
         "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/placard/images/browse-custom.png"
       ],
       "tintColor": "#5C79E6",
-      "versions": []
+      "versions": [
+        {
+          "version": "1.9.2",
+          "date": "2026-09-26",
+          "localizedDescription": "**Full Changelog**: https://github.com/frs0n/placard/compare/v1.9.1...v1.9.2",
+          "downloadURL": "https://github.com/frs0n/placard/releases/download/v1.9.2/placard-v1.9.2-unsigned.ipa",
+          "size": 9600240,
+          "minOSVersion": "26.0"
+        }
+      ]
     }
   ],
-  "news": []
+  "news": [
+    {
+      "appID": "me.ssus.placard",
+      "title": "Placard 1.9.2 · 26 Sep 2026",
+      "identifier": "Placard-release-v1.9.2",
+      "caption": "Placard 1.9.2 is available.",
+      "date": "2026-09-26T07:37:42Z",
+      "tintColor": "#5C79E6",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/placard/images/news.png",
+      "notify": true,
+      "url": "https://github.com/frs0n/placard/releases/tag/v1.9.2"
+    }
+  ]
 }
