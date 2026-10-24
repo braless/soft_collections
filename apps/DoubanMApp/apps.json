@@ -16,11 +16,11 @@
       "tintColor": "#02AD0A",
       "versions": [
         {
-          "version": "1.1.0",
-          "date": "2026-05-24",
-          "localizedDescription": "去除底栏市集",
-          "downloadURL": "https://github.com/TouchFriend/DoubanMApp/releases/download/1.1.0/douban-7.109.0.v1.1.0.ipa",
-          "size": 95870836,
+          "version": "1.2.0",
+          "date": "2026-10-24",
+          "localizedDescription": "适配豆瓣 7.134.0",
+          "downloadURL": "https://github.com/TouchFriend/DoubanMApp/releases/download/1.2.0/douban-7.134.0.v1.2.0.ipa",
+          "size": 103252086,
           "minOSVersion": "13.0"
         }
       ]
@@ -29,14 +29,14 @@
   "news": [
     {
       "appID": "com.douban.frodo",
-      "title": "豆瓣 1.1.0 · 24 May 2026",
-      "identifier": "豆瓣-release-1.1.0",
-      "caption": "豆瓣 1.1.0 is available.",
-      "date": "2026-05-24T05:45:17Z",
+      "title": "豆瓣 1.2.0 · 24 Oct 2026",
+      "identifier": "豆瓣-release-1.2.0",
+      "caption": "豆瓣 1.2.0 is available.",
+      "date": "2026-10-24T08:15:45Z",
       "tintColor": "#02AD0A",
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/DoubanMApp/images/news.png",
       "notify": true,
-      "url": "https://github.com/TouchFriend/DoubanMApp/releases/tag/1.1.0"
+      "url": "https://github.com/TouchFriend/DoubanMApp/releases/tag/1.2.0"
     }
   ]
 }
