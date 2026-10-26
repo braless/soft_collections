@@ -1,0 +1,19 @@
+# render_news.py config: python3 templates/render_news.py --out apps/cilicili
+# Colors left unset are auto-derived: tint from config.toml, background as
+# a light shade of the icon's dominant color.
+
+name = "CiliCili"
+tagline = "SwiftUI 第三方 B 站客户端"
+
+# Color notes — each key below controls one element of the image. All are
+# optional: unset keys are auto-derived. Shown values are the current result.
+[colors]
+# The badge uses a deeper pink than the app's tint (#F5639D): the background
+# below it is a pale pink too, and the icon pink only reaches ~2.1:1 there.
+tint = "#A62A5E"
+# tint_alt = "#F5639D"      # bottom-right glow (default: [source] tint_color)
+# background = "#EBD6DD"    # gradient base (derived from the icon's dominant color)
+# bg_mid = "#F3E7EB"        # gradient mid stop (derived from background)
+# bg_dark = "#DEBBC6"       # gradient end stop (derived from background)
+# text_color = "#111111"    # app name (auto white/black)
+# tagline_color = "#BD5175" # tagline text (derived from background)

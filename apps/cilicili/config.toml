@@ -1,0 +1,48 @@
+# altgen config for the CiliCili AltStore source.
+# Run: uvx altgen -c config.toml
+#
+# No AltStore source upstream: identity comes from the repository's committed
+# build configuration — Config/Signing.xcconfig sets PRODUCT_BUNDLE_IDENTIFIER
+# to cc.bili, bili.xcodeproj sets IPHONEOS_DEPLOYMENT_TARGET to 26.1, and the
+# README states iOS 26.1+. The icon is the 1024px AppIcon asset.
+#
+# Release assets are not named consistently (cilicili-1.1.1-1-unsigned.ipa,
+# cilicili-v1.0.18-unsigned.ipa, CiliCili-v1.0.22-unsigned.ipa), hence the
+# case-insensitive pattern below.
+
+[github]
+repo = "Rone89/cilicili"
+
+[source]
+name = "CiliCili"
+subtitle = "CiliCili AltStore source by soft_collections & altgen"
+description = "Auto-updated AltStore source for CiliCili"
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/cilicili/icon.png"
+website = "https://github.com/Rone89/cilicili"
+tint_color = "#F5639D"
+
+[app]
+name = "CiliCili"
+bundle_identifier = "cc.bili"
+developer_name = "Rone89"
+subtitle = "SwiftUI 第三方 B 站客户端"
+description = "使用 SwiftUI 编写的第三方 B 站客户端实验项目：首页推荐、搜索、UP 主空间、动态（图文/视频/转发）、视频详情与 HLS 播放、弹幕（开关、样式、关键词过滤）、评论与私信，并支持二维码与网页登录（登录态保存在本机 Keychain）。"
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/cilicili/icon.png"
+tint_color = "#F5639D"
+min_os_version = "26.1"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# asset_pattern is a regex (not glob): match every naming variant, only the IPA
+asset_pattern = "(?i)^cilicili-.*-unsigned\\.ipa$"
+# ... whose name carries the build number, e.g. cilicili-1.1.1-1-unsigned.ipa
+build_version_pattern = "-(\\d+)-unsigned\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+# shared promo image rendered by templates/render_news.py
+image_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/cilicili/images/news.png"
+
+[output]
+path = "apps.json"

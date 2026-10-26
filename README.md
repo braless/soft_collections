@@ -47,6 +47,9 @@ Apple Wallet card skins, lock screen passcode themes and PosterBoard wallpapers 
 ### <a href="https://github.com/Lakr233/Asspp"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/Asspp/icon.png" alt="Asspp icon" width="24" align="top"> Asspp</a>
 Manage multiple Apple IDs across App Store regions and download official signed IPAs — no more logging out of your device.
 
+### <a href="https://github.com/Rone89/cilicili"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/cilicili/icon.png" alt="CiliCili icon" width="24" align="top"> CiliCili</a>
+SwiftUI 编写的第三方 B 站客户端：推荐、搜索、UP 主空间、动态、HLS 播放、弹幕与评论私信（iOS 26.1+）。
+
 ### <a href="https://github.com/TouchFriend/DoubanMApp"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/DoubanMApp/icon.png" alt="DoubanMApp icon" width="24" align="top"> 豆瓣</a>
 无广告版豆瓣客户端（DoubanMApp）：移除绝大多数广告、精简界面，其余功能与官方客户端一致。
 
