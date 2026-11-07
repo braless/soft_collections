@@ -187,11 +187,11 @@
       "tintColor": "#30F040",
       "versions": [
         {
-          "version": "1.6.0",
-          "date": "2026-10-27",
-          "localizedDescription": "Unsigned build — sign it with your own Apple ID before installing.\nhttps://github.com/ResistanceTo/MiniWatts#install\n\n## 改进\n\n- **iPhone 18 Pro 高功率充电时会提示读数可能只有一半。** 在 iPhone 18 Pro 系列上用有线充电、协商功率超过 30 W 时，表盘旁会显示\"可能只读到一半\"，功率页和适配器页也会说明原因：这种情况下输入和电芯两侧的传感器都可能只测到一半功率。数值本身不做修正。\n- **新增\"电量核对\"。** 充电时，App 会把电量上升的速度换算成功率，和电芯传感器在同一段时间里测到的功率对比。如果电量涨得明显比传感器测到的快（1.6 倍以上），表盘旁会显示\"读数偏低\"，并给出两边的数值；如果两边一致，会显示核对通过，上面那条\"可能只读到一半\"的提示也会隐藏。电量要上涨至少 3% 才能给出结果，通常需要几分钟。\n- **传感器按 SMC key 识别，重复的读数会合并。** iOS 27 上每个传感器都会出现两份，以前只取第一份，现在取两份的平均值；发热页的列表里每个传感器也只出现一次。发热页和原始数据会在传感器名旁边标出 key（比如电池温度偏高的那个是 `TG0B`）。\n- **电池能量按机型给默认值。** iPhone 18 Pro Max 为 21.75 Wh，iPhone 17 Pro Max 为 19.7 Wh，其他机型仍是 15 Wh。设置 → 电池能量 里会显示本机型的额定值，点\"使用\"即可填入。已经手动设置过的值保持不变。\n- **原始数据新增\"Derived power checks\"一节。** 这一节记录半功率提示是否生效，以及电量核对的结果。\n\n## 修复\n\n- 适配器：iPhone 18 Pro 高功率充电时，读数偏低不再被误判成线材或接口的问题；在无法确认读数完整时，不计算线路电阻和电流利用率。\n\n## 注意\n\n- iPhone 18 Pro 高功率充电时，完整的输入功率仍然读不到：另一路充电电流没有可读的传感器。这个版本只能提示和核对，不能补上缺失的功率；这段时间的充电记录里的能量统计也仍然偏低。\n- \"电量核对\"还没有在 iPhone 18 Pro 上验证过。如果你有这台手机，请在 45 W 充电、电量上涨几个百分点之后，从 设置 → 原始数据 复制导出并反馈。\n- 如果你的机型不在上面的列表里，请在 设置 → 电池能量 里填入正确的数值，否则电量核对可能一直给不出结论。\n- 部分发现来自 ChargeSpeed 作者在 iPhone 18 Pro Max 上的实测。\n\n---\n\n## Improvements\n\n- **The iPhone 18 Pro now warns when a reading may be half.** On an iPhone 18 Pro model charging by cable on a profile above 30 W, the dial shows \"may read half\", and the Power and Adapter pages explain why: in that mode both the input and the cell sensors can see only half the power. The numbers themselves are not corrected.\n- **New battery level check.** While charging, the app turns the battery level's rise into watts and compares it with what the cell sensors measured over the same stretch. If the level rises much faster (1.6× or more), the dial shows \"reading low\" with both figures; if they agree, the check says so and the \"may read half\" warning is hidden. It needs at least a 3% rise, usually a few minutes.\n- **Sensors are identified by SMC key, and duplicate copies are merged.** iOS 27 publishes every sensor twice. The app used to take the first copy; it now averages the two, and each sensor appears once on the Thermal page. The Thermal page and Raw data show the key beside the name (the battery sensor that runs hot is `TG0B`).\n- **Battery energy defaults by model.** 21.75 Wh for the iPhone 18 Pro Max, 19.7 Wh for the iPhone 17 Pro Max, 15 Wh otherwise. Settings → Battery energy shows your model's rating with a \"Use\" button. A value you set yourself is kept.\n- **Raw data gains a \"Derived power checks\" section**, recording whether the half-reading warning applies and the battery level check's result.\n\n## Fixes\n\n- Adapter: on an iPhone 18 Pro at high power, a low reading is no longer blamed on the cable or plugs; path resistance and current utilisation are not worked out while the reading may be incomplete.\n\n## Notes\n\n- On an iPhone 18 Pro at high power the full input still cannot be read: the second charging path has no readable sensor. This version can warn and cross-check, not fill in the missing power, and energy totals recorded during that time are still low.\n- The battery level check has not been verified on an iPhone 18 Pro. If you have one, charge at 45 W, let the level rise a few percent, then copy the dump from Settings → Raw data and report it.\n- If your model is not in the list above, set Settings → Battery energy to its rating, or the level check may never reach a verdict.\n- Some of these findings come from measurements by ChargeSpeed's author on an iPhone 18 Pro Max.\n\n**Full Changelog**: https://github.com/ResistanceTo/MiniWatts/compare/v1.5.1...v1.6.0",
-          "downloadURL": "https://github.com/ResistanceTo/MiniWatts/releases/download/v1.6.0/MiniWatts-unsigned.ipa",
-          "size": 3332420,
+          "version": "1.7.0",
+          "date": "2026-11-07",
+          "localizedDescription": "Unsigned build — sign it with your own Apple ID before installing.\nhttps://github.com/ResistanceTo/MiniWatts#install\n\n## 改进\n\n- **温度可以显示为华氏度。** 设置 → 单位 里可选\"自动 / °C / °F\"。\"自动\"跟随系统地区，以及\"设置 › 通用 › 语言与地区\"里的\"温度\"选项，所以地区使用华氏度的用户升级后会直接看到 °F。App 各页、图表、热力图、悬浮读数、实时活动和小组件都按所选单位显示；原始数据仍显示传感器给出的 °C。(#25)\n- **充电预估。** 充电时，功率页会显示充到 80% 和充到 100% 还要多久，以及大约几点。时间根据电量实际上升的速度推算，不依赖电池能量设置；要等电量变化两次才会出现，通常需要几分钟。80% 以后按典型充电曲线估算，只是近似值。(#27)\n- **显示版本号。** 设置 → 关于 里显示当前版本，原始数据导出的第一行也带上了版本号。(#27)\n- **iPad 布局。** iPad 横屏和 13 英寸竖屏时，各页分成两栏；窄屏时仍是一栏。历史记录里单次充电的详情页在 iPad 上不再横向铺满。(#22)\n- **iPad 热力图。** 在 iPad 上，发热页画的是 iPad 的轮廓，各区域按 iPad Pro 11 英寸的内部布局放置：主板在中间，两侧是电芯，充电芯片在 USB-C 接口旁。设备页和设置里的图标也换成了 iPad。(#13, #22)\n\n## 修复\n\n- 发热：CPU 簇（`pACC`、`eACC`）和图像处理器（`ISP`）等传感器以前被归入\"其他传感器\"，现在算作 SoC，SoC 区域的温度也会把它们算进去。iPhone 11 上 `FrontCameraDie`、`BCMLBSkin` 这类名字连写的传感器以前会被分错区（比如前摄像头被当成机身），现在会先拆词再归类。(#13, #14)\n- 适配器页里\"单次采样\"那段说明以前在中文界面下一直显示英文，现在已有中文。\n\n## 注意\n\n- iPad 相关的改动只在模拟器里验证过，我手上没有 iPad。如果在 iPad 上看到问题，请从 设置 → 原始数据 复制导出并反馈。\n- iPad 上\"来自充电器\"的功率偏低（#13）这次还没有修：要确认其余的输入由哪个传感器测量，需要一份**充电时**导出的原始数据。有 iPad 的话，请在充电时从 设置 → 原始数据 复制导出，贴到 #13。\n- 充电预估无法知道是否开启了充电上限或优化电池充电。如果开着，电池会在上限前停下，\"充到 100%\"的时间就不准。\n\n---\n\n## Improvements\n\n- **Temperatures can be shown in Fahrenheit.** Settings → Units offers Automatic, °C or °F. Automatic follows your region and the Temperature option under Settings › General › Language & Region, so if your region uses Fahrenheit you will see °F straight after updating. Every page, the charts, the heat map, the floating meter, the Live Activity and the widget follow the setting; Raw data still shows the sensors' own °C. (#25)\n- **Charge forecast.** While charging, the Power page shows how long until 80% and until 100%, and roughly when. It is worked out from how fast the battery level is actually rising, so it does not depend on the battery energy setting; it appears once the level has moved twice, usually within a few minutes. Past 80% it follows a typical charging curve and is approximate. (#27)\n- **Version number.** Settings → About shows the installed version, and the first line of the Raw data dump includes it. (#27)\n- **iPad layout.** On an iPad in landscape, and a 13-inch in portrait, every page uses two columns; narrower windows keep one. A session's detail page in History no longer stretches edge to edge on an iPad. (#22)\n- **iPad heat map.** On an iPad the Thermal page draws an iPad, with the zones placed as in an iPad Pro 11-inch: logic board down the middle, a battery cell either side, the charge IC by the USB-C port. The Devices page and Settings use iPad icons too. (#13, #22)\n\n## Fixes\n\n- Thermal: the CPU-cluster (`pACC`, `eACC`) and image-processor (`ISP`) sensors used to land under \"Other sensors\"; they now count as the SoC, and the SoC zone's temperature includes them. On an iPhone 11, run-together sensor names such as `FrontCameraDie` and `BCMLBSkin` were filed in the wrong zone (the front camera as chassis); names are now split into words before they are matched. (#13, #14)\n- Adapter: the one-sample note always showed in English in the Chinese interface; it is now translated.\n\n## Notes\n\n- The iPad changes were checked in the simulator only — I do not have an iPad. If something looks wrong on yours, copy the dump from Settings → Raw data and report it.\n- The low \"from charger\" reading on an iPad (#13) is not fixed yet: finding which sensor carries the rest of the input needs a Raw data dump taken **while charging**. If you have an iPad, please copy one from Settings → Raw data while it charges and post it on #13.\n- The charge forecast cannot tell whether a charge limit or Optimized Battery Charging is on. If one is, the battery stops short and the time to 100% will be wrong.\n\n**Full Changelog**: https://github.com/ResistanceTo/MiniWatts/compare/v1.6.0...v1.7.0",
+          "downloadURL": "https://github.com/ResistanceTo/MiniWatts/releases/download/v1.7.0/MiniWatts-unsigned.ipa",
+          "size": 3374224,
           "minOSVersion": "17.0"
         }
       ]
@@ -322,11 +322,11 @@
       "tintColor": "#1060F0",
       "versions": [
         {
-          "version": "1.0.20",
-          "date": "2026-10-28",
-          "localizedDescription": "## 主要变化\n\n本版新增海外地点搜索，支持更多坐标粘贴格式，并在定位会话失败时记录更具体的原因。\n\n- **海外搜索**：国内 iPhone 上的 Apple 地图数据缺少海外地点，搜“东京塔”“埃菲尔铁塔”会找到国内的同名地点。轻点搜索框末尾的“国内”切换为“海外”，即可通过 Geoapify（OpenStreetMap 数据）搜索。结果最多显示 5 个候选，每个都标注精度，橙色标签表示只找到大致位置。查询以中文国名开头（如“法国巴黎”）时只在该国家内查找；带门牌号的查询，只有落在门牌上的结果才显示为精确。\n- **粘贴坐标**：除了 `35.6586, 139.7454`，搜索框还能识别中文逗号、空格、带 N/S/E/W 的度数、“北纬/东经”和度分秒格式，国内和海外模式都可用。搜不到地点时会提示可以直接粘贴坐标。\n- **地图提示**：地图上的错误提示几秒后自动消失，也可轻点关闭，出现和消失都有动画，不再一直停留在界面上。\n- **诊断信息**：定位会话失败时，“复制诊断信息”会包含底层错误类型和错误码（不含设备文字或位置），便于排查配对校验失败等问题。连接检测不再声称配对记录“有效”，配对会在开始定位时由 iPhone 校验。\n\n## 海外搜索的限制\n\n- 在中国大陆不开代理可能无法连接 Geoapify，连接失败时会提示开启代理或粘贴坐标。\n- 结果来自 OpenStreetMap。地标通常能找到，很多门牌地址查不到，日本尤其明显。橙色结果请核对后再模拟，或直接粘贴坐标。\n- 只有轻点“搜索”时才会请求。每台 iPhone 每天可进行 50 次海外搜索，7 天内重复搜索直接使用保存在本机的结果。所有安装共享同一份 Geoapify 免费额度；若额度被暂停，海外搜索会提示暂时不可用，粘贴坐标仍然可用。\n- 只有在海外模式下，搜索内容才会发送给 Geoapify。详见 [隐私说明](Privacy.zh-CN.md)。\n\n## 下载与安装\n\n- 标准版：`WrapPin-Standard-1.0.20-build66-unsigned.ipa`，供 SideStore 或其他自签方式使用。\n- 隧道版：`WrapPin-Tunnel-1.0.20-build66-unsigned.ipa`，需要带 Packet Tunnel 权限的签名证书及描述文件。\n- 两个版本均为未签名 IPA，最低系统为 iOS 27.0。免费 Apple 账号和 SideStore 请使用标准版。\n\nSHA-256：\n\n- 标准版：`7e2065489239572d983ebd08588d75e05d99221ba9e6f5ed32837f2b2dd4fb0b`\n- 隧道版：`427d0d4b995ce49dbd6aa092d24e554719fe76aae7fc622cd571d93aba273322`\n\n\n## 验证与边界\n\n- 维护者已在真机上安装 Build 64 测试包并使用海外搜索，发现中国大陆不开代理无法连接 Geoapify、地图提示一直停留，两者已在本版处理。Build 65 和 66 尚未装机；新增的诊断详情也尚未在真机上实际观察到。\n- 两个 scheme 的 Debug、Release 构建，10 个检查脚本及 Rust 12 项单元测试均通过；两个 IPA 的包标识、版本、扩展有无和 ZIP 完整性检查均通过。\n- 发布前已通过代理，用一组中英文查询对 Geoapify 生产接口的结果进行核对。\n- 首尔等落在大陆坐标模式推荐范围内的海外地点，仍会被推荐为 GCJ-02，需要手动切换为 WGS-84。\n- 未新增统计事件。本次构建未配置 TelemetryDeck 标识，不会发送使用统计。",
-          "downloadURL": "https://github.com/suversal/WrapPin/releases/download/v1.0.20/WrapPin-Standard-1.0.20-build66-unsigned.ipa",
-          "size": 4964556,
+          "version": "1.0.21",
+          "date": "2026-11-07",
+          "localizedDescription": "## 主要变化\n\n本版增加 iOS 18–26 的电脑配对流程和 iPad 支持，并优化地图面板，让横竖屏都能留出更多地图空间。\n\n- **iOS 18 起的兼容适配**：最低系统调整为 iOS/iPadOS 18.0，兼容旧系统的地图、地址解析和快捷指令接口。标准版与隧道版各一个包，无需按系统版本另选安装包。\n- **电脑配对导入**：iOS 18–26 先在电脑 idevice_pair 中生成 Remote pairing 文件，再导入 WrapPin；也支持粘贴配对 XML。导入会检查记录类型、设备身份与密钥，导入失败会保留原有有效记录。iOS 27 继续使用开发者设置中的六位码本机配对。\n- **iPad 横屏**：支持双向横屏。宽窗口使用左侧操作区与右侧地图；点击操作区顶部的按钮或向左滑动标题区可隐藏侧栏，左上角“显示控制面板”可恢复。\n- **竖屏与窄窗口**：操作卡片贴在底部安全区上方，内容宽度限制为 420 pt。iPad 默认紧凑显示，展开内容较多或字号较大时可在卡片内滚动。\n- **面板交互**：固定定位与路线共用展开／收起状态；收起后保留主要操作，定位中可停止并恢复，路线中可暂停／继续及停止。拖动手势仅在卡片顶部生效，避免干扰滚动、坐标切换和速度滑块。\n- **地图提示**：提示条按当前卡片高度和侧栏位置避让，减少遮挡。\n\n## 配对与安装\n\n- 标准版：`WrapPin-Standard-1.0.21-build71-unsigned.ipa`，供 SideStore 等自签方式使用，需要 LocalDevVPN 等外部设备隧道。\n- 隧道版：`WrapPin-Tunnel-1.0.21-build71-unsigned.ipa`，内置设备隧道；签名需同时覆盖主 App 和 Packet Tunnel 扩展，并具备对应权限。免费 Apple 账号和 SideStore 请使用标准版。\n- 两个包均为未签名 IPA。沿用当前签名身份覆盖安装对应版本，通常无需重置配对；两个版本分别保存配对记录。\n- iOS 18–26：在 idevice_pair 选择 **Remote pairing → Create**，成功后点 **Validate**，显示 **Works** 后保存同一份文件并导入。不要选 Lockdown 文件。详细步骤见[电脑配对说明](https://github.com/suversal/WrapPin/blob/v1.0.21/Documentation/iOS26Pairing.zh-CN.md)。\n- iOS 27：沿用“配对本机”，到开发者设置中输入六位验证码。\n\nSHA-256：\n\n- 标准版：`d576b512ee3d38e7aeb8468de9b2577a89b776fef765404ec2d4f88f0e62feea`\n- 隧道版：`11fdce6da3718805a341be47a1140156f172da36a29db492e19af54503b7954f`\n\n两个包均由源码提交 `e227b46624120696c82653a5dabd89ca9b864485` 使用 Xcode 27.0（`27A266a`）构建，后续文档和发布提交不改变安装包。发布页：[v1.0.21](https://github.com/suversal/WrapPin/releases/tag/v1.0.21)；[构建记录](https://github.com/suversal/WrapPin/blob/v1.0.21/Releases/PanelLayout-build71/receipt.json)；[安装与验收](https://github.com/suversal/WrapPin/blob/v1.0.21/Releases/PanelLayout-build71/%E6%B5%8B%E8%AF%95%E8%AF%B4%E6%98%8E.md)。\n\n## 验证与边界\n\n- 两版 Debug、Release Archive、11 项离线检查，以及 IPA 的版本、最低系统、arm64、设备类型、方向、扩展、许可证和 ZIP 完整性检查均通过；打包文件与归档逐字节一致。原生引擎未修改。\n- iPad mini 与 375 pt iPhone 的界面检查通过，覆盖贴底、双向横屏、侧栏显隐、固定／路线展开收起、旋转保留选点、暂停／继续和停止确认入口，以及最大辅助字号、深色和减少动态效果渲染分支。界面检查使用合成会话状态，不验证真实配对、定位或恢复。\n- 此前标准版在 iOS 26.5 上有首轮成功反馈；用户也反馈 iPad iOS 26 可以定位和横屏。Build 71 完整真机回归、iOS 18 实机运行、其他 iOS 26 版本、隧道版和 iOS 27 本机配对仍需继续验收。\n- 部分原生配对校验错误仍统一显示“已保存的配对已失效”。单凭这句话不能判定记录过期；仍失败时，在“设置 → 连接检测 → 复制诊断”查看阶段与错误类型。\n- 定位仍依赖开发者模式、可用的设备隧道和开发者镜像准备状态。本版不新增开发者镜像下载／挂载功能。\n- 沿用现有海外搜索配置与共享额度；本次未配置 TelemetryDeck，不发送使用统计。",
+          "downloadURL": "https://github.com/suversal/WrapPin/releases/download/v1.0.21/WrapPin-Standard-1.0.21-build71-unsigned.ipa",
+          "size": 6914083,
           "minOSVersion": "27.0"
         }
       ]
@@ -417,6 +417,28 @@
   ],
   "news": [
     {
+      "appID": "com.suversal.wrappin",
+      "title": "WrapPin 1.0.21 · 07 Nov 2026",
+      "identifier": "WrapPin-release-v1.0.21",
+      "caption": "WrapPin 1.0.21 is available.",
+      "date": "2026-11-07T08:52:15Z",
+      "tintColor": "#1060F0",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/news.png",
+      "notify": true,
+      "url": "https://github.com/suversal/WrapPin/releases/tag/v1.0.21"
+    },
+    {
+      "appID": "org.zhaohe.MiniWatts",
+      "title": "MiniWatts 1.7.0 · 07 Nov 2026",
+      "identifier": "MiniWatts-release-v1.7.0",
+      "caption": "MiniWatts 1.7.0 is available.",
+      "date": "2026-11-07T08:08:32Z",
+      "tintColor": "#30F040",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/MiniWatts/images/news.png",
+      "notify": true,
+      "url": "https://github.com/ResistanceTo/MiniWatts/releases/tag/v1.7.0"
+    },
+    {
       "appID": "sb.moe.kumone",
       "title": "Kumone 0.3.29 · 06 Nov 2026",
       "identifier": "Kumone-release-v0.3.29",
@@ -437,28 +459,6 @@
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PiliPlus/images/news.png",
       "notify": true,
       "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.2.0.2"
-    },
-    {
-      "appID": "com.suversal.wrappin",
-      "title": "WrapPin 1.0.20 · 28 Oct 2026",
-      "identifier": "WrapPin-release-v1.0.20",
-      "caption": "WrapPin 1.0.20 is available.",
-      "date": "2026-10-28T15:34:05Z",
-      "tintColor": "#1060F0",
-      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/news.png",
-      "notify": true,
-      "url": "https://github.com/suversal/WrapPin/releases/tag/v1.0.20"
-    },
-    {
-      "appID": "org.zhaohe.MiniWatts",
-      "title": "MiniWatts 1.6.0 · 27 Oct 2026",
-      "identifier": "MiniWatts-release-v1.6.0",
-      "caption": "MiniWatts 1.6.0 is available.",
-      "date": "2026-10-27T03:11:13Z",
-      "tintColor": "#30F040",
-      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/MiniWatts/images/news.png",
-      "notify": true,
-      "url": "https://github.com/ResistanceTo/MiniWatts/releases/tag/v1.6.0"
     },
     {
       "appID": "com.douban.frodo",
