@@ -1,0 +1,43 @@
+# altgen config for the iPadn AltStore source.
+# Run: uvx altgen -c config.toml
+
+[github]
+repo = "mengangs/ipadn"
+
+[source]
+name = "iPadn"
+subtitle = "iPadn AltStore source by soft_collections & altgen"
+description = "Auto-updated AltStore source for iPadn"
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/iPadn/icon.png"
+website = "https://github.com/mengangs/ipadn"
+tint_color = "#111111"
+
+[app]
+name = "iPadn"
+bundle_identifier = "app.local.iPadn"
+developer_name = "mengangs"
+subtitle = "在 iPhone 和 iPad 上管理已购 App"
+description = "在 iPhone 和 iPad 上搜索、下载并安装你已拥有的 App，支持历史版本、已下架应用、多地区比价、已购项目与一键安装。"
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/iPadn/icon.png"
+screenshots = [
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/iPadn/images/01-search.jpg",
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/iPadn/images/02-detail.jpg",
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/iPadn/images/03-versions.jpg",
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/iPadn/images/04-prices.jpg",
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/iPadn/images/05-purchased.jpg",
+]
+tint_color = "#111111"
+min_os_version = "17.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# asset_pattern is a regex (not glob): only match the versioned unsigned IPA.
+asset_pattern = "(?i)^iPadn-.*-unsigned\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+image_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/iPadn/images/news.png"
+
+[output]
+path = "apps.json"
