@@ -23,11 +23,11 @@
       "tintColor": "#111111",
       "versions": [
         {
-          "version": "1.8.0",
-          "date": "2026-11-09",
-          "localizedDescription": "## iPadn 1.8.0\n\n适用于 iOS / iPadOS 17 及更新版本；安装包未签名，请用自己的工具签名后安装。\n\n### 新增\n\n- 支持 Apple Store 设备验证（X-Apple-AMD）：登录、购买、下载时按服务器要求自动完成设备注册与验证头生成，减少因设备验证导致的登录或下载失败。验证数据仅保存在本机钥匙串，不随备份迁移。\n- 账号页改为与其他页面一致的大标题页头和底部标签栏样式。\n\n### 修复\n\n- 登录请求改用 Apple 当前的 plist 请求格式，并兼容 `auth.itunes.apple.com` 原生登录节点。\n- 登录、下载节点校验更严格：拒绝编码斜杠和路径穿越，仅接受 Apple 官方购买节点。\n- 签名运行组件在 Windows 检出（CRLF 换行）时也能通过校验。\n- 列表底部增加留白，避免最后一行被标签栏遮挡。\n\n真实账号登录、双重认证和下载授权效果待真机验证。\n\n更早版本的更新内容见 [Releases](https://github.com/mengangs/ipadn/releases)。\n\n验证：设备 Release 编译与 IPA 检查通过；114 项测试通过，0 项失败，0 项跳过。",
-          "downloadURL": "https://github.com/mengangs/ipadn/releases/download/v1.8.0/iPadn-1.8.0-unsigned.ipa",
-          "size": 43743768,
+          "version": "1.8.5",
+          "date": "2026-11-10",
+          "localizedDescription": "## iPadn 1.8.5\r\n\r\n本轮集中改善列表交互、加载流畅性和下载稳定性。适用于 iOS / iPadOS 17 及更新版本；安装包未签名，请用自己的工具签名后安装。\r\n\r\n- 列表侧滑参考 Telegram iOS 开源运动模型，统一双向拖动、阻尼、回弹、操作阈值与触觉反馈；支持减少动态效果和辅助操作。\r\n- 侧滑整张圆角卡片跟手移动，搜索历史使用红色胶囊按钮，其他列表使用圆形图标与下方标题；修复横向滑动抬手误触原行操作。\r\n- 侧滑过程中保留该行文字、图标和操作按钮原色，收起后无需等待颜色恢复；防误触处理保留。\r\n- 账号行静止时与“添加账号”保持连续分组，仅展开侧滑的当前行变成圆角卡片，收回恢复分组。\r\n- 顶部提示恢复紧凑布局并限制最大宽度；删除/移除确认保留原生底部弹层，大字体内容可滚动，按钮保持易点按。\r\n- 侧滑界面状态按屏幕刷新合并提交，复用宿主查找结果并减少重复裁剪。\r\n- 补齐设备容量显示和应用内计时 API 的用途声明，与工程生成脚本保持同步。\r\n- 搜索历史删除、清空及取消关注支持限时撤销；账号移除提示具体账号及当前登录影响。\r\n- 下载记录与安装包支持异步批量删除和保存失败回滚；重启时恢复尚未提交删除的安装包。\r\n- 下载回调使用任务对象身份校验，避免前后台 Session 编号碰撞；进度单独更新对应行。\r\n- 本地缓存异步加载，关注和账号缓存后台保存；图标与截图合并重复请求，同条件搜索刷新保留已有结果。\r\n- 修复多组件授权顺序、授权数量校验、安装包冲突覆盖及签名运行组件取消、超时、复用重试问题。\r\n- CI 默认执行完整单元测试，手动可增加 UI 测试；新增侧滑模型、下载并发、删除回滚及 100/500/1000 条记录交互检查。\r\n\r\nOTA 安装来源由 iOS 决定，清单使用应用真实版本号，不承诺改变系统的企业分发分类。\r\n\r\n更早版本的更新内容见 [Releases](https://github.com/mengangs/ipadn/releases)。\r\n\r\n验证：设备 Release 编译与 IPA 校验通过；最新提交的 122 项单元测试、2 项提示/最大字号/撤销 UI 回归通过，0 失败、0 跳过；其余 9 项 UI 已在前一轮完整回归中通过。最终真机检查包含紧凑提示、边缘点按、原生删除确认与最大辅助字号布局。\r\n\r\n[最终相关回归](https://github.com/mengangs/ipadn/actions/runs/42816175788) · [此前完整回归](https://github.com/mengangs/ipadn/actions/runs/42812063480)",
+          "downloadURL": "https://github.com/mengangs/ipadn/releases/download/v1.8.5/iPadn-1.8.5-unsigned.ipa",
+          "size": 43961928,
           "minOSVersion": "17.0"
         }
       ]
@@ -36,14 +36,14 @@
   "news": [
     {
       "appID": "app.local.iPadn",
-      "title": "iPadn 1.8.0 · 09 Nov 2026",
-      "identifier": "iPadn-release-v1.8.0",
-      "caption": "iPadn 1.8.0 is available.",
-      "date": "2026-11-09T00:04:33Z",
+      "title": "iPadn 1.8.5 · 10 Nov 2026",
+      "identifier": "iPadn-release-v1.8.5",
+      "caption": "iPadn 1.8.5 is available.",
+      "date": "2026-11-10T12:52:09Z",
       "tintColor": "#111111",
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/iPadn/images/news.png",
       "notify": true,
-      "url": "https://github.com/mengangs/ipadn/releases/tag/v1.8.0"
+      "url": "https://github.com/mengangs/ipadn/releases/tag/v1.8.5"
     }
   ]
 }
