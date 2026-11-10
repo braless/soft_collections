@@ -6,9 +6,10 @@
 # to cc.bili, bili.xcodeproj sets IPHONEOS_DEPLOYMENT_TARGET to 26.1, and the
 # README states iOS 26.1+. The icon is the 1024px AppIcon asset.
 #
-# Release assets are not named consistently (cilicili-1.1.1-1-unsigned.ipa,
-# cilicili-v1.0.18-unsigned.ipa, CiliCili-v1.0.22-unsigned.ipa), hence the
-# case-insensitive pattern below.
+# Release assets are not named consistently. Older releases use names such as
+# cilicili-1.1.1-1-unsigned.ipa or CiliCili-v1.0.22-unsigned.ipa, while current
+# releases use bili-release-unsigned.ipa. The case-insensitive pattern below
+# accepts both schemes.
 
 [github]
 repo = "Rone89/cilicili"
@@ -35,8 +36,9 @@ min_os_version = "26.1"
 strip_v_prefix = true
 include_prereleases = false
 # asset_pattern is a regex (not glob): match every naming variant, only the IPA
-asset_pattern = "(?i)^cilicili-.*-unsigned\\.ipa$"
-# ... whose name carries the build number, e.g. cilicili-1.1.1-1-unsigned.ipa
+asset_pattern = "(?i)^(?:cilicili-.*|bili-release)-unsigned\\.ipa$"
+# Older assets encode the build number (e.g. cilicili-1.1.1-1-unsigned.ipa).
+# Newer bili-release-unsigned.ipa assets omit it, so buildVersion is optional.
 build_version_pattern = "-(\\d+)-unsigned\\.ipa$"
 
 [news]
