@@ -1,0 +1,49 @@
+{
+  "name": "iPadn",
+  "subtitle": "iPadn AltStore source by soft_collections & altgen",
+  "description": "Auto-updated AltStore source for iPadn",
+  "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/iPadn/icon.png",
+  "website": "https://github.com/mengangs/ipadn",
+  "tintColor": "#111111",
+  "apps": [
+    {
+      "name": "iPadn",
+      "bundleIdentifier": "app.local.iPadn",
+      "developerName": "mengangs",
+      "subtitle": "在 iPhone 和 iPad 上管理已购 App",
+      "localizedDescription": "在 iPhone 和 iPad 上搜索、下载并安装你已拥有的 App，支持历史版本、已下架应用、多地区比价、已购项目与一键安装。",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/iPadn/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/iPadn/images/01-search.jpg",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/iPadn/images/02-detail.jpg",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/iPadn/images/03-versions.jpg",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/iPadn/images/04-prices.jpg",
+        "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/iPadn/images/05-purchased.jpg"
+      ],
+      "tintColor": "#111111",
+      "versions": [
+        {
+          "version": "1.8.0",
+          "date": "2026-11-09",
+          "localizedDescription": "## iPadn 1.8.0\n\n适用于 iOS / iPadOS 17 及更新版本；安装包未签名，请用自己的工具签名后安装。\n\n### 新增\n\n- 支持 Apple Store 设备验证（X-Apple-AMD）：登录、购买、下载时按服务器要求自动完成设备注册与验证头生成，减少因设备验证导致的登录或下载失败。验证数据仅保存在本机钥匙串，不随备份迁移。\n- 账号页改为与其他页面一致的大标题页头和底部标签栏样式。\n\n### 修复\n\n- 登录请求改用 Apple 当前的 plist 请求格式，并兼容 `auth.itunes.apple.com` 原生登录节点。\n- 登录、下载节点校验更严格：拒绝编码斜杠和路径穿越，仅接受 Apple 官方购买节点。\n- 签名运行组件在 Windows 检出（CRLF 换行）时也能通过校验。\n- 列表底部增加留白，避免最后一行被标签栏遮挡。\n\n真实账号登录、双重认证和下载授权效果待真机验证。\n\n更早版本的更新内容见 [Releases](https://github.com/mengangs/ipadn/releases)。\n\n验证：设备 Release 编译与 IPA 检查通过；114 项测试通过，0 项失败，0 项跳过。",
+          "downloadURL": "https://github.com/mengangs/ipadn/releases/download/v1.8.0/iPadn-1.8.0-unsigned.ipa",
+          "size": 43743768,
+          "minOSVersion": "17.0"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "appID": "app.local.iPadn",
+      "title": "iPadn 1.8.0 · 09 Nov 2026",
+      "identifier": "iPadn-release-v1.8.0",
+      "caption": "iPadn 1.8.0 is available.",
+      "date": "2026-11-09T00:04:33Z",
+      "tintColor": "#111111",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/iPadn/images/news.png",
+      "notify": true,
+      "url": "https://github.com/mengangs/ipadn/releases/tag/v1.8.0"
+    }
+  ]
+}
