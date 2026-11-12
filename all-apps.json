@@ -206,11 +206,11 @@
       "tintColor": "#F0D060",
       "versions": [
         {
-          "version": "0.3.32",
-          "date": "2026-11-09",
-          "localizedDescription": "### Added\n\n- **iOS**: eight sound-effect presets and a ten-band custom equalizer on the now-playing page and in Settings, with a live response curve. A change applies to the playing track without rebuilding the player (#191).\n\n### Improved\n\n- **iOS**: the app follows the system language, English or Simplified Chinese, as the macOS app does (#191).\n- **Localization**: the English interface is complete on macOS, iOS and CarPlay. Album, playlist, artist and search pages, the iOS updater and CarPlay no longer fall back to Chinese, and VoiceOver reads the now-playing buttons in English. CarPlay play counts use K/M/B in English.\n- **Downloads**: a failed download now says why — the service's own reason (such as a risk-control refusal) or the system error code — instead of only asking you to check the network (#141).\n\n---\n\n### 新增\n\n- **iOS**：播放页和设置里新增八种音效预设和十段自定义均衡器，并带实时频率响应曲线。切换后直接作用于当前播放，不用重建播放器（#191）。\n\n### 改进\n\n- **iOS**：与 macOS 一样跟随系统语言，支持英文和简体中文（#191）。\n- **本地化**：macOS、iOS 与 CarPlay 的英文界面补齐。专辑、歌单、歌手与搜索页面、iOS 更新流程和 CarPlay 不再夹杂中文，播放页按钮的 VoiceOver 朗读也有了英文。CarPlay 的播放次数在英文下使用 K/M/B。\n- **下载**：下载失败时会说明原因（如服务端的风控拒绝）或系统错误码，而不再只提示检查网络（#141）。",
-          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.32/Kumone-iOS-0.3.32.ipa",
-          "size": 4060424,
+          "version": "0.3.34",
+          "date": "2026-11-12",
+          "localizedDescription": "### Added\n\n- **Comments**: read a song's comments from its context menu, or on iOS from the now-playing page's More menu — top comments first, then the latest, loading more as you scroll, with the reply each one answers and its likes. Signed in, you can like a comment or take the like back (#113).\n- **Search**: on iOS every playlist can be searched (the magnifying glass, or pull down), not only Liked Songs; tapping a result plays the whole playlist from that song (#185).\n- **Cloud Disk**: search by song, artist, album or uploaded file name, on macOS and iOS. The cloud disk now loads every song instead of the first 1,000, so search and Play All cover them all (#186).\n\n### Improved\n\n- **iOS**: Daily Recs drops the large cover banner at the top, so the songs start right below the date, title and Play All.\n\n---\n\n### 新增\n\n- **评论**：从歌曲的右键 / 长按菜单，或 iOS 播放页的「更多」菜单查看歌曲评论——先显示热门评论，再显示最新评论，滚动时自动加载更多，并显示所回复的评论和点赞数。登录后可以给评论点赞或取消点赞（#113）。\n- **搜索**：iOS 上所有歌单都可以在歌单内搜索（右上角放大镜，或在列表顶部下拉），不再只限「我喜欢的音乐」；点搜索结果会从这首开始播放整个歌单（#185）。\n- **音乐云盘**：macOS 和 iOS 都可以按歌名、歌手、专辑或上传的文件名搜索。云盘现在会加载全部歌曲，不再只加载前 1000 首，搜索和「播放全部」都覆盖所有歌曲（#186）。\n\n### 改进\n\n- **iOS**：每日推荐去掉了顶部的大封面横幅，日期、标题和「播放全部」下面直接就是歌曲列表。",
+          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.34/Kumone-iOS-0.3.34.ipa",
+          "size": 4270017,
           "minOSVersion": "16.0"
         }
       ]
@@ -360,11 +360,11 @@
       "tintColor": "#1E8FC7",
       "versions": [
         {
-          "version": "0.9.3",
-          "date": "2026-11-11",
-          "localizedDescription": "> **Requires:** iOS 27, or iOS 26.0 – 26.7.2 (preliminary support). Tested on iOS 27.0.1, 27.2.1 and 26.7.1.\n> **Needs:** a sideloading tool that keeps the App Group entitlement; see [Signing](https://github.com/kolbicz/WQFiles#signing-the-app-group) in the README.\n\n# Worse Query Files 0.9.3\n\n## New\n\n- **Startup check:** while the start screen is up, WQ Files checks in the background that everything it depends on works: the App Group, finding other apps' folders, its sandbox access (a sample of those folders must really open) and the app database (names). If a new iOS version or a signing problem breaks something essential, WQ Files now stops with what failed, with **Try Again**, **Log** and **Continue Anyway**, instead of showing empty or wrong lists. Problems that leave it partly usable are shown once as a notice.\n- **Recently Deleted** (under Backups on the start screen, [#41](https://github.com/kolbicz/WQFiles/issues/41)): files WQ Files deleted, newest first, from their copies in Backups. Tap to view, **Restore** puts a file back where it was (missing folders are created, nothing is replaced), **Delete Permanently** or **Delete All** removes them from Backups.\n\n## Changed\n\n- **Cache Cleaner:** the bar shows the scan's progress while scanning, and the total counts up during the first scan.\n- **App Bundles** and **Open App Bundle** only appear where iOS lets WQ Files open those folders; iOS 26 and 27.0.1 don't.\n- **Offloaded apps:** Apple's built-in apps count as installed, and the Installed/Offloaded filters only appear when the state of nearly every app can be read. On the iOS versions tested so far iOS refuses to show other apps' bundles, so the filters usually stay hidden.\n\n## Fixed\n\n- **Log:** reading app bundles no longer adds a line per app.\n\n## Credit\n\nSandbox technique: [worse_query](https://github.com/forcequitOS/worse_query) by Taj C (forcequit). Container enumeration: [KAMUI](https://github.com/murk-sus/kamui-escape) by murk-sus. Translations: iosrxwy (Simplified Chinese), hfip (Arabic), hooray804 (Korean). Thanks to everyone who sent Logs and ideas. GPL-3.0-or-later.\n\nSHA-256 of WQFiles.ipa: `7aa60c63dc1c51928ab0d0d304dd56f07204a132b7833cc50b5ab3d4b3b0b321`",
-          "downloadURL": "https://github.com/kolbicz/WQFiles/releases/download/v0.9.3/WQFiles.ipa",
-          "size": 559984,
+          "version": "0.9.5",
+          "date": "2026-11-12",
+          "localizedDescription": "> **Requires:** iOS 27, or iOS 26.0 – 26.7.2. Tested on iOS 27.0.1, 27.2.1 and 26.7.1; iOS 27.3 beta support is based on a user's Log.\n> **Needs:** a sideloading tool that keeps the App Group entitlement; see [Signing](https://github.com/kolbicz/WQFiles#signing-the-app-group) in the README.\n\n# Worse Query Files 0.9.5\n\n## New\n\n- **iOS 27.3 beta** ([#50](https://github.com/kolbicz/WQFiles/issues/50)): WQ Files reads the app database of iOS 27.3, where app extensions are stored differently. Before, most folders on 27.3 stayed unidentified, and the Cache Cleaner couldn't clean them.\n- **Turkish**, and a **flag next to each language** under **Language** in WQ Files' Settings.\n- **Import several files at once with Replace All** ([#49](https://github.com/kolbicz/WQFiles/issues/49)): when some names already exist, WQ Files asks once: **Replace All** (each replaced file is backed up first) or **Keep Both**.\n- **Rename in Select** ([#41](https://github.com/kolbicz/WQFiles/issues/41)): with one item selected, **Rename** is in the toolbar.\n- **Restore edited app backups:** a backup whose files were swapped afterwards, for example with files from another backup tool, used to be refused. WQ Files now says which parts changed and offers **Restore Anyway**. The app's current data is still backed up first.\n\n## Changed\n\n- **Deleting folders:** the alert now says how many files are backed up and how many links or special files are removed without a backup, instead of promising a copy of everything.\n- **Recently Deleted:** shows when Backups can't be read instead of \"Nothing deleted\". A failed restore removes the empty folders it created.\n- **Share as ZIP:** asks before sharing when items couldn't be read and were left out. The container's own system file doesn't count.\n- **SQLite:**\n  - **Saving** keeps one complete backup of the previous database, including changes that were still only in the `-wal` file.\n  - **Text** that can't be shown exactly (invalid UTF-8, embedded NUL) is shown as hex and can't be edited as text by accident.\n  - **CSV export** escapes column names, writes exact values and never shares a failed export.\n  - **SQL statements** run in the background and can be cancelled.\n- **Plist editor:** dates keep fractions of a second in binary plists, and 64-bit numbers are kept exactly instead of being clamped.\n- **Hex editor:** search can be stopped and no longer blocks loading or saving. Oversized byte input is rejected at once.\n- **Media:** each player gets its own temporary copy, so two open players no longer disturb each other. Streaming reads one consistent version of the file. `.m3u8` playlists open as text.\n- **ZIP import and extraction** build the result in a hidden folder and only show it once it's complete. Very large or malformed archives are refused.\n- **App backup import** asks when the backup names a different app than its contents.\n- **Startup check:** a failure is shown once you're back on the start screen, instead of covering whatever is open.\n\n## Fixed\n\n- **Deleting a folder:** if the folder was replaced while it was being deleted, the replacement could be deleted instead. WQ Files now stops. Rename, move and Move Here also check that the item is still the one you selected.\n- **ZIP files with a comment** could extract as empty.\n- **App backups** of apps with sockets or pipes failed their check.\n- **Recently Deleted** could show an older copy when more than nine backups were made in the same second.\n- **Reset Access Cache** couldn't repair a damaged lock file.\n- **Cache Cleaner:** pulling to refresh while cleaning could hide **Stop**.\n- **Refresh** could show the result of the scan from before the refresh.\n- **Translations:** \"Date\" and \"Data\" were the same word in the plist editor in Italian, Polish and Portuguese. App names that match a menu word (like \"Files\") are no longer translated.\n\n## Credit\n\nSandbox technique: [worse_query](https://github.com/forcequitOS/worse_query) by Taj C (forcequit). Container enumeration: [KAMUI](https://github.com/murk-sus/kamui-escape) by murk-sus. Translations: iosrxwy (Simplified Chinese), hfip (Arabic), hooray804 (Korean), Reinascape (Russian). Thanks to xuhao2004 for the iOS 27.3 Log and to everyone who sent Logs and ideas. GPL-3.0-or-later.\n\nSHA-256 of WQFiles.ipa: `f0e41b3e300032f0b25a72efdc63954032606812600e610a82f68c53a4ef7587`",
+          "downloadURL": "https://github.com/kolbicz/WQFiles/releases/download/v0.9.5/WQFiles.ipa",
+          "size": 715465,
           "minOSVersion": "26.0"
         }
       ]
@@ -385,11 +385,11 @@
       "tintColor": "#1060F0",
       "versions": [
         {
-          "version": "1.0.21",
-          "date": "2026-11-07",
-          "localizedDescription": "## 主要变化\n\n本版增加 iOS 18–26 的电脑配对流程和 iPad 支持，并优化地图面板，让横竖屏都能留出更多地图空间。\n\n- **iOS 18 起的兼容适配**：最低系统调整为 iOS/iPadOS 18.0，兼容旧系统的地图、地址解析和快捷指令接口。标准版与隧道版各一个包，无需按系统版本另选安装包。\n- **电脑配对导入**：iOS 18–26 先在电脑 idevice_pair 中生成 Remote pairing 文件，再导入 WrapPin；也支持粘贴配对 XML。导入会检查记录类型、设备身份与密钥，导入失败会保留原有有效记录。iOS 27 继续使用开发者设置中的六位码本机配对。\n- **iPad 横屏**：支持双向横屏。宽窗口使用左侧操作区与右侧地图；点击操作区顶部的按钮或向左滑动标题区可隐藏侧栏，左上角“显示控制面板”可恢复。\n- **竖屏与窄窗口**：操作卡片贴在底部安全区上方，内容宽度限制为 420 pt。iPad 默认紧凑显示，展开内容较多或字号较大时可在卡片内滚动。\n- **面板交互**：固定定位与路线共用展开／收起状态；收起后保留主要操作，定位中可停止并恢复，路线中可暂停／继续及停止。拖动手势仅在卡片顶部生效，避免干扰滚动、坐标切换和速度滑块。\n- **地图提示**：提示条按当前卡片高度和侧栏位置避让，减少遮挡。\n\n## 配对与安装\n\n- 标准版：`WrapPin-Standard-1.0.21-build71-unsigned.ipa`，供 SideStore 等自签方式使用，需要 LocalDevVPN 等外部设备隧道。\n- 隧道版：`WrapPin-Tunnel-1.0.21-build71-unsigned.ipa`，内置设备隧道；签名需同时覆盖主 App 和 Packet Tunnel 扩展，并具备对应权限。免费 Apple 账号和 SideStore 请使用标准版。\n- 两个包均为未签名 IPA。沿用当前签名身份覆盖安装对应版本，通常无需重置配对；两个版本分别保存配对记录。\n- iOS 18–26：在 idevice_pair 选择 **Remote pairing → Create**，成功后点 **Validate**，显示 **Works** 后保存同一份文件并导入。不要选 Lockdown 文件。详细步骤见[电脑配对说明](https://github.com/suversal/WrapPin/blob/v1.0.21/Documentation/iOS26Pairing.zh-CN.md)。\n- iOS 27：沿用“配对本机”，到开发者设置中输入六位验证码。\n\nSHA-256：\n\n- 标准版：`d576b512ee3d38e7aeb8468de9b2577a89b776fef765404ec2d4f88f0e62feea`\n- 隧道版：`11fdce6da3718805a341be47a1140156f172da36a29db492e19af54503b7954f`\n\n两个包均由源码提交 `e227b46624120696c82653a5dabd89ca9b864485` 使用 Xcode 27.0（`27A266a`）构建，后续文档和发布提交不改变安装包。发布页：[v1.0.21](https://github.com/suversal/WrapPin/releases/tag/v1.0.21)；[构建记录](https://github.com/suversal/WrapPin/blob/v1.0.21/Releases/PanelLayout-build71/receipt.json)；[安装与验收](https://github.com/suversal/WrapPin/blob/v1.0.21/Releases/PanelLayout-build71/%E6%B5%8B%E8%AF%95%E8%AF%B4%E6%98%8E.md)。\n\n## 验证与边界\n\n- 两版 Debug、Release Archive、11 项离线检查，以及 IPA 的版本、最低系统、arm64、设备类型、方向、扩展、许可证和 ZIP 完整性检查均通过；打包文件与归档逐字节一致。原生引擎未修改。\n- iPad mini 与 375 pt iPhone 的界面检查通过，覆盖贴底、双向横屏、侧栏显隐、固定／路线展开收起、旋转保留选点、暂停／继续和停止确认入口，以及最大辅助字号、深色和减少动态效果渲染分支。界面检查使用合成会话状态，不验证真实配对、定位或恢复。\n- 此前标准版在 iOS 26.5 上有首轮成功反馈；用户也反馈 iPad iOS 26 可以定位和横屏。Build 71 完整真机回归、iOS 18 实机运行、其他 iOS 26 版本、隧道版和 iOS 27 本机配对仍需继续验收。\n- 部分原生配对校验错误仍统一显示“已保存的配对已失效”。单凭这句话不能判定记录过期；仍失败时，在“设置 → 连接检测 → 复制诊断”查看阶段与错误类型。\n- 定位仍依赖开发者模式、可用的设备隧道和开发者镜像准备状态。本版不新增开发者镜像下载／挂载功能。\n- 沿用现有海外搜索配置与共享额度；本次未配置 TelemetryDeck，不发送使用统计。",
-          "downloadURL": "https://github.com/suversal/WrapPin/releases/download/v1.0.21/WrapPin-Standard-1.0.21-build71-unsigned.ipa",
-          "size": 6914083,
+          "version": "1.0.22",
+          "date": "2026-11-12",
+          "localizedDescription": "优化定位维持和断线后的恢复：\n\n- 前台开始定位时提前启动后台保活，回到前台后检查长时间未收到回调的请求。\n- 运行中的定位遇到可重试连接错误时，以 1、2、4 秒间隔最多连续重连三次，沿用最新坐标。\n- 重连期间冻结路线进度，恢复后保留原有暂停状态。\n- 主动停止、重置和恢复真实位置会取消重连；认证错误及上次启动留下的未确认会话仍需手动处理。\n\n**安装包选择**\n\n- **Standard 标准版**：SideStore 等自签安装，配合 LocalDevVPN 等外部设备隧道。\n- **Tunnel 隧道版**：内置设备隧道，需匹配主 App 和扩展的 Packet Tunnel 签名权限；免费账号请选择标准版。\n\n支持 iOS/iPadOS 18.0+。均为未签名 IPA，沿用原签名身份升级同一版本通常无需重新配对。\n\n两版 Debug/Release 编译、13 项离线检查和包校验通过。**Build 74 真机安装及长时间锁屏/后台效果仍待回测**，尚不能保证所有定位失效问题均已解决。\n\nSHA-256：\n\n- Standard：`868eead7328847473c7e2b7ff3f11c9bdeb84132ebef0e417c83db5c6c35e735`\n- Tunnel：`e2c47e3886dd197c9b91eb32924081844f61d4a6d042226ec5d3a34ef00c8551`",
+          "downloadURL": "https://github.com/suversal/WrapPin/releases/download/v1.0.22/WrapPin-Standard-1.0.22-build74-unsigned.ipa",
+          "size": 6923608,
           "minOSVersion": "27.0"
         }
       ]
@@ -480,6 +480,39 @@
   ],
   "news": [
     {
+      "appID": "sb.moe.kumone",
+      "title": "Kumone 0.3.34 · 12 Nov 2026",
+      "identifier": "Kumone-release-v0.3.34",
+      "caption": "Kumone 0.3.34 is available.",
+      "date": "2026-11-12T20:52:06Z",
+      "tintColor": "#F0D060",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kumone/images/news.png",
+      "notify": true,
+      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.34"
+    },
+    {
+      "appID": "cz.kolbi.wqfiles",
+      "title": "WQ Files 0.9.5 · 12 Nov 2026",
+      "identifier": "WQ Files-release-v0.9.5",
+      "caption": "WQ Files 0.9.5 is available.",
+      "date": "2026-11-12T19:33:26Z",
+      "tintColor": "#1E8FC7",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WQFiles/images/news.png",
+      "notify": true,
+      "url": "https://github.com/kolbicz/WQFiles/releases/tag/v0.9.5"
+    },
+    {
+      "appID": "com.suversal.wrappin",
+      "title": "WrapPin 1.0.22 · 12 Nov 2026",
+      "identifier": "WrapPin-release-v1.0.22",
+      "caption": "WrapPin 1.0.22 is available.",
+      "date": "2026-11-12T15:30:27Z",
+      "tintColor": "#1060F0",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/news.png",
+      "notify": true,
+      "url": "https://github.com/suversal/WrapPin/releases/tag/v1.0.22"
+    },
+    {
       "appID": "app.local.iPadn",
       "title": "iPadn 2.0.0 · 12 Nov 2026",
       "identifier": "iPadn-release-v2.0.0",
@@ -502,28 +535,6 @@
       "url": "https://github.com/Kianuni/Erosion-CN/releases/tag/v0.8.6"
     },
     {
-      "appID": "cz.kolbi.wqfiles",
-      "title": "WQ Files 0.9.3 · 11 Nov 2026",
-      "identifier": "WQ Files-release-v0.9.3",
-      "caption": "WQ Files 0.9.3 is available.",
-      "date": "2026-11-11T18:18:51Z",
-      "tintColor": "#1E8FC7",
-      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WQFiles/images/news.png",
-      "notify": true,
-      "url": "https://github.com/kolbicz/WQFiles/releases/tag/v0.9.3"
-    },
-    {
-      "appID": "sb.moe.kumone",
-      "title": "Kumone 0.3.32 · 09 Nov 2026",
-      "identifier": "Kumone-release-v0.3.32",
-      "caption": "Kumone 0.3.32 is available.",
-      "date": "2026-11-09T17:49:02Z",
-      "tintColor": "#F0D060",
-      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kumone/images/news.png",
-      "notify": true,
-      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.32"
-    },
-    {
       "appID": "cc.bili",
       "title": "CiliCili 1.1.3 · 09 Nov 2026",
       "identifier": "CiliCili-release-v1.1.3",
@@ -533,17 +544,6 @@
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/cilicili/images/news.png",
       "notify": true,
       "url": "https://github.com/Rone89/cilicili/releases/tag/v1.1.3"
-    },
-    {
-      "appID": "com.suversal.wrappin",
-      "title": "WrapPin 1.0.21 · 07 Nov 2026",
-      "identifier": "WrapPin-release-v1.0.21",
-      "caption": "WrapPin 1.0.21 is available.",
-      "date": "2026-11-07T08:52:15Z",
-      "tintColor": "#1060F0",
-      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/news.png",
-      "notify": true,
-      "url": "https://github.com/suversal/WrapPin/releases/tag/v1.0.21"
     },
     {
       "appID": "org.zhaohe.MiniWatts",
