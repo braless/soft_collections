@@ -53,6 +53,9 @@ SwiftUI 编写的第三方 B 站客户端：推荐、搜索、UP 主空间、动
 ### <a href="https://github.com/TouchFriend/DoubanMApp"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/DoubanMApp/icon.png" alt="DoubanMApp icon" width="24" align="top"> 豆瓣</a>
 无广告版豆瓣客户端（DoubanMApp）：移除绝大多数广告、精简界面，其余功能与官方客户端一致。
 
+### <a href="https://github.com/Kianuni/Erosion-CN"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/Erosion-CN/icon.png" alt="Erosion-CN icon" width="24" align="top"> Erosion-CN</a>
+简体中文 iOS/iPadOS 系统配置与 MobileGestalt 研究工具箱：写入前差异预览、备份校验、写后读回与自动回滚，一键恢复原厂参数（iOS/iPadOS 27 完整支持，26.x 部分支持）。
+
 ### <a href="https://github.com/mengangs/ipadn"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/iPadn/icon.png" alt="iPadn icon" width="24" align="top"> iPadn</a>
 在 iPhone 和 iPad 上搜索、下载并安装你已拥有的 App，支持历史版本、已下架应用、多地区比价与已购项目（iOS/iPadOS 17+）。
 
@@ -79,6 +82,9 @@ A lightweight, native YouTube client for iOS 12+ — no ads, no tracking, no dep
 
 ### <a href="https://github.com/leminlimez/Pocket-Poster"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/Pocket-Poster/icon.png" alt="Pocket Poster icon" width="24" align="top"> Pocket Poster</a>
 Custom PosterBoard animated wallpapers for iOS 17+ — browse and download community wallpapers, or import your own videos and images.
+
+### <a href="https://github.com/kolbicz/WQFiles"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/WQFiles/icon.png" alt="WQ Files icon" width="24" align="top"> WQ Files</a>
+无需越狱浏览 App 数据与文件，支持 Plist/十六进制编辑、应用数据备份恢复和缓存清理；需使用保留 App Group 权限的签名工具（iOS 26+）。
 
 ### <a href="https://github.com/suversal/WrapPin"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/WrapPin/icon.png" alt="WrapPin icon" width="24" align="top"> WrapPin</a>
 在手机上选择并移动 iPhone 向系统报告的位置：固定位置、步行与驾车路线模拟，随时可恢复真实定位。Roam Control 的非官方中文分支（iOS 27+）。

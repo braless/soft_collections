@@ -1,0 +1,38 @@
+# altgen config for the Erosion-CN AltStore source.
+# Run: uvx altgen -c config.toml
+# Identity was read from the released IPA:
+# Payload/Erosion.app/Info.plist -> com.jbdotparty.Erosion, 0.8.5, build 20.
+
+[github]
+repo = "Kianuni/Erosion-CN"
+
+[source]
+name = "Erosion-CN"
+subtitle = "Erosion-CN AltStore source by soft_collections & altgen"
+description = "Auto-updated AltStore source for Erosion-CN"
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Erosion-CN/icon.png"
+website = "https://github.com/Kianuni/Erosion-CN"
+tint_color = "#D07030"
+
+[app]
+name = "Erosion-CN"
+bundle_identifier = "com.jbdotparty.Erosion"
+developer_name = "Kianuni"
+subtitle = "系统配置与 MobileGestalt 工具箱"
+description = "基于 worse_query 的简体中文 iOS/iPadOS 系统配置与 MobileGestalt 研究工具箱，支持写入前差异预览、备份校验、写后读回与自动回滚，并支持一键恢复原厂参数。iOS/iPadOS 27 完整支持，26.x 部分支持。"
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Erosion-CN/icon.png"
+tint_color = "#D07030"
+min_os_version = "26.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# asset_pattern is a regex (not glob): releases ship the Simplified Chinese IPA.
+asset_pattern = "(?i)^Erosion_v.*_zh-Hans\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+image_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Erosion-CN/images/news.png"
+
+[output]
+path = "apps.json"

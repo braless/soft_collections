@@ -1,0 +1,4 @@
+# render_news.py config: python templates/render_news.py --out apps/WQFiles
+
+name = "WQ Files"
+tagline = "无需越狱的文件与 App 数据管理器"

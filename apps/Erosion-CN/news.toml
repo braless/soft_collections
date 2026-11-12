@@ -1,0 +1,4 @@
+# render_news.py config: python templates/render_news.py --out apps/Erosion-CN
+
+name = "Erosion-CN"
+tagline = "系统配置与 MobileGestalt 工具箱"

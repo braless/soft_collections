@@ -1,0 +1,39 @@
+# altgen config for the WQ Files AltStore source.
+# Run: uvx altgen -c config.toml
+# Identity was read from the released IPA:
+# Payload/WQ Files.app/Info.plist -> cz.kolbi.wqfiles, 0.9.3, build 59.
+# The project also publishes its own AltStore source with the same tint color.
+
+[github]
+repo = "kolbicz/WQFiles"
+
+[source]
+name = "Worse Query Files"
+subtitle = "WQ Files AltStore source by soft_collections & altgen"
+description = "Auto-updated AltStore source for WQ Files"
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WQFiles/icon.png"
+website = "https://github.com/kolbicz/WQFiles"
+tint_color = "#1E8FC7"
+
+[app]
+name = "WQ Files"
+bundle_identifier = "cz.kolbi.wqfiles"
+developer_name = "kolbicz"
+subtitle = "无需越狱的文件与 App 数据管理器"
+description = "无需越狱浏览 App 数据与文件，支持 Plist/十六进制编辑、应用数据备份恢复、缓存清理与 SQLite 查看。需使用保留 App Group 权限的签名工具（AltStore、SideStore 或 Impactor，不支持 Sideloadly）。"
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WQFiles/icon.png"
+tint_color = "#1E8FC7"
+min_os_version = "26.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# asset_pattern is a regex (not glob): every release ships WQFiles.ipa.
+asset_pattern = "(?i)^WQFiles\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+image_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WQFiles/images/news.png"
+
+[output]
+path = "apps.json"
