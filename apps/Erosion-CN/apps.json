@@ -1,0 +1,42 @@
+{
+  "name": "Erosion-CN",
+  "subtitle": "Erosion-CN AltStore source by soft_collections & altgen",
+  "description": "Auto-updated AltStore source for Erosion-CN",
+  "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Erosion-CN/icon.png",
+  "website": "https://github.com/Kianuni/Erosion-CN",
+  "tintColor": "#D07030",
+  "apps": [
+    {
+      "name": "Erosion-CN",
+      "bundleIdentifier": "com.jbdotparty.Erosion",
+      "developerName": "Kianuni",
+      "subtitle": "系统配置与 MobileGestalt 工具箱",
+      "localizedDescription": "基于 worse_query 的简体中文 iOS/iPadOS 系统配置与 MobileGestalt 研究工具箱，支持写入前差异预览、备份校验、写后读回与自动回滚，并支持一键恢复原厂参数。iOS/iPadOS 27 完整支持，26.x 部分支持。",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Erosion-CN/icon.png",
+      "tintColor": "#D07030",
+      "versions": [
+        {
+          "version": "0.8.5",
+          "date": "2026-11-11",
+          "localizedDescription": "## Erosion-CN v0.8.5 更新日志 (Build 20)\n\n### 🛠️ 照片「高质量」消除防冲突锁定 & iPhone 18 Pro 系列原厂基线精准保护\n\n1. **修复开启「解锁 iOS 27 进阶 AI 能力 `[测试特性]`」导致照片「高质量」消除报错的问题**：\n   - 经 `iPhone 18 Pro Max (iPhone19,7)` 真机 A/B 对照与 `MGInspector` 三源底层探针实锤确认：\n     - 照片「快速」消除走本地独立 GAN 模型，而「高质量」消除走云端扩散模型管线 (`ServerDiffusionInpainting`)；\n     - **`Audio Intelligence`（iOS 27 音频智能，`rb2tKZxlj0Gm2tBmUQSLqQ`，槽位 `#178`）** 在 iPhone / iPad 出厂均为 **`false (0x00)`**——强行开启该非原生实验槽位会导致系统生成式模型管线校验断路，直接造成照片「高质量」消除报错（提示 *“消除此照片时出错。请稍后再试。”*）；\n     - **`Personal Translator`（个人实时翻译，`M1n2sAqf33NAOgZRGxQYBA`，槽位 `#266`）** 在 iPhone 18 Pro 系列 (`iPhone19,*`) 出厂原生即为 **`true (0x01)`**，与照片「高质量」消除完全兼容。\n2. **默认防呆锁定 + 原厂基线保护 + 一键自愈修复**：\n   - 已将非原生实验槽位从顶部 **「⚡ 一键配齐 / 修复」** 中移除，并在 iPhone / iPad 上默认锁定关闭防误开（常规通话录音、语音备忘录转写与系统翻译均由主 AI 开关完整支持）；\n   - 新增 `isNativePersonalTranslatorHD()` 与 `isLiveAdvAIConflictActive()`，完整识别并保护 iPhone 18 Pro 系列原厂自带的 `Personal Translator = true` 基线，严防误报或误清零；\n   - 若此前在旧版本中曾开启过该实验开关，升级 `v0.8.5` 后直接关闭该开关（或点击顶部四要素体检卡片 **「⚡ 一键配齐 / 修复」**）并应用重启，即可自动清零冲突槽位并立即恢复照片「高质量」消除。\n\n---\n\n### 📦 安装包校验信息\n- **文件名**：`Erosion_v0.8.5_zh-Hans.ipa`\n- **版本号**：`v0.8.5 (Build 20)`\n- **SHA-256**：`994c9363f42c28e1820b6ace48f2f95409c8c6d5e1bc858da41e82dd85cbcf95`",
+          "downloadURL": "https://github.com/Kianuni/Erosion-CN/releases/download/v0.8.5/Erosion_v0.8.5_zh-Hans.ipa",
+          "size": 6039610,
+          "minOSVersion": "26.0"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "appID": "com.jbdotparty.Erosion",
+      "title": "Erosion-CN 0.8.5 · 11 Nov 2026",
+      "identifier": "Erosion-CN-release-v0.8.5",
+      "caption": "Erosion-CN 0.8.5 is available.",
+      "date": "2026-11-11T13:17:51Z",
+      "tintColor": "#D07030",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Erosion-CN/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Kianuni/Erosion-CN/releases/tag/v0.8.5"
+    }
+  ]
+}
