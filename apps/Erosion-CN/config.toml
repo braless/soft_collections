@@ -27,8 +27,8 @@ min_os_version = "26.0"
 [versions]
 strip_v_prefix = true
 include_prereleases = false
-# asset_pattern is a regex (not glob): releases ship the Simplified Chinese IPA.
-asset_pattern = "(?i)^Erosion_v.*_zh-Hans\\.ipa$"
+# asset_pattern is a regex (not glob): match Erosion_ IPA assets.
+asset_pattern = "Erosion_.*\\.ipa$"
 
 [news]
 title_template = "{name} {version} · {date}"
