@@ -14,9 +14,10 @@ never in Chinese or other languages.
 
 ## Reading JSON
 
-Prefer `jq` to read or inspect JSON files (`apps.json`, `all-apps.json`), e.g.
-`jq '.apps | length' PiliPlus/apps.json` or `jq '.apps[0]' PiliPlus/apps.json`.
-Only read the full file when you actually need the whole content.
+Prefer `jq` to read or inspect JSON files (`apps.json`, `apps-proxy.json`,
+`all-apps.json`, `all-apps-proxy.json`), e.g. `jq '.apps | length'
+PiliPlus/apps.json` or `jq '.apps[0]' PiliPlus/apps.json`. Only read the full
+file when you actually need the whole content.
 
 ## Directory Layout
 
@@ -30,10 +31,12 @@ apps/<AppName>/
 ├── images/          # screenshots + news.png promo image
 │   ├── home.png     # screenshots (referenced from [app] screenshots)
 │   └── news.png     # generated promo image (referenced from [news] image_url)
-└── apps.json        # generated AltStore source (gitignored), do not hand-edit
+├── apps.json        # generated AltStore source (gitignored), do not hand-edit
+└── apps-proxy.json  # generated gh-proxy mirror (gitignored), do not hand-edit
 ```
 
-Each folder's `apps.json` is an independent AltStore source.
+Each folder's `apps.json` is an independent AltStore source; `apps-proxy.json`
+is its mirror for users who cannot reach GitHub directly.
 
 ## apps/Local — hand-committed IPAs
 
@@ -51,17 +54,18 @@ offline generator rather than altgen settings.
   `all-apps.json`; `update.yml` ignores the folder (`paths-ignore`) but still
   merges `apps/Local/apps.json` with every other source, because `update.sh`
   collects all `apps/*/apps.json`.
-- `apps/Local/apps.json` is gitignored like every other generated source;
-  `apps/Local/icons/` is committed.
+- `apps/Local/apps.json` and `apps/Local/apps-proxy.json` are gitignored like
+  every other generated source; `apps/Local/icons/` is committed.
 - A bundle identifier that already exists in another folder is a hard error:
   the merge rejects duplicates.
 
 ## Generating apps.json
 
-`./update.sh` regenerates every app source and merges them into
-`all-apps.json`. After editing a `config.toml`, regenerate just that app to
-verify it — you don't need to update the other apps locally (the CI workflow
-regenerates and commits everything on push):
+`./update.sh` regenerates every app source, merges them into
+`all-apps.json`, and generates the proxy mirrors. After editing a
+`config.toml`, regenerate just that app to verify it — you don't need to
+update the other apps locally (the CI workflow regenerates and commits
+everything on push):
 
 ```bash
 ./update.sh <AppName>                            # single app — enough for local verification
@@ -72,20 +76,35 @@ altgen reads the GitHub Releases API; if rate-limited or the repo is private,
 pass a token (`--token` > `GITHUB_TOKEN` env > `[github].token` in
 config.toml).
 
-**Rule: after ANY `config.toml` change, regenerate — never leave the two out
-of sync, and never hand-edit `apps.json`.**
+**Rule: after ANY `config.toml` change, regenerate — never leave the config,
+`apps.json`, `apps-proxy.json`, `all-apps.json`, and `all-apps-proxy.json` out
+of sync, and never hand-edit generated sources.**
 
-`.github/workflows/update.yml` regenerates and commits `apps.json` and
-`all-apps.json` on every push to `main`, every hour, and on manual
-`workflow_dispatch`. (Both files are tracked despite `.gitignore`, so leave
-any local regenerated changes for the workflow to commit.)
+`.github/workflows/update.yml` regenerates and commits the app sources,
+`all-apps.json` and their proxy mirrors on every push to `main`, every hour,
+and on manual `workflow_dispatch`. (They are tracked despite `.gitignore`, so
+leave any local regenerated changes for the workflow to commit.)
+
+`scripts/make_proxy.py --all` writes `all-apps-proxy.json` plus one
+`apps/<AppName>/apps-proxy.json` per app source. It mirrors only URLs that
+AltStore/SideStore fetches — `raw.githubusercontent.com` files (icons,
+screenshots, news images, locally committed IPAs) and
+`github.com/<owner>/<repo>/releases/(latest/)?download/...` assets — by
+prefixing them with `https://gh-proxy.com/`. Browser-facing GitHub pages
+(`website`, `news[].url`, release tag links) stay unchanged. Never edit a
+proxy source by hand; regenerate it from its source JSON instead. Running the
+generator on an already-proxied file is a no-op.
+
+Run `python3 scripts/make_proxy.py` to regenerate just the combined mirror,
+or pass an explicit input/output pair for a single source.
 
 ## Merging into all-apps.json
 
 After all app sources are regenerated, merge them into the repo-root
-`all-apps.json` (the "ultimate" AltStore source for the whole project).
-The whole flow — regenerate every source, then merge — is scripted in
-`./update.sh` (run from anywhere); prefer it over the individual commands.
+`all-apps.json` (the "ultimate" AltStore source for the whole project), then
+generate its proxy mirror. The whole flow — regenerate every source, merge,
+then proxy — is scripted in `./update.sh` (run from anywhere); prefer it over
+the individual commands.
 
 ```bash
 uvx altgen merge -c assets/merge.toml apps/<AppName>/apps.json ...
@@ -97,14 +116,14 @@ metadata: name, icon_url, tint_color) and `[output]` (`path = "../all-apps.json"
 resolved against the config's directory → repo root).
 
 **Rule: after any `config.toml` change, regenerate with `./update.sh
-<AppName>` and check the diff — never leave `config.toml` and its `apps.json`
-out of sync. You don't need the full `./update.sh` locally: `apps.json` and
-`all-apps.json` are regenerated and committed by the CI workflow on every push
-to `main`, so a single-app run is enough to verify the sources. (Both files
-are tracked despite `.gitignore`, so a local regenerate shows them as modified
-in `git status` — leave them for the workflow to commit.) To refresh them
-immediately, run the `Update all-apps.json` workflow manually
-(`workflow_dispatch`).**
+<AppName>` and check the diff — never leave `config.toml` and its generated
+sources out of sync. You don't need the full `./update.sh` locally: the app
+sources, `all-apps.json` and all proxy mirrors are regenerated and committed
+by the CI workflow on every push to `main`, so a single-app run is enough to
+verify the sources. (They are tracked despite `.gitignore`, so a local
+regenerate shows them as modified in `git status` — leave them for the
+workflow to commit.) To refresh them immediately, run the `Update all-apps.json`
+workflow manually (`workflow_dispatch`).**
 
 ## Generating News Images
 

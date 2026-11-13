@@ -1,14 +1,16 @@
 ---
 name: update
-description: Regenerate everything in the soft_collections repo — run ./update.sh (regenerate every apps/<AppName>/apps.json from config.toml and merge them into all-apps.json) and ./update_news.sh (re-render every app's images/news.png from its news.toml). apps.json / all-apps.json are gitignored (committed by the workflow); leave re-rendered images/news.png files uncommitted for the user to review. Use when the user wants to refresh / update / regenerate all app sources and news images.
+description: Regenerate everything in the soft_collections repo — run ./update.sh (regenerate every apps/<AppName>/apps.json from config.toml, merge them into all-apps.json, and build all proxy mirrors) and ./update_news.sh (re-render every app's images/news.png from its news.toml). Generated JSON is gitignored (committed by the workflow); leave re-rendered images/news.png files uncommitted for the user to review. Use when the user wants to refresh / update / regenerate all app sources and news images.
 ---
 
 # Update All App Sources & News Images
 
 Refresh every generated artifact in the repo:
 
-1. **Regenerate every app source + merge** — each `apps/<AppName>/apps.json`
-   from its `config.toml`, then merged into the repo-root `all-apps.json`:
+1. **Regenerate every app source + merge + proxy** — each
+   `apps/<AppName>/apps.json` from its `config.toml`, merged into the
+   repo-root `all-apps.json`, then mirrored into `all-apps-proxy.json` and
+   every `apps/<AppName>/apps-proxy.json`:
    ```bash
    ./update.sh
    ```
@@ -27,7 +29,8 @@ Notes:
   local verification; the full update here is for refreshing everything.
 - `update.sh` reads the GitHub Releases API; if rate-limited, retry with a
   token, e.g. `GITHUB_TOKEN=$(gh auth token) uvx altgen -c config.toml`.
-- `apps/<AppName>/apps.json` and `all-apps.json` are gitignored — after
+- `apps/<AppName>/apps.json`, `apps/<AppName>/apps-proxy.json`,
+  `all-apps.json` and `all-apps-proxy.json` are gitignored — after
   `update.sh` they won't show in `git status`; the workflow
   (`.github/workflows/update.yml`) regenerates and commits them. Only the
   re-rendered `images/news.png` files stay in the working tree for you to

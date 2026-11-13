@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# soft_collections — regenerate app source(s), then merge them into the repo-root all-apps.json.
-# Run: ./update.sh              (regenerate every app source, then merge)
-#      ./update.sh <AppName>    (regenerate just one app, then merge)
+# soft_collections — regenerate app source(s), merge them, and build proxy mirrors.
+# Run: ./update.sh              (regenerate every app source, merge, then proxy)
+#      ./update.sh <AppName>    (regenerate just one app, merge, then proxy)
 # A single-app run is enough for local verification after editing a
 # config.toml — the CI workflow regenerates and commits everything on push,
 # so there is no need to update every app locally.
@@ -61,3 +61,9 @@ if [[ ${#apps[@]} -gt 0 ]]; then
 else
   echo "No app sources found — nothing to merge."
 fi
+
+# 3. Build gh-proxy.com mirrors of the combined source and every app source.
+#    Always refresh all mirrors, even on a single-app run: merging rewrites
+#    all-apps.json, so its proxy must stay in sync too.
+echo "==> Generating proxy sources"
+"${PYTHON:-python3}" scripts/make_proxy.py --all

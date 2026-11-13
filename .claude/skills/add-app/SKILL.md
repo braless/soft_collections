@@ -1,6 +1,6 @@
 ---
 name: add-app
-description: Add a new app to the soft_collections repo. When the project already ships its own AltStore source (apps.json), extracts the fields it needs from that source to pre-fill config.toml. Creates apps/<AppName>/, writes config.toml and news.toml, downloads icon + screenshots, samples a tint color from the icon, renders images/news.png, generates apps.json with altgen (local verification only), and adds the README "Available Apps" entry. Both apps.json and all-apps.json are generated and committed by the CI workflow — never update or commit them locally. Use whenever the user wants to add a new app / a new IPA source to the gallery.
+description: Add a new app to the soft_collections repo. When the project already ships its own AltStore source (apps.json), extracts the fields it needs from that source to pre-fill config.toml. Creates apps/<AppName>/, writes config.toml and news.toml, downloads icon + screenshots, samples a tint color from the icon, renders images/news.png, generates apps.json with altgen (local verification only), and adds the README "Available Apps" entry. The app sources, all-apps.json and all proxy mirrors are generated and committed by the CI workflow — never update or commit generated JSON locally. Use whenever the user wants to add a new app / a new IPA source to the gallery.
 ---
 
 # Adding a New App to soft_collections
@@ -127,24 +127,26 @@ re-derived from the README by hand.
 
 7. **Generate `apps.json`** — **never hand-edit it**:
    ```bash
-   cd apps/<AppName> && uvx altgen -c config.toml
+   ./update.sh <AppName>
    ```
    ⚠️ **After ANY `config.toml` change, regenerate** — never leave config and
-   `apps.json` out of sync. If rate-limited or fetching from a private repo,
-   use `GITHUB_TOKEN=$(gh auth token) uvx altgen -c config.toml`. This local
-   run only **verifies** `config.toml` — the resulting `apps.json` is
-   gitignored (it won't show in `git status`). The workflow
-   (`.github/workflows/update.yml`) regenerates and commits the real
-   `apps.json` — same as `all-apps.json` — after your change merges.
+   its generated sources out of sync. If rate-limited or fetching from a
+   private repo, use `GITHUB_TOKEN=$(gh auth token) uvx altgen -c config.toml`
+   inside the app folder. This local run only **verifies** `config.toml` —
+   the resulting `apps.json` and `apps-proxy.json` are gitignored (they won't
+   show in `git status`). The workflow (`.github/workflows/update.yml`)
+   regenerates and commits the real generated sources — including
+   `all-apps.json`, `all-apps-proxy.json` and every app's `apps-proxy.json` —
+   after your change merges.
 
-8. **Do NOT commit `all-apps.json`** — like `apps.json`, the repo-root JSON is
-   generated and committed by the CI workflow
+8. **Do NOT commit generated JSON** — the app sources, combined source and
+   proxy mirrors are generated and committed by the CI workflow
    (`.github/workflows/update.yml`) after your change merges; never commit
-   either file locally. To verify the new app's source after its `config.toml`
-   is written, the single-app form is fine: `./update.sh <AppName>` only
-   regenerates this app's `apps.json` (no other app is touched). It still
-   rewrites the tracked `all-apps.json`, so an unstaged `M` shows in
-   `git status` — leave it for the workflow. Your change ships only
+   them locally. To verify the new app's source after its `config.toml` is
+   written, the single-app form `./update.sh <AppName>` is fine: it only
+   regenerates this app's `apps.json`, then refreshes `all-apps.json` and all
+   proxy mirrors. It rewrites tracked generated JSON, so an unstaged `M`
+   shows in `git status` — leave it for the workflow. Your change ships only
    `apps/<AppName>/` plus the README entry.
 
 9. **Update README** — add the app to **Available Apps**, icon inline before
@@ -177,7 +179,7 @@ re-derived from the README by hand.
 - [ ] `apps/<AppName>/{config.toml, news.toml, icon.png, images/*}` all present
 - [ ] icon/screenshots hosted locally and referenced via `braless/soft_collections` raw URLs (never the source's remote URLs)
 - [ ] `apps.json` regenerated after the last config change; never hand-edited; gitignored (not committed)
-- [ ] `all-apps.json` NOT touched — CI workflow regenerates and commits it
+- [ ] `apps-proxy.json`, `all-apps.json` and `all-apps-proxy.json` NOT committed — CI workflow regenerates them
 - [ ] `images/news.png` rendered; not auto-committed
 - [ ] README entry added, icon with `align="top"`
 - [ ] if no screenshots could be found, the user was explicitly warned (never proceed silently)

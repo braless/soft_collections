@@ -2,8 +2,9 @@ name: Update Local source
 
 # apps/Local/ holds IPAs that are committed here instead of being released on
 # GitHub. scripts/local_source.py reads each IPA (name, bundle id, version,
-# icon) offline, and this job merges the result into all-apps.json. The
-# altgen-based update.yml deliberately ignores this folder.
+# icon) offline, and this job merges the result into all-apps.json and
+# regenerates the gh-proxy.com mirrors. The altgen-based update.yml
+# deliberately ignores this folder.
 
 on:
   push:
@@ -12,6 +13,7 @@ on:
     paths:
       - 'apps/Local/**'
       - 'scripts/local_source.py'
+      - 'scripts/make_proxy.py'
       - '.github/workflows/local.yml'
   workflow_dispatch:
 
@@ -32,15 +34,15 @@ jobs:
           # which a shallow clone cannot resolve.
           fetch-depth: 0
 
-      # `uvx altgen merge` needs uv; the source itself is built with Python's
-      # standard library only.
+      # `uvx altgen merge` needs uv; both Python helpers use the standard
+      # library only.
       - uses: astral-sh/setup-uv@v7
 
       - name: Build Local source, commit and push
-        # The source is rebuilt from scratch when a push is rejected: it is
-        # derived from the committed IPAs, and update.yml may have started in
-        # the same second and pushed first (GitHub's concurrency queue is
-        # best-effort).
+        # The source and proxy mirrors are rebuilt from scratch when a push is
+        # rejected: they are derived from the committed IPAs and existing app
+        # sources, and update.yml may have started in the same second and
+        # pushed first (GitHub's concurrency queue is best-effort).
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
@@ -51,16 +53,17 @@ jobs:
 
             python3 scripts/local_source.py
             uvx altgen merge -c assets/merge.toml apps/*/apps.json
+            python3 scripts/make_proxy.py --all
 
             git add -A apps/Local
-            git add -f apps/Local/apps.json all-apps.json
+            git add -f apps/Local/apps.json apps/Local/apps-proxy.json all-apps.json all-apps-proxy.json apps/*/apps-proxy.json
 
             if git diff --cached --quiet; then
               echo "nothing to commit"
               exit 0
             fi
 
-            git commit -q -m "chore: update Local source"
+            git commit -q -m "chore: update Local source and proxy mirrors"
 
             if git push origin "HEAD:${GITHUB_REF_NAME}"; then
               exit 0
