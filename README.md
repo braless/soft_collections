@@ -86,6 +86,9 @@ Custom PosterBoard animated wallpapers for iOS 17+ — browse and download commu
 ### <a href="https://github.com/kolbicz/WQFiles"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/WQFiles/icon.png" alt="WQ Files icon" width="24" align="top"> WQ Files</a>
 无需越狱浏览 App 数据与文件，支持 Plist/十六进制编辑、应用数据备份恢复和缓存清理；需使用保留 App Group 权限的签名工具（iOS 26+）。
 
+### <a href="https://github.com/hseons/WQManager"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/WQManager/icon.png" alt="WQManager icon" width="24" align="top"> WQManager</a>
+面向 iOS 26+ 的开源 App 数据管理、备份与单应用缓存清理工具：支持带哈希校验和安全回滚的数据备份恢复，以及按目录清理缓存；发布包为 unsigned IPA，真机使用需以保留 App Group 权限的付费开发者证书签名。
+
 ### <a href="https://github.com/suversal/WrapPin"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/WrapPin/icon.png" alt="WrapPin icon" width="24" align="top"> WrapPin</a>
 在手机上选择并移动 iPhone 向系统报告的位置：固定位置、步行与驾车路线模拟，随时可恢复真实定位。Roam Control 的非官方中文分支（iOS 27+）。
 

@@ -1,0 +1,4 @@
+# render_news.py config: python templates/render_news.py --out apps/WQManager
+
+name = "WQManager"
+tagline = "iOS 26 App 数据管理与缓存清理"
