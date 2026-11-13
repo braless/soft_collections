@@ -92,11 +92,11 @@
       "tintColor": "#D07030",
       "versions": [
         {
-          "version": "0.8.6",
-          "date": "2026-11-12T08:25:04Z",
-          "localizedDescription": "## Erosion-CN v0.8.6 更新日志 (Build 21)\n\n### 🚀 容器极速枚举修复 & 空间音频硬件防呆解耦 & 分流规则增强\n\n1. **修复高 Inode 主力机容器扫描卡死 5–6 分钟，并适配 `iOS 26.3.x` `CSStore2` 秒开（修复 #21）**：\n   - **修正 `pathleak` 上限保护逻辑**：修复长期使用的设备（累计 APFS 单调递增 Inode 超过 2 亿）在回退 `pathleak` 时外层 `min/max` 写反导致 `15,000,000` 上限失效、强行遍历 2.28 亿次系统调用的问题；\n   - **新增不依赖结构体偏移的 `CSStore2` 书签 TLV（`NSURL minimalBookmark`）兜底提取引擎**：在 `iOS 26.3.x` 与 `iOS 27.x` 上均可直接从 `.csstore` 提取并校验有效的应用数据（`Application`）、扩展插件（`PluginKitPlugin`）、应用共享组（`AppGroup`）与守护进程（`InternalDaemon`）容器路径，无论容器 Inode 高低均可秒级加载。\n\n2. **拆分「FaceTime 空间音频」与「空间音频录制」，新增非四麦克风机型自动防呆（修复 #19）**：\n   - 将原合并开关拆分为独立的 **「FaceTime 空间音频」**（`spatial-facetime-audio`，纯软件声场渲染，兼容 `iPhone 15 Pro` 及更早机型）与 **「空间音频录制（相机 / 语音备忘录录音室）」**（`spatial-audio-recording`）；\n   - 对非四麦克风阵列旧机型（`iPhone 15` 系列及更早三麦克风机型）默认自动防呆锁定关闭「空间音频录制」，避免语音备忘录出现无效的「录音室 (Studio)」档位并点录音即停（旧版已开启用户升级后可直接一键关闭恢复）。\n\n3. **修正屏幕子类型 (Subtype) 数值与多项交互提示优化（#14 / #15 / #17 / #13）**：\n   - 修正上游遗留的「屏幕子类型」数值笔误（`iPhone 14 Pro / 15 Pro` 修正为 `2556`，`iPhone 14 Pro Max / 15 Pro Max` 修正为 `2796`）并消除重复 Tag 冲突；\n   - 补充 iOS 26/27 下解除 `green-tea` 同样会切换国际版网络权限（隐藏单应用「不允许联网」）的说明，并针对侧载签名剥离 `App Group` 导致的 `result: -1` 新增专属中文排障弹窗；\n   - 更新内置 `Surge (.sgmodule)` 与 `Stash (.stoverride)` 分流生成器，补齐 Apple PCC 速率限制匿名令牌签发域名（`mask-api.icloud.com` / `mask.icloud.com` / `mask-h2.icloud.com`）与相册云端消除网关（`*.app.apple.com`）。\n\n---\n\n### 📦 安装包校验信息\n\n- **文件名**：`Erosion_v0.8.6_zh-Hans.ipa`\n- **版本号**：`v0.8.6` (`Build 21`)\n- **SHA-256**：`004a64cd96d050dea3ac2197a7efa5e5c6b2943f17f7af7af8ced253022ff72a`",
-          "downloadURL": "https://github.com/Kianuni/Erosion-CN/releases/download/v0.8.6/Erosion_v0.8.6_zh-Hans.ipa",
-          "size": 6047130,
+          "version": "0.9.1",
+          "date": "2026-11-12T13:06:38Z",
+          "localizedDescription": "## Erosion-CN v0.9.1 更新日志 · Bilingual Release Notes (Build 23)\n\n### 🇨🇳 简体中文\n\n#### 🛠️ 关键 Bug 修复：原生 AI 机型 `Personal Translator (#266)` 基线锁定与双向自愈（修复 #16 / #22）\n1. **修复旧版（`v0.8.3 – v0.8.5`）误关槽位 `#266` 导致相册云端工具与相机 Siri「0 秒瞬间报错」的问题**：\n   - 在所有原生支持 Apple 智能的 iPhone（`iPhone 15 Pro` 至 `iPhone 18 Pro Max` 全系列）原厂 `CacheData` 中，`Personal Translator`（`M1n2sAqf33NAOgZRGxQYBA`，槽位 `#266`）原厂默认为 `true (0x01)`，而 `Audio Intelligence`（`rb2tKZxlj0Gm2tBmUQSLqQ`，槽位 `#178`）原厂默认为 `false (0x00)`。\n   - 此前跨 iOS 版本 OTA 升级（旧 `OriginalGestalt.plist` 的 `CacheUUID` 变化）或非 18 Pro 机型执行一键配齐时，可能将 `#266` 误写为 `false (0x00)` 并污染本地 `UserDefaults` 基线快照，触发 `GenerativeModels / ModelCatalog` 本地预检 0ms 熔断报错（端侧快速消除正常，但**照片高质量消除、扩图延伸、重构及相机 `SIRI` 模式**瞬间报错）。\n   - `v0.9.1` 已锁定全系原生 AI iPhone 的硬件原厂基线（`#266 = true`、`#178 = false`，免疫跨版本备份不匹配与污染缓存），并在恢复出厂 / 重建缓存 / 重生备份时自动清理本地槽位基线记录。\n2. **新增双向异常检测与「一键配齐 / 修复」自愈提示**：\n   - 顶部「Apple 智能激活四要素体检」卡片、实时 `MGCopyAnswer` 核验与防呆护栏现可**双向检测**槽位偏移（无论 `#178` 被强开为 `true` 还是原生 AI 机型的 `#266` 被误关为 `false`）；\n   - 受旧版影响的用户升级 `v0.9.1` 后，打开 `MobileGestalt` 点击顶部 **「一键配齐 / 修复」→「应用」→ 手动关机冷重启** 即可完整恢复原厂基线。\n3. **单包中英双语同步更新**：新增诊断提示词条已 100% 同步内置简体中文 (`zh-Hans`) 与英文 (`en`) 双语翻译。\n\n---\n\n### 🌐 English\n\n#### 🛠️ Critical Bug Fix: `Personal Translator (#266)` Factory Baseline Lock & Two-Way Auto-Heal (Fixes #16 / #22)\n1. **Fixed instant 0ms failure in Photos Cloud Tools (High-Quality Clean Up / Extend / Reframe) & Camera `SIRI` caused by slot `#266` downgrade**:\n   - On all native Apple Intelligence iPhones (`iPhone 15 Pro` through `iPhone 18 Pro Max`), factory `CacheData` sets `Personal Translator` (`M1n2sAqf33NAOgZRGxQYBA`, slot `#266`) to `true (0x01)` and `Audio Intelligence` (`rb2tKZxlj0Gm2tBmUQSLqQ`, slot `#178`) to `false (0x00)`.\n   - Earlier versions (`v0.8.3 – v0.8.5`) could accidentally flip slot `#266` to `false (0x00)` on non-18-Pro models or after an OTA iOS update (`CacheUUID` change) and cache that polluted baseline in `UserDefaults`, causing `GenerativeModels / ModelCatalog` to abort locally in 0ms while Fast Clean Up still worked.\n   - `v0.9.1` enforces the verified hardware factory baseline (`#266 = true`, `#178 = false`) across all native AI iPhones and purges stale `UserDefaults` slot baselines on Factory Restore / Clean Cache Rebuild / Backup Regeneration.\n2. **Two-Way Slot Drift Detection & One-Click Auto-Heal**:\n   - Both the 4-Factor Readiness Checkup Card and live `MGCopyAnswer` verification now detect drift in **both directions** (`#178` forced ON or `#266` accidentally turned OFF on native AI hardware) and expose **One-Click Setup / Repair** immediately.\n   - To heal an affected device: install `v0.9.1` → open **Tweaks → MobileGestalt** → tap **One-Click Setup / Repair** → **Apply** → **power off and cold-reboot**.\n\n---\n\n### 📦 Checksum · 安装包校验信息\n\n- **File**: `Erosion_v0.9.1_Bilingual.ipa`\n- **Version**: `v0.9.1` (Build 23)\n- **SHA-256**: `32a538f9ffbb2e9c604c4a39f58b4491eb3731886ea439dff6b0bdefcb514c98`",
+          "downloadURL": "https://github.com/Kianuni/Erosion-CN/releases/download/v0.9.1/Erosion_v0.9.1_Bilingual.ipa",
+          "size": 6277874,
           "minOSVersion": "26.0"
         }
       ]
@@ -560,6 +560,17 @@
       "url": "https://github.com/suversal/WrapPin/releases/tag/v1.0.22"
     },
     {
+      "appID": "com.jbdotparty.Erosion",
+      "title": "Erosion-CN 0.9.1 · 12 Nov 2026",
+      "identifier": "Erosion-CN-release-v0.9.1",
+      "caption": "Erosion-CN 0.9.1 is available.",
+      "date": "2026-11-12T13:06:38Z",
+      "tintColor": "#D07030",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Erosion-CN/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Kianuni/Erosion-CN/releases/tag/v0.9.1"
+    },
+    {
       "appID": "mumu.pduola.WQManager",
       "title": "WQManager 0.3.1 · 12 Nov 2026",
       "identifier": "WQManager-release-v0.3.1",
@@ -569,17 +580,6 @@
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WQManager/images/news.png",
       "notify": true,
       "url": "https://github.com/hseons/WQManager/releases/tag/v0.3.1"
-    },
-    {
-      "appID": "com.jbdotparty.Erosion",
-      "title": "Erosion-CN 0.8.6 · 12 Nov 2026",
-      "identifier": "Erosion-CN-release-v0.8.6",
-      "caption": "Erosion-CN 0.8.6 is available.",
-      "date": "2026-11-12T08:25:04Z",
-      "tintColor": "#D07030",
-      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Erosion-CN/images/news.png",
-      "notify": true,
-      "url": "https://github.com/Kianuni/Erosion-CN/releases/tag/v0.8.6"
     },
     {
       "appID": "nsk-1695.v-team.cn",
