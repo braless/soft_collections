@@ -1,0 +1,110 @@
+{
+  "name": "Local",
+  "subtitle": "IPAs committed straight into this repository",
+  "description": "Locally committed IPA builds. Generated from apps/Local/ by scripts/local_source.py — no GitHub release lookup involved.",
+  "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/assets/icon.png",
+  "website": "https://github.com/braless/soft_collections",
+  "tintColor": "#3B82F6",
+  "apps": [
+    {
+      "name": "Feather",
+      "bundleIdentifier": "thewonderofyou.Feather",
+      "developerName": "Local",
+      "subtitle": "Locally committed IPA",
+      "localizedDescription": "Feather — committed to this repository as an IPA under apps/Local/.",
+      "tintColor": "#3B82F6",
+      "versions": [
+        {
+          "version": "2.9.0",
+          "date": "2026-09-11",
+          "localizedDescription": "Locally committed build: Feather.ipa (13.6 MB). Build 1.",
+          "downloadURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Local/Feather.ipa",
+          "size": 14296537,
+          "buildVersion": "1",
+          "minOSVersion": "16.0"
+        }
+      ],
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Local/icons/thewonderofyou.Feather.png"
+    },
+    {
+      "name": "Infuse",
+      "bundleIdentifier": "com.firecore.infuse",
+      "developerName": "Local",
+      "subtitle": "Locally committed IPA",
+      "localizedDescription": "Infuse — committed to this repository as an IPA under apps/Local/.",
+      "tintColor": "#3B82F6",
+      "versions": [
+        {
+          "version": "8.3.5",
+          "date": "2026-09-11",
+          "localizedDescription": "Locally committed build: Infuse_8.3.5.ipa (72.0 MB). Build 8.3.5459.",
+          "downloadURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Local/Infuse_8.3.5.ipa",
+          "size": 75480684,
+          "buildVersion": "8.3.5459",
+          "minOSVersion": "10.0"
+        }
+      ],
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Local/icons/com.firecore.infuse.png"
+    },
+    {
+      "name": "Twitter",
+      "bundleIdentifier": "com.atebits.Tweetie2",
+      "developerName": "Local",
+      "subtitle": "Locally committed IPA",
+      "localizedDescription": "Twitter — committed to this repository as an IPA under apps/Local/.",
+      "tintColor": "#3B82F6",
+      "versions": [
+        {
+          "version": "9.63",
+          "date": "2026-09-11",
+          "localizedDescription": "Locally committed build: Twitter_9.63.ipa (98.3 MB). Build 9.63.",
+          "downloadURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Local/Twitter_9.63.ipa",
+          "size": 103080699,
+          "buildVersion": "9.63",
+          "minOSVersion": "10.0"
+        }
+      ],
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Local/icons/com.atebits.Tweetie2.png"
+    },
+    {
+      "name": "多多阅读",
+      "bundleIdentifier": "com.duoduomsoft.dudureader",
+      "developerName": "Local",
+      "subtitle": "Locally committed IPA",
+      "localizedDescription": "多多阅读 — committed to this repository as an IPA under apps/Local/.",
+      "tintColor": "#3B82F6",
+      "versions": [
+        {
+          "version": "5.9",
+          "date": "2026-09-11",
+          "localizedDescription": "Locally committed build: 多多阅读.ipa (20.3 MB). Build 5.9.",
+          "downloadURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Local/%E5%A4%9A%E5%A4%9A%E9%98%85%E8%AF%BB.ipa",
+          "size": 21285673,
+          "buildVersion": "5.9",
+          "minOSVersion": "10.0"
+        }
+      ],
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Local/icons/com.duoduomsoft.dudureader.png"
+    },
+    {
+      "name": "威锋",
+      "bundleIdentifier": "com.feng.New.WPForumClient",
+      "developerName": "Local",
+      "subtitle": "Locally committed IPA",
+      "localizedDescription": "威锋 — committed to this repository as an IPA under apps/Local/.",
+      "tintColor": "#3B82F6",
+      "versions": [
+        {
+          "version": "7.0.8",
+          "date": "2026-09-11",
+          "localizedDescription": "Locally committed build: 威锋_7.0.8.ipa (66.6 MB). Build 1.",
+          "downloadURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Local/%E5%A8%81%E9%94%8B_7.0.8.ipa",
+          "size": 69865187,
+          "buildVersion": "1",
+          "minOSVersion": "10.0"
+        }
+      ],
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Local/icons/com.feng.New.WPForumClient.png"
+    }
+  ]
+}

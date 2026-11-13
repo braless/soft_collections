@@ -1,0 +1,706 @@
+{
+  "name": "Oaife's 软件源",
+  "subtitle": "Curated AltStore sources for IPA projects on GitHub",
+  "description": "AltStore sources generated from GitHub Releases by soft_collections",
+  "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/assets/icon.png",
+  "website": "https://github.com/braless/soft_collections",
+  "tintColor": "#3B82F6",
+  "apps": [
+    {
+      "name": "AirBeep",
+      "bundleIdentifier": "com.linkpass888.airbeep",
+      "developerName": "LinkPass888",
+      "subtitle": "静音通话录音提示音",
+      "localizedDescription": "把 iOS 通话录音的开始与结束提示音替换成等长静音：一个开关完成替换，替换前会自动备份原文件（备份永不覆盖），并支持一键还原；每次写入都会回读校验。支持英文与简体中文界面。",
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/AirBeep/icon.png",
+      "tintColor": "#0057D9",
+      "versions": [
+        {
+          "version": "2.5.2",
+          "date": "2026-10-19T11:35:11Z",
+          "localizedDescription": "## [2.5.2] - 2026-10-19\r\n\r\n### English / Added\r\n- **Check tone status button.** The current tone state can now be checked on\r\n  demand from the home screen. The read channel is unreliable on some iOS\r\n  releases (the AirTraffic move step never completes there), so the check\r\n  reports one of three outcomes: silenced, originals still in place, or\r\n  unverifiable on this device. It never runs automatically and never gates an\r\n  operation.\r\n\r\n### English / Changed\r\n- After silencing, the success alert no longer claims a verified result when\r\n  the read-back could not confirm it; it says the silence was written but\r\n  unverified and points at the tone status check. This covers the\r\n  [issue #6](https://github.com/LinkPass888/AirBeep/issues/6) report where the\r\n  write channel returns success on iOS 27.x while the tones never change.\r\n\r\n---\r\n\r\n### 中文 / 新增\r\n- **校验提示音状态按钮。** 可在首页按需检测当前提示音状态。部分 iOS 版本上\r\n  读取通道不可靠（AirTraffic 搬运步骤始终无法完成），因此检测结果分为三种：\r\n  已静音、原始提示音仍在、本机无法校验。该检测绝不自动运行，也不会阻断\r\n  任何操作。\r\n\r\n### 中文 / 变更\r\n- 静音后的成功弹窗在回读校验无法确认时不再直接宣称成功，改为提示\"静音\r\n  已写入、结果未经校验\"，并引导使用提示音状态校验。对应\r\n  [issue #6](https://github.com/LinkPass888/AirBeep/issues/6) 反馈的\r\n  iOS 27.x 上写入通道返回成功但提示音实际未变的问题。\r\n\r\n**Full Changelog**: https://github.com/LinkPass888/AirBeep/compare/v2.5.1...v2.5.2",
+          "downloadURL": "https://gh-proxy.com/https://github.com/LinkPass888/AirBeep/releases/download/v2.5.2/airbeep-v2.5.2-unsigned.ipa",
+          "size": 5880046,
+          "minOSVersion": "27.0"
+        }
+      ]
+    },
+    {
+      "name": "AirCard-iOS",
+      "bundleIdentifier": "com.mak5er.aircard",
+      "developerName": "Mak5er",
+      "subtitle": "Apple Wallet card skins and lock screen themes",
+      "localizedDescription": "Customise Apple Wallet card artwork, the lock screen passcode dialer and PosterBoard wallpapers on device, without a jailbreak. AirCard-iOS talks to Apple's internal services through the LocalDevVPN loopback tunnel, which has to be installed as well.",
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/AirCard-iOS/icon.png",
+      "tintColor": "#5020E0",
+      "versions": [
+        {
+          "version": "1.3.2",
+          "date": "2026-10-04T12:22:53Z",
+          "localizedDescription": "## What's Changed in v1.3.2 🚀\n\nThis update brings full feature parity with AirCard macOS v1.2.6, restores robust card discovery across all iOS versions, introduces automatic bank/network recognition with custom card nicknames, delivers an ultra-fast tunnel cache (0.02s connections), and completely resolves wallpaper flashing for Collections and Mercury wallpapers.\n\n### 💳 Wallet Card Discovery & Bank Identification\n• **Universal Wallet Log Parser**: Ported the proven `WalletScanParser` from AirCard macOS. Captures cards from `Dashboard loading (...): for SOO+`, `passIDs[InSession]`, `passIDs[global]`, and modern JSON NFC activations (`\"identifier\": \"HEX\"`).\n• **Automatic Bank & Network Detection**: Recognizes Visa, Mastercard, American Express, UnionPay, Discover, and JCB via applet AIDs during selection.\n• **Card Nicknames (Rename)**: Added a direct **Rename** button (✏️) so you can give your cards friendly names like *\"Monobank\"*, *\"Salary Card\"*, or *\"Revolut\"*, safely persisted in app settings.\n• **28-Character Fallback Token Matcher**: Restores dependable card discovery on devices where standard log patterns are redacted.\n\n### ⚡ Ultra-Fast Tunnel Routing (from 10s to 0.02s!)\n• **Working Route Caching**: `rust-core` now caches the active RSD connection route (`LAST_WORKING_ROUTE`), eliminating repeated port and interface scanning.\n• **RSD-First Priority**: Connects directly via RemoteXPC on port 49152, bypassing slow Lockdown retries and broken pipes on iOS 18+.\n• **Eliminated Loopback Policy Drops**: Removed local loopback attempts that caused `policy drop` control channel errors.\n\n### 🖼 Wallpapers (.tendies) — Collections & Mercury Fixes\n• **Dual Injection on iOS 18+**: Wallpapers are now injected into both their primary bundle (`com.apple.WallpaperKit.CollectionsPoster` or `com.apple.MercuryPoster`) and the modern iOS 18+ application container (`com.apple.Posters.CollectionsPosterApp` / `com.apple.Posters.MercuryPosterApp`).\n• **Metadata Synchronization**: Fixed a critical issue where `Wallpaper.plist`'s numeric identifier was randomized out-of-sync with `suggestionMetadata.plist` (`7400.DYNAMIC`), causing wallpapers like Windows 11 to vanish from the Lock Screen gallery.\n• **Mercury Wallpaper Support**: Added recognition for `mercury-descriptors` container folders and registered `com.apple.Posters.MercuryPosterApp` in `PersistedPosterContainerBundleIdentifiers`.\n• **NeoSpring Respring**: Instant springboard reload to apply wallpaper preferences immediately.\n\n### 🧪 Quality & Testing\n• All 24 unit tests passing (`TendiesEngineTests`, `WalletScanParserTests`, `CardPhotoCropTests`, `CardPhotoPickerTests`).\n\n**Full Changelog**: https://github.com/Mak5er/AirCard-iOS/compare/v1.3.1...v1.3.2",
+          "downloadURL": "https://gh-proxy.com/https://github.com/Mak5er/AirCard-iOS/releases/download/v1.3.2/AirCard-iOS.ipa",
+          "size": 4638147,
+          "minOSVersion": "27.0"
+        }
+      ]
+    },
+    {
+      "name": "Asspp",
+      "bundleIdentifier": "wiki.qaq.Asspp",
+      "developerName": "Lakr233",
+      "subtitle": "Multi-region App Store manager",
+      "localizedDescription": "Manage multiple Apple IDs across App Store regions from one app: switch stores instantly, browse and search any region, download official signed IPAs for backup or sideloading, and pull older versions of an app when you need them.",
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Asspp/icon.png",
+      "tintColor": "#3060D0",
+      "versions": [
+        {
+          "version": "4.2.2",
+          "date": "2026-10-20T03:08:48Z",
+          "localizedDescription": "## Changes\n\n- Recover downloads when Apple returns an empty HTTP 500 by retrying the version-pinned request through the bag’s update endpoint.\n- Update ApplePackage to 2.0.3 with Swift 6.2 compatibility fixes.\n- Report Keychain save failures before completing login, and preserve stored data when loading fails.\n- Improve empty account layout, editable device identifiers, and account table column widths.\n- Remove personal metadata from bundled installation certificates and omit the CA private key.\n- Explicitly clear development teams for release builds and check packaged artifacts before publication.\n\n## Installation certificate\n\nThe local installation CA was replaced to remove personal metadata. If you use OTA installation, install and trust the new certificate from Settings after updating.\n\nThe release contains an unsigned iOS IPA and a macOS ZIP without a personal development team.",
+          "downloadURL": "https://gh-proxy.com/https://github.com/Lakr233/Asspp/releases/download/4.2.2/Asspp.ipa",
+          "size": 16458246,
+          "minOSVersion": "17.0"
+        }
+      ]
+    },
+    {
+      "name": "CiliCili",
+      "bundleIdentifier": "nsk-1695.v-team.cn",
+      "developerName": "Rone89",
+      "subtitle": "SwiftUI 第三方 B 站客户端",
+      "localizedDescription": "使用 SwiftUI 编写的第三方 B 站客户端实验项目：首页推荐、搜索、UP 主空间、动态（图文/视频/转发）、视频详情与 HLS 播放、弹幕（开关、样式、关键词过滤）、评论与私信，并支持二维码与网页登录（登录态保存在本机 Keychain）。",
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/cilicili/icon.png",
+      "tintColor": "#F5639D",
+      "versions": [
+        {
+          "version": "1.1.3",
+          "date": "2026-11-09T10:12:47Z",
+          "localizedDescription": "## 这版更新了啥\n\n- 首页推荐和动态都可以点底栏回到顶部，到顶后再点一次就刷新。动态下拉也会直接获取新内容。\n- 动态页顶部可以自选显示哪些频道，还能调整顺序。\n- 长动态和长评论可以点末行的「… 展开」，直接看全文。\n- 播放器新增 CC 字幕入口，可以选字幕轨，也能设置 AI 字幕偏好。横屏播放的设置移到右侧，屏幕顶部左右分别显示时间和电量。\n- 分 P、番剧选集和合集换成了带封面的紧凑列表。视频详情里的头像和操作按钮也重新排过，更容易区分。\n\n## 修了哪些问题\n\n- 优化评论滚动和翻页，修了切换「最热／最新」时出现的大块空白和加载占位盖住排序栏的问题。\n- 修正部分 HDR 视频的显示和弹幕设置，并补充了部分视频取流失败时的重试方式。\n- 调整搜索筛选栏和投币面板，投币时可以选择是否同时点赞。\n\n## 安装包\n\n- 附件里的 `bili-release-unsigned.ipa` 是 1.1.3（Build 150）的未签名安装包，需自行签名后安装。",
+          "downloadURL": "https://gh-proxy.com/https://github.com/Rone89/cilicili/releases/download/v1.1.3/bili-release-unsigned.ipa",
+          "size": 24576338,
+          "minOSVersion": "26.1"
+        }
+      ]
+    },
+    {
+      "name": "Erosion-CN",
+      "bundleIdentifier": "com.jbdotparty.Erosion",
+      "developerName": "Kianuni",
+      "subtitle": "系统配置与 MobileGestalt 工具箱",
+      "localizedDescription": "基于 worse_query 的简体中文 iOS/iPadOS 系统配置与 MobileGestalt 研究工具箱，支持写入前差异预览、备份校验、写后读回与自动回滚，并支持一键恢复原厂参数。iOS/iPadOS 27 完整支持，26.x 部分支持。",
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Erosion-CN/icon.png",
+      "tintColor": "#D07030",
+      "versions": [
+        {
+          "version": "0.8.6",
+          "date": "2026-11-12T08:25:04Z",
+          "localizedDescription": "## Erosion-CN v0.8.6 更新日志 (Build 21)\n\n### 🚀 容器极速枚举修复 & 空间音频硬件防呆解耦 & 分流规则增强\n\n1. **修复高 Inode 主力机容器扫描卡死 5–6 分钟，并适配 `iOS 26.3.x` `CSStore2` 秒开（修复 #21）**：\n   - **修正 `pathleak` 上限保护逻辑**：修复长期使用的设备（累计 APFS 单调递增 Inode 超过 2 亿）在回退 `pathleak` 时外层 `min/max` 写反导致 `15,000,000` 上限失效、强行遍历 2.28 亿次系统调用的问题；\n   - **新增不依赖结构体偏移的 `CSStore2` 书签 TLV（`NSURL minimalBookmark`）兜底提取引擎**：在 `iOS 26.3.x` 与 `iOS 27.x` 上均可直接从 `.csstore` 提取并校验有效的应用数据（`Application`）、扩展插件（`PluginKitPlugin`）、应用共享组（`AppGroup`）与守护进程（`InternalDaemon`）容器路径，无论容器 Inode 高低均可秒级加载。\n\n2. **拆分「FaceTime 空间音频」与「空间音频录制」，新增非四麦克风机型自动防呆（修复 #19）**：\n   - 将原合并开关拆分为独立的 **「FaceTime 空间音频」**（`spatial-facetime-audio`，纯软件声场渲染，兼容 `iPhone 15 Pro` 及更早机型）与 **「空间音频录制（相机 / 语音备忘录录音室）」**（`spatial-audio-recording`）；\n   - 对非四麦克风阵列旧机型（`iPhone 15` 系列及更早三麦克风机型）默认自动防呆锁定关闭「空间音频录制」，避免语音备忘录出现无效的「录音室 (Studio)」档位并点录音即停（旧版已开启用户升级后可直接一键关闭恢复）。\n\n3. **修正屏幕子类型 (Subtype) 数值与多项交互提示优化（#14 / #15 / #17 / #13）**：\n   - 修正上游遗留的「屏幕子类型」数值笔误（`iPhone 14 Pro / 15 Pro` 修正为 `2556`，`iPhone 14 Pro Max / 15 Pro Max` 修正为 `2796`）并消除重复 Tag 冲突；\n   - 补充 iOS 26/27 下解除 `green-tea` 同样会切换国际版网络权限（隐藏单应用「不允许联网」）的说明，并针对侧载签名剥离 `App Group` 导致的 `result: -1` 新增专属中文排障弹窗；\n   - 更新内置 `Surge (.sgmodule)` 与 `Stash (.stoverride)` 分流生成器，补齐 Apple PCC 速率限制匿名令牌签发域名（`mask-api.icloud.com` / `mask.icloud.com` / `mask-h2.icloud.com`）与相册云端消除网关（`*.app.apple.com`）。\n\n---\n\n### 📦 安装包校验信息\n\n- **文件名**：`Erosion_v0.8.6_zh-Hans.ipa`\n- **版本号**：`v0.8.6` (`Build 21`)\n- **SHA-256**：`004a64cd96d050dea3ac2197a7efa5e5c6b2943f17f7af7af8ced253022ff72a`",
+          "downloadURL": "https://gh-proxy.com/https://github.com/Kianuni/Erosion-CN/releases/download/v0.8.6/Erosion_v0.8.6_zh-Hans.ipa",
+          "size": 6047130,
+          "minOSVersion": "26.0"
+        }
+      ]
+    },
+    {
+      "name": "Feather",
+      "bundleIdentifier": "thewonderofyou.Feather",
+      "developerName": "Local",
+      "subtitle": "Locally committed IPA",
+      "localizedDescription": "Feather — committed to this repository as an IPA under apps/Local/.",
+      "tintColor": "#3B82F6",
+      "versions": [
+        {
+          "version": "2.9.0",
+          "date": "2026-09-11",
+          "localizedDescription": "Locally committed build: Feather.ipa (13.6 MB). Build 1.",
+          "downloadURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Local/Feather.ipa",
+          "size": 14296537,
+          "buildVersion": "1",
+          "minOSVersion": "16.0"
+        }
+      ],
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Local/icons/thewonderofyou.Feather.png"
+    },
+    {
+      "name": "Infuse",
+      "bundleIdentifier": "com.firecore.infuse",
+      "developerName": "Local",
+      "subtitle": "Locally committed IPA",
+      "localizedDescription": "Infuse — committed to this repository as an IPA under apps/Local/.",
+      "tintColor": "#3B82F6",
+      "versions": [
+        {
+          "version": "8.3.5",
+          "date": "2026-09-11",
+          "localizedDescription": "Locally committed build: Infuse_8.3.5.ipa (72.0 MB). Build 8.3.5459.",
+          "downloadURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Local/Infuse_8.3.5.ipa",
+          "size": 75480684,
+          "buildVersion": "8.3.5459",
+          "minOSVersion": "10.0"
+        }
+      ],
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Local/icons/com.firecore.infuse.png"
+    },
+    {
+      "name": "iPadn",
+      "bundleIdentifier": "app.local.iPadn",
+      "developerName": "mengangs",
+      "subtitle": "在 iPhone 和 iPad 上管理已购 App",
+      "localizedDescription": "在 iPhone 和 iPad 上搜索、下载并安装你已拥有的 App，支持历史版本、已下架应用、多地区比价、已购项目与一键安装。",
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/iPadn/icon.png",
+      "screenshots": [
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/iPadn/images/01-search.jpg",
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/iPadn/images/02-detail.jpg",
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/iPadn/images/03-versions.jpg",
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/iPadn/images/04-prices.jpg",
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/iPadn/images/05-purchased.jpg"
+      ],
+      "tintColor": "#111111",
+      "versions": [
+        {
+          "version": "2.0.0",
+          "date": "2026-11-12T10:41:39Z",
+          "localizedDescription": "## iPadn 2.0.0\n\niPadn 2.0 是一次大更新：新增发现页、用户评论、翻译、应用锁、本机应用、Wi‑Fi 传输、灵动岛下载进度、小组件和快捷指令，原生安装可以阻止 App Store 更新，并开始支持 iOS / iPadOS 16。安装包未签名，请用自己的工具签名后安装。\n\n**两个安装包**\n\n- `iPadn-2.0.0-unsigned.ipa`：标准版，包含实时活动（灵动岛、锁屏）和小组件，签名时需要 2 个 App ID。\n- `iPadn-2.0.0-lite-unsigned.ipa`：精简版，不含扩展，只需 1 个 App ID，适合 App ID 数量有限的签名方式。其他功能相同。\n- SideStore、AltStore、Feather 等签名工具可以添加源 `https://raw.githubusercontent.com/mengangs/ipadn/main/altstore-source.json`，在工具里直接安装和更新。\n\n**发现与应用详情**\n\n- 搜索页新增「发现」：免费榜、付费榜、畅销榜，可切换地区并按分类筛选。\n- 详情页新增「评论」，可查看各地区最近的用户评论并按星级筛选。\n- 简介和更新说明不是你的语言时，可以用系统翻译替换为译文（iOS 17.4 及更新版本）。\n- 版本历史默认显示最近 5 个版本。\n\n**下载与安装**\n\n- 锁屏和灵动岛显示下载进度（可在设置中关闭）。\n- 新增「仅使用 Wi‑Fi 下载」和「下载完成后自动安装」。\n- 下载页可以「全部更新」，编辑模式改为紧凑列表并支持全选。\n- 任务详情新增「安装包信息」：权限、扩展、语言、URL Scheme、后台模式等。\n- 原生安装新增「阻止 App Store 更新」：App Store 会把应用视为最新版本，不再提示或自动更新；关闭后再安装一次即可恢复（#46）。\n- 新增「账号 › 本机应用」：列出手机上已装的应用，对比 App Store 版本并一键全部更新（需要原生安装的配对）。\n- 新增「账号 › Wi‑Fi 传输」：在同一 Wi‑Fi 的电脑浏览器中下载已完成的安装包，只在页面打开时运行，地址带随机密钥。\n- 在 LiveContainer 中运行时，会提示打开 LiveContainer 的「修复文件导入」，之后才能导入导出文件和一键安装（#44）。\n\n**关注与价格**\n\n- 关注的付费应用可以设置目标价，降到目标价才提醒。\n\n**安全与快捷操作**\n\n- 新增应用锁：面容 ID、触控 ID 或密码，可设置离开多久后需要验证，多任务界面中也会隐藏内容。\n- 新增主屏幕和锁屏小组件：快速打开搜索、下载、已购和更新检查。\n- 新增快捷指令：下载应用、检查更新、下载全部更新、获取下载进度、暂停或继续全部下载、关注应用。\n\n**专业模式**\n\n- 可以对比同一应用的两个已下载版本：版本、权限、扩展、框架等变化。\n\n**设置**\n\n- 设置首页改为分类入口；新增「备份与维护」导出、导入设置和关注列表（不含账号和安装包）。\n- 关闭「新版本提醒」后，下载页也不再显示更新提示。\n\n**系统支持与稳定性**\n\n- 支持 iOS / iPadOS 16 及更新版本（感谢 @tageniu）。\n- 修复部分安装包（如网易云音乐）的图标导致 iPadn 启动后崩溃。\n- 切换标签页更流畅：不再每次重建所有页面（#41）。\n\n**English**\n\niPadn 2.0 adds Discover (top charts by region and category), customer reviews, system translation of descriptions and release notes, App Lock, Apps on This Device, Wi‑Fi transfer to a computer, download progress on the Lock Screen and in the Dynamic Island, widgets and Shortcuts actions. Downloads can wait for Wi‑Fi and install automatically when finished; native installation can block App Store updates for an app. Package info shows what a package declares, and Pro mode compares two downloaded versions. Followed paid apps can have a target price, settings are grouped into pages with backup export and import, and iOS / iPadOS 16 is now supported. Releases include a lite package without the app extension that needs a single App ID. Also fixes a launch crash caused by some packages' icons and makes tab switching smoother.\n\n更早版本的更新内容见 [Releases](https://github.com/mengangs/ipadn/releases)。\n\n两个安装包：`iPadn-2.0.0-unsigned.ipa` 是标准版（含实时活动和桌面小组件，需要 2 个 App ID）；`iPadn-2.0.0-lite-unsigned.ipa` 是精简版（不含扩展，只需 1 个 App ID），适合 App ID 数量受限的签名方式。\n\n验证：设备 Release 编译与 IPA 检查通过；145 项测试通过，0 项失败，0 项跳过。",
+          "downloadURL": "https://gh-proxy.com/https://github.com/mengangs/ipadn/releases/download/v2.0.0/iPadn-2.0.0-lite-unsigned.ipa",
+          "size": 48080581,
+          "minOSVersion": "17.0"
+        }
+      ]
+    },
+    {
+      "name": "KMusic",
+      "bundleIdentifier": "com.macxk.KMusic",
+      "developerName": "Mac-XK",
+      "subtitle": "基于 SwiftUI 的多源音乐聚合播放器",
+      "localizedDescription": "基于 SwiftUI 开发的多源音乐聚合播放器，支持 iOS/macOS。内置酷我、酷狗、QQ 音乐、网易云、咪咕等多平台音源，支持 LRC 歌词同步、全局搜索、后台播放与深色主题，并可通过 JS 脚本导入自定义音源。",
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/KMusic/icon.png",
+      "screenshots": [
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/KMusic/images/recommendation.png",
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/KMusic/images/playlist.png",
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/KMusic/images/play.png"
+      ],
+      "tintColor": "#F03050",
+      "versions": [
+        {
+          "version": "2.3.0",
+          "date": "2026-03-12T08:39:59Z",
+          "localizedDescription": "- 优化增加各种问题",
+          "downloadURL": "https://gh-proxy.com/https://github.com/Mac-XK/KMusic/releases/download/%E6%AD%8C%E4%B8%80%E5%88%802.3.0/_2.3.0_22.2.ipa",
+          "size": 3836900,
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "Kumone",
+      "bundleIdentifier": "sb.moe.kumone",
+      "developerName": "missuo",
+      "subtitle": "原生 NetEase Cloud Music iOS 客户端（雲の音）",
+      "localizedDescription": "Kumone（雲の音）— native NetEase Cloud Music client for iOS. Talks directly to NetEase's real API with no third-party server: QR-code login, gray-track unblocking, synced lyrics with translation, immersive artwork-tinted now-playing, and playlist management.\n\nSupports English and Simplified Chinese localization.",
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kumone/icon.png",
+      "screenshots": [
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kumone/images/home.png",
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kumone/images/search.png",
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kumone/images/featured.png"
+      ],
+      "tintColor": "#F0D060",
+      "versions": [
+        {
+          "version": "0.3.34",
+          "date": "2026-11-12T20:52:06Z",
+          "localizedDescription": "### Added\n\n- **Comments**: read a song's comments from its context menu, or on iOS from the now-playing page's More menu — top comments first, then the latest, loading more as you scroll, with the reply each one answers and its likes. Signed in, you can like a comment or take the like back (#113).\n- **Search**: on iOS every playlist can be searched (the magnifying glass, or pull down), not only Liked Songs; tapping a result plays the whole playlist from that song (#185).\n- **Cloud Disk**: search by song, artist, album or uploaded file name, on macOS and iOS. The cloud disk now loads every song instead of the first 1,000, so search and Play All cover them all (#186).\n\n### Improved\n\n- **iOS**: Daily Recs drops the large cover banner at the top, so the songs start right below the date, title and Play All.\n\n---\n\n### 新增\n\n- **评论**：从歌曲的右键 / 长按菜单，或 iOS 播放页的「更多」菜单查看歌曲评论——先显示热门评论，再显示最新评论，滚动时自动加载更多，并显示所回复的评论和点赞数。登录后可以给评论点赞或取消点赞（#113）。\n- **搜索**：iOS 上所有歌单都可以在歌单内搜索（右上角放大镜，或在列表顶部下拉），不再只限「我喜欢的音乐」；点搜索结果会从这首开始播放整个歌单（#185）。\n- **音乐云盘**：macOS 和 iOS 都可以按歌名、歌手、专辑或上传的文件名搜索。云盘现在会加载全部歌曲，不再只加载前 1000 首，搜索和「播放全部」都覆盖所有歌曲（#186）。\n\n### 改进\n\n- **iOS**：每日推荐去掉了顶部的大封面横幅，日期、标题和「播放全部」下面直接就是歌曲列表。",
+          "downloadURL": "https://gh-proxy.com/https://github.com/missuo/kumone/releases/download/v0.3.34/Kumone-iOS-0.3.34.ipa",
+          "size": 4270017,
+          "minOSVersion": "16.0"
+        }
+      ]
+    },
+    {
+      "name": "MiniWatts",
+      "bundleIdentifier": "org.zhaohe.MiniWatts",
+      "developerName": "ZhaoHe Studio",
+      "subtitle": "Battery, charging and thermal instrument for iPhone",
+      "localizedDescription": "A battery, charging and thermal instrument for iPhone, built on Apple's private power-management APIs. It shows what the charger is delivering, how much of it reaches the cell, where the rest goes as heat, and what the phone's temperature sensors are doing while it happens.",
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/MiniWatts/icon.png",
+      "screenshots": [
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/MiniWatts/images/power.jpg",
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/MiniWatts/images/thermal.jpg",
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/MiniWatts/images/adapter.jpg",
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/MiniWatts/images/history.jpg"
+      ],
+      "tintColor": "#30F040",
+      "versions": [
+        {
+          "version": "1.7.0",
+          "date": "2026-11-07T08:08:32Z",
+          "localizedDescription": "Unsigned build — sign it with your own Apple ID before installing.\nhttps://github.com/ResistanceTo/MiniWatts#install\n\n## 改进\n\n- **温度可以显示为华氏度。** 设置 → 单位 里可选\"自动 / °C / °F\"。\"自动\"跟随系统地区，以及\"设置 › 通用 › 语言与地区\"里的\"温度\"选项，所以地区使用华氏度的用户升级后会直接看到 °F。App 各页、图表、热力图、悬浮读数、实时活动和小组件都按所选单位显示；原始数据仍显示传感器给出的 °C。(#25)\n- **充电预估。** 充电时，功率页会显示充到 80% 和充到 100% 还要多久，以及大约几点。时间根据电量实际上升的速度推算，不依赖电池能量设置；要等电量变化两次才会出现，通常需要几分钟。80% 以后按典型充电曲线估算，只是近似值。(#27)\n- **显示版本号。** 设置 → 关于 里显示当前版本，原始数据导出的第一行也带上了版本号。(#27)\n- **iPad 布局。** iPad 横屏和 13 英寸竖屏时，各页分成两栏；窄屏时仍是一栏。历史记录里单次充电的详情页在 iPad 上不再横向铺满。(#22)\n- **iPad 热力图。** 在 iPad 上，发热页画的是 iPad 的轮廓，各区域按 iPad Pro 11 英寸的内部布局放置：主板在中间，两侧是电芯，充电芯片在 USB-C 接口旁。设备页和设置里的图标也换成了 iPad。(#13, #22)\n\n## 修复\n\n- 发热：CPU 簇（`pACC`、`eACC`）和图像处理器（`ISP`）等传感器以前被归入\"其他传感器\"，现在算作 SoC，SoC 区域的温度也会把它们算进去。iPhone 11 上 `FrontCameraDie`、`BCMLBSkin` 这类名字连写的传感器以前会被分错区（比如前摄像头被当成机身），现在会先拆词再归类。(#13, #14)\n- 适配器页里\"单次采样\"那段说明以前在中文界面下一直显示英文，现在已有中文。\n\n## 注意\n\n- iPad 相关的改动只在模拟器里验证过，我手上没有 iPad。如果在 iPad 上看到问题，请从 设置 → 原始数据 复制导出并反馈。\n- iPad 上\"来自充电器\"的功率偏低（#13）这次还没有修：要确认其余的输入由哪个传感器测量，需要一份**充电时**导出的原始数据。有 iPad 的话，请在充电时从 设置 → 原始数据 复制导出，贴到 #13。\n- 充电预估无法知道是否开启了充电上限或优化电池充电。如果开着，电池会在上限前停下，\"充到 100%\"的时间就不准。\n\n---\n\n## Improvements\n\n- **Temperatures can be shown in Fahrenheit.** Settings → Units offers Automatic, °C or °F. Automatic follows your region and the Temperature option under Settings › General › Language & Region, so if your region uses Fahrenheit you will see °F straight after updating. Every page, the charts, the heat map, the floating meter, the Live Activity and the widget follow the setting; Raw data still shows the sensors' own °C. (#25)\n- **Charge forecast.** While charging, the Power page shows how long until 80% and until 100%, and roughly when. It is worked out from how fast the battery level is actually rising, so it does not depend on the battery energy setting; it appears once the level has moved twice, usually within a few minutes. Past 80% it follows a typical charging curve and is approximate. (#27)\n- **Version number.** Settings → About shows the installed version, and the first line of the Raw data dump includes it. (#27)\n- **iPad layout.** On an iPad in landscape, and a 13-inch in portrait, every page uses two columns; narrower windows keep one. A session's detail page in History no longer stretches edge to edge on an iPad. (#22)\n- **iPad heat map.** On an iPad the Thermal page draws an iPad, with the zones placed as in an iPad Pro 11-inch: logic board down the middle, a battery cell either side, the charge IC by the USB-C port. The Devices page and Settings use iPad icons too. (#13, #22)\n\n## Fixes\n\n- Thermal: the CPU-cluster (`pACC`, `eACC`) and image-processor (`ISP`) sensors used to land under \"Other sensors\"; they now count as the SoC, and the SoC zone's temperature includes them. On an iPhone 11, run-together sensor names such as `FrontCameraDie` and `BCMLBSkin` were filed in the wrong zone (the front camera as chassis); names are now split into words before they are matched. (#13, #14)\n- Adapter: the one-sample note always showed in English in the Chinese interface; it is now translated.\n\n## Notes\n\n- The iPad changes were checked in the simulator only — I do not have an iPad. If something looks wrong on yours, copy the dump from Settings → Raw data and report it.\n- The low \"from charger\" reading on an iPad (#13) is not fixed yet: finding which sensor carries the rest of the input needs a Raw data dump taken **while charging**. If you have an iPad, please copy one from Settings → Raw data while it charges and post it on #13.\n- The charge forecast cannot tell whether a charge limit or Optimized Battery Charging is on. If one is, the battery stops short and the time to 100% will be wrong.\n\n**Full Changelog**: https://github.com/ResistanceTo/MiniWatts/compare/v1.6.0...v1.7.0",
+          "downloadURL": "https://gh-proxy.com/https://github.com/ResistanceTo/MiniWatts/releases/download/v1.7.0/MiniWatts-unsigned.ipa",
+          "size": 3374224,
+          "minOSVersion": "17.0"
+        }
+      ]
+    },
+    {
+      "name": "Opaline",
+      "bundleIdentifier": "com.verback.YTLite",
+      "developerName": "verback2308",
+      "subtitle": "YouTube client for iOS 12+",
+      "localizedDescription": "A lightweight, privacy-focused YouTube client for iOS, built with UIKit. SponsorBlock, Return YouTube Dislike, up to 1080p playback, background audio, Picture-in-Picture, subtitles and offline downloads — no ads, no tracking, no dependencies.",
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Opaline/icon.png",
+      "screenshots": [
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Opaline/images/home.jpeg",
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Opaline/images/player.jpeg",
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Opaline/images/channel.jpeg"
+      ],
+      "tintColor": "#FF0000",
+      "versions": [
+        {
+          "version": "1.12.0",
+          "date": "2026-09-10T02:02:27Z",
+          "localizedDescription": "**New**\n\n- Hold anywhere on the video to seek ([#116](https://github.com/verback2308/Opaline/issues/116)). Press and hold on the picture, then drag sideways. The seek bar follows your finger and the video jumps where you let go, so you no longer have to hit the thin bar at the bottom. The taps you already know still work: the sides seek, the middle pauses.\n- Search inside a channel ([#117](https://github.com/verback2308/Opaline/issues/117)). Channel pages have a magnifier now, and whatever you type there searches that channel only. YouTube serves no filters for this kind of search, so there are none in the app either.\n- Get a downloaded video out of the app ([#115](https://github.com/verback2308/Opaline/issues/115)). The menu on a downloaded video has a new \"Save to Files\" row that hands the file to the usual iOS share sheet, so it can go to Files, Photos, AirDrop or another app. It is named after the video, and only the video leaves: subtitles, comments and the saved page stay where they were.\n- Clear the whole search history at once ([#121](https://github.com/verback2308/Opaline/issues/121)). The last row under Recent searches wipes the list, and it asks first.\n\n**Fixes**\n\n- The mini player no longer sits on top of the tab bar ([#118](https://github.com/verback2308/Opaline/issues/118)). Tapping a tab behind the collapsed player switches to that tab instead of reopening the video.\n- Stereo no longer gets spatialized on AirPods ([#119](https://github.com/verback2308/Opaline/issues/119)). Ordinary two-channel sound was being turned into a fake surround field that moved when you turned your head. Video that really is multichannel still spatializes.\n- The \"...\" menu stops closing on its own ([#128](https://github.com/verback2308/Opaline/issues/128)). It was reacting to the device being tilted or put down, which made it look random when you held the phone in your hand.\n\n**Also**\n\n- If your device is older than Opaline supports, the README now points at [a downport for iOS 9](https://github.com/Joeviocoe/Opaline) by another developer, which runs on the iPad 2, iPad 3, iPad mini and iPhone 4S ([#125](https://github.com/verback2308/Opaline/issues/125)).",
+          "downloadURL": "https://gh-proxy.com/https://github.com/verback2308/Opaline/releases/download/1.12.0/Opaline_1.12.0.ipa",
+          "size": 6685919,
+          "minOSVersion": "12.0"
+        }
+      ]
+    },
+    {
+      "name": "PiliPlus",
+      "bundleIdentifier": "com.example.piliplus",
+      "developerName": "bggRGjQaUbCoE",
+      "subtitle": "使用Flutter开发的BiliBili第三方客户端",
+      "localizedDescription": "使用Flutter开发的BiliBili第三方客户端",
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PiliPlus/icon.png",
+      "screenshots": [
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PiliPlus/images/home.png",
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PiliPlus/images/bangumi.png",
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PiliPlus/images/dynamic.png"
+      ],
+      "tintColor": "#73b480",
+      "versions": [
+        {
+          "version": "2.2.0",
+          "buildVersion": "5598",
+          "date": "2026-11-03T07:43:02Z",
+          "localizedDescription": "更新投屏依赖 https://github.com/bggRGjQaUbCoE/PiliPlus/issues/2680#issuecomment-6597938908\r\n修复部分视频评论显示不全 #3458\r\n修复播放课堂视频 #3454 by @ucxn\r\n修复 macOS 关闭系统标题栏后无法拖动 #3453 by @NalCol\r\n修复点赞弹幕跳转未留提前量，导致跳转到弹幕时无法加载 #3459 by @Rim-World\r\nChromeOS(ARC) 上不再主动请求屏幕方向，由系统决定窗口方向 #3406 co-by @selcarpa",
+          "downloadURL": "https://gh-proxy.com/https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.2.0.2/PiliPlus_ios_2.2.0%2B5598.ipa",
+          "size": 24933082,
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "Placard",
+      "bundleIdentifier": "me.ssus.placard",
+      "developerName": "frs0n",
+      "subtitle": "PosterBoard 自定义壁纸管理器",
+      "localizedDescription": "浏览、搜索并预览社区制作的交互式 PosterBoard 壁纸，导入 .tendies 壁纸包，或把 12 秒以内的竖屏视频做成循环/往复播放的锁屏壁纸，并直接在设备上安装与清理已装壁纸。安装与管理需要支持 bad_query 的实体设备。",
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/placard/icon.png",
+      "screenshots": [
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/placard/images/browse-custom.png"
+      ],
+      "tintColor": "#5C79E6",
+      "versions": [
+        {
+          "version": "1.9.2",
+          "date": "2026-09-26T07:37:42Z",
+          "localizedDescription": "**Full Changelog**: https://github.com/frs0n/placard/compare/v1.9.1...v1.9.2",
+          "downloadURL": "https://gh-proxy.com/https://github.com/frs0n/placard/releases/download/v1.9.2/placard-v1.9.2-unsigned.ipa",
+          "size": 9600240,
+          "minOSVersion": "26.0"
+        }
+      ]
+    },
+    {
+      "name": "Pocket Poster",
+      "bundleIdentifier": "com.lemin.Pocket-Poster",
+      "developerName": "LeminLimez",
+      "subtitle": "Custom PosterBoard animated wallpapers for iOS 17.0+",
+      "localizedDescription": "Custom PosterBoard animated wallpapers for iOS 17.0+. Browse community wallpapers in the built-in explore page, import your own videos and images, and apply them as animated posters — including CarPlay and per-collection sets.",
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Pocket-Poster/icon.png",
+      "tintColor": "#DD94F3",
+      "versions": [
+        {
+          "version": "3.0",
+          "date": "2025-08-29T21:35:36Z",
+          "localizedDescription": "# Features\r\n- Added an in-app explore page for finding and downloading wallpapers\r\n- Added custom CarPlay wallpapers (will not work on iOS 26.0)\r\n- *Preliminary* iOS 16 support (not all wallpapers will work)\r\n- Improved certain error messages\r\n\r\n# Bug Fixes\r\n- Fixed the aspect ratio/rotation of imported custom videos\r\n- Fixed the update API not being called correctly\r\n- Fixed issues with some alerts not popping up\r\n- Other various app stability improvements",
+          "downloadURL": "https://gh-proxy.com/https://github.com/leminlimez/Pocket-Poster/releases/download/v3.0/Pocket_Poster.ipa",
+          "size": 13686800,
+          "minOSVersion": "17.0"
+        }
+      ]
+    },
+    {
+      "name": "Twitter",
+      "bundleIdentifier": "com.atebits.Tweetie2",
+      "developerName": "Local",
+      "subtitle": "Locally committed IPA",
+      "localizedDescription": "Twitter — committed to this repository as an IPA under apps/Local/.",
+      "tintColor": "#3B82F6",
+      "versions": [
+        {
+          "version": "9.63",
+          "date": "2026-09-11",
+          "localizedDescription": "Locally committed build: Twitter_9.63.ipa (98.3 MB). Build 9.63.",
+          "downloadURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Local/Twitter_9.63.ipa",
+          "size": 103080699,
+          "buildVersion": "9.63",
+          "minOSVersion": "10.0"
+        }
+      ],
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Local/icons/com.atebits.Tweetie2.png"
+    },
+    {
+      "name": "WQ Files",
+      "bundleIdentifier": "cz.kolbi.wqfiles",
+      "developerName": "kolbicz",
+      "subtitle": "无需越狱的文件与 App 数据管理器",
+      "localizedDescription": "无需越狱浏览 App 数据与文件，支持 Plist/十六进制编辑、应用数据备份恢复、缓存清理与 SQLite 查看。需使用保留 App Group 权限的签名工具（AltStore、SideStore 或 Impactor，不支持 Sideloadly）。",
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WQFiles/icon.png",
+      "tintColor": "#1E8FC7",
+      "versions": [
+        {
+          "version": "0.9.5",
+          "date": "2026-11-12T19:33:26Z",
+          "localizedDescription": "> **Requires:** iOS 27, or iOS 26.0 – 26.7.2. Tested on iOS 27.0.1, 27.2.1 and 26.7.1; iOS 27.3 beta support is based on a user's Log.\n> **Needs:** a sideloading tool that keeps the App Group entitlement; see [Signing](https://github.com/kolbicz/WQFiles#signing-the-app-group) in the README.\n\n# Worse Query Files 0.9.5\n\n## New\n\n- **iOS 27.3 beta** ([#50](https://github.com/kolbicz/WQFiles/issues/50)): WQ Files reads the app database of iOS 27.3, where app extensions are stored differently. Before, most folders on 27.3 stayed unidentified, and the Cache Cleaner couldn't clean them.\n- **Turkish**, and a **flag next to each language** under **Language** in WQ Files' Settings.\n- **Import several files at once with Replace All** ([#49](https://github.com/kolbicz/WQFiles/issues/49)): when some names already exist, WQ Files asks once: **Replace All** (each replaced file is backed up first) or **Keep Both**.\n- **Rename in Select** ([#41](https://github.com/kolbicz/WQFiles/issues/41)): with one item selected, **Rename** is in the toolbar.\n- **Restore edited app backups:** a backup whose files were swapped afterwards, for example with files from another backup tool, used to be refused. WQ Files now says which parts changed and offers **Restore Anyway**. The app's current data is still backed up first.\n\n## Changed\n\n- **Deleting folders:** the alert now says how many files are backed up and how many links or special files are removed without a backup, instead of promising a copy of everything.\n- **Recently Deleted:** shows when Backups can't be read instead of \"Nothing deleted\". A failed restore removes the empty folders it created.\n- **Share as ZIP:** asks before sharing when items couldn't be read and were left out. The container's own system file doesn't count.\n- **SQLite:**\n  - **Saving** keeps one complete backup of the previous database, including changes that were still only in the `-wal` file.\n  - **Text** that can't be shown exactly (invalid UTF-8, embedded NUL) is shown as hex and can't be edited as text by accident.\n  - **CSV export** escapes column names, writes exact values and never shares a failed export.\n  - **SQL statements** run in the background and can be cancelled.\n- **Plist editor:** dates keep fractions of a second in binary plists, and 64-bit numbers are kept exactly instead of being clamped.\n- **Hex editor:** search can be stopped and no longer blocks loading or saving. Oversized byte input is rejected at once.\n- **Media:** each player gets its own temporary copy, so two open players no longer disturb each other. Streaming reads one consistent version of the file. `.m3u8` playlists open as text.\n- **ZIP import and extraction** build the result in a hidden folder and only show it once it's complete. Very large or malformed archives are refused.\n- **App backup import** asks when the backup names a different app than its contents.\n- **Startup check:** a failure is shown once you're back on the start screen, instead of covering whatever is open.\n\n## Fixed\n\n- **Deleting a folder:** if the folder was replaced while it was being deleted, the replacement could be deleted instead. WQ Files now stops. Rename, move and Move Here also check that the item is still the one you selected.\n- **ZIP files with a comment** could extract as empty.\n- **App backups** of apps with sockets or pipes failed their check.\n- **Recently Deleted** could show an older copy when more than nine backups were made in the same second.\n- **Reset Access Cache** couldn't repair a damaged lock file.\n- **Cache Cleaner:** pulling to refresh while cleaning could hide **Stop**.\n- **Refresh** could show the result of the scan from before the refresh.\n- **Translations:** \"Date\" and \"Data\" were the same word in the plist editor in Italian, Polish and Portuguese. App names that match a menu word (like \"Files\") are no longer translated.\n\n## Credit\n\nSandbox technique: [worse_query](https://github.com/forcequitOS/worse_query) by Taj C (forcequit). Container enumeration: [KAMUI](https://github.com/murk-sus/kamui-escape) by murk-sus. Translations: iosrxwy (Simplified Chinese), hfip (Arabic), hooray804 (Korean), Reinascape (Russian). Thanks to xuhao2004 for the iOS 27.3 Log and to everyone who sent Logs and ideas. GPL-3.0-or-later.\n\nSHA-256 of WQFiles.ipa: `f0e41b3e300032f0b25a72efdc63954032606812600e610a82f68c53a4ef7587`",
+          "downloadURL": "https://gh-proxy.com/https://github.com/kolbicz/WQFiles/releases/download/v0.9.5/WQFiles.ipa",
+          "size": 715465,
+          "minOSVersion": "26.0"
+        }
+      ]
+    },
+    {
+      "name": "WQManager",
+      "bundleIdentifier": "mumu.pduola.WQManager",
+      "developerName": "hseons",
+      "subtitle": "iOS 26 App 数据管理与缓存清理工具",
+      "localizedDescription": "面向 iOS 26+ 的开源 App 数据管理、备份与单应用缓存清理工具：支持带哈希校验和安全回滚的数据备份恢复，以及按目录清理缓存；发布包为 unsigned IPA，真机使用需以保留 App Group 权限的付费开发者证书签名。",
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WQManager/icon.png",
+      "screenshots": [
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WQManager/images/01-apps.png",
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WQManager/images/02-cleaner.png",
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WQManager/images/03-history.png",
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WQManager/images/04-settings.png"
+      ],
+      "tintColor": "#242529",
+      "versions": [
+        {
+          "version": "0.3.1",
+          "date": "2026-11-12T12:58:23Z",
+          "localizedDescription": "- 新增存储占用面板与清理\n- 修复分享导入残留占用空间\n- 恢复后只保留最新一份安全备份",
+          "downloadURL": "https://gh-proxy.com/https://github.com/hseons/WQManager/releases/download/v0.3.1/WQManager-0.3.1-unsigned.ipa",
+          "size": 705110,
+          "minOSVersion": "26.0"
+        }
+      ]
+    },
+    {
+      "name": "WrapPin",
+      "bundleIdentifier": "com.suversal.wrappin",
+      "developerName": "suversal",
+      "subtitle": "本机虚拟定位与步行路线测试工具",
+      "localizedDescription": "在一张地图上选择、测试并移动 iPhone 向系统报告的位置：支持固定位置、步行与驾车路线模拟、收藏与历史记录，结束后可恢复真实位置。它通过本机配对与设备隧道建立开发者定位会话（默认使用 LocalDevVPN）。这是 Roam Control 的非官方中文分支，仅供在你自己拥有并控制的设备上做开发与测试。",
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/icon.png",
+      "screenshots": [
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/fixed-location.png",
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/walking-active.png",
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/settings.png",
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/privacy.png"
+      ],
+      "tintColor": "#1060F0",
+      "versions": [
+        {
+          "version": "1.0.22",
+          "date": "2026-11-12T15:30:27Z",
+          "localizedDescription": "优化定位维持和断线后的恢复：\n\n- 前台开始定位时提前启动后台保活，回到前台后检查长时间未收到回调的请求。\n- 运行中的定位遇到可重试连接错误时，以 1、2、4 秒间隔最多连续重连三次，沿用最新坐标。\n- 重连期间冻结路线进度，恢复后保留原有暂停状态。\n- 主动停止、重置和恢复真实位置会取消重连；认证错误及上次启动留下的未确认会话仍需手动处理。\n\n**安装包选择**\n\n- **Standard 标准版**：SideStore 等自签安装，配合 LocalDevVPN 等外部设备隧道。\n- **Tunnel 隧道版**：内置设备隧道，需匹配主 App 和扩展的 Packet Tunnel 签名权限；免费账号请选择标准版。\n\n支持 iOS/iPadOS 18.0+。均为未签名 IPA，沿用原签名身份升级同一版本通常无需重新配对。\n\n两版 Debug/Release 编译、13 项离线检查和包校验通过。**Build 74 真机安装及长时间锁屏/后台效果仍待回测**，尚不能保证所有定位失效问题均已解决。\n\nSHA-256：\n\n- Standard：`868eead7328847473c7e2b7ff3f11c9bdeb84132ebef0e417c83db5c6c35e735`\n- Tunnel：`e2c47e3886dd197c9b91eb32924081844f61d4a6d042226ec5d3a34ef00c8551`",
+          "downloadURL": "https://gh-proxy.com/https://github.com/suversal/WrapPin/releases/download/v1.0.22/WrapPin-Standard-1.0.22-build74-unsigned.ipa",
+          "size": 6923608,
+          "minOSVersion": "27.0"
+        }
+      ]
+    },
+    {
+      "name": "多多阅读",
+      "bundleIdentifier": "com.duoduomsoft.dudureader",
+      "developerName": "Local",
+      "subtitle": "Locally committed IPA",
+      "localizedDescription": "多多阅读 — committed to this repository as an IPA under apps/Local/.",
+      "tintColor": "#3B82F6",
+      "versions": [
+        {
+          "version": "5.9",
+          "date": "2026-09-11",
+          "localizedDescription": "Locally committed build: 多多阅读.ipa (20.3 MB). Build 5.9.",
+          "downloadURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Local/%E5%A4%9A%E5%A4%9A%E9%98%85%E8%AF%BB.ipa",
+          "size": 21285673,
+          "buildVersion": "5.9",
+          "minOSVersion": "10.0"
+        }
+      ],
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Local/icons/com.duoduomsoft.dudureader.png"
+    },
+    {
+      "name": "威锋",
+      "bundleIdentifier": "com.feng.New.WPForumClient",
+      "developerName": "Local",
+      "subtitle": "Locally committed IPA",
+      "localizedDescription": "威锋 — committed to this repository as an IPA under apps/Local/.",
+      "tintColor": "#3B82F6",
+      "versions": [
+        {
+          "version": "7.0.8",
+          "date": "2026-09-11",
+          "localizedDescription": "Locally committed build: 威锋_7.0.8.ipa (66.6 MB). Build 1.",
+          "downloadURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Local/%E5%A8%81%E9%94%8B_7.0.8.ipa",
+          "size": 69865187,
+          "buildVersion": "1",
+          "minOSVersion": "10.0"
+        }
+      ],
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Local/icons/com.feng.New.WPForumClient.png"
+    },
+    {
+      "name": "豆瓣",
+      "bundleIdentifier": "com.douban.frodo",
+      "developerName": "TouchFriend",
+      "subtitle": "无广告版豆瓣客户端（DoubanMApp）",
+      "localizedDescription": "通过 iOS 逆向改造的豆瓣客户端：移除绝大多数广告、精简界面，其余功能与官方客户端保持一致。发布包基于豆瓣 7.109.0 修改，所以应用内显示的版本号仍是 7.109.0，而本源里的版本号用的是该项目自己的发布号。它的 bundle ID 与官方豆瓣相同，两者不能同时安装。",
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/DoubanMApp/icon.png",
+      "tintColor": "#02AD0A",
+      "versions": [
+        {
+          "version": "1.2.0",
+          "date": "2026-10-24T08:15:45Z",
+          "localizedDescription": "适配豆瓣 7.134.0",
+          "downloadURL": "https://gh-proxy.com/https://github.com/TouchFriend/DoubanMApp/releases/download/1.2.0/douban-7.134.0.v1.2.0.ipa",
+          "size": 103252086,
+          "minOSVersion": "13.0"
+        }
+      ]
+    },
+    {
+      "name": "酷安",
+      "bundleIdentifier": "com.coolapk.desktop",
+      "developerName": "daimiaopeng",
+      "subtitle": "非官方酷安客户端（Tauri 跨平台）",
+      "localizedDescription": "基于 Tauri 2、Vue 3 和 Rust 的非官方酷安客户端，除 iOS 外还提供 Windows、macOS、Linux 与 Android 版本。iOS 包由项目 CI 构建且未签名，需要用 AltStore 等工具自行签名后安装。",
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/coolapk-desktop/icon.png",
+      "screenshots": [
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/coolapk-desktop/images/home.png",
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/coolapk-desktop/images/feed.png",
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/coolapk-desktop/images/detail.png"
+      ],
+      "tintColor": "#12B868",
+      "versions": [
+        {
+          "version": "1.35.0",
+          "date": "2026-10-15T03:53:20Z",
+          "localizedDescription": "## 更新日志\r\n\r\n### 新增\r\n- 桌面端支持从账号最近发布的动态、评论中识别手机型号和系统信息，自动用于请求设备配置；无可用记录时使用 iPhone 18 Pro Max 兼容模板。\r\n- 设备设置页展示自动识别的机型及来源。自动配置保留手动指纹和已保存的数盟设备 ID，切换账号时重新识别。\r\n- 搜索分类支持拖动排序，并可收起不常用栏目。\r\n- 无图模式新增详情页图片显示开关。\r\n- 新增浅色界面底色自定义和动态背景图显示开关。\r\n- 话题页新增我的点评卡片。\r\n- 设置页新增“液态玻璃”总开关，默认关闭，可统一控制首页和话题导航的液态玻璃效果。\r\n\r\n### 优化\r\n- 移动首页滚动时可自动收起搜索栏和底部导航；详情页底栏支持随滚动隐藏。\r\n- 优化移动端上传、下载布局，并增加 CDN 上传入口。\r\n- 优化首页与话题的沉浸式导航，适配 Android 和 iOS 安全区，并统一上下导航的玻璃效果。\r\n- 优化设置页窄屏和大字体下的布局。\r\n- 设置中心统一使用一个“设置”标签，切换菜单不再新增标签，返回时打开最近访问的栏目；已有固定和收藏的设置标签自动合并。\r\n- 隐藏桌面设置内容区与侧栏重复的栏目标题，保留说明和功能分组。\r\n\r\n### 修复\r\n- 修复私信列表中同一联系人可能重复显示的问题，覆盖缓存恢复、刷新及分页加载场景。\r\n- 修复已安装测试版选择稳定版更新渠道时，错误展示旧稳定版更新日志、发布日期和 Release 链接的问题。\r\n- 修正关于页的版本类型与更新渠道说明，避免测试版安装包被误认为稳定版。\r\n- 修复手机快捷入口图标缺失。\r\n- 修复系统榜首屏内容不足时不继续加载下一页，以及双列瀑布流滚动抽动、短列加载不及时的问题。\r\n- 修复切换应用窗口标签后话题列表意外刷新的问题。\r\n- 修复头条刷新和分页时游标传递异常。\r\n- 修复私信图片预览及输入区高度调节问题。\r\n- 修复详情评论点赞状态的主题色显示，以及话题简介文字与背景对比度不足的问题。\r\n- 修复私信列表已收到新消息、当前聊天窗口却未及时更新的问题，现在会自动同步聊天内容，并在展示后更新已读状态；同步时保留输入草稿和历史消息阅读位置。",
+          "downloadURL": "https://gh-proxy.com/https://github.com/daimiaopeng/coolapk-desktop/releases/download/v1.35.0/coolapk-v1.35.0-ios-arm64-unsigned.ipa",
+          "size": 8021392,
+          "minOSVersion": "14.0"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "appID": "sb.moe.kumone",
+      "title": "Kumone 0.3.34 · 12 Nov 2026",
+      "identifier": "Kumone-release-v0.3.34",
+      "caption": "Kumone 0.3.34 is available.",
+      "date": "2026-11-12T20:52:06Z",
+      "tintColor": "#F0D060",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kumone/images/news.png",
+      "notify": true,
+      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.34"
+    },
+    {
+      "appID": "cz.kolbi.wqfiles",
+      "title": "WQ Files 0.9.5 · 12 Nov 2026",
+      "identifier": "WQ Files-release-v0.9.5",
+      "caption": "WQ Files 0.9.5 is available.",
+      "date": "2026-11-12T19:33:26Z",
+      "tintColor": "#1E8FC7",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WQFiles/images/news.png",
+      "notify": true,
+      "url": "https://github.com/kolbicz/WQFiles/releases/tag/v0.9.5"
+    },
+    {
+      "appID": "com.suversal.wrappin",
+      "title": "WrapPin 1.0.22 · 12 Nov 2026",
+      "identifier": "WrapPin-release-v1.0.22",
+      "caption": "WrapPin 1.0.22 is available.",
+      "date": "2026-11-12T15:30:27Z",
+      "tintColor": "#1060F0",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/news.png",
+      "notify": true,
+      "url": "https://github.com/suversal/WrapPin/releases/tag/v1.0.22"
+    },
+    {
+      "appID": "mumu.pduola.WQManager",
+      "title": "WQManager 0.3.1 · 12 Nov 2026",
+      "identifier": "WQManager-release-v0.3.1",
+      "caption": "WQManager 0.3.1 is available.",
+      "date": "2026-11-12T12:58:23Z",
+      "tintColor": "#242529",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WQManager/images/news.png",
+      "notify": true,
+      "url": "https://github.com/hseons/WQManager/releases/tag/v0.3.1"
+    },
+    {
+      "appID": "app.local.iPadn",
+      "title": "iPadn 2.0.0 · 12 Nov 2026",
+      "identifier": "iPadn-release-v2.0.0",
+      "caption": "iPadn 2.0.0 is available.",
+      "date": "2026-11-12T10:41:39Z",
+      "tintColor": "#111111",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/iPadn/images/news.png",
+      "notify": true,
+      "url": "https://github.com/mengangs/ipadn/releases/tag/v2.0.0"
+    },
+    {
+      "appID": "com.jbdotparty.Erosion",
+      "title": "Erosion-CN 0.8.6 · 12 Nov 2026",
+      "identifier": "Erosion-CN-release-v0.8.6",
+      "caption": "Erosion-CN 0.8.6 is available.",
+      "date": "2026-11-12T08:25:04Z",
+      "tintColor": "#D07030",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Erosion-CN/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Kianuni/Erosion-CN/releases/tag/v0.8.6"
+    },
+    {
+      "appID": "nsk-1695.v-team.cn",
+      "title": "CiliCili 1.1.3 · 09 Nov 2026",
+      "identifier": "CiliCili-release-v1.1.3",
+      "caption": "CiliCili 1.1.3 is available.",
+      "date": "2026-11-09T10:12:47Z",
+      "tintColor": "#F5639D",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/cilicili/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Rone89/cilicili/releases/tag/v1.1.3"
+    },
+    {
+      "appID": "org.zhaohe.MiniWatts",
+      "title": "MiniWatts 1.7.0 · 07 Nov 2026",
+      "identifier": "MiniWatts-release-v1.7.0",
+      "caption": "MiniWatts 1.7.0 is available.",
+      "date": "2026-11-07T08:08:32Z",
+      "tintColor": "#30F040",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/MiniWatts/images/news.png",
+      "notify": true,
+      "url": "https://github.com/ResistanceTo/MiniWatts/releases/tag/v1.7.0"
+    },
+    {
+      "appID": "com.example.piliplus",
+      "title": "PiliPlus 2.2.0 · 03 Nov 2026",
+      "identifier": "PiliPlus-release-2.2.0.2",
+      "caption": "PiliPlus 2.2.0 is available.",
+      "date": "2026-11-03T07:43:02Z",
+      "tintColor": "#73b480",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PiliPlus/images/news.png",
+      "notify": true,
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.2.0.2"
+    },
+    {
+      "appID": "com.douban.frodo",
+      "title": "豆瓣 1.2.0 · 24 Oct 2026",
+      "identifier": "豆瓣-release-1.2.0",
+      "caption": "豆瓣 1.2.0 is available.",
+      "date": "2026-10-24T08:15:45Z",
+      "tintColor": "#02AD0A",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/DoubanMApp/images/news.png",
+      "notify": true,
+      "url": "https://github.com/TouchFriend/DoubanMApp/releases/tag/1.2.0"
+    },
+    {
+      "appID": "wiki.qaq.Asspp",
+      "title": "Asspp 4.2.2 · 20 Oct 2026",
+      "identifier": "Asspp-release-4.2.2",
+      "caption": "Asspp 4.2.2 is available.",
+      "date": "2026-10-20T03:08:48Z",
+      "tintColor": "#3060D0",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Asspp/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Lakr233/Asspp/releases/tag/4.2.2"
+    },
+    {
+      "appID": "com.linkpass888.airbeep",
+      "title": "AirBeep 2.5.2 · 19 Oct 2026",
+      "identifier": "AirBeep-release-v2.5.2",
+      "caption": "AirBeep 2.5.2 is available.",
+      "date": "2026-10-19T11:35:11Z",
+      "tintColor": "#0057D9",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/AirBeep/images/news.png",
+      "notify": true,
+      "url": "https://github.com/LinkPass888/AirBeep/releases/tag/v2.5.2"
+    },
+    {
+      "appID": "com.coolapk.desktop",
+      "title": "酷安 1.35.0 · 15 Oct 2026",
+      "identifier": "酷安-release-v1.35.0",
+      "caption": "酷安 1.35.0 is available.",
+      "date": "2026-10-15T03:53:20Z",
+      "tintColor": "#12B868",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/coolapk-desktop/images/news.png",
+      "notify": true,
+      "url": "https://github.com/daimiaopeng/coolapk-desktop/releases/tag/v1.35.0"
+    },
+    {
+      "appID": "com.mak5er.aircard",
+      "title": "AirCard-iOS 1.3.2 · 04 Oct 2026",
+      "identifier": "AirCard-iOS-release-v1.3.2",
+      "caption": "AirCard-iOS 1.3.2 is available.",
+      "date": "2026-10-04T12:22:53Z",
+      "tintColor": "#5020E0",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/AirCard-iOS/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Mak5er/AirCard-iOS/releases/tag/v1.3.2"
+    },
+    {
+      "appID": "me.ssus.placard",
+      "title": "Placard 1.9.2 · 26 Sep 2026",
+      "identifier": "Placard-release-v1.9.2",
+      "caption": "Placard 1.9.2 is available.",
+      "date": "2026-09-26T07:37:42Z",
+      "tintColor": "#5C79E6",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/placard/images/news.png",
+      "notify": true,
+      "url": "https://github.com/frs0n/placard/releases/tag/v1.9.2"
+    },
+    {
+      "appID": "com.verback.YTLite",
+      "title": "Opaline 1.12.0 · 10 Sep 2026",
+      "identifier": "Opaline-release-1.12.0",
+      "caption": "Opaline 1.12.0 is available.",
+      "date": "2026-09-10T02:02:27Z",
+      "tintColor": "#FF0000",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Opaline/images/news.png",
+      "notify": true,
+      "url": "https://github.com/verback2308/Opaline/releases/tag/1.12.0"
+    },
+    {
+      "appID": "com.macxk.KMusic",
+      "title": "KMusic 2.3.0 · 12 Mar 2026",
+      "identifier": "KMusic-release-歌一刀2.3.0",
+      "caption": "KMusic 2.3.0 is available.",
+      "date": "2026-03-12T08:39:59Z",
+      "tintColor": "#F03050",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/KMusic/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Mac-XK/KMusic/releases/tag/歌一刀2.3.0"
+    },
+    {
+      "appID": "com.lemin.Pocket-Poster",
+      "title": "Pocket Poster 3.0 · 29 Aug 2025",
+      "identifier": "Pocket Poster-release-v3.0",
+      "caption": "Pocket Poster 3.0 is available.",
+      "date": "2025-08-29T21:35:36Z",
+      "tintColor": "#DD94F3",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Pocket-Poster/images/news.png",
+      "notify": true,
+      "url": "https://github.com/leminlimez/Pocket-Poster/releases/tag/v3.0"
+    }
+  ]
+}

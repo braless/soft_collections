@@ -1,0 +1,48 @@
+{
+  "name": "WQManager",
+  "subtitle": "WQManager AltStore source by soft_collections & altgen",
+  "description": "Auto-updated AltStore source for WQManager",
+  "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WQManager/icon.png",
+  "website": "https://github.com/hseons/WQManager",
+  "tintColor": "#242529",
+  "apps": [
+    {
+      "name": "WQManager",
+      "bundleIdentifier": "mumu.pduola.WQManager",
+      "developerName": "hseons",
+      "subtitle": "iOS 26 App 数据管理与缓存清理工具",
+      "localizedDescription": "面向 iOS 26+ 的开源 App 数据管理、备份与单应用缓存清理工具：支持带哈希校验和安全回滚的数据备份恢复，以及按目录清理缓存；发布包为 unsigned IPA，真机使用需以保留 App Group 权限的付费开发者证书签名。",
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WQManager/icon.png",
+      "screenshots": [
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WQManager/images/01-apps.png",
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WQManager/images/02-cleaner.png",
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WQManager/images/03-history.png",
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WQManager/images/04-settings.png"
+      ],
+      "tintColor": "#242529",
+      "versions": [
+        {
+          "version": "0.3.1",
+          "date": "2026-11-12T12:58:23Z",
+          "localizedDescription": "- 新增存储占用面板与清理\n- 修复分享导入残留占用空间\n- 恢复后只保留最新一份安全备份",
+          "downloadURL": "https://gh-proxy.com/https://github.com/hseons/WQManager/releases/download/v0.3.1/WQManager-0.3.1-unsigned.ipa",
+          "size": 705110,
+          "minOSVersion": "26.0"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "appID": "mumu.pduola.WQManager",
+      "title": "WQManager 0.3.1 · 12 Nov 2026",
+      "identifier": "WQManager-release-v0.3.1",
+      "caption": "WQManager 0.3.1 is available.",
+      "date": "2026-11-12T12:58:23Z",
+      "tintColor": "#242529",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WQManager/images/news.png",
+      "notify": true,
+      "url": "https://github.com/hseons/WQManager/releases/tag/v0.3.1"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "name": "WrapPin",
+  "subtitle": "WrapPin AltStore source by soft_collections & altgen",
+  "description": "Auto-updated AltStore source for WrapPin",
+  "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/icon.png",
+  "website": "https://github.com/suversal/WrapPin",
+  "tintColor": "#1060F0",
+  "apps": [
+    {
+      "name": "WrapPin",
+      "bundleIdentifier": "com.suversal.wrappin",
+      "developerName": "suversal",
+      "subtitle": "本机虚拟定位与步行路线测试工具",
+      "localizedDescription": "在一张地图上选择、测试并移动 iPhone 向系统报告的位置：支持固定位置、步行与驾车路线模拟、收藏与历史记录，结束后可恢复真实位置。它通过本机配对与设备隧道建立开发者定位会话（默认使用 LocalDevVPN）。这是 Roam Control 的非官方中文分支，仅供在你自己拥有并控制的设备上做开发与测试。",
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/icon.png",
+      "screenshots": [
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/fixed-location.png",
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/walking-active.png",
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/settings.png",
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/privacy.png"
+      ],
+      "tintColor": "#1060F0",
+      "versions": [
+        {
+          "version": "1.0.22",
+          "date": "2026-11-12T15:30:27Z",
+          "localizedDescription": "优化定位维持和断线后的恢复：\n\n- 前台开始定位时提前启动后台保活，回到前台后检查长时间未收到回调的请求。\n- 运行中的定位遇到可重试连接错误时，以 1、2、4 秒间隔最多连续重连三次，沿用最新坐标。\n- 重连期间冻结路线进度，恢复后保留原有暂停状态。\n- 主动停止、重置和恢复真实位置会取消重连；认证错误及上次启动留下的未确认会话仍需手动处理。\n\n**安装包选择**\n\n- **Standard 标准版**：SideStore 等自签安装，配合 LocalDevVPN 等外部设备隧道。\n- **Tunnel 隧道版**：内置设备隧道，需匹配主 App 和扩展的 Packet Tunnel 签名权限；免费账号请选择标准版。\n\n支持 iOS/iPadOS 18.0+。均为未签名 IPA，沿用原签名身份升级同一版本通常无需重新配对。\n\n两版 Debug/Release 编译、13 项离线检查和包校验通过。**Build 74 真机安装及长时间锁屏/后台效果仍待回测**，尚不能保证所有定位失效问题均已解决。\n\nSHA-256：\n\n- Standard：`868eead7328847473c7e2b7ff3f11c9bdeb84132ebef0e417c83db5c6c35e735`\n- Tunnel：`e2c47e3886dd197c9b91eb32924081844f61d4a6d042226ec5d3a34ef00c8551`",
+          "downloadURL": "https://gh-proxy.com/https://github.com/suversal/WrapPin/releases/download/v1.0.22/WrapPin-Standard-1.0.22-build74-unsigned.ipa",
+          "size": 6923608,
+          "minOSVersion": "27.0"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "appID": "com.suversal.wrappin",
+      "title": "WrapPin 1.0.22 · 12 Nov 2026",
+      "identifier": "WrapPin-release-v1.0.22",
+      "caption": "WrapPin 1.0.22 is available.",
+      "date": "2026-11-12T15:30:27Z",
+      "tintColor": "#1060F0",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/news.png",
+      "notify": true,
+      "url": "https://github.com/suversal/WrapPin/releases/tag/v1.0.22"
+    }
+  ]
+}
