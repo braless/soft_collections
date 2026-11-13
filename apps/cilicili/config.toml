@@ -1,10 +1,11 @@
 # altgen config for the CiliCili AltStore source.
 # Run: uvx altgen -c config.toml
 #
-# No AltStore source upstream: identity comes from the repository's committed
-# build configuration — Config/Signing.xcconfig sets PRODUCT_BUNDLE_IDENTIFIER
-# to cc.bili, bili.xcodeproj sets IPHONEOS_DEPLOYMENT_TARGET to 26.1, and the
-# README states iOS 26.1+. The icon is the 1024px AppIcon asset.
+# No AltStore source upstream: the latest release IPA declares
+# CFBundleIdentifier nsk-1695.v-team.cn in its Info.plist, while the current
+# repository build configuration still sets PRODUCT_BUNDLE_IDENTIFIER to
+# cc.bili. Use the released IPA identity so AltStore can match installed apps.
+# The deployment target is 26.1, and the icon is the 1024px AppIcon asset.
 #
 # Release assets are not named consistently. Older releases use names such as
 # cilicili-1.1.1-1-unsigned.ipa or CiliCili-v1.0.22-unsigned.ipa, while current
@@ -24,7 +25,7 @@ tint_color = "#F5639D"
 
 [app]
 name = "CiliCili"
-bundle_identifier = "cc.bili"
+bundle_identifier = "nsk-1695.v-team.cn"
 developer_name = "Rone89"
 subtitle = "SwiftUI 第三方 B 站客户端"
 description = "使用 SwiftUI 编写的第三方 B 站客户端实验项目：首页推荐、搜索、UP 主空间、动态（图文/视频/转发）、视频详情与 HLS 播放、弹幕（开关、样式、关键词过滤）、评论与私信，并支持二维码与网页登录（登录态保存在本机 Keychain）。"
