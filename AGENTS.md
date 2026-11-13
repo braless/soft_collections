@@ -76,7 +76,7 @@ config.toml).
 of sync, and never hand-edit `apps.json`.**
 
 `.github/workflows/update.yml` regenerates and commits `apps.json` and
-`all-apps.json` on every push to `main`, every 6 hours, and on manual
+`all-apps.json` on every push to `main`, every hour, and on manual
 `workflow_dispatch`. (Both files are tracked despite `.gitignore`, so leave
 any local regenerated changes for the workflow to commit.)
 

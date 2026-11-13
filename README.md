@@ -165,7 +165,7 @@ directory.
 
 `apps/<AppName>/apps.json` and `all-apps.json` are gitignored and are not
 committed by contributors. The `Update all-apps.json` GitHub Actions workflow
-regenerates and commits them on every push to `main`, every 6 hours, or on
+regenerates and commits them on every push to `main`, every hour, or on
 manual "Run workflow". Re-rendered `images/news.png` files stay in the working
 tree for you to review and commit.
 
