@@ -17,7 +17,7 @@
       "versions": [
         {
           "version": "3.0",
-          "date": "2025-08-29",
+          "date": "2025-08-29T21:35:36Z",
           "localizedDescription": "# Features\r\n- Added an in-app explore page for finding and downloading wallpapers\r\n- Added custom CarPlay wallpapers (will not work on iOS 26.0)\r\n- *Preliminary* iOS 16 support (not all wallpapers will work)\r\n- Improved certain error messages\r\n\r\n# Bug Fixes\r\n- Fixed the aspect ratio/rotation of imported custom videos\r\n- Fixed the update API not being called correctly\r\n- Fixed issues with some alerts not popping up\r\n- Other various app stability improvements",
           "downloadURL": "https://github.com/leminlimez/Pocket-Poster/releases/download/v3.0/Pocket_Poster.ipa",
           "size": 13686800,

@@ -17,7 +17,7 @@
       "versions": [
         {
           "version": "2.5.2",
-          "date": "2026-10-19",
+          "date": "2026-10-19T11:35:11Z",
           "localizedDescription": "## [2.5.2] - 2026-10-19\r\n\r\n### English / Added\r\n- **Check tone status button.** The current tone state can now be checked on\r\n  demand from the home screen. The read channel is unreliable on some iOS\r\n  releases (the AirTraffic move step never completes there), so the check\r\n  reports one of three outcomes: silenced, originals still in place, or\r\n  unverifiable on this device. It never runs automatically and never gates an\r\n  operation.\r\n\r\n### English / Changed\r\n- After silencing, the success alert no longer claims a verified result when\r\n  the read-back could not confirm it; it says the silence was written but\r\n  unverified and points at the tone status check. This covers the\r\n  [issue #6](https://github.com/LinkPass888/AirBeep/issues/6) report where the\r\n  write channel returns success on iOS 27.x while the tones never change.\r\n\r\n---\r\n\r\n### 中文 / 新增\r\n- **校验提示音状态按钮。** 可在首页按需检测当前提示音状态。部分 iOS 版本上\r\n  读取通道不可靠（AirTraffic 搬运步骤始终无法完成），因此检测结果分为三种：\r\n  已静音、原始提示音仍在、本机无法校验。该检测绝不自动运行，也不会阻断\r\n  任何操作。\r\n\r\n### 中文 / 变更\r\n- 静音后的成功弹窗在回读校验无法确认时不再直接宣称成功，改为提示\"静音\r\n  已写入、结果未经校验\"，并引导使用提示音状态校验。对应\r\n  [issue #6](https://github.com/LinkPass888/AirBeep/issues/6) 反馈的\r\n  iOS 27.x 上写入通道返回成功但提示音实际未变的问题。\r\n\r\n**Full Changelog**: https://github.com/LinkPass888/AirBeep/compare/v2.5.1...v2.5.2",
           "downloadURL": "https://github.com/LinkPass888/AirBeep/releases/download/v2.5.2/airbeep-v2.5.2-unsigned.ipa",
           "size": 5880046,
