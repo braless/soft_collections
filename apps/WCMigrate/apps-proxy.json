@@ -1,0 +1,47 @@
+{
+  "name": "WCMigrate",
+  "subtitle": "WCMigrate AltStore source by soft_collections & altgen",
+  "description": "Auto-updated AltStore source for WCMigrate",
+  "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WCMigrate/icon.png",
+  "website": "https://github.com/yangokok886/WCMigrate",
+  "tintColor": "#86F4CF",
+  "apps": [
+    {
+      "name": "WCMigrate",
+      "bundleIdentifier": "local.xchat.transfer",
+      "developerName": "yangokok886",
+      "subtitle": "iOS 26 应用沙盒数据迁移工具",
+      "localizedDescription": "面向 iOS 26.0–27.3 的原生应用沙盒数据迁移工具，主要用于微信及其多开应用：支持替换、转换与合并文件及文件夹，数据暂存与中断续传，插件配置备份恢复，以及带完整哈希校验的 APFS 写时复制；真机使用需以保留 App Group 权限的开发者证书签名。",
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WCMigrate/icon.png",
+      "screenshots": [
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WCMigrate/images/01-migration.png",
+        "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WCMigrate/images/02-features.png"
+      ],
+      "tintColor": "#86F4CF",
+      "versions": [
+        {
+          "version": "1.0.3",
+          "buildVersion": "27",
+          "date": "2026-11-14T09:07:19Z",
+          "localizedDescription": "本版本聚焦迁移稳定性与资源占用优化。\n\n- 优化大规模文件迁移时的内存与磁盘压力，降低大量文件场景下的闪退风险。\n- 增加磁盘写入问题分析记录，便于定位迁移过程中的资源压力。\n\nIPA 使用 adhoc 签名，不包含可用于普通真机安装的开发者 provisioning profile。",
+          "downloadURL": "https://gh-proxy.com/https://github.com/yangokok886/WCMigrate/releases/download/v1.0.3/WCMigrate-1.0.3-build27.ipa",
+          "size": 1904481,
+          "minOSVersion": "26.0"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "appID": "local.xchat.transfer",
+      "title": "WCMigrate 1.0.3 · 14 Nov 2026",
+      "identifier": "WCMigrate-release-v1.0.3",
+      "caption": "WCMigrate 1.0.3 is available.",
+      "date": "2026-11-14T09:07:19Z",
+      "tintColor": "#86F4CF",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WCMigrate/images/news.png",
+      "notify": true,
+      "url": "https://github.com/yangokok886/WCMigrate/releases/tag/v1.0.3"
+    }
+  ]
+}
