@@ -384,11 +384,11 @@
       "tintColor": "#1E8FC7",
       "versions": [
         {
-          "version": "0.9.7",
-          "date": "2026-11-14T14:17:48Z",
-          "localizedDescription": "> **Requires:** iOS 27, or iOS 26.0 – 26.7.2. Tested on iOS 27.0.1, 27.2.1, 26.7.1 and the 27.3 beta (confirmed by a user).\n> **Needs:** a sideloading tool that keeps the App Group entitlement; see [Signing](https://github.com/kolbicz/WQFiles#signing-the-app-group) in the README.\n\n# Worse Query Files 0.9.7\n\n## New\n\n- **New design** ([#43](https://github.com/kolbicz/WQFiles/issues/43)): a redesigned start screen and tabs.\n  - **Home:** container cards, tools, favorites and the startup check with a **Quick Check** button.\n  - **Tabs:** Home, Apps, Clean and Backups. Backups holds App Backups, File Backups and Recently Deleted.\n  - **Settings** opens from the gear button.\n  - On iPhone the tab bar sits at the bottom and hides inside folders. On iPad it sits at the top and stays.\n- **Classic design:** turn off **Settings → New Design** to get the previous start screen back. It switches right away and is remembered.\n\n## Changed\n\n- **Translations** for the new screens in all languages.\n\n## Fixed\n\n- **Classic design:** folders opened from the start screen now show their title in your language instead of English.\n\n## Credit\n\nNew design: GpGp700. Sandbox technique: [worse_query](https://github.com/forcequitOS/worse_query) by Taj C (forcequit). Container enumeration: [KAMUI](https://github.com/murk-sus/kamui-escape) by murk-sus. Translations: iosrxwy (Simplified Chinese), hfip (Arabic), hooray804 (Korean), Reinascape (Russian). Thanks to everyone who sent Logs and ideas. GPL-3.0-or-later.\n\nSHA-256 of WQFiles.ipa: `0a88b3ed7fd05bf63c5ddde51bb3825330543f69624f7c05e98001ef28c8e94b`",
-          "downloadURL": "https://gh-proxy.com/https://github.com/kolbicz/WQFiles/releases/download/v0.9.7/WQFiles.ipa",
-          "size": 814659,
+          "version": "0.9.8",
+          "date": "2026-11-14T18:14:23Z",
+          "localizedDescription": "> **Requires:** iOS 27, or iOS 26.0 – 26.7.2. Tested on iOS 27.0.1, 27.2.1, 26.7.1 and the 27.3 beta (confirmed by a user).\n> **Needs:** a sideloading tool that keeps the App Group entitlement; see [Signing](https://github.com/kolbicz/WQFiles#signing-the-app-group) in the README.\n\n# Worse Query Files 0.9.8\n\n## New\n\n- **Reset Access Cache in Settings:** under **Settings → Troubleshooting**, in both designs. Until now it only appeared on the startup check screen when sandbox access failed, so it couldn't be reached after **Continue Anyway** or when access broke later. It puts WQ Files' own cache folder in the App Group back; nothing is deleted.\n\n## Changed\n\n- **Clearer Log when access is blocked:** when the access cache can't be repaired automatically, the Log now says why and what it found (swap marker, preserved Caches folder, what Caches is now) and points to **Reset Access Cache**. The same failure is logged once instead of for every folder.\n- **Translations** for the new texts in all languages.\n\n## Credit\n\nNew design: GpGp700. Sandbox technique: [worse_query](https://github.com/forcequitOS/worse_query) by Taj C (forcequit). Container enumeration: [KAMUI](https://github.com/murk-sus/kamui-escape) by murk-sus. Translations: iosrxwy (Simplified Chinese), hfip (Arabic), hooray804 (Korean), Reinascape (Russian), buraakkcayir (Turkish review). Thanks to everyone who sent Logs and ideas. GPL-3.0-or-later.\n\nSHA-256 of WQFiles.ipa: `7459ded30f5aa740a49060e1497ddf7eafa7b0152290b8104d336338de9a050c`",
+          "downloadURL": "https://gh-proxy.com/https://github.com/kolbicz/WQFiles/releases/download/v0.9.8/WQFiles.ipa",
+          "size": 817121,
           "minOSVersion": "26.0"
         }
       ]
@@ -530,14 +530,14 @@
   "news": [
     {
       "appID": "cz.kolbi.wqfiles",
-      "title": "WQ Files 0.9.7 · 14 Nov 2026",
-      "identifier": "WQ Files-release-v0.9.7",
-      "caption": "WQ Files 0.9.7 is available.",
-      "date": "2026-11-14T14:17:48Z",
+      "title": "WQ Files 0.9.8 · 14 Nov 2026",
+      "identifier": "WQ Files-release-v0.9.8",
+      "caption": "WQ Files 0.9.8 is available.",
+      "date": "2026-11-14T18:14:23Z",
       "tintColor": "#1E8FC7",
       "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WQFiles/images/news.png",
       "notify": true,
-      "url": "https://github.com/kolbicz/WQFiles/releases/tag/v0.9.7"
+      "url": "https://github.com/kolbicz/WQFiles/releases/tag/v0.9.8"
     },
     {
       "appID": "sb.moe.kumone-ios",
