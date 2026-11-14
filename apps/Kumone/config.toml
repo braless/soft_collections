@@ -15,7 +15,7 @@ tint_color = "#F0D060"
 
 [app]
 name = "Kumone"
-bundle_identifier = "sb.moe.kumone"
+bundle_identifier = "sb.moe.kumone-ios"
 developer_name = "missuo"
 subtitle = "原生 NetEase Cloud Music iOS 客户端（雲の音）"
 description = "Kumone（雲の音）— native NetEase Cloud Music client for iOS. Talks directly to NetEase's real API with no third-party server: QR-code login, gray-track unblocking, synced lyrics with translation, immersive artwork-tinted now-playing, and playlist management.\n\nSupports English and Simplified Chinese localization."
