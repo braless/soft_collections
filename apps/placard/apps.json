@@ -19,11 +19,11 @@
       "tintColor": "#5C79E6",
       "versions": [
         {
-          "version": "2.0.2",
-          "date": "2026-11-13T15:59:56Z",
-          "localizedDescription": "- 加快首次打开 Library 时的壁纸容器定位，找到目标后立即停止扫描。\n- 合并重复扫描，减少权限请求和签名信息读取。\n\n本地编译的未签名 Release IPA。",
-          "downloadURL": "https://github.com/frs0n/placard/releases/download/v2.0.2/placard-v2.0.2-unsigned.ipa",
-          "size": 6695549,
+          "version": "2.0.3",
+          "date": "2026-11-14T07:47:09Z",
+          "localizedDescription": "- 修复发布 IPA 未嵌入 App Group 权限声明的问题，便于重签工具识别所需权限。\n- 打包时验证实际签名和最终 IPA 中的 App Group 配置。\n\n本地编译，附带 ad-hoc 临时签名，仍需自行重签安装。",
+          "downloadURL": "https://github.com/frs0n/placard/releases/download/v2.0.3/placard-v2.0.3-unsigned.ipa",
+          "size": 6699817,
           "minOSVersion": "26.0"
         }
       ]
@@ -32,14 +32,14 @@
   "news": [
     {
       "appID": "me.ssus.placard",
-      "title": "Placard 2.0.2 · 13 Nov 2026",
-      "identifier": "Placard-release-v2.0.2",
-      "caption": "Placard 2.0.2 is available.",
-      "date": "2026-11-13T15:59:56Z",
+      "title": "Placard 2.0.3 · 14 Nov 2026",
+      "identifier": "Placard-release-v2.0.3",
+      "caption": "Placard 2.0.3 is available.",
+      "date": "2026-11-14T07:47:09Z",
       "tintColor": "#5C79E6",
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/placard/images/news.png",
       "notify": true,
-      "url": "https://github.com/frs0n/placard/releases/tag/v2.0.2"
+      "url": "https://github.com/frs0n/placard/releases/tag/v2.0.3"
     }
   ]
 }

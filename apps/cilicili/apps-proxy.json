@@ -16,11 +16,11 @@
       "tintColor": "#F5639D",
       "versions": [
         {
-          "version": "1.1.3",
-          "date": "2026-11-09T10:12:47Z",
-          "localizedDescription": "## 这版更新了啥\n\n- 首页推荐和动态都可以点底栏回到顶部，到顶后再点一次就刷新。动态下拉也会直接获取新内容。\n- 动态页顶部可以自选显示哪些频道，还能调整顺序。\n- 长动态和长评论可以点末行的「… 展开」，直接看全文。\n- 播放器新增 CC 字幕入口，可以选字幕轨，也能设置 AI 字幕偏好。横屏播放的设置移到右侧，屏幕顶部左右分别显示时间和电量。\n- 分 P、番剧选集和合集换成了带封面的紧凑列表。视频详情里的头像和操作按钮也重新排过，更容易区分。\n\n## 修了哪些问题\n\n- 优化评论滚动和翻页，修了切换「最热／最新」时出现的大块空白和加载占位盖住排序栏的问题。\n- 修正部分 HDR 视频的显示和弹幕设置，并补充了部分视频取流失败时的重试方式。\n- 调整搜索筛选栏和投币面板，投币时可以选择是否同时点赞。\n\n## 安装包\n\n- 附件里的 `bili-release-unsigned.ipa` 是 1.1.3（Build 150）的未签名安装包，需自行签名后安装。",
-          "downloadURL": "https://gh-proxy.com/https://github.com/Rone89/cilicili/releases/download/v1.1.3/bili-release-unsigned.ipa",
-          "size": 24576338,
+          "version": "1.1.4",
+          "date": "2026-11-14T09:45:45Z",
+          "localizedDescription": "## 更新内容（1.1.3 → 1.1.4）\n\n- **启动更快**：点开视频到出画面明显提速。\n- **修复 #66**：全屏后画面漂移到左下角（HEVC/AV1 编码场景）。\n- **弹幕重做**：更省电，暂停/拖动/倍速自动跟随；修好不显示、位置错、重叠、断流、空档、重复等问题。\n- **弹幕设置更干净**：去掉灰黑色块；横屏调字体粗细不再被弹回竖屏。\n- **横屏 100% 显示区域可铺满**（底部按钮区除外）。\n- **其他**：图片/封面清晰度合并为一个选项；长视频标题可展开看全。\n\n---\n\n**安装说明**：附件为**未签名** IPA，需自行签名后安装。",
+          "downloadURL": "https://gh-proxy.com/https://github.com/Rone89/cilicili/releases/download/v1.1.4/bili-release-unsigned.ipa",
+          "size": 24660955,
           "minOSVersion": "26.1"
         }
       ]
@@ -29,14 +29,14 @@
   "news": [
     {
       "appID": "nsk-1695.v-team.cn",
-      "title": "CiliCili 1.1.3 · 09 Nov 2026",
-      "identifier": "CiliCili-release-v1.1.3",
-      "caption": "CiliCili 1.1.3 is available.",
-      "date": "2026-11-09T10:12:47Z",
+      "title": "CiliCili 1.1.4 · 14 Nov 2026",
+      "identifier": "CiliCili-release-v1.1.4",
+      "caption": "CiliCili 1.1.4 is available.",
+      "date": "2026-11-14T09:45:45Z",
       "tintColor": "#F5639D",
       "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/cilicili/images/news.png",
       "notify": true,
-      "url": "https://github.com/Rone89/cilicili/releases/tag/v1.1.3"
+      "url": "https://github.com/Rone89/cilicili/releases/tag/v1.1.4"
     }
   ]
 }

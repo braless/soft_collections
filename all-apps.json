@@ -73,11 +73,11 @@
       "tintColor": "#F5639D",
       "versions": [
         {
-          "version": "1.1.3",
-          "date": "2026-11-09T10:12:47Z",
-          "localizedDescription": "## 这版更新了啥\n\n- 首页推荐和动态都可以点底栏回到顶部，到顶后再点一次就刷新。动态下拉也会直接获取新内容。\n- 动态页顶部可以自选显示哪些频道，还能调整顺序。\n- 长动态和长评论可以点末行的「… 展开」，直接看全文。\n- 播放器新增 CC 字幕入口，可以选字幕轨，也能设置 AI 字幕偏好。横屏播放的设置移到右侧，屏幕顶部左右分别显示时间和电量。\n- 分 P、番剧选集和合集换成了带封面的紧凑列表。视频详情里的头像和操作按钮也重新排过，更容易区分。\n\n## 修了哪些问题\n\n- 优化评论滚动和翻页，修了切换「最热／最新」时出现的大块空白和加载占位盖住排序栏的问题。\n- 修正部分 HDR 视频的显示和弹幕设置，并补充了部分视频取流失败时的重试方式。\n- 调整搜索筛选栏和投币面板，投币时可以选择是否同时点赞。\n\n## 安装包\n\n- 附件里的 `bili-release-unsigned.ipa` 是 1.1.3（Build 150）的未签名安装包，需自行签名后安装。",
-          "downloadURL": "https://github.com/Rone89/cilicili/releases/download/v1.1.3/bili-release-unsigned.ipa",
-          "size": 24576338,
+          "version": "1.1.4",
+          "date": "2026-11-14T09:45:45Z",
+          "localizedDescription": "## 更新内容（1.1.3 → 1.1.4）\n\n- **启动更快**：点开视频到出画面明显提速。\n- **修复 #66**：全屏后画面漂移到左下角（HEVC/AV1 编码场景）。\n- **弹幕重做**：更省电，暂停/拖动/倍速自动跟随；修好不显示、位置错、重叠、断流、空档、重复等问题。\n- **弹幕设置更干净**：去掉灰黑色块；横屏调字体粗细不再被弹回竖屏。\n- **横屏 100% 显示区域可铺满**（底部按钮区除外）。\n- **其他**：图片/封面清晰度合并为一个选项；长视频标题可展开看全。\n\n---\n\n**安装说明**：附件为**未签名** IPA，需自行签名后安装。",
+          "downloadURL": "https://github.com/Rone89/cilicili/releases/download/v1.1.4/bili-release-unsigned.ipa",
+          "size": 24660955,
           "minOSVersion": "26.1"
         }
       ]
@@ -206,11 +206,11 @@
       "tintColor": "#F0D060",
       "versions": [
         {
-          "version": "0.3.35",
-          "date": "2026-11-13T19:25:08Z",
-          "localizedDescription": "### Added\n\n- **Comments**: on the iPhone now-playing page, swipe left from the lyrics to the song's comments, and right to return; two dots show which page is up. Comments load when you first turn to them and follow the song that is playing.\n\n### Fixed\n\n- **Playback**: a request for a song's playback address that drops, times out or meets a server error is retried once, instead of failing at once with \"Unable to play\" or switching to a third-party source (#210).\n- **iOS**: songs the service can play no longer keep playing from a third-party source copy in the cache; that copy is only used when the service refuses the song. Thanks @yuanruoyu515 (#205, closes #206).\n- **iOS 16/17**: the now-playing page no longer stops part way when it opens from the mini player, leaving it short of the top; it now opens as a full-screen page (#213).\n\n---\n\n### 新增\n\n- **评论**：iPhone 播放页的歌词向左滑即可查看这首歌的评论，向右滑回到歌词，底部两个小圆点提示当前页。评论在第一次翻到时才加载，并跟随正在播放的歌曲切换。\n\n### 修复\n\n- **播放**：获取播放地址的请求断线、超时或遇到服务器错误时会自动重试一次，不再直接提示「无法播放」或转到第三方音源（#210）。\n- **iOS**：网易云能播放的歌曲，不再一直播放缓存里的第三方音源副本；只有网易云拒绝时才会使用它。感谢 @yuanruoyu515（#205，关闭 #206）。\n- **iOS 16/17**：从迷你播放条打开播放页时，不会再停在半路、没有铺满屏幕，现在以全屏页面打开（#213）。",
-          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.35/Kumone-iOS-0.3.35.ipa",
-          "size": 4289752,
+          "version": "0.3.36",
+          "date": "2026-11-14T10:16:56Z",
+          "localizedDescription": "### Fixed\n\n- **Third-party sources**: for songs Kuwo won't serve, its 11-second clip suggesting Kuwo Music is no longer played as the song; the next source is tried instead, and copies of the clip already in the cache are removed (#212).\n- **iOS 16/17**: opening the now-playing page from the mini player no longer freezes the app on iOS 17. These systems show the lyrics alone; the song's comments stay in its More menu (#213).\n- **Comments**: the comments beside the iPhone lyrics no longer keep spinning after a load is interrupted; they load again on their own (#214).\n- **iOS**: \"Unable to play\" now says why — the request that failed, or the code the service answered with when it gave no playback address (#209).\n\n---\n\n### 修复\n\n- **第三方音源**：酷我不给播放的歌，它返回的「建议去酷我音乐收听」的 11 秒提示音不再被当成歌曲播放，会改为尝试下一个音源，已经缓存的这段提示音也会被清掉（#212）。\n- **iOS 16/17**：在 iOS 17 上从迷你播放条打开播放页不会再卡死。这两个系统上播放页只显示歌词，评论仍可在歌曲的「更多」菜单中查看（#213）。\n- **评论**：iPhone 歌词旁的评论在加载被打断后不会再一直转圈，会自动重新加载（#214）。\n- **iOS**：「无法播放」提示现在会写明原因：请求失败的原因，或网易云没给播放地址时返回的代码（#209）。",
+          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.36/Kumone-iOS-0.3.36.ipa",
+          "size": 4292609,
           "minOSVersion": "16.0"
         }
       ]
@@ -279,12 +279,12 @@
       "tintColor": "#73b480",
       "versions": [
         {
-          "version": "2.2.0",
-          "buildVersion": "5598",
-          "date": "2026-11-03T07:43:02Z",
-          "localizedDescription": "更新投屏依赖 https://github.com/bggRGjQaUbCoE/PiliPlus/issues/2680#issuecomment-6597938908\r\n修复部分视频评论显示不全 #3458\r\n修复播放课堂视频 #3454 by @ucxn\r\n修复 macOS 关闭系统标题栏后无法拖动 #3453 by @NalCol\r\n修复点赞弹幕跳转未留提前量，导致跳转到弹幕时无法加载 #3459 by @Rim-World\r\nChromeOS(ARC) 上不再主动请求屏幕方向，由系统决定窗口方向 #3406 co-by @selcarpa",
-          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.2.0.2/PiliPlus_ios_2.2.0%2B5598.ipa",
-          "size": 24933082,
+          "version": "2.2.1",
+          "buildVersion": "5655",
+          "date": "2026-11-14T08:11:53Z",
+          "localizedDescription": "支持管理粉丝勋章\r\n支持进入直播间自动佩戴对应粉丝牌，默认关\r\n动态支持查看全文 https://github.com/bggRGjQaUbCoE/PiliPlus/issues/3420#issuecomment-6716986635\r\n支持更新已缓存视频的合集信息\r\n支持缓存/更新视频字幕、分段信息、音量均衡信息\r\n支持桌面端推荐 #3463 by @liaolon\r\n直播画中画、媒体通知添加刷新、弹幕显示按钮\r\n直播支持上报心跳、观看直播增加亲密度 #2073\r\n楼中楼评论支持线程式显示、保存评论链 #3351 by @My-Responsitories\r\n\r\n修复 bug\r\n修复音视频音频焦点问题 #2702\r\n修复部分视频评论显示不全 #3504\r\n修复私信失效卡片显示 #3481 by @HChaZZY\r\n修复动态详情页刷新指示器 #3477 by @PYH0809\r\n修复 iOS 登录验证码验证 #3484 by @ngbyspy\r\n修复 iOS 直播全屏底部边距 #3499 by @freejool\r\n修复 #3553 by @Tobiichi-Origuchi\r\n修复乐播旧控制地址导致的投屏失败 #3507 by @TG-Twilight\r\n修复 niri 退出画中画导致鼠标操作异常 #3471 by @Tobiichi-Origuchi\r\n修复播放器音量超过 100% 后的削波失真 #3448 by @No-World co-by @My-Responsitories",
+          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.2.1/PiliPlus_ios_2.2.1%2B5655.ipa",
+          "size": 25053075,
           "minOSVersion": "14.0"
         }
       ]
@@ -302,11 +302,11 @@
       "tintColor": "#5C79E6",
       "versions": [
         {
-          "version": "2.0.2",
-          "date": "2026-11-13T15:59:56Z",
-          "localizedDescription": "- 加快首次打开 Library 时的壁纸容器定位，找到目标后立即停止扫描。\n- 合并重复扫描，减少权限请求和签名信息读取。\n\n本地编译的未签名 Release IPA。",
-          "downloadURL": "https://github.com/frs0n/placard/releases/download/v2.0.2/placard-v2.0.2-unsigned.ipa",
-          "size": 6695549,
+          "version": "2.0.3",
+          "date": "2026-11-14T07:47:09Z",
+          "localizedDescription": "- 修复发布 IPA 未嵌入 App Group 权限声明的问题，便于重签工具识别所需权限。\n- 打包时验证实际签名和最终 IPA 中的 App Group 配置。\n\n本地编译，附带 ad-hoc 临时签名，仍需自行重签安装。",
+          "downloadURL": "https://github.com/frs0n/placard/releases/download/v2.0.3/placard-v2.0.3-unsigned.ipa",
+          "size": 6699817,
           "minOSVersion": "26.0"
         }
       ]
@@ -505,6 +505,50 @@
   ],
   "news": [
     {
+      "appID": "sb.moe.kumone-ios",
+      "title": "Kumone 0.3.36 · 14 Nov 2026",
+      "identifier": "Kumone-release-v0.3.36",
+      "caption": "Kumone 0.3.36 is available.",
+      "date": "2026-11-14T10:16:56Z",
+      "tintColor": "#F0D060",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kumone/images/news.png",
+      "notify": true,
+      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.36"
+    },
+    {
+      "appID": "nsk-1695.v-team.cn",
+      "title": "CiliCili 1.1.4 · 14 Nov 2026",
+      "identifier": "CiliCili-release-v1.1.4",
+      "caption": "CiliCili 1.1.4 is available.",
+      "date": "2026-11-14T09:45:45Z",
+      "tintColor": "#F5639D",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/cilicili/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Rone89/cilicili/releases/tag/v1.1.4"
+    },
+    {
+      "appID": "com.example.piliplus",
+      "title": "PiliPlus 2.2.1 · 14 Nov 2026",
+      "identifier": "PiliPlus-release-2.2.1",
+      "caption": "PiliPlus 2.2.1 is available.",
+      "date": "2026-11-14T08:11:53Z",
+      "tintColor": "#73b480",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PiliPlus/images/news.png",
+      "notify": true,
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.2.1"
+    },
+    {
+      "appID": "me.ssus.placard",
+      "title": "Placard 2.0.3 · 14 Nov 2026",
+      "identifier": "Placard-release-v2.0.3",
+      "caption": "Placard 2.0.3 is available.",
+      "date": "2026-11-14T07:47:09Z",
+      "tintColor": "#5C79E6",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/placard/images/news.png",
+      "notify": true,
+      "url": "https://github.com/frs0n/placard/releases/tag/v2.0.3"
+    },
+    {
       "appID": "app.local.iPadn",
       "title": "iPadn 2.1.1 · 14 Nov 2026",
       "identifier": "iPadn-release-v2.1.1",
@@ -514,28 +558,6 @@
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/iPadn/images/news.png",
       "notify": true,
       "url": "https://github.com/mengangs/ipadn/releases/tag/v2.1.1"
-    },
-    {
-      "appID": "sb.moe.kumone-ios",
-      "title": "Kumone 0.3.35 · 13 Nov 2026",
-      "identifier": "Kumone-release-v0.3.35",
-      "caption": "Kumone 0.3.35 is available.",
-      "date": "2026-11-13T19:25:08Z",
-      "tintColor": "#F0D060",
-      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kumone/images/news.png",
-      "notify": true,
-      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.35"
-    },
-    {
-      "appID": "me.ssus.placard",
-      "title": "Placard 2.0.2 · 13 Nov 2026",
-      "identifier": "Placard-release-v2.0.2",
-      "caption": "Placard 2.0.2 is available.",
-      "date": "2026-11-13T15:59:56Z",
-      "tintColor": "#5C79E6",
-      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/placard/images/news.png",
-      "notify": true,
-      "url": "https://github.com/frs0n/placard/releases/tag/v2.0.2"
     },
     {
       "appID": "cz.kolbi.wqfiles",
@@ -582,17 +604,6 @@
       "url": "https://github.com/hseons/WQManager/releases/tag/v0.3.1"
     },
     {
-      "appID": "nsk-1695.v-team.cn",
-      "title": "CiliCili 1.1.3 · 09 Nov 2026",
-      "identifier": "CiliCili-release-v1.1.3",
-      "caption": "CiliCili 1.1.3 is available.",
-      "date": "2026-11-09T10:12:47Z",
-      "tintColor": "#F5639D",
-      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/cilicili/images/news.png",
-      "notify": true,
-      "url": "https://github.com/Rone89/cilicili/releases/tag/v1.1.3"
-    },
-    {
       "appID": "org.zhaohe.MiniWatts",
       "title": "MiniWatts 1.7.0 · 07 Nov 2026",
       "identifier": "MiniWatts-release-v1.7.0",
@@ -602,17 +613,6 @@
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/MiniWatts/images/news.png",
       "notify": true,
       "url": "https://github.com/ResistanceTo/MiniWatts/releases/tag/v1.7.0"
-    },
-    {
-      "appID": "com.example.piliplus",
-      "title": "PiliPlus 2.2.0 · 03 Nov 2026",
-      "identifier": "PiliPlus-release-2.2.0.2",
-      "caption": "PiliPlus 2.2.0 is available.",
-      "date": "2026-11-03T07:43:02Z",
-      "tintColor": "#73b480",
-      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/PiliPlus/images/news.png",
-      "notify": true,
-      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.2.0.2"
     },
     {
       "appID": "com.douban.frodo",
