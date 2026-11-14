@@ -8,7 +8,7 @@
   "apps": [
     {
       "name": "Kumone",
-      "bundleIdentifier": "sb.moe.kumone",
+      "bundleIdentifier": "sb.moe.kumone-ios",
       "developerName": "missuo",
       "subtitle": "原生 NetEase Cloud Music iOS 客户端（雲の音）",
       "localizedDescription": "Kumone（雲の音）— native NetEase Cloud Music client for iOS. Talks directly to NetEase's real API with no third-party server: QR-code login, gray-track unblocking, synced lyrics with translation, immersive artwork-tinted now-playing, and playlist management.\n\nSupports English and Simplified Chinese localization.",
@@ -33,7 +33,7 @@
   ],
   "news": [
     {
-      "appID": "sb.moe.kumone",
+      "appID": "sb.moe.kumone-ios",
       "title": "Kumone 0.3.35 · 13 Nov 2026",
       "identifier": "Kumone-release-v0.3.35",
       "caption": "Kumone 0.3.35 is available.",
