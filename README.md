@@ -87,6 +87,9 @@ Custom PosterBoard animated wallpapers for iOS 17+ — browse and download commu
 ### <a href="https://github.com/kolbicz/WQFiles"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/WQFiles/icon.png" alt="WQ Files icon" width="24" align="top"> WQ Files</a>
 无需越狱浏览 App 数据与文件，支持 Plist/十六进制编辑、应用数据备份恢复和缓存清理；需使用保留 App Group 权限的签名工具（iOS 26+）。
 
+### <a href="https://github.com/yangokok886/WCMigrate"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/WCMigrate/icon.png" alt="WCMigrate icon" width="24" align="top"> WCMigrate</a>
+面向 iOS 26.0–27.3 的原生应用沙盒数据迁移工具，主要用于微信及其多开应用：支持替换、转换与合并文件及文件夹，数据暂存与中断续传，插件配置备份恢复，以及带完整哈希校验的 APFS 写时复制（需保留 App Group 权限签名）。
+
 ### <a href="https://github.com/hseons/WQManager"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/WQManager/icon.png" alt="WQManager icon" width="24" align="top"> WQManager</a>
 面向 iOS 26+ 的开源 App 数据管理、备份与单应用缓存清理工具：支持带哈希校验和安全回滚的数据备份恢复，以及按目录清理缓存；发布包为 unsigned IPA，真机使用需以保留 App Group 权限的付费开发者证书签名。
 

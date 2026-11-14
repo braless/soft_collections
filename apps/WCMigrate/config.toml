@@ -1,0 +1,44 @@
+# altgen config for the WCMigrate AltStore source.
+# Run: uvx altgen -c config.toml
+# Identity was read from the released IPA:
+# Payload/XChatTransfer.app/Info.plist -> local.xchat.transfer, 1.0.3, build 27.
+
+[github]
+repo = "yangokok886/WCMigrate"
+
+[source]
+name = "WCMigrate"
+subtitle = "WCMigrate AltStore source by soft_collections & altgen"
+description = "Auto-updated AltStore source for WCMigrate"
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WCMigrate/icon.png"
+website = "https://github.com/yangokok886/WCMigrate"
+tint_color = "#86F4CF"
+
+[app]
+name = "WCMigrate"
+bundle_identifier = "local.xchat.transfer"
+developer_name = "yangokok886"
+subtitle = "iOS 26 应用沙盒数据迁移工具"
+description = "面向 iOS 26.0–27.3 的原生应用沙盒数据迁移工具，主要用于微信及其多开应用：支持替换、转换与合并文件及文件夹，数据暂存与中断续传，插件配置备份恢复，以及带完整哈希校验的 APFS 写时复制；真机使用需以保留 App Group 权限的开发者证书签名。"
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WCMigrate/icon.png"
+screenshots = [
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WCMigrate/images/01-migration.png",
+  "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WCMigrate/images/02-features.png",
+]
+tint_color = "#86F4CF"
+min_os_version = "26.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# asset_pattern is a regex (not glob): releases ship one WCMigrate IPA.
+asset_pattern = "(?i)^WCMigrate-.*\\.ipa$"
+# Build number is embedded in the asset filename (e.g. -build27).
+build_version_pattern = "-build(\\d+)\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+image_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WCMigrate/images/news.png"
+
+[output]
+path = "apps.json"

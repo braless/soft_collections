@@ -1,0 +1,12 @@
+# render_news.py config: python templates/render_news.py --out apps/WCMigrate
+
+name = "WCMigrate"
+tagline = "iOS 26 应用沙盒数据迁移工具"
+
+# Match the app icon: dark teal background with mint accents.
+[colors]
+tint = "#86F4CF"
+tint_alt = "#80F0C0"
+background = "#043F41"
+text_color = "#FFFFFF"
+tagline_color = "#A8E6D0"
