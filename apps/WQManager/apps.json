@@ -22,11 +22,11 @@
       "tintColor": "#242529",
       "versions": [
         {
-          "version": "0.3.1",
-          "date": "2026-11-12T12:58:23Z",
-          "localizedDescription": "- 新增存储占用面板与清理\n- 修复分享导入残留占用空间\n- 恢复后只保留最新一份安全备份",
-          "downloadURL": "https://github.com/hseons/WQManager/releases/download/v0.3.1/WQManager-0.3.1-unsigned.ipa",
-          "size": 705110,
+          "version": "0.4.0",
+          "date": "2026-11-15T13:19:16Z",
+          "localizedDescription": "本轮围绕空间定位和备份管理补全 P1/P2，P3 加密导出已取消。\n\n- 空间变化：最近 60 次扫描、App 增长排行与历史趋势。\n- 文件查找：大文件排序、文件名/路径搜索、类型与大小筛选、预览及定位目录。\n- 批量备份：串行执行快速/完整备份，支持重试失败项、完成当前任务后停止剩余项。\n- 备份备注与重要备份保护；保护状态随导入导出保留，并接入删除和自动保留策略。\n- 备份内容浏览与同范围备份对比，可按需进行 SHA-256 内容校验。\n- 目录级自定义备份：只恢复所选目录，安全备份、回滚和恢复日志使用相同范围。\n- 下一步 WQ 计划：访问能力诊断 → App Groups/扩展容器只读总览 → 结构化数据检查。\n\n验证：19 组可移植测试、模拟器构建/静态分析、arm64 Release 构建及 IPA 完整性检查通过；中英文 616 个键与格式占位符一致。真机 WQ 权限、大容器与系统中断场景仍需回归。\n\n安装包未签名，需自行签名并保留 App Group。快速/完整备份继续使用格式 2；自定义备份格式 3 需 0.4.0 或更新版本。备份保护由 0.4.0+ 执行。批量任务需保持前台，不提供退出后自动续跑。\n\nSHA-256: 9514534441d813480c4413c72cf69d95e062400244350db06563999db02aec3e",
+          "downloadURL": "https://github.com/hseons/WQManager/releases/download/v0.4.0/WQManager-0.4.0-unsigned.ipa",
+          "size": 849184,
           "minOSVersion": "26.0"
         }
       ]
@@ -35,14 +35,14 @@
   "news": [
     {
       "appID": "mumu.pduola.WQManager",
-      "title": "WQManager 0.3.1 · 12 Nov 2026",
-      "identifier": "WQManager-release-v0.3.1",
-      "caption": "WQManager 0.3.1 is available.",
-      "date": "2026-11-12T12:58:23Z",
+      "title": "WQManager 0.4.0 · 15 Nov 2026",
+      "identifier": "WQManager-release-v0.4.0",
+      "caption": "WQManager 0.4.0 is available.",
+      "date": "2026-11-15T13:19:16Z",
       "tintColor": "#242529",
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WQManager/images/news.png",
       "notify": true,
-      "url": "https://github.com/hseons/WQManager/releases/tag/v0.3.1"
+      "url": "https://github.com/hseons/WQManager/releases/tag/v0.4.0"
     }
   ]
 }
