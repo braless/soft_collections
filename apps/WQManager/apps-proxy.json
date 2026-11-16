@@ -22,11 +22,11 @@
       "tintColor": "#242529",
       "versions": [
         {
-          "version": "0.4.3",
-          "date": "2026-11-16T11:44:35Z",
-          "localizedDescription": "显示版本 **0.4**，构建 **15**；内部发布修订 **0.4.3**。\n\n- App 扫描逐步显示结果，新增单 App 刷新，取消保留原索引。\n- 文件搜索后台筛选并防抖；文本/JSON 与图片解码移到后台，修复截断提示布局和 UTF-8 边界。\n- 批量备份队列持久保存，重开后可明确继续未完成任务，重新校验目标身份与备份范围。\n- App 操作面板及备份/恢复失败提示可直接进入访问能力诊断。\n- 新增二进制/XML plist 树、SQLite 表结构与 100 行分页、用户所选表的 CSV 导出。SQLite 只打开工具工作副本。\n- 新增 GitHub Actions 构建、配置检查、可移植回归及模拟器 UI 测试。\n\n验证：22 个本地测试程序、5 条模拟器 UI 流程、Debug 模拟器/Release arm64 构建与静态分析均完成。新代码无编译/分析警告，已有两条分析提示见发布记录。\n\n文本最多预览 64 KiB，完整文件可分享；plist 上限 8 MiB，数据库与 WAL 合计上限 512 MiB。关闭来源 App 后再制作工作副本。CSV 最多 10000 行/16 MiB，每值最多 4 KiB，BLOB 仅导出大小。后台执行时间由 iOS 决定，进程重启后需明确恢复队列。真机签名、容器访问和后台中断矩阵仍待验收。\n\n附件为 **未签名 IPA**，适合按项目说明保留 App Group 权限重新签名安装。\n\nSHA-256：`f8b5fd1bed114eb5ec7581cfd310358877120c95b126f9710a32302f87226e1d`\n\n[详细发布验证](https://github.com/hseons/WQManager/blob/v0.4.3/docs/RELEASE_0.4.3.md)",
-          "downloadURL": "https://gh-proxy.com/https://github.com/hseons/WQManager/releases/download/v0.4.3/WQManager-0.4-build15-unsigned.ipa",
-          "size": 898803,
+          "version": "0.4.4",
+          "date": "2026-11-16T13:47:46Z",
+          "localizedDescription": "显示版本 **0.4**，构建 **16**；内部发布修订 **0.4.4**。\n\n- 修复记录页状态徽标被压缩成一个字：徽标保留完整宽度，空间不足时先压缩副标题；副标题最多两行。\n- 应用页索引失败改为危险色并追加「下拉可重试」，失败不再看起来像普通说明。\n- 清理页没有可清理对象时收起选择计数与快捷筛选，空卡片可点按重新扫描。\n- 备份行时间改为今天/昨天/日期 + 时间，同一 App 的多份备份更容易区分。\n- 记录页与备份页的日期格式化器按语言缓存，去掉逐行创建开销。\n\n验证：22 个本地测试程序、5 条模拟器 UI 流程、Debug 模拟器与 Release arm64 构建均通过，编译警告 0 条。\n\n备份时间与徽标只影响展示，不改变备份、恢复与清理的判定逻辑。真机签名、容器访问和后台中断矩阵仍待验收。\n\n附件为 **未签名 IPA**，适合按项目说明保留 App Group 权限重新签名安装。",
+          "downloadURL": "https://gh-proxy.com/https://github.com/hseons/WQManager/releases/download/v0.4.4/WQManager-0.4-build16-unsigned.ipa",
+          "size": 891285,
           "minOSVersion": "26.0"
         }
       ]
@@ -35,14 +35,14 @@
   "news": [
     {
       "appID": "mumu.pduola.WQManager",
-      "title": "WQManager 0.4.3 · 16 Nov 2026",
-      "identifier": "WQManager-release-v0.4.3",
-      "caption": "WQManager 0.4.3 is available.",
-      "date": "2026-11-16T11:44:35Z",
+      "title": "WQManager 0.4.4 · 16 Nov 2026",
+      "identifier": "WQManager-release-v0.4.4",
+      "caption": "WQManager 0.4.4 is available.",
+      "date": "2026-11-16T13:47:46Z",
       "tintColor": "#242529",
       "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WQManager/images/news.png",
       "notify": true,
-      "url": "https://github.com/hseons/WQManager/releases/tag/v0.4.3"
+      "url": "https://github.com/hseons/WQManager/releases/tag/v0.4.4"
     }
   ]
 }
