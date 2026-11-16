@@ -1,0 +1,12 @@
+# render_news.py config: python templates/render_news.py --out apps/Camlo
+
+name = "Camlo"
+tagline = "零门槛滑动解锁变身 + 动态锁屏壁纸工坊"
+
+# Use the official brand purple with a deep backdrop for contrast.
+[colors]
+tint = "#6B4EFF"
+tint_alt = "#FF7A9C"
+background = "#2A1B5E"
+text_color = "#FFFFFF"
+tagline_color = "#D9CFFF"

@@ -48,6 +48,9 @@ Apple Wallet card skins, lock screen passcode themes and PosterBoard wallpapers 
 ### <a href="https://github.com/Lakr233/Asspp"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/Asspp/icon.png" alt="Asspp icon" width="24" align="top"> Asspp</a>
 Manage multiple Apple IDs across App Store regions and download official signed IPAs — no more logging out of your device.
 
+### <a href="https://github.com/Kianuni/Camlo"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/Camlo/icon.png" alt="Camlo icon" width="24" align="top"> Camlo</a>
+零门槛锁屏变身与动态壁纸工坊：免电脑一键直写上滑解锁变身、裸眼 3D 视差、人物遮挡时钟与昼夜双生壁纸，支持 iPhone Duo 内外双屏（iOS 26+）。
+
 ### <a href="https://github.com/Rone89/cilicili"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/cilicili/icon.png" alt="CiliCili icon" width="24" align="top"> CiliCili</a>
 SwiftUI 编写的第三方 B 站客户端：推荐、搜索、UP 主空间、动态、HLS 播放、弹幕与评论私信（iOS 26.1+）。
 
