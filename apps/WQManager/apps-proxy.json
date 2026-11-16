@@ -22,11 +22,11 @@
       "tintColor": "#242529",
       "versions": [
         {
-          "version": "0.4.0",
-          "date": "2026-11-15T13:19:16Z",
-          "localizedDescription": "本轮围绕空间定位和备份管理补全 P1/P2，P3 加密导出已取消。\n\n- 空间变化：最近 60 次扫描、App 增长排行与历史趋势。\n- 文件查找：大文件排序、文件名/路径搜索、类型与大小筛选、预览及定位目录。\n- 批量备份：串行执行快速/完整备份，支持重试失败项、完成当前任务后停止剩余项。\n- 备份备注与重要备份保护；保护状态随导入导出保留，并接入删除和自动保留策略。\n- 备份内容浏览与同范围备份对比，可按需进行 SHA-256 内容校验。\n- 目录级自定义备份：只恢复所选目录，安全备份、回滚和恢复日志使用相同范围。\n- 下一步 WQ 计划：访问能力诊断 → App Groups/扩展容器只读总览 → 结构化数据检查。\n\n验证：19 组可移植测试、模拟器构建/静态分析、arm64 Release 构建及 IPA 完整性检查通过；中英文 616 个键与格式占位符一致。真机 WQ 权限、大容器与系统中断场景仍需回归。\n\n安装包未签名，需自行签名并保留 App Group。快速/完整备份继续使用格式 2；自定义备份格式 3 需 0.4.0 或更新版本。备份保护由 0.4.0+ 执行。批量任务需保持前台，不提供退出后自动续跑。\n\nSHA-256: 9514534441d813480c4413c72cf69d95e062400244350db06563999db02aec3e",
-          "downloadURL": "https://gh-proxy.com/https://github.com/hseons/WQManager/releases/download/v0.4.0/WQManager-0.4.0-unsigned.ipa",
-          "size": 849184,
+          "version": "0.4.2",
+          "date": "2026-11-16T03:02:25Z",
+          "localizedDescription": "界面版本固定为 **0.4（构建 14）**。本次 GitHub 发布修订为 v0.4.2，供版本追踪和旧版检测更新使用。\n\n新增设置 →「访问能力」：\n\n- 显示设备与系统 build、当前签名的 App Group 证据、共享目录可用性与受保护数据状态。\n- 从已有 App 索引选择一个目标，分别检查 token、容器身份、目录打开／读取和文件读取样本。\n- 区分查询无结果、缺 token、token 消费失败、系统拒绝读取及容器身份变化，给出对应处理建议。\n- 支持停止检查与导出脱敏 JSON；报告去除 App 名、Bundle ID、路径、token、原始日志和文件内容。\n\n诊断每个目录最多检查 64 个直接条目，Documents／Library／tmp 各尝试读取一个普通文件的最多 1 字节；不写入目标 App，不启动全盘扫描。抽样通过不表示整个容器可读。共享 App Groups、扩展、系统容器及写入能力仍标记未验证。\n\n验证：20 组可移植测试通过；Debug 模拟器和 arm64 Release 构建通过，编译日志无警告；新增诊断代码无静态分析提示。iOS 26.0（23A343）模拟器中文浅色／英文深色、选择目标、检查结果和 JSON 分享流程通过，实际报告脱敏检查通过。\n\n静态分析保留两条原有提示：WQAccess 的 NSNumber 指针转 BOOL，以及空间透镜菜单可能加入空对象。真机签名／权限兼容性矩阵尚待安装验证。\n\n安装包为 **WQManager 0.4（14）未签名 IPA**，包含分享扩展；签名安装时请保留 App Group。\n\nSHA-256: `2072acd37e752b6740d295980c1ecbdd98f46dd135e46d1d5495d04c4e16a291`",
+          "downloadURL": "https://gh-proxy.com/https://github.com/hseons/WQManager/releases/download/v0.4.2/WQManager-0.4-build14-unsigned.ipa",
+          "size": 873753,
           "minOSVersion": "26.0"
         }
       ]
@@ -35,14 +35,14 @@
   "news": [
     {
       "appID": "mumu.pduola.WQManager",
-      "title": "WQManager 0.4.0 · 15 Nov 2026",
-      "identifier": "WQManager-release-v0.4.0",
-      "caption": "WQManager 0.4.0 is available.",
-      "date": "2026-11-15T13:19:16Z",
+      "title": "WQManager 0.4.2 · 16 Nov 2026",
+      "identifier": "WQManager-release-v0.4.2",
+      "caption": "WQManager 0.4.2 is available.",
+      "date": "2026-11-16T03:02:25Z",
       "tintColor": "#242529",
       "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WQManager/images/news.png",
       "notify": true,
-      "url": "https://github.com/hseons/WQManager/releases/tag/v0.4.0"
+      "url": "https://github.com/hseons/WQManager/releases/tag/v0.4.2"
     }
   ]
 }
