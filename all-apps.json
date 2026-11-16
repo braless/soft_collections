@@ -64,6 +64,25 @@
       ]
     },
     {
+      "name": "Camlo",
+      "bundleIdentifier": "com.kianuni.Camlo",
+      "developerName": "Kianuni",
+      "subtitle": "零门槛「滑动解锁变身 + 动态锁屏」壁纸工坊",
+      "localizedDescription": "让 iPhone 锁屏活起来：免电脑、免越狱一键直写上滑变身与动态锁屏，支持裸眼 3D 景深、人物遮挡时间、昼夜双生壁纸与 120Hz 实时预览，内置 6 套风光预设与 385+ 款官方云端壁纸（iOS 26+）。",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Camlo/icon.png",
+      "tintColor": "#6B4EFF",
+      "versions": [
+        {
+          "version": "1.3.0",
+          "date": "2026-11-16T02:20:27Z",
+          "localizedDescription": "## What's New in Camlo v1.3.0\n\n### 📱 Native iPhone Duo Dual-Screen Canvas (Inner + Outer)\n- Compiles unified WallpaperKit `<wallpapers>` `ParameterizedCA` packages embedding both the **Outer Cover** (`466×678` pt) and **Inner Unfolded Landscape** (`951×669` pt) canvases with `requiresLandscapeScaling = true`, scaled gyro parallax, and synchronized `Sleep / Locked / Unlock` transitions.\n- Auto-detects **iPhone Duo (`iPhone19,4`)** and switches Slide-to-Morph Studio & Video Studio to dual-screen mode by default (with manual toggle available on every iPhone).\n- Interactive **Outer / Inner live preview switcher**, landscape crop guides, dual Vision AI foreground clock-depth cutouts, and 120Hz `.ca` preview support in Vault X-Ray.\n\n### 🎨 10 Exclusive iPhone Duo Official Cloud Packs (60 Official · 385+ Total)\n- Added a dedicated **iPhone Duo** category in Cloud Gallery with **10 bespoke museum-grade Inner+Outer packs** (8 Dual-Screen Depth Morph + 2 Dual-Screen Living Cinemagraphs) hosted outside the IPA for zero app bloat (~9.1 MB IPA).",
+          "downloadURL": "https://github.com/Kianuni/Camlo/releases/download/v1.3.0/Camlo_v1.3.0_Bilingual.ipa",
+          "size": 9528701,
+          "minOSVersion": "26.0"
+        }
+      ]
+    },
+    {
       "name": "CiliCili",
       "bundleIdentifier": "nsk-1695.v-team.cn",
       "developerName": "Rone89",
@@ -538,6 +557,17 @@
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WQManager/images/news.png",
       "notify": true,
       "url": "https://github.com/hseons/WQManager/releases/tag/v0.4.2"
+    },
+    {
+      "appID": "com.kianuni.Camlo",
+      "title": "Camlo 1.3.0 · 16 Nov 2026",
+      "identifier": "Camlo-release-v1.3.0",
+      "caption": "Camlo 1.3.0 is available.",
+      "date": "2026-11-16T02:20:27Z",
+      "tintColor": "#6B4EFF",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Camlo/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Kianuni/Camlo/releases/tag/v1.3.0"
     },
     {
       "appID": "cz.kolbi.wqfiles",
