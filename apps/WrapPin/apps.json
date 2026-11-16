@@ -22,11 +22,11 @@
       "tintColor": "#1060F0",
       "versions": [
         {
-          "version": "1.0.22",
-          "date": "2026-11-12T15:30:27Z",
-          "localizedDescription": "优化定位维持和断线后的恢复：\n\n- 前台开始定位时提前启动后台保活，回到前台后检查长时间未收到回调的请求。\n- 运行中的定位遇到可重试连接错误时，以 1、2、4 秒间隔最多连续重连三次，沿用最新坐标。\n- 重连期间冻结路线进度，恢复后保留原有暂停状态。\n- 主动停止、重置和恢复真实位置会取消重连；认证错误及上次启动留下的未确认会话仍需手动处理。\n\n**安装包选择**\n\n- **Standard 标准版**：SideStore 等自签安装，配合 LocalDevVPN 等外部设备隧道。\n- **Tunnel 隧道版**：内置设备隧道，需匹配主 App 和扩展的 Packet Tunnel 签名权限；免费账号请选择标准版。\n\n支持 iOS/iPadOS 18.0+。均为未签名 IPA，沿用原签名身份升级同一版本通常无需重新配对。\n\n两版 Debug/Release 编译、13 项离线检查和包校验通过。**Build 74 真机安装及长时间锁屏/后台效果仍待回测**，尚不能保证所有定位失效问题均已解决。\n\nSHA-256：\n\n- Standard：`868eead7328847473c7e2b7ff3f11c9bdeb84132ebef0e417c83db5c6c35e735`\n- Tunnel：`e2c47e3886dd197c9b91eb32924081844f61d4a6d042226ec5d3a34ef00c8551`",
-          "downloadURL": "https://github.com/suversal/WrapPin/releases/download/v1.0.22/WrapPin-Standard-1.0.22-build74-unsigned.ipa",
-          "size": 6923608,
+          "version": "1.0.23",
+          "date": "2026-11-16T12:30:54Z",
+          "localizedDescription": "优化本机配对和重新配对：\n\n- 新配对使用随机主机身份，与新密钥保持一致；已有正常配对在普通启动和定位重连时保持不变。\n- 配对端口同时支持 IPv4 和 IPv6。\n- 重置等待旧配对、记录保存/导入和定位停止完成，再删除并核验本地记录，防止旧任务恢复已配对状态。\n- 修复迟到的广播回调可能隐藏配对码、启动前取消请求丢失的问题，增加配对超时和阶段诊断。\n- 在系统设置发起配对后，请返回 WrapPin 查看配对码，再回设置输入。\n\n**安装包选择**\n\n- **Standard 标准版**：适合 SideStore 等自签，配合 LocalDevVPN 等外部设备隧道；免费账号请选择标准版。\n- **Tunnel 隧道版**：内置设备隧道，主 App 和扩展均需匹配的 Packet Tunnel 签名权限。\n\n两版均为 iOS/iPadOS 18.0+ 未签名 IPA。沿用原签名身份覆盖升级同一版本类型即可，正常配对无需移除。iOS 18–26 继续导入电脑生成的 RPPairing，本机配对码流程需要 iOS 27。\n\n**验证范围**\n\n15 组离线检查、15 项 Rust 测试、双版 Debug 真机/模拟器目标与 Release 归档及安装包校验通过。当前环境尚未复现反馈用户手机上的不出码问题，真实 beta 系统配对、签名后安装及长时间后台效果仍待真机回测。本版处理已确认的实现缺口，不代表已证明该故障的唯一原因。\n\n[详细说明](https://github.com/suversal/WrapPin/blob/v1.0.23/Documentation/Release-1.0.23.zh-CN.md) · [构建记录](https://github.com/suversal/WrapPin/blob/v1.0.23/Releases/PairingReset-build75/receipt.json)\n\nSHA-256：\n\n- Standard：`2101fc1168c538562af9f0147c66073c2715b32d57fd182951b01764784d1e5a`\n- Tunnel：`6bd85c31daa5fba44c4b697915960f593bd08fcc56d650c29eb56c75d24ac9d5`",
+          "downloadURL": "https://github.com/suversal/WrapPin/releases/download/v1.0.23/WrapPin-Standard-1.0.23-build75-unsigned.ipa",
+          "size": 6936160,
           "minOSVersion": "27.0"
         }
       ]
@@ -35,14 +35,14 @@
   "news": [
     {
       "appID": "com.suversal.wrappin",
-      "title": "WrapPin 1.0.22 · 12 Nov 2026",
-      "identifier": "WrapPin-release-v1.0.22",
-      "caption": "WrapPin 1.0.22 is available.",
-      "date": "2026-11-12T15:30:27Z",
+      "title": "WrapPin 1.0.23 · 16 Nov 2026",
+      "identifier": "WrapPin-release-v1.0.23",
+      "caption": "WrapPin 1.0.23 is available.",
+      "date": "2026-11-16T12:30:54Z",
       "tintColor": "#1060F0",
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/news.png",
       "notify": true,
-      "url": "https://github.com/suversal/WrapPin/releases/tag/v1.0.22"
+      "url": "https://github.com/suversal/WrapPin/releases/tag/v1.0.23"
     }
   ]
 }

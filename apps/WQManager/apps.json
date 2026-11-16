@@ -22,11 +22,11 @@
       "tintColor": "#242529",
       "versions": [
         {
-          "version": "0.4.2",
-          "date": "2026-11-16T03:02:25Z",
-          "localizedDescription": "界面版本固定为 **0.4（构建 14）**。本次 GitHub 发布修订为 v0.4.2，供版本追踪和旧版检测更新使用。\n\n新增设置 →「访问能力」：\n\n- 显示设备与系统 build、当前签名的 App Group 证据、共享目录可用性与受保护数据状态。\n- 从已有 App 索引选择一个目标，分别检查 token、容器身份、目录打开／读取和文件读取样本。\n- 区分查询无结果、缺 token、token 消费失败、系统拒绝读取及容器身份变化，给出对应处理建议。\n- 支持停止检查与导出脱敏 JSON；报告去除 App 名、Bundle ID、路径、token、原始日志和文件内容。\n\n诊断每个目录最多检查 64 个直接条目，Documents／Library／tmp 各尝试读取一个普通文件的最多 1 字节；不写入目标 App，不启动全盘扫描。抽样通过不表示整个容器可读。共享 App Groups、扩展、系统容器及写入能力仍标记未验证。\n\n验证：20 组可移植测试通过；Debug 模拟器和 arm64 Release 构建通过，编译日志无警告；新增诊断代码无静态分析提示。iOS 26.0（23A343）模拟器中文浅色／英文深色、选择目标、检查结果和 JSON 分享流程通过，实际报告脱敏检查通过。\n\n静态分析保留两条原有提示：WQAccess 的 NSNumber 指针转 BOOL，以及空间透镜菜单可能加入空对象。真机签名／权限兼容性矩阵尚待安装验证。\n\n安装包为 **WQManager 0.4（14）未签名 IPA**，包含分享扩展；签名安装时请保留 App Group。\n\nSHA-256: `2072acd37e752b6740d295980c1ecbdd98f46dd135e46d1d5495d04c4e16a291`",
-          "downloadURL": "https://github.com/hseons/WQManager/releases/download/v0.4.2/WQManager-0.4-build14-unsigned.ipa",
-          "size": 873753,
+          "version": "0.4.3",
+          "date": "2026-11-16T11:44:35Z",
+          "localizedDescription": "显示版本 **0.4**，构建 **15**；内部发布修订 **0.4.3**。\n\n- App 扫描逐步显示结果，新增单 App 刷新，取消保留原索引。\n- 文件搜索后台筛选并防抖；文本/JSON 与图片解码移到后台，修复截断提示布局和 UTF-8 边界。\n- 批量备份队列持久保存，重开后可明确继续未完成任务，重新校验目标身份与备份范围。\n- App 操作面板及备份/恢复失败提示可直接进入访问能力诊断。\n- 新增二进制/XML plist 树、SQLite 表结构与 100 行分页、用户所选表的 CSV 导出。SQLite 只打开工具工作副本。\n- 新增 GitHub Actions 构建、配置检查、可移植回归及模拟器 UI 测试。\n\n验证：22 个本地测试程序、5 条模拟器 UI 流程、Debug 模拟器/Release arm64 构建与静态分析均完成。新代码无编译/分析警告，已有两条分析提示见发布记录。\n\n文本最多预览 64 KiB，完整文件可分享；plist 上限 8 MiB，数据库与 WAL 合计上限 512 MiB。关闭来源 App 后再制作工作副本。CSV 最多 10000 行/16 MiB，每值最多 4 KiB，BLOB 仅导出大小。后台执行时间由 iOS 决定，进程重启后需明确恢复队列。真机签名、容器访问和后台中断矩阵仍待验收。\n\n附件为 **未签名 IPA**，适合按项目说明保留 App Group 权限重新签名安装。\n\nSHA-256：`f8b5fd1bed114eb5ec7581cfd310358877120c95b126f9710a32302f87226e1d`\n\n[详细发布验证](https://github.com/hseons/WQManager/blob/v0.4.3/docs/RELEASE_0.4.3.md)",
+          "downloadURL": "https://github.com/hseons/WQManager/releases/download/v0.4.3/WQManager-0.4-build15-unsigned.ipa",
+          "size": 898803,
           "minOSVersion": "26.0"
         }
       ]
@@ -35,14 +35,14 @@
   "news": [
     {
       "appID": "mumu.pduola.WQManager",
-      "title": "WQManager 0.4.2 · 16 Nov 2026",
-      "identifier": "WQManager-release-v0.4.2",
-      "caption": "WQManager 0.4.2 is available.",
-      "date": "2026-11-16T03:02:25Z",
+      "title": "WQManager 0.4.3 · 16 Nov 2026",
+      "identifier": "WQManager-release-v0.4.3",
+      "caption": "WQManager 0.4.3 is available.",
+      "date": "2026-11-16T11:44:35Z",
       "tintColor": "#242529",
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WQManager/images/news.png",
       "notify": true,
-      "url": "https://github.com/hseons/WQManager/releases/tag/v0.4.2"
+      "url": "https://github.com/hseons/WQManager/releases/tag/v0.4.3"
     }
   ]
 }
