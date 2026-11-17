@@ -16,11 +16,11 @@
       "tintColor": "#6B4EFF",
       "versions": [
         {
-          "version": "1.3.0",
-          "date": "2026-11-16T02:20:27Z",
-          "localizedDescription": "## What's New in Camlo v1.3.0\n\n### 📱 Native iPhone Duo Dual-Screen Canvas (Inner + Outer)\n- Compiles unified WallpaperKit `<wallpapers>` `ParameterizedCA` packages embedding both the **Outer Cover** (`466×678` pt) and **Inner Unfolded Landscape** (`951×669` pt) canvases with `requiresLandscapeScaling = true`, scaled gyro parallax, and synchronized `Sleep / Locked / Unlock` transitions.\n- Auto-detects **iPhone Duo (`iPhone19,4`)** and switches Slide-to-Morph Studio & Video Studio to dual-screen mode by default (with manual toggle available on every iPhone).\n- Interactive **Outer / Inner live preview switcher**, landscape crop guides, dual Vision AI foreground clock-depth cutouts, and 120Hz `.ca` preview support in Vault X-Ray.\n\n### 🎨 10 Exclusive iPhone Duo Official Cloud Packs (60 Official · 385+ Total)\n- Added a dedicated **iPhone Duo** category in Cloud Gallery with **10 bespoke museum-grade Inner+Outer packs** (8 Dual-Screen Depth Morph + 2 Dual-Screen Living Cinemagraphs) hosted outside the IPA for zero app bloat (~9.1 MB IPA).",
-          "downloadURL": "https://github.com/Kianuni/Camlo/releases/download/v1.3.0/Camlo_v1.3.0_Bilingual.ipa",
-          "size": 9528701,
+          "version": "1.3.1",
+          "date": "2026-11-17T15:05:46Z",
+          "localizedDescription": "## What's New in Camlo v1.3.1 (Build 24)\n\n### 1. 10 Original 「次元 3D (Anime 3D)」 Cloud Wallpapers (`ParameterizedCA` + Apple Vision Clock Depth)\n- Official zero-bloat Cloud Gallery (`wallpapers/`) expanded from 60 to **70 packs** (**395+ total** across Official + Community channels), while keeping `Camlo_v1.3.1_Bilingual.ipa` ultra-slim at **~9.5 MB (`9.1 MiB`)**.\n- All 10 new 100%-original Anime packs (`18961`–`18970`) are natively compiled as single-screen **`ParameterizedCA` (`Marble` / `wantsDeviceMotion = true`)** bundles with **real hardware 120Hz 3D Gyroscope Parallax**, **Apple Vision foreground cutouts occluding the `09:41` clock**, **3-state (`Sleep → Locked → Unlock`) morphing**, and **hardware `CAEmitterLayer` / volumetric particles**:\n  1. `18961` · **墨线初醒 · 樱绘少女** (*Ink Sketch Bloom · Sakura*) — Obsidian ink sketch blooming into full color & drifting sakura\n  2. `18962` · **赛博视界 · 瞳孔开机** (*Cyber Visor · Wake Protocol*) — Standby cyber courier awakening cyan/magenta visor rings\n  3. `18963` · **雨岸平交道 · 破云霞光** (*Rainy Crossing · Sunbreak*) — Coastal rain clearing into amber cumulonimbus sunbeams\n  4. `18964` · **狐面鸟居 · 千灯夜祭** (*Kitsune Torii · Lantern Festival*) — Midnight shrine igniting vermilion-gold lanterns & maple sparks\n  5. `18965` · **猩红爵士 · 破屏切入** (*Crimson Velvet · Cut-In*) — Monochrome phantom erupting into crimson & gold-leaf graphic cut-in\n  6. `18966` · **天台星镜 · 流星夜话** (*Rooftop Observatory · Meteors*) — Twilight refractor telescope awakening Milky Way & meteor shower\n  7. `18967` · **深夜窗猫 · 暖灯可可** (*Midnight Desk · Cat & Cocoa*) — Cool moonlit Lo-Fi study switching on honey-amber lamp light\n  8. `18968` · **星穹魔女 · 古铜星盘** (*Astral Witch · Celestial Astrolabe*) — Silver-braided witch awakening molten-gold celestial rings & butterflies\n  9. `18969` · **格纳库整备 · 光翼出击** (*Orbital Hangar · Wing Ignition*) — Titanium mecha standby igniting emerald optics & azure plasma wings\n  10. `18970` · **松崖剑意 · 破晓青莲** (*Cliff Pine Swordswoman · Lotus Dawn*) — Moonlit swordswoman awakening golden cloud-sea dawn & jade lotus aura\n\n### 2. Cloud Gallery `Anime 3D` Category & Scrollable Pill Filter\n- Adds dedicated **`次元 3D / Anime 3D`** filter chip and upgrades the Cloud Gallery filter bar to a horizontal scrollable pill row with live pack counters.\n\n> ⚠️ **iOS Compatibility Reminder**: On-device Computer-Free Direct Write supports **iOS / iPadOS 26.0 – 27.3 beta 1** (Apple patched `worse_query` in `27.3 beta 2`). Creation, 120Hz preview, and `.tendies` export continue to work on all versions.",
+          "downloadURL": "https://github.com/Kianuni/Camlo/releases/download/v1.3.1/Camlo_v1.3.1_Bilingual.ipa",
+          "size": 9534904,
           "minOSVersion": "26.0"
         }
       ]
@@ -29,14 +29,14 @@
   "news": [
     {
       "appID": "com.kianuni.Camlo",
-      "title": "Camlo 1.3.0 · 16 Nov 2026",
-      "identifier": "Camlo-release-v1.3.0",
-      "caption": "Camlo 1.3.0 is available.",
-      "date": "2026-11-16T02:20:27Z",
+      "title": "Camlo 1.3.1 · 17 Nov 2026",
+      "identifier": "Camlo-release-v1.3.1",
+      "caption": "Camlo 1.3.1 is available.",
+      "date": "2026-11-17T15:05:46Z",
       "tintColor": "#6B4EFF",
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Camlo/images/news.png",
       "notify": true,
-      "url": "https://github.com/Kianuni/Camlo/releases/tag/v1.3.0"
+      "url": "https://github.com/Kianuni/Camlo/releases/tag/v1.3.1"
     }
   ]
 }

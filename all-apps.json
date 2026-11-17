@@ -73,11 +73,11 @@
       "tintColor": "#6B4EFF",
       "versions": [
         {
-          "version": "1.3.0",
-          "date": "2026-11-16T02:20:27Z",
-          "localizedDescription": "## What's New in Camlo v1.3.0\n\n### 📱 Native iPhone Duo Dual-Screen Canvas (Inner + Outer)\n- Compiles unified WallpaperKit `<wallpapers>` `ParameterizedCA` packages embedding both the **Outer Cover** (`466×678` pt) and **Inner Unfolded Landscape** (`951×669` pt) canvases with `requiresLandscapeScaling = true`, scaled gyro parallax, and synchronized `Sleep / Locked / Unlock` transitions.\n- Auto-detects **iPhone Duo (`iPhone19,4`)** and switches Slide-to-Morph Studio & Video Studio to dual-screen mode by default (with manual toggle available on every iPhone).\n- Interactive **Outer / Inner live preview switcher**, landscape crop guides, dual Vision AI foreground clock-depth cutouts, and 120Hz `.ca` preview support in Vault X-Ray.\n\n### 🎨 10 Exclusive iPhone Duo Official Cloud Packs (60 Official · 385+ Total)\n- Added a dedicated **iPhone Duo** category in Cloud Gallery with **10 bespoke museum-grade Inner+Outer packs** (8 Dual-Screen Depth Morph + 2 Dual-Screen Living Cinemagraphs) hosted outside the IPA for zero app bloat (~9.1 MB IPA).",
-          "downloadURL": "https://github.com/Kianuni/Camlo/releases/download/v1.3.0/Camlo_v1.3.0_Bilingual.ipa",
-          "size": 9528701,
+          "version": "1.3.1",
+          "date": "2026-11-17T15:05:46Z",
+          "localizedDescription": "## What's New in Camlo v1.3.1 (Build 24)\n\n### 1. 10 Original 「次元 3D (Anime 3D)」 Cloud Wallpapers (`ParameterizedCA` + Apple Vision Clock Depth)\n- Official zero-bloat Cloud Gallery (`wallpapers/`) expanded from 60 to **70 packs** (**395+ total** across Official + Community channels), while keeping `Camlo_v1.3.1_Bilingual.ipa` ultra-slim at **~9.5 MB (`9.1 MiB`)**.\n- All 10 new 100%-original Anime packs (`18961`–`18970`) are natively compiled as single-screen **`ParameterizedCA` (`Marble` / `wantsDeviceMotion = true`)** bundles with **real hardware 120Hz 3D Gyroscope Parallax**, **Apple Vision foreground cutouts occluding the `09:41` clock**, **3-state (`Sleep → Locked → Unlock`) morphing**, and **hardware `CAEmitterLayer` / volumetric particles**:\n  1. `18961` · **墨线初醒 · 樱绘少女** (*Ink Sketch Bloom · Sakura*) — Obsidian ink sketch blooming into full color & drifting sakura\n  2. `18962` · **赛博视界 · 瞳孔开机** (*Cyber Visor · Wake Protocol*) — Standby cyber courier awakening cyan/magenta visor rings\n  3. `18963` · **雨岸平交道 · 破云霞光** (*Rainy Crossing · Sunbreak*) — Coastal rain clearing into amber cumulonimbus sunbeams\n  4. `18964` · **狐面鸟居 · 千灯夜祭** (*Kitsune Torii · Lantern Festival*) — Midnight shrine igniting vermilion-gold lanterns & maple sparks\n  5. `18965` · **猩红爵士 · 破屏切入** (*Crimson Velvet · Cut-In*) — Monochrome phantom erupting into crimson & gold-leaf graphic cut-in\n  6. `18966` · **天台星镜 · 流星夜话** (*Rooftop Observatory · Meteors*) — Twilight refractor telescope awakening Milky Way & meteor shower\n  7. `18967` · **深夜窗猫 · 暖灯可可** (*Midnight Desk · Cat & Cocoa*) — Cool moonlit Lo-Fi study switching on honey-amber lamp light\n  8. `18968` · **星穹魔女 · 古铜星盘** (*Astral Witch · Celestial Astrolabe*) — Silver-braided witch awakening molten-gold celestial rings & butterflies\n  9. `18969` · **格纳库整备 · 光翼出击** (*Orbital Hangar · Wing Ignition*) — Titanium mecha standby igniting emerald optics & azure plasma wings\n  10. `18970` · **松崖剑意 · 破晓青莲** (*Cliff Pine Swordswoman · Lotus Dawn*) — Moonlit swordswoman awakening golden cloud-sea dawn & jade lotus aura\n\n### 2. Cloud Gallery `Anime 3D` Category & Scrollable Pill Filter\n- Adds dedicated **`次元 3D / Anime 3D`** filter chip and upgrades the Cloud Gallery filter bar to a horizontal scrollable pill row with live pack counters.\n\n> ⚠️ **iOS Compatibility Reminder**: On-device Computer-Free Direct Write supports **iOS / iPadOS 26.0 – 27.3 beta 1** (Apple patched `worse_query` in `27.3 beta 2`). Creation, 120Hz preview, and `.tendies` export continue to work on all versions.",
+          "downloadURL": "https://github.com/Kianuni/Camlo/releases/download/v1.3.1/Camlo_v1.3.1_Bilingual.ipa",
+          "size": 9534904,
           "minOSVersion": "26.0"
         }
       ]
@@ -92,11 +92,11 @@
       "tintColor": "#F5639D",
       "versions": [
         {
-          "version": "1.1.4",
-          "date": "2026-11-14T09:45:45Z",
-          "localizedDescription": "## 更新内容（1.1.3 → 1.1.4）\n\n- **启动更快**：点开视频到出画面明显提速。\n- **修复 #66**：全屏后画面漂移到左下角（HEVC/AV1 编码场景）。\n- **弹幕重做**：更省电，暂停/拖动/倍速自动跟随；修好不显示、位置错、重叠、断流、空档、重复等问题。\n- **弹幕设置更干净**：去掉灰黑色块；横屏调字体粗细不再被弹回竖屏。\n- **横屏 100% 显示区域可铺满**（底部按钮区除外）。\n- **其他**：图片/封面清晰度合并为一个选项；长视频标题可展开看全。\n\n---\n\n**安装说明**：附件为**未签名** IPA，需自行签名后安装。",
-          "downloadURL": "https://github.com/Rone89/cilicili/releases/download/v1.1.4/bili-release-unsigned.ipa",
-          "size": 24660955,
+          "version": "1.1.5",
+          "date": "2026-11-17T11:42:35Z",
+          "localizedDescription": "## 更新内容（1.1.4 → 1.1.5）\n\n- **顶栏交互统一**：搜索页与「我的」页面采用系统原生顶栏搜索与按钮布局；动态页右上角切换箭头尺寸调整得更协调。\n- **视频页状态栏清晰**：浅色模式下进入视频或直播详情页时，顶部状态栏图标恢复清晰可见。\n- **底栏防误触回顶**：底栏最小化成胶囊后，首次点击只展开底栏方便切换页面；在展开状态下再轻点当前 Tab 才返回顶部。\n- **顶部渐变收窄**：保留系统柔和渐进模糊效果，移除多余顶部留白占位，整体视野更干净。\n\n---\n\n**安装说明**：附件为**未签名** IPA，需自行签名后安装。",
+          "downloadURL": "https://github.com/Rone89/cilicili/releases/download/v1.1.5/bili-release-unsigned.ipa",
+          "size": 24814110,
           "minOSVersion": "26.1"
         }
       ]
@@ -111,11 +111,11 @@
       "tintColor": "#D07030",
       "versions": [
         {
-          "version": "1.0.1",
-          "date": "2026-11-17T05:26:32Z",
-          "localizedDescription": "## Erosion-CN v1.0.1 (Build 26)\n\n### What's New / 更新内容\n1. **Built-in Interactive APFS Swap & Multi-App Migration Guide / 内置 APFS 换包与多开搬家分步教程 (`APFSVaultGuideSheet`)**\n   - Added a bilingual **Usage Guide (`使用说明`)** button right in the **App & Game Save Manager** toolbar, APFS Swap Vault card, and inside **APFS Swap Vault**.\n   - Clearly explains:\n     - **APFS Zero-Space Stage vs `.zip` Save Backup** (when to use each);\n     - **Same-App Re-sign / Reinstall (6 Steps)**: swipe-close → stage → reinstall → launch once to create fresh container & close → restore → re-login once (Keychain) & release vault;\n     - **Official ↔ Clone Migration** (e.g. `com.tencent.xin` → `com.tencent.wx` with automatic `.plist` renaming);\n     - **3 Critical Safety Rules** (never uninstall Erosion before releasing vault, always close target app first, Keychain re-login behavior).\n2. **UI Layout Polish / 存档列表卡片排版优化**\n   - Fixed the 3-line wrapping on container card link buttons (`Documents` / `Preferences` / `Full Container` | `文档目录` / `偏好配置` / `完整目录`).\n3. **Updated Usage Guide & Bilingual Changelog / 文档同步完善**\n   - Updated [USAGE_GUIDE.md](https://github.com/Kianuni/Erosion-CN/blob/main/USAGE_GUIDE.md) with all `v1.0.0 – v1.0.1` features & `iOS 27.3 beta 2` compatibility notes; see [CHANGELOG.md](https://github.com/Kianuni/Erosion-CN/blob/main/CHANGELOG.md) for full bilingual history.\n\n### Install / 下载安装\n- **SideStore / AltStore / Feather Official Source**: `https://raw.githubusercontent.com/Kianuni/Erosion-CN/main/apps.json`\n- **IPA Asset**: `Erosion_v1.0.1_Bilingual.ipa` below (bilingual EN/ZH; preserve App Group entitlements when signing).",
-          "downloadURL": "https://github.com/Kianuni/Erosion-CN/releases/download/v1.0.1/Erosion_v1.0.1_Bilingual.ipa",
-          "size": 6696463,
+          "version": "1.0.4",
+          "date": "2026-11-17T14:37:22Z",
+          "localizedDescription": "## Erosion-CN v1.0.4 (Build 29)\n\n> [!IMPORTANT]\n> **System Compatibility / 系统兼容性提示**  \n> - **Supported / 完整支持**：`iOS / iPadOS 27.0 – 27.2.1` and `27.3 beta 1` (`24C503*`).  \n> - **Patched / 已封堵**：Apple patched `worse_query` starting in **`iOS 27.3 beta 2` (`24C5049d+`)**. Do **NOT** update past `27.3 beta 1` if you rely on Erosion-CN.\n\n---\n\n### What's New / 更新内容\n\n1. **Non-Blocking Cold Start in Custom Lock Screen Wallpapers + `Camlo · 开幕` Guide (`PosterBoardView`) / 「自定义锁屏壁纸」零阻塞秒开与 Camlo 动态壁纸引导** *(Special thanks to [@iiichika](https://github.com/iiichika) for the thorough root-cause report in [#51](https://github.com/Kianuni/Erosion-CN/issues/51) / 特别感谢 [@iiichika](https://github.com/iiichika) 在 [#51](https://github.com/Kianuni/Erosion-CN/issues/51) 的详细根因排查)*\n   - **Instant UI & Import Ready**：Removed the full-screen `isReady` gate so the `.tendies` list, bottom import button, and top-right menu load immediately without blocking on cold `PosterBoard` container discovery (fixing the ~39s+ blank screen on iPad / fresh installs).\n   - **Background Lookup & Actionable Retry**：`com.apple.PosterBoard` container resolution now runs asynchronously in the background with an inline status/retry banner, and tapping **Apply** (`应用`) when unready shows an actionable **Retry Lookup** (`重新定位`) alert instead of silently staying disabled.\n   - **Built-In `Camlo · 开幕` Companion Card**：Added a bilingual card at the top of `Custom Lock Screen Wallpapers` introducing our companion on-device dynamic wallpaper studio **[Camlo](https://github.com/Kianuni/Camlo)** (~9 MB, swipe-reveal transitions, Live Photo/video & 3D depth lock screens, 385+ free cloud & museum wallpapers, `.tendies` export) with direct GitHub access and a one-tap **Add Repo Source** menu for SideStore / AltStore / Feather.\n\n2. **Fixed Horizontal Card Clipping in Splash Ad Blocker (`AdCacheBlockerView`) / 修复「开屏广告缓存精准锁死」概览卡片排版溢出** *(Thanks to [@wvcq6xxvkj-star](https://github.com/wvcq6xxvkj-star) for reporting [#52](https://github.com/Kianuni/Erosion-CN/issues/52) / 感谢 [@wvcq6xxvkj-star](https://github.com/Kianuni/Erosion-CN/issues/52) 反馈)*\n   - Removed intrinsic `.fixedSize()` constraints on multi-button `HStack` rows inside inset-grouped cards and moved **Lock All Pending** (`一键全锁`) to a full-width prominent row button so both left and right edges stay cleanly inside card margins on Display Zoom, smaller iPhones, and Larger Text.\n   - Wrapped per-item action rows (`Locate`, `Preview`, `Trash`, `Lock/Unlock`) in `ViewThatFits(in: .horizontal)` and tightened container header flexibility to prevent horizontal clipping across all screen widths.\n\n> 📜 Full changelog / 完整更新日志：**[CHANGELOG.md](https://github.com/Kianuni/Erosion-CN/blob/main/CHANGELOG.md)** · User Guide / 使用指南：**[USAGE_GUIDE.md](https://github.com/Kianuni/Erosion-CN/blob/main/USAGE_GUIDE.md)**\n\n---\n\n### Install & Checksum / 下载安装与校验\n\n- **SideStore / AltStore / Feather Official Source / 官方更新源**：`https://raw.githubusercontent.com/Kianuni/Erosion-CN/main/apps.json` *(auto-synced by CI after release / 发版后由 GitHub Actions 自动同步)*\n- **IPA Asset / 安装包文件**：`Erosion_v1.0.4_Bilingual.ipa` (`6,857,330` bytes; preserve `App Group` entitlements when signing)\n- **SHA-256**：`3ce536e48138644d673e43387eb2f21a8fbd9bdc975da635d6626a6177c858fc`",
+          "downloadURL": "https://github.com/Kianuni/Erosion-CN/releases/download/v1.0.4/Erosion_v1.0.4_Bilingual.ipa",
+          "size": 6857330,
           "minOSVersion": "26.0"
         }
       ]
@@ -403,11 +403,11 @@
       "tintColor": "#1E8FC7",
       "versions": [
         {
-          "version": "0.9.16",
-          "date": "2026-11-16T22:54:40Z",
-          "localizedDescription": "> **Requires:** iOS 26.0 – 26.7.2, or iOS 27.0 up to 27.3 beta 1. **Not supported:** iOS 27.3 beta 2 and later, where Apple patched worse_query. Tested on iOS 27.0.1, 27.2.1, 27.3 beta 1 (confirmed by a user) and 26.7.1; see [Tested devices](https://github.com/kolbicz/WQFiles#tested-devices).\n> **Needs:** a sideloading tool that keeps the App Group entitlement; see [Signing](https://github.com/kolbicz/WQFiles#signing-the-app-group) in the README.\n\n# Worse Query Files 0.9.16\n\n## New\n\n- **Invert Selection** in the Cache Cleaner's Select menu. Select All and Invert are greyed out when no row can be cleaned, and Select None clears the selection everywhere, including rows the search hides.\n\n## Fixes\n\n- **LiveContainer** ([#65](https://github.com/kolbicz/WQFiles/issues/65)): inside LiveContainer every app folder was refused, and Reset Access Cache didn't help. LiveContainer gives WQ Files a stand-in App Group folder, while iOS hands out access for the real one. WQ Files now uses the real folder.\n- **Cache Cleaner: Clean stayed grey after a scan** ([#67](https://github.com/kolbicz/WQFiles/issues/67)): since 0.9.11 a finished scan selected nothing. A scan that finishes while the Cache Cleaner is open now selects every row that can be cleaned again, as up to 0.9.10. Results shown again later, e.g. after a restart, still start with nothing selected.\n- **Wi-Fi Sharing uploads:** nothing is saved anymore after you stop sharing, even if an upload was still running. An upload whose name already exists is saved as \"name 2\" again instead of failing.\n\n## Credit\n\nNew design: GpGp700. Sandbox technique: [worse_query](https://github.com/forcequitOS/worse_query) by Taj C (forcequit). Container enumeration: [KAMUI](https://github.com/murk-sus/kamui-escape) by murk-sus. Resumable scans: hhh2210. Translations: iosrxwy (Simplified Chinese), hfip (Arabic), hooray804 (Korean), Reinascape (Russian), romlayvn-93 (Vietnamese), buraakkcayir (Turkish review). Thanks to everyone who sent screenshots and Logs. GPL-3.0-or-later.\n\nSHA-256 of WQFiles.ipa: `66b0edea54a69c1d0021061b8f79efffe2cffb89574584ccc995727bd7dfa420`",
-          "downloadURL": "https://github.com/kolbicz/WQFiles/releases/download/v0.9.16/WQFiles.ipa",
-          "size": 2078252,
+          "version": "0.9.18",
+          "date": "2026-11-17T15:21:21Z",
+          "localizedDescription": "> **Requires:** iOS 26.0 – 26.7.2, or iOS 27.0 up to 27.3 beta 1. **Not supported:** iOS 27.3 beta 2 and later, where Apple patched worse_query. Tested on iOS 27.0.1, 27.2.1, 27.3 beta 1 (confirmed by a user) and 26.7.1; see [Tested devices](https://github.com/kolbicz/WQFiles#tested-devices).\n> **Needs:** a sideloading tool that keeps the App Group entitlement; see [Signing](https://github.com/kolbicz/WQFiles#signing-the-app-group) in the README.\n\n# Worse Query Files 0.9.18\n\nYour own inspectors, your own cleaning targets, and Japanese.\n\n## New\n\n- **Custom inspectors** ([#45](https://github.com/kolbicz/WQFiles/issues/45)): small JavaScript programs that show a file's contents your way. Long-press a file → **Open As → Custom Inspector…**. WQ Files ships only the runtime; the inspectors are yours.\n  - **Install:** open a `.zip` holding an inspector with WQ Files (share sheet, AirDrop, Files app), or copy its folder into **Settings → Inspectors**. Installing one with the same name again updates it.\n  - **Write one:** a folder with `manifest.json` and `inspect.js`. The script gets the file as bytes, as text and, for property lists, already parsed, and returns sections with rows or text. A `data.json` can hold your own lookup tables. Two examples and the full format are in the [README](https://github.com/kolbicz/WQFiles#custom-inspectors).\n  - **Results:** tap a value to copy it; Share sends everything as text. Script errors show with their line number.\n  - **Safe by design:** inspectors only read. A script has no access to other files, the network or the app, and is stopped after 2 seconds.\n- **Your own folders and files in the Cache Cleaner:** long-press a folder or file inside an app's data → **Add to Cache Cleaner**. Instagram, for example, keeps uploaded videos in `Library/Application Support/Instagram/VideoUpload` long after they're posted.\n  - Choose **Always Select** (selected after every scan and by Select All, like caches) or **Select by Hand** (you pick it each time). Long-press it in the Cache Cleaner to switch **Select Automatically** later, or to take it off the list.\n  - A folder is emptied (the folder itself stays), a file is deleted.\n  - Only add what the app can do without: anything it keeps there (drafts, downloads, logins) is gone once cleaned. The app's settings folders can't be added.\n  - Saved per app, so it keeps working when the app moves to a new container.\n- **Japanese** ([#69](https://github.com/kolbicz/WQFiles/pull/69)), the 14th language. Thanks to kinboy56.\n\n## Credit\n\nNew design: GpGp700. Sandbox technique: [worse_query](https://github.com/forcequitOS/worse_query) by Taj C (forcequit). Container enumeration: [KAMUI](https://github.com/murk-sus/kamui-escape) by murk-sus. Resumable scans: hhh2210. Custom inspectors idea: deltaII. Translations: iosrxwy and FrogTool (Simplified Chinese), kinboy56 (Japanese), hfip (Arabic), hooray804 (Korean), Reinascape (Russian), romlayvn-93 (Vietnamese), buraakkcayir (Turkish review). Thanks to everyone who sent screenshots and Logs. GPL-3.0-or-later.\n\nSHA-256 of WQFiles.ipa: `177b383c541f6deb04db331a8c7b5ed3ba8f574d85e24a72cb867f3699550a18`",
+          "downloadURL": "https://github.com/kolbicz/WQFiles/releases/download/v0.9.18/WQFiles.ipa",
+          "size": 2171189,
           "minOSVersion": "26.0"
         }
       ]
@@ -548,26 +548,48 @@
   ],
   "news": [
     {
-      "appID": "com.jbdotparty.Erosion",
-      "title": "Erosion-CN 1.0.1 · 17 Nov 2026",
-      "identifier": "Erosion-CN-release-v1.0.1",
-      "caption": "Erosion-CN 1.0.1 is available.",
-      "date": "2026-11-17T05:26:32Z",
-      "tintColor": "#D07030",
-      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Erosion-CN/images/news.png",
-      "notify": true,
-      "url": "https://github.com/Kianuni/Erosion-CN/releases/tag/v1.0.1"
-    },
-    {
       "appID": "cz.kolbi.wqfiles",
-      "title": "WQ Files 0.9.16 · 16 Nov 2026",
-      "identifier": "WQ Files-release-v0.9.16",
-      "caption": "WQ Files 0.9.16 is available.",
-      "date": "2026-11-16T22:54:40Z",
+      "title": "WQ Files 0.9.18 · 17 Nov 2026",
+      "identifier": "WQ Files-release-v0.9.18",
+      "caption": "WQ Files 0.9.18 is available.",
+      "date": "2026-11-17T15:21:21Z",
       "tintColor": "#1E8FC7",
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WQFiles/images/news.png",
       "notify": true,
-      "url": "https://github.com/kolbicz/WQFiles/releases/tag/v0.9.16"
+      "url": "https://github.com/kolbicz/WQFiles/releases/tag/v0.9.18"
+    },
+    {
+      "appID": "com.kianuni.Camlo",
+      "title": "Camlo 1.3.1 · 17 Nov 2026",
+      "identifier": "Camlo-release-v1.3.1",
+      "caption": "Camlo 1.3.1 is available.",
+      "date": "2026-11-17T15:05:46Z",
+      "tintColor": "#6B4EFF",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Camlo/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Kianuni/Camlo/releases/tag/v1.3.1"
+    },
+    {
+      "appID": "com.jbdotparty.Erosion",
+      "title": "Erosion-CN 1.0.4 · 17 Nov 2026",
+      "identifier": "Erosion-CN-release-v1.0.4",
+      "caption": "Erosion-CN 1.0.4 is available.",
+      "date": "2026-11-17T14:37:22Z",
+      "tintColor": "#D07030",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Erosion-CN/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Kianuni/Erosion-CN/releases/tag/v1.0.4"
+    },
+    {
+      "appID": "nsk-1695.v-team.cn",
+      "title": "CiliCili 1.1.5 · 17 Nov 2026",
+      "identifier": "CiliCili-release-v1.1.5",
+      "caption": "CiliCili 1.1.5 is available.",
+      "date": "2026-11-17T11:42:35Z",
+      "tintColor": "#F5639D",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/cilicili/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Rone89/cilicili/releases/tag/v1.1.5"
     },
     {
       "appID": "mumu.pduola.WQManager",
@@ -592,17 +614,6 @@
       "url": "https://github.com/suversal/WrapPin/releases/tag/v1.0.23"
     },
     {
-      "appID": "com.kianuni.Camlo",
-      "title": "Camlo 1.3.0 · 16 Nov 2026",
-      "identifier": "Camlo-release-v1.3.0",
-      "caption": "Camlo 1.3.0 is available.",
-      "date": "2026-11-16T02:20:27Z",
-      "tintColor": "#6B4EFF",
-      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Camlo/images/news.png",
-      "notify": true,
-      "url": "https://github.com/Kianuni/Camlo/releases/tag/v1.3.0"
-    },
-    {
       "appID": "app.local.iPadn",
       "title": "iPadn 2.1.3 · 15 Nov 2026",
       "identifier": "iPadn-release-v2.1.3",
@@ -623,17 +634,6 @@
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kumone/images/news.png",
       "notify": true,
       "url": "https://github.com/missuo/kumone/releases/tag/v0.3.37"
-    },
-    {
-      "appID": "nsk-1695.v-team.cn",
-      "title": "CiliCili 1.1.4 · 14 Nov 2026",
-      "identifier": "CiliCili-release-v1.1.4",
-      "caption": "CiliCili 1.1.4 is available.",
-      "date": "2026-11-14T09:45:45Z",
-      "tintColor": "#F5639D",
-      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/cilicili/images/news.png",
-      "notify": true,
-      "url": "https://github.com/Rone89/cilicili/releases/tag/v1.1.4"
     },
     {
       "appID": "local.xchat.transfer",
