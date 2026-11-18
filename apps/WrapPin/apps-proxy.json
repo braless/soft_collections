@@ -22,11 +22,11 @@
       "tintColor": "#1060F0",
       "versions": [
         {
-          "version": "1.0.23",
-          "date": "2026-11-16T12:30:54Z",
-          "localizedDescription": "优化本机配对和重新配对：\n\n- 新配对使用随机主机身份，与新密钥保持一致；已有正常配对在普通启动和定位重连时保持不变。\n- 配对端口同时支持 IPv4 和 IPv6。\n- 重置等待旧配对、记录保存/导入和定位停止完成，再删除并核验本地记录，防止旧任务恢复已配对状态。\n- 修复迟到的广播回调可能隐藏配对码、启动前取消请求丢失的问题，增加配对超时和阶段诊断。\n- 在系统设置发起配对后，请返回 WrapPin 查看配对码，再回设置输入。\n\n**安装包选择**\n\n- **Standard 标准版**：适合 SideStore 等自签，配合 LocalDevVPN 等外部设备隧道；免费账号请选择标准版。\n- **Tunnel 隧道版**：内置设备隧道，主 App 和扩展均需匹配的 Packet Tunnel 签名权限。\n\n两版均为 iOS/iPadOS 18.0+ 未签名 IPA。沿用原签名身份覆盖升级同一版本类型即可，正常配对无需移除。iOS 18–26 继续导入电脑生成的 RPPairing，本机配对码流程需要 iOS 27。\n\n**验证范围**\n\n15 组离线检查、15 项 Rust 测试、双版 Debug 真机/模拟器目标与 Release 归档及安装包校验通过。当前环境尚未复现反馈用户手机上的不出码问题，真实 beta 系统配对、签名后安装及长时间后台效果仍待真机回测。本版处理已确认的实现缺口，不代表已证明该故障的唯一原因。\n\n[详细说明](https://github.com/suversal/WrapPin/blob/v1.0.23/Documentation/Release-1.0.23.zh-CN.md) · [构建记录](https://github.com/suversal/WrapPin/blob/v1.0.23/Releases/PairingReset-build75/receipt.json)\n\nSHA-256：\n\n- Standard：`2101fc1168c538562af9f0147c66073c2715b32d57fd182951b01764784d1e5a`\n- Tunnel：`6bd85c31daa5fba44c4b697915960f593bd08fcc56d650c29eb56c75d24ac9d5`",
-          "downloadURL": "https://gh-proxy.com/https://github.com/suversal/WrapPin/releases/download/v1.0.23/WrapPin-Standard-1.0.23-build75-unsigned.ipa",
-          "size": 6936160,
+          "version": "1.0.24",
+          "date": "2026-11-18T06:20:00Z",
+          "localizedDescription": "新增自定义路线，在 Apple 地图不提供步行规划的地区也能模拟移动。\n\n- 搜索地点、输入坐标或地图点选起终点与途经点，支持长按排序、逐点删除和撤销。\n- 支持 GPX 导入及轨迹段选择。\n- 统一速度滑块：0.1–240 公里/小时，步长 0.1；支持暂停、继续、返程和停止恢复真实位置。\n- 优化首页与路线浮框的三档拖动、背景可读性、按钮边界和收起摘要；移除弹簧吸附，增加路线页当前位置按钮。\n\n自定义地点按顺序直线连接，不自动贴合道路。路线计算和 GPX 解析在本机完成，无需 Apple 步行规划；地图显示和地点搜索仍可能需要网络。\n\n**安装包选择**\n\n- **Standard 标准版**：适合 SideStore 等自签，配合外部设备隧道；免费账号请选择标准版。\n- **Tunnel 隧道版**：内置设备隧道，需要匹配的 Packet Tunnel 签名权限。\n\n两版均为 iOS/iPadOS 18.0+ 未签名 IPA。使用原签名身份覆盖升级同一版本类型，正常配对无需移除。\n\n**验证范围**\n\n路线、GPX、速度、选点搜索、恢复记录、定位连续性及双版 Release 归档和包体校验通过。此前测试包已通过 iOS 26 模拟器交互及双版 Debug 编译；本次正式包签名安装、iOS 18 交互和长时间后台运行仍待真机验收。\n\n[详细说明](https://github.com/suversal/WrapPin/blob/v1.0.24/Documentation/Release-1.0.24.zh-CN.md) · [English](https://github.com/suversal/WrapPin/blob/v1.0.24/Documentation/Release-1.0.24.md) · [构建记录](https://github.com/suversal/WrapPin/blob/v1.0.24/Releases/CustomRoutes-build88/receipt.json)\n\nSHA-256：\n\n- Standard：`82f5c48cac14769ebf92ebd0faff120ae2796e933a93e681a239ca1f1fdcf62a`\n- Tunnel：`651251b173569f199e7f141d58f6c2f49b4d6ca6ab8ffb001c397a67718f87a9`",
+          "downloadURL": "https://gh-proxy.com/https://github.com/suversal/WrapPin/releases/download/v1.0.24/WrapPin-Standard-1.0.24-build88-unsigned.ipa",
+          "size": 7114190,
           "minOSVersion": "27.0"
         }
       ]
@@ -35,14 +35,14 @@
   "news": [
     {
       "appID": "com.suversal.wrappin",
-      "title": "WrapPin 1.0.23 · 16 Nov 2026",
-      "identifier": "WrapPin-release-v1.0.23",
-      "caption": "WrapPin 1.0.23 is available.",
-      "date": "2026-11-16T12:30:54Z",
+      "title": "WrapPin 1.0.24 · 18 Nov 2026",
+      "identifier": "WrapPin-release-v1.0.24",
+      "caption": "WrapPin 1.0.24 is available.",
+      "date": "2026-11-18T06:20:00Z",
       "tintColor": "#1060F0",
       "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/news.png",
       "notify": true,
-      "url": "https://github.com/suversal/WrapPin/releases/tag/v1.0.23"
+      "url": "https://github.com/suversal/WrapPin/releases/tag/v1.0.24"
     }
   ]
 }
