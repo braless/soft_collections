@@ -22,11 +22,11 @@
       "tintColor": "#1060F0",
       "versions": [
         {
-          "version": "1.0.24",
-          "date": "2026-11-18T06:20:00Z",
-          "localizedDescription": "新增自定义路线，在 Apple 地图不提供步行规划的地区也能模拟移动。\n\n- 搜索地点、输入坐标或地图点选起终点与途经点，支持长按排序、逐点删除和撤销。\n- 支持 GPX 导入及轨迹段选择。\n- 统一速度滑块：0.1–240 公里/小时，步长 0.1；支持暂停、继续、返程和停止恢复真实位置。\n- 优化首页与路线浮框的三档拖动、背景可读性、按钮边界和收起摘要；移除弹簧吸附，增加路线页当前位置按钮。\n\n自定义地点按顺序直线连接，不自动贴合道路。路线计算和 GPX 解析在本机完成，无需 Apple 步行规划；地图显示和地点搜索仍可能需要网络。\n\n**安装包选择**\n\n- **Standard 标准版**：适合 SideStore 等自签，配合外部设备隧道；免费账号请选择标准版。\n- **Tunnel 隧道版**：内置设备隧道，需要匹配的 Packet Tunnel 签名权限。\n\n两版均为 iOS/iPadOS 18.0+ 未签名 IPA。使用原签名身份覆盖升级同一版本类型，正常配对无需移除。\n\n**验证范围**\n\n路线、GPX、速度、选点搜索、恢复记录、定位连续性及双版 Release 归档和包体校验通过。此前测试包已通过 iOS 26 模拟器交互及双版 Debug 编译；本次正式包签名安装、iOS 18 交互和长时间后台运行仍待真机验收。\n\n[详细说明](https://github.com/suversal/WrapPin/blob/v1.0.24/Documentation/Release-1.0.24.zh-CN.md) · [English](https://github.com/suversal/WrapPin/blob/v1.0.24/Documentation/Release-1.0.24.md) · [构建记录](https://github.com/suversal/WrapPin/blob/v1.0.24/Releases/CustomRoutes-build88/receipt.json)\n\nSHA-256：\n\n- Standard：`82f5c48cac14769ebf92ebd0faff120ae2796e933a93e681a239ca1f1fdcf62a`\n- Tunnel：`651251b173569f199e7f141d58f6c2f49b4d6ca6ab8ffb001c397a67718f87a9`",
-          "downloadURL": "https://github.com/suversal/WrapPin/releases/download/v1.0.24/WrapPin-Standard-1.0.24-build88-unsigned.ipa",
-          "size": 7114190,
+          "version": "1.0.25",
+          "date": "2026-11-18T17:29:45Z",
+          "localizedDescription": "优化自定义路线的地点搜索：\n\n- 国内输入和点击“搜索”统一使用联想候选；点击“搜索”收起键盘，保留原来的候选列表，不再换成另一批结果。\n- 点击具体地点直接加入路线并返回，无需再次选择。\n- 联想结果统一显示添加图标，防止重复点击添加。\n\n候选数量由地图服务决定，最多显示六条。坐标输入、海外搜索和首页搜索保留原有方式。\n\n**安装**\n\nStandard 标准版适合 SideStore 与外部设备隧道；Tunnel 隧道版需要匹配的 Packet Tunnel 签名权限。两版均为 iOS/iPadOS 18.0+ 未签名 IPA，沿用原签名身份覆盖安装同一版本类型即可。\n\n路线搜索、候选保留、取消、恢复与定位连续性回归及双版 Release 包体校验通过；真实地图服务返回结果和签名安装仍需手机验收。\n\n[详细说明](https://github.com/suversal/WrapPin/blob/v1.0.25/Documentation/Release-1.0.25.zh-CN.md) · [English](https://github.com/suversal/WrapPin/blob/v1.0.25/Documentation/Release-1.0.25.md)\n\nSHA-256：\n\n- Standard：`b86567e92cad582a4cfca54e3d90079dbefcdb1dbab587c4b5d917f2b86526d5`\n- Tunnel：`ee2e38a66dfdbd6c225035aa1c0c9c848c6d59ce58c566374f6f80e66e76e2ad`",
+          "downloadURL": "https://github.com/suversal/WrapPin/releases/download/v1.0.25/WrapPin-Standard-1.0.25-build93-unsigned.ipa",
+          "size": 7117623,
           "minOSVersion": "27.0"
         }
       ]
@@ -35,14 +35,14 @@
   "news": [
     {
       "appID": "com.suversal.wrappin",
-      "title": "WrapPin 1.0.24 · 18 Nov 2026",
-      "identifier": "WrapPin-release-v1.0.24",
-      "caption": "WrapPin 1.0.24 is available.",
-      "date": "2026-11-18T06:20:00Z",
+      "title": "WrapPin 1.0.25 · 18 Nov 2026",
+      "identifier": "WrapPin-release-v1.0.25",
+      "caption": "WrapPin 1.0.25 is available.",
+      "date": "2026-11-18T17:29:45Z",
       "tintColor": "#1060F0",
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/news.png",
       "notify": true,
-      "url": "https://github.com/suversal/WrapPin/releases/tag/v1.0.24"
+      "url": "https://github.com/suversal/WrapPin/releases/tag/v1.0.25"
     }
   ]
 }
