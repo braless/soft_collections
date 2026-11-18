@@ -73,11 +73,11 @@
       "tintColor": "#6B4EFF",
       "versions": [
         {
-          "version": "1.3.1",
-          "date": "2026-11-17T15:05:46Z",
-          "localizedDescription": "## What's New in Camlo v1.3.1 (Build 24)\n\n### 1. 10 Original 「次元 3D (Anime 3D)」 Cloud Wallpapers (`ParameterizedCA` + Apple Vision Clock Depth)\n- Official zero-bloat Cloud Gallery (`wallpapers/`) expanded from 60 to **70 packs** (**395+ total** across Official + Community channels), while keeping `Camlo_v1.3.1_Bilingual.ipa` ultra-slim at **~9.5 MB (`9.1 MiB`)**.\n- All 10 new 100%-original Anime packs (`18961`–`18970`) are natively compiled as single-screen **`ParameterizedCA` (`Marble` / `wantsDeviceMotion = true`)** bundles with **real hardware 120Hz 3D Gyroscope Parallax**, **Apple Vision foreground cutouts occluding the `09:41` clock**, **3-state (`Sleep → Locked → Unlock`) morphing**, and **hardware `CAEmitterLayer` / volumetric particles**:\n  1. `18961` · **墨线初醒 · 樱绘少女** (*Ink Sketch Bloom · Sakura*) — Obsidian ink sketch blooming into full color & drifting sakura\n  2. `18962` · **赛博视界 · 瞳孔开机** (*Cyber Visor · Wake Protocol*) — Standby cyber courier awakening cyan/magenta visor rings\n  3. `18963` · **雨岸平交道 · 破云霞光** (*Rainy Crossing · Sunbreak*) — Coastal rain clearing into amber cumulonimbus sunbeams\n  4. `18964` · **狐面鸟居 · 千灯夜祭** (*Kitsune Torii · Lantern Festival*) — Midnight shrine igniting vermilion-gold lanterns & maple sparks\n  5. `18965` · **猩红爵士 · 破屏切入** (*Crimson Velvet · Cut-In*) — Monochrome phantom erupting into crimson & gold-leaf graphic cut-in\n  6. `18966` · **天台星镜 · 流星夜话** (*Rooftop Observatory · Meteors*) — Twilight refractor telescope awakening Milky Way & meteor shower\n  7. `18967` · **深夜窗猫 · 暖灯可可** (*Midnight Desk · Cat & Cocoa*) — Cool moonlit Lo-Fi study switching on honey-amber lamp light\n  8. `18968` · **星穹魔女 · 古铜星盘** (*Astral Witch · Celestial Astrolabe*) — Silver-braided witch awakening molten-gold celestial rings & butterflies\n  9. `18969` · **格纳库整备 · 光翼出击** (*Orbital Hangar · Wing Ignition*) — Titanium mecha standby igniting emerald optics & azure plasma wings\n  10. `18970` · **松崖剑意 · 破晓青莲** (*Cliff Pine Swordswoman · Lotus Dawn*) — Moonlit swordswoman awakening golden cloud-sea dawn & jade lotus aura\n\n### 2. Cloud Gallery `Anime 3D` Category & Scrollable Pill Filter\n- Adds dedicated **`次元 3D / Anime 3D`** filter chip and upgrades the Cloud Gallery filter bar to a horizontal scrollable pill row with live pack counters.\n\n> ⚠️ **iOS Compatibility Reminder**: On-device Computer-Free Direct Write supports **iOS / iPadOS 26.0 – 27.3 beta 1** (Apple patched `worse_query` in `27.3 beta 2`). Creation, 120Hz preview, and `.tendies` export continue to work on all versions.",
-          "downloadURL": "https://gh-proxy.com/https://github.com/Kianuni/Camlo/releases/download/v1.3.1/Camlo_v1.3.1_Bilingual.ipa",
-          "size": 9534904,
+          "version": "1.3.2",
+          "date": "2026-11-17T23:46:39Z",
+          "localizedDescription": "## Camlo v1.3.2 (Build 25)\n\n### 修复 iPhone Duo（折叠屏）所有壁纸缩小为 1/3 与展开内屏偏移问题 (#4)\n- **彻底修复缩放比例 (`retinaMultiplier: 3 → 1`)**：在 `WallpaperKit` `<wallpapers>` 多屏描述中，由于 Camlo 以逻辑点坐标（外屏 `466×678`、内屏 `951×669`）编译底层 Core Animation 图层树，将其 `retinaMultiplier` 设为 `3` 会导致系统 `WKParameterizedCAPackageLoader` 将绘制尺寸再除以 `3`，从而把壁纸缩小为约 `1/3`（实测 `951×669` px）；现已修正为 `retinaMultiplier = 1` 并保留完整物理像素资源。\n- **修复展开内屏居中偏移 (`BACKGROUND_INNER` / `FLOATING_INNER` position 对齐)**：在折叠屏展开状态下，`WKParameterizedCAWallpaperRepresentedView` 会将 `BACKGROUND_INNER` / `FLOATING_INNER` 直接挂入外屏 `__capRootLayer__` 的 `hostingLayer`（中心点 `233 339`），旧版 `475.5 334.5` 坐标会导致向右下角明显偏移；现统一对齐为 `233 339`，实现外屏/内屏严丝合缝全屏铺满。\n- **Duo 导出分辨率升级**：外屏素材采样升级至原生 `@3x`（`1398×2034`），展开内屏升级至高清（`2282×1606`）；10 套官方云端 iPhone Duo 双屏壁纸（`18951`–`18960`）已全量重新编译并通过 `CAPackage` 渲染校验。\n- **金库旧包自动原地自愈 + 120Hz 实时预览居中修复**：升级至 `v1.3.2` 后，已下载或自制保存在金库的旧版 Duo `.tendies` 包会在后台与写入瞬间自动原地修复（无需重新下载或重新创作，只需重新点击一次**「一键应用到锁屏」**并注销即可满屏生效）；同时修复应用内 `120Hz` 实时预览外/内屏定位。\n\n### Fix iPhone Duo 1/3 Shrunk Scaling & Off-Center Inner Screen (#4)\n- **Fixed `retinaMultiplier` (`3 → 1`)**: `CAMLCompiler` authors Duo root layers in logical points (`466×678` Outer, `951×669` Inner); changing `<wallpapers>` `retinaMultiplier` from `3` to `1` stops `WallpaperKit` from shrinking the rendered wallpaper to `1/3` size while keeping full-resolution texture assets (`1398×2034` Outer `@3x`, `2282×1606` Inner).\n- **Fixed Unfolded Inner-Screen Offset**: Aligned `BACKGROUND_INNER` / `FLOATING_INNER` layer `position` to `__capRootLayer__` center (`233 339`) so `WKParameterizedCAWallpaperRepresentedView`'s `hostingLayer` fills `(0, 0, 951, 669)` edge-to-edge on unfold.\n- **Recompiled All 10 Official Cloud Duo Packs (`18951`–`18960`)**: Verified via `CAPackage` & simulated `WallpaperKit` layout bounds.\n- **Automatic Vault Self-Healing & Accurate Live Preview**: Existing downloaded or Studio-created Duo packs in your Vault heal automatically in-place upon updating to `v1.3.2` — just tap **1-Tap Apply** again and respring (or re-download from Cloud Gallery for crisp `1398×2034` / `2282×1606` assets).\n\n> ⚠️ **iOS Compatibility Reminder**: On-device Computer-Free Direct Write supports **iOS / iPadOS 26.0 – 27.3 beta 1** (Apple patched `worse_query` in `27.3 beta 2`). Creation, 120Hz preview, and `.tendies` export continue to work on all versions.",
+          "downloadURL": "https://gh-proxy.com/https://github.com/Kianuni/Camlo/releases/download/v1.3.2/Camlo_v1.3.2_Bilingual.ipa",
+          "size": 9540236,
           "minOSVersion": "26.0"
         }
       ]
@@ -111,11 +111,11 @@
       "tintColor": "#D07030",
       "versions": [
         {
-          "version": "1.0.4",
-          "date": "2026-11-17T14:37:22Z",
-          "localizedDescription": "## Erosion-CN v1.0.4 (Build 29)\n\n> [!IMPORTANT]\n> **System Compatibility / 系统兼容性提示**  \n> - **Supported / 完整支持**：`iOS / iPadOS 27.0 – 27.2.1` and `27.3 beta 1` (`24C503*`).  \n> - **Patched / 已封堵**：Apple patched `worse_query` starting in **`iOS 27.3 beta 2` (`24C5049d+`)**. Do **NOT** update past `27.3 beta 1` if you rely on Erosion-CN.\n\n---\n\n### What's New / 更新内容\n\n1. **Non-Blocking Cold Start in Custom Lock Screen Wallpapers + `Camlo · 开幕` Guide (`PosterBoardView`) / 「自定义锁屏壁纸」零阻塞秒开与 Camlo 动态壁纸引导** *(Special thanks to [@iiichika](https://github.com/iiichika) for the thorough root-cause report in [#51](https://github.com/Kianuni/Erosion-CN/issues/51) / 特别感谢 [@iiichika](https://github.com/iiichika) 在 [#51](https://github.com/Kianuni/Erosion-CN/issues/51) 的详细根因排查)*\n   - **Instant UI & Import Ready**：Removed the full-screen `isReady` gate so the `.tendies` list, bottom import button, and top-right menu load immediately without blocking on cold `PosterBoard` container discovery (fixing the ~39s+ blank screen on iPad / fresh installs).\n   - **Background Lookup & Actionable Retry**：`com.apple.PosterBoard` container resolution now runs asynchronously in the background with an inline status/retry banner, and tapping **Apply** (`应用`) when unready shows an actionable **Retry Lookup** (`重新定位`) alert instead of silently staying disabled.\n   - **Built-In `Camlo · 开幕` Companion Card**：Added a bilingual card at the top of `Custom Lock Screen Wallpapers` introducing our companion on-device dynamic wallpaper studio **[Camlo](https://github.com/Kianuni/Camlo)** (~9 MB, swipe-reveal transitions, Live Photo/video & 3D depth lock screens, 385+ free cloud & museum wallpapers, `.tendies` export) with direct GitHub access and a one-tap **Add Repo Source** menu for SideStore / AltStore / Feather.\n\n2. **Fixed Horizontal Card Clipping in Splash Ad Blocker (`AdCacheBlockerView`) / 修复「开屏广告缓存精准锁死」概览卡片排版溢出** *(Thanks to [@wvcq6xxvkj-star](https://github.com/wvcq6xxvkj-star) for reporting [#52](https://github.com/Kianuni/Erosion-CN/issues/52) / 感谢 [@wvcq6xxvkj-star](https://github.com/Kianuni/Erosion-CN/issues/52) 反馈)*\n   - Removed intrinsic `.fixedSize()` constraints on multi-button `HStack` rows inside inset-grouped cards and moved **Lock All Pending** (`一键全锁`) to a full-width prominent row button so both left and right edges stay cleanly inside card margins on Display Zoom, smaller iPhones, and Larger Text.\n   - Wrapped per-item action rows (`Locate`, `Preview`, `Trash`, `Lock/Unlock`) in `ViewThatFits(in: .horizontal)` and tightened container header flexibility to prevent horizontal clipping across all screen widths.\n\n> 📜 Full changelog / 完整更新日志：**[CHANGELOG.md](https://github.com/Kianuni/Erosion-CN/blob/main/CHANGELOG.md)** · User Guide / 使用指南：**[USAGE_GUIDE.md](https://github.com/Kianuni/Erosion-CN/blob/main/USAGE_GUIDE.md)**\n\n---\n\n### Install & Checksum / 下载安装与校验\n\n- **SideStore / AltStore / Feather Official Source / 官方更新源**：`https://raw.githubusercontent.com/Kianuni/Erosion-CN/main/apps.json` *(auto-synced by CI after release / 发版后由 GitHub Actions 自动同步)*\n- **IPA Asset / 安装包文件**：`Erosion_v1.0.4_Bilingual.ipa` (`6,857,330` bytes; preserve `App Group` entitlements when signing)\n- **SHA-256**：`3ce536e48138644d673e43387eb2f21a8fbd9bdc975da635d6626a6177c858fc`",
-          "downloadURL": "https://gh-proxy.com/https://github.com/Kianuni/Erosion-CN/releases/download/v1.0.4/Erosion_v1.0.4_Bilingual.ipa",
-          "size": 6857330,
+          "version": "1.0.5",
+          "date": "2026-11-17T23:33:43Z",
+          "localizedDescription": "## Erosion-CN v1.0.5 (Build 30)\n\n> [!IMPORTANT]\n> **System Compatibility / 系统兼容性提示**  \n> - **Supported / 完整支持**：`iOS / iPadOS 27.0 – 27.2.1` and `27.3 beta 1` (`24C503*`).  \n> - **Patched / 已封堵**：Apple patched `worse_query` starting in **`iOS 27.3 beta 2` (`24C5049d+`)**. Do **NOT** update past `27.3 beta 1` if you rely on Erosion-CN.\n\n---\n\n### What's New / 更新内容\n\n1. **Fixed Unresponsive \"Clean Selected\" in Container Cache Cleaner (`CacheCleanerView`) / 修复容器缓存「一键清理已选」不生效** *(Thanks to [@KindLin99](https://github.com/KindLin99) for reporting [#53](https://github.com/Kianuni/Erosion-CN/issues/53) / 感谢 [@KindLin99](https://github.com/KindLin99) 反馈 [#53](https://github.com/Kianuni/Erosion-CN/issues/53))*\n   - **Separated Button Styles in Overview Card**：Assigned `.borderless` to **Rescan** (`重新扫描`) and promoted **Clean Selected** (`一键清理已选`) to a full-width `.borderedProminent` button snapshotting targets prior to confirmation, eliminating SwiftUI `List` multi-button tap hijacking.\n   - **Prevented Row Hit-Box Hijacking**：Replaced inline `NavigationLink` on **Inspect** (`查看`) with a `.borderless` button + `.navigationDestination(item:)` so tapping row checkboxes or **Clean** (`清理`) never triggers accidental navigation.\n   - **Ad-Sentinel Protection & Re-Sized Refresh**：Unified scan/purge traversal depth (`Library/Caches` depth `7`, `tmp` depth `6`), skipped `.erosion_adlock` anti-recreate ad folders during cleanup, and updated remaining bytes / auth failure reporting accurately after purge.\n\n2. **Explicit Read-Only & Sentinel State in `InfoViewer` / 文件详情页只读与防重建状态提示**\n   - When a directory or file is already at `0555` / `0444`, the **Set Read-Only** preset button now automatically disables and displays `Already Read-Only` (`当前已是只读锁死状态`) or `Read-Only & Sentinel Active` (`当前已是只读防重建锁死状态`) alongside an `Anti-Recreate Lock` row (`Active (.erosion_adlock)`).\n   - **Restore Read-Write** and **Apply** buttons disable when permissions already match, and restoring write permission on a sentinel directory from `InfoViewer` cleanly unlinks `.erosion_adlock`.\n\n3. **Target Highlighting & Auto-Scroll on Ad Locator (`FileBrowserView` / `AdCacheBlockerView`) / 去广告「定位」自动高亮与居中定位**\n   - Tapping **Locate** (`定位`) in Splash Ad Blocker now highlights the target ad folder/config inside its parent directory and scrolls smoothly to center it, with read-only sandbox grants for locator browsing and container grants ordered prior to `lstat` attribute checks.\n\n> 📜 Full changelog / 完整更新日志：**[CHANGELOG.md](https://github.com/Kianuni/Erosion-CN/blob/main/CHANGELOG.md)** · User Guide / 使用指南：**[USAGE_GUIDE.md](https://github.com/Kianuni/Erosion-CN/blob/main/USAGE_GUIDE.md)**\n\n---\n\n### Install & Checksum / 下载安装与校验\n\n- **SideStore / AltStore / Feather Official Source / 官方更新源**：`https://raw.githubusercontent.com/Kianuni/Erosion-CN/main/apps.json` *(auto-synced by CI after release / 发版后由 GitHub Actions 自动同步)*\n- **IPA Asset / 安装包文件**：`Erosion_v1.0.5_Bilingual.ipa` (`6,875,541` bytes; preserve `App Group` entitlements when signing)\n- **SHA-256**：`408c50a9bbb2a84ece90393875bab5d7240f02e784e7a34aaa4d61d7a44a41c3`",
+          "downloadURL": "https://gh-proxy.com/https://github.com/Kianuni/Erosion-CN/releases/download/v1.0.5/Erosion_v1.0.5_Bilingual.ipa",
+          "size": 6875541,
           "minOSVersion": "26.0"
         }
       ]
@@ -548,6 +548,28 @@
   ],
   "news": [
     {
+      "appID": "com.kianuni.Camlo",
+      "title": "Camlo 1.3.2 · 17 Nov 2026",
+      "identifier": "Camlo-release-v1.3.2",
+      "caption": "Camlo 1.3.2 is available.",
+      "date": "2026-11-17T23:46:39Z",
+      "tintColor": "#6B4EFF",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Camlo/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Kianuni/Camlo/releases/tag/v1.3.2"
+    },
+    {
+      "appID": "com.jbdotparty.Erosion",
+      "title": "Erosion-CN 1.0.5 · 17 Nov 2026",
+      "identifier": "Erosion-CN-release-v1.0.5",
+      "caption": "Erosion-CN 1.0.5 is available.",
+      "date": "2026-11-17T23:33:43Z",
+      "tintColor": "#D07030",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Erosion-CN/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Kianuni/Erosion-CN/releases/tag/v1.0.5"
+    },
+    {
       "appID": "cz.kolbi.wqfiles",
       "title": "WQ Files 0.9.18 · 17 Nov 2026",
       "identifier": "WQ Files-release-v0.9.18",
@@ -557,28 +579,6 @@
       "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WQFiles/images/news.png",
       "notify": true,
       "url": "https://github.com/kolbicz/WQFiles/releases/tag/v0.9.18"
-    },
-    {
-      "appID": "com.kianuni.Camlo",
-      "title": "Camlo 1.3.1 · 17 Nov 2026",
-      "identifier": "Camlo-release-v1.3.1",
-      "caption": "Camlo 1.3.1 is available.",
-      "date": "2026-11-17T15:05:46Z",
-      "tintColor": "#6B4EFF",
-      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Camlo/images/news.png",
-      "notify": true,
-      "url": "https://github.com/Kianuni/Camlo/releases/tag/v1.3.1"
-    },
-    {
-      "appID": "com.jbdotparty.Erosion",
-      "title": "Erosion-CN 1.0.4 · 17 Nov 2026",
-      "identifier": "Erosion-CN-release-v1.0.4",
-      "caption": "Erosion-CN 1.0.4 is available.",
-      "date": "2026-11-17T14:37:22Z",
-      "tintColor": "#D07030",
-      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Erosion-CN/images/news.png",
-      "notify": true,
-      "url": "https://github.com/Kianuni/Erosion-CN/releases/tag/v1.0.4"
     },
     {
       "appID": "nsk-1695.v-team.cn",
