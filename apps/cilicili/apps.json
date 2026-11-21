@@ -16,11 +16,11 @@
       "tintColor": "#F5639D",
       "versions": [
         {
-          "version": "1.1.6",
-          "date": "2026-11-19T21:24:27Z",
-          "localizedDescription": "## 更新内容（1.1.5 → 1.1.6）\n\n• **原生播放底层转正与手感优化**：正式采用系统原生 `AVPlayerViewController` 底座配合通透液态玻璃自绘控件，优化横向滑动调进度响应与松手出帧速度，统一手动全屏、重力横屏与系统画中画衔接体验。\n• **弹幕架构收敛与旋转稳定性修复**：点播由原生 `AVSynchronizedLayer` 同步驱动、直播由 `Metal` 渲染并彻底移除第三方 `DanmakuKit` 依赖；解决横竖屏旋转时弹幕闪烁、位置偏移与清晰度切换闪退问题，新增大会员渐变彩色弹幕及「同屏弹幕上限」设置。\n• **杜比视界与 HDR 播放精简**：移除旧版「杜比视界渲染」开关与双层叠加播放器，统一交由系统原生高动态范围输出配合内置防过曝兼容处理，避免额外功耗与画中画/全屏割裂。\n• **底栏动效与评论弹窗细节**：彻底修复二级页面返回一级页面时底部 TabBar 闪现及滚动最小化失效问题；新增「评论弹窗不展开到最大高度」开关，保持更舒适的阅读视野。\n\n--------\n\n安装说明：附件为未签名 IPA（`1.1.6` Build `218`），需自行签名后安装。",
-          "downloadURL": "https://github.com/Rone89/cilicili/releases/download/v1.1.6/bili-release-unsigned.ipa",
-          "size": 24747937,
+          "version": "1.1.7",
+          "date": "2026-11-21T02:38:11Z",
+          "localizedDescription": "## v1.1.7 更新内容\n\n### ✨ 新增功能\n- **原生专栏阅读页**：动态页与搜索结果中的专栏（支持 `cv` 专栏与 `opus` 图文动态）支持原生打开，不再跳转外部网页。\n  - 动态中的专栏卡片点击整卡直接进入专栏详情页，无需先经由动态详情页中转。\n  - 支持封面、标题、分类/字数/发布时间、富文本排版（标题、粗斜体、删除线、引用、列表、代码块）、正文图片全屏缩放查看。\n  - 右上角提供独立的作者头像液态玻璃按钮（点击跳转 UP 主主页）；底部提供与动态详情页一致的**点赞、评论（「点击发送电波」发评及楼中楼回复）、分享**交互栏。\n- **视频三分手势控制**（可在「我的 → 播放设置 → 播放体验」中开启）：\n  - **左侧 1/3**：上下滑调节屏幕亮度。\n  - **中间 1/3**：横屏视频在竖屏下上滑转至横屏全屏、横屏下下滑退回竖屏；竖屏视频上滑进入竖屏全屏、全屏下下滑退出全屏。\n  - **右侧 1/3**：上下滑调节音量。\n\n### 🐛 修复与优化\n- **应用内画中画（小窗）稳定性与体验优化**：\n  - 修复退出视频页后无法自动进入应用内画中画小窗的问题。\n  - 修复小窗播放期间点击进入新视频时旧小窗卡住无法播放的问题，并优化旧小窗退出与新视频起播的切换速度。\n  - 修复在应用内画中画中点击暂停后仍自动恢复播放的问题。\n  - 修复未开启后台播放时，画中画播放期间锁屏未自动暂停的问题（普通返回桌面/切换 App 仍保持小窗播放）。\n- **构建与发布规范**：\n  - 统一未签名 Release IPA 的默认 Bundle ID 为 `com.rayc.cilicili`。\n\n### 📦 未签名 IPA 信息\n- **Bundle ID**：`com.rayc.cilicili`\n- **版本**：`1.1.7 (230)`\n- **SHA-256**：`8ca178884b074d84ed5a8e2e584e58d46942c25049111502e6d867d1d8ba3da6`",
+          "downloadURL": "https://github.com/Rone89/cilicili/releases/download/v1.1.7/bili-release-unsigned.ipa",
+          "size": 25017751,
           "minOSVersion": "26.1"
         }
       ]
@@ -29,14 +29,14 @@
   "news": [
     {
       "appID": "nsk-1695.v-team.cn",
-      "title": "CiliCili 1.1.6 · 19 Nov 2026",
-      "identifier": "CiliCili-release-v1.1.6",
-      "caption": "CiliCili 1.1.6 is available.",
-      "date": "2026-11-19T21:24:27Z",
+      "title": "CiliCili 1.1.7 · 21 Nov 2026",
+      "identifier": "CiliCili-release-v1.1.7",
+      "caption": "CiliCili 1.1.7 is available.",
+      "date": "2026-11-21T02:38:11Z",
       "tintColor": "#F5639D",
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/cilicili/images/news.png",
       "notify": true,
-      "url": "https://github.com/Rone89/cilicili/releases/tag/v1.1.6"
+      "url": "https://github.com/Rone89/cilicili/releases/tag/v1.1.7"
     }
   ]
 }
