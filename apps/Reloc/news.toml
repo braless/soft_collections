@@ -1,0 +1,12 @@
+# render_news.py config: python templates/render_news.py --out apps/Reloc
+
+name = "Reloc"
+tagline = "iPhone 外设级定位模拟工具"
+
+# Apple-blue accent with a deep backdrop for contrast against the pale icon.
+[colors]
+tint = "#0A84FF"
+tint_alt = "#64D8CB"
+background = "#10294A"
+text_color = "#FFFFFF"
+tagline_color = "#BDD8F5"

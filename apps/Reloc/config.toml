@@ -1,0 +1,38 @@
+# altgen config for the Reloc AltStore source.
+# Run: uvx altgen -c config.toml
+# Identity was read from the released IPA (Payload/Reloc.app/Info.plist):
+# dev.reloc.ios, 1.0.1, build 2, MinimumOSVersion 17.0.
+
+[github]
+repo = "Reukix/Reloc"
+
+[source]
+name = "Reloc"
+subtitle = "Reloc AltStore source by soft_collections & altgen"
+description = "Auto-updated AltStore source for Reloc"
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Reloc/icon.png"
+website = "https://github.com/Reukix/Reloc"
+tint_color = "#0A84FF"
+
+[app]
+name = "Reloc"
+bundle_identifier = "dev.reloc.ios"
+developer_name = "Reukix"
+subtitle = "面向 iPhone 的外设级定位模拟工具"
+description = "基于 Swift / ObjC / Rust FFI 构建的 iOS 外设级定位模拟工具，通过本机回环注入 iAP2 / MFi-v3 / NMEA 报文，让系统以标准外设 GPS 身份接收实时坐标；支持地图选点、多源地图与纠偏、后台保活与本机配对（iOS 17+，仅 iPhone）。"
+icon_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Reloc/icon.png"
+tint_color = "#0A84FF"
+min_os_version = "17.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# asset_pattern is a regex (not glob): every release ships one unsigned IPA.
+asset_pattern = "^Reloc\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+image_url = "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Reloc/images/news.png"
+
+[output]
+path = "apps.json"

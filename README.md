@@ -78,6 +78,9 @@ An iPhone battery, charging and thermal instrument built on Apple's private iOS 
 ### <a href="https://github.com/verback2308/Opaline"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/Opaline/icon.png" alt="Opaline icon" width="24" align="top"> Opaline</a>
 A lightweight, native YouTube client for iOS 12+ — no ads, no tracking, no dependencies.
 
+### <a href="https://github.com/Reukix/Reloc"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/Reloc/icon.png" alt="Reloc icon" width="24" align="top"> Reloc</a>
+面向 iPhone 的外设级定位模拟工具，通过本机回环注入 iAP2 / MFi-v3 / NMEA 报文实现系统级 GPS 定位模拟；支持地图选点、纠偏、后台保活与本机配对（iOS 17+，仅 iPhone）。
+
 ### <a href="https://github.com/frs0n/placard"><img src="https://raw.githubusercontent.com/braless/soft_collections/main/apps/placard/icon.png" alt="Placard icon" width="24" align="top"> Placard</a>
 浏览、导入、制作并管理 PosterBoard 自定义壁纸：社区壁纸、.tendies 包，或把 12 秒内的竖屏视频做成循环锁屏壁纸（iOS 26+）。
 
