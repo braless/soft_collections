@@ -16,11 +16,11 @@
       "tintColor": "#0A84FF",
       "versions": [
         {
-          "version": "1.0.1",
-          "date": "2026-11-26T11:35:53Z",
-          "localizedDescription": "## Reloc v1.0.1\n\n修复配对文件导入、地名解析与停止恢复定位问题，新增纯 WGS-84 国际地图可选项、极速自动触发与一键画中画（PiP）定位刷新闭环，并增加 iPad 不支持提示。\n\n### 本次更新\n\n- **修复配对文件无法选择**：改用原生 UIDocumentPickerViewController 副本导入模式，在 Info.plist 中声明 .rppairing / .mobiledevicepairing / .mobilepair 文档类型，解决文件置灰无法点选的问题，并支持「用 Reloc 打开」直接导入。\n- **多源地图与无高德选项**：保留 Apple 地图（系统默认），同时新增完全独立于 MKMapView 的纯原生 UIKit WGS-84 瓦片地图（全球街道图 Esri / OpenStreetMap / 全球卫星图），全部免 API Key、无高德地图字样与 GCJ-02 偏移。\n- **修复地名一直解析卡住**：新增 CLGeocoder（2 秒超时）→ OpenStreetMap Nominatim → BigDataCloud → 坐标兜底的四级联反地理编码，解决海外坐标长期卡在「正在解析地名…」的问题。\n- **极速触发与一键 PiP 刷新**：iAP2 鉴权成功后延迟拉起 CoreLocation + 自动脉冲订阅 0xFFFA + 初始高速锁定突发，首页实时显示外设生效状态；若系统沿用旧缓存，可一键启动画中画（PiP）悬浮 5 秒倒计时指引并直达系统「定位服务」（已修复未关定位误闪 5 秒与过渡卡顿）。\n- **修复停止定位后未恢复真实位置**：停止时先下发标准 NMEA 失效报文（GPGGA quality=0 / GPRMC status=V）与 iAP2 RST 链路复位包，随后自动唤醒本机真实 GPS 覆盖缓存，室内弱信号时同样提供一键刷新恢复入口。\n- **新增 iPad 设备检测**：因 iPadOS 不提供 CarPlay / com.apple.carkit.service 外设通道，在 iPad 上启动时将直接提示设备不可用（仅支持 iPhone）。\n\n### 安装说明\n\n- 附件 Reloc.ipa 为未签名 Release 构建产物，请使用个人证书或自签工具签名后安装（仅支持 iPhone）。\n- 建议安装后在系统「设置 → 隐私与安全性 → 定位服务 → Reloc」将定位权限设为「始终」并开启「精确位置」。",
-          "downloadURL": "https://github.com/Reukix/Reloc/releases/download/v1.0.1/Reloc.ipa",
-          "size": 4441557,
+          "version": "1.0.2",
+          "date": "2026-11-26T17:31:32Z",
+          "localizedDescription": "## What's Changed\n\n### 地图搜索与交互优化\n- 新增基于当前地图视野范围的实时搜索联想（`MKLocalSearchCompleter` + 当前可视区域同步 + 自动回退 `MKLocalSearch`），支持 Apple 地图与纯 WGS-84 全球图源\n- 修复点击搜索框、下拉联想卡片与底部卡片边缘时触摸穿透到底层地图误改定位的问题；搜索态下点击地图先收起键盘/下拉列表\n- 合并 #11 搜索栏键盘避让与布局稳定化修复，补充无结果/网络错误提示，修复 iOS 26/27 SDK 下按钮着色与下拉副标题渲染问题\n- 优化地图重绘性能，消除定位监控每秒触发整页刷新，支持手动坐标范围校验与中文逗号坐标解析\n\n### 定位注入与连接稳定性\n- 优化 NMEA 注入锁定速度（5Hz 初始捕获脉冲、DGPS 质量标志、远距离跳点滤波重置）与停止时高 HDOP 优雅退化恢复\n- 增强回环通道健壮性：`RLTLSSocket.nudge()`、自动 RST 软重连、`waitingSubscription` 订阅看门狗、无损 CoreLocation 唤醒与「精确位置」关闭提醒\n- 音频保活设置实时生效，修复后台任务到期回调隔离问题，并保留意外中断会话恢复记录直到重连成功\n\n### 安全与存储\n- 启用 Lockdown TLS 证书固定（Certificate Pinning），加固 ObjC/iAP2 协议解析边界与并发安全\n- 配对记录迁移至 Keychain 存储，重新配对时复用 Host 身份避免重复弹窗\n\n### 下载说明\n- 附件 `Reloc.ipa` 为未签名 Release 包，请使用自签工具（如 SideStore / AltStore / TrollStore 等）安装。",
+          "downloadURL": "https://github.com/Reukix/Reloc/releases/download/v1.0.2/Reloc.ipa",
+          "size": 4533520,
           "minOSVersion": "17.0"
         }
       ]
@@ -29,14 +29,14 @@
   "news": [
     {
       "appID": "dev.reloc.ios",
-      "title": "Reloc 1.0.1 · 26 Nov 2026",
-      "identifier": "Reloc-release-v1.0.1",
-      "caption": "Reloc 1.0.1 is available.",
-      "date": "2026-11-26T11:35:53Z",
+      "title": "Reloc 1.0.2 · 26 Nov 2026",
+      "identifier": "Reloc-release-v1.0.2",
+      "caption": "Reloc 1.0.2 is available.",
+      "date": "2026-11-26T17:31:32Z",
       "tintColor": "#0A84FF",
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Reloc/images/news.png",
       "notify": true,
-      "url": "https://github.com/Reukix/Reloc/releases/tag/v1.0.1"
+      "url": "https://github.com/Reukix/Reloc/releases/tag/v1.0.2"
     }
   ]
 }
