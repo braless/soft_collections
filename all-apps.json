@@ -350,6 +350,25 @@
       ]
     },
     {
+      "name": "Reloc",
+      "bundleIdentifier": "dev.reloc.ios",
+      "developerName": "Reukix",
+      "subtitle": "面向 iPhone 的外设级定位模拟工具",
+      "localizedDescription": "基于 Swift / ObjC / Rust FFI 构建的 iOS 外设级定位模拟工具，通过本机回环注入 iAP2 / MFi-v3 / NMEA 报文，让系统以标准外设 GPS 身份接收实时坐标；支持地图选点、多源地图与纠偏、后台保活与本机配对（iOS 17+，仅 iPhone）。",
+      "iconURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Reloc/icon.png",
+      "tintColor": "#0A84FF",
+      "versions": [
+        {
+          "version": "1.0.1",
+          "date": "2026-11-26T11:35:53Z",
+          "localizedDescription": "## Reloc v1.0.1\n\n修复配对文件导入、地名解析与停止恢复定位问题，新增纯 WGS-84 国际地图可选项、极速自动触发与一键画中画（PiP）定位刷新闭环，并增加 iPad 不支持提示。\n\n### 本次更新\n\n- **修复配对文件无法选择**：改用原生 UIDocumentPickerViewController 副本导入模式，在 Info.plist 中声明 .rppairing / .mobiledevicepairing / .mobilepair 文档类型，解决文件置灰无法点选的问题，并支持「用 Reloc 打开」直接导入。\n- **多源地图与无高德选项**：保留 Apple 地图（系统默认），同时新增完全独立于 MKMapView 的纯原生 UIKit WGS-84 瓦片地图（全球街道图 Esri / OpenStreetMap / 全球卫星图），全部免 API Key、无高德地图字样与 GCJ-02 偏移。\n- **修复地名一直解析卡住**：新增 CLGeocoder（2 秒超时）→ OpenStreetMap Nominatim → BigDataCloud → 坐标兜底的四级联反地理编码，解决海外坐标长期卡在「正在解析地名…」的问题。\n- **极速触发与一键 PiP 刷新**：iAP2 鉴权成功后延迟拉起 CoreLocation + 自动脉冲订阅 0xFFFA + 初始高速锁定突发，首页实时显示外设生效状态；若系统沿用旧缓存，可一键启动画中画（PiP）悬浮 5 秒倒计时指引并直达系统「定位服务」（已修复未关定位误闪 5 秒与过渡卡顿）。\n- **修复停止定位后未恢复真实位置**：停止时先下发标准 NMEA 失效报文（GPGGA quality=0 / GPRMC status=V）与 iAP2 RST 链路复位包，随后自动唤醒本机真实 GPS 覆盖缓存，室内弱信号时同样提供一键刷新恢复入口。\n- **新增 iPad 设备检测**：因 iPadOS 不提供 CarPlay / com.apple.carkit.service 外设通道，在 iPad 上启动时将直接提示设备不可用（仅支持 iPhone）。\n\n### 安装说明\n\n- 附件 Reloc.ipa 为未签名 Release 构建产物，请使用个人证书或自签工具签名后安装（仅支持 iPhone）。\n- 建议安装后在系统「设置 → 隐私与安全性 → 定位服务 → Reloc」将定位权限设为「始终」并开启「精确位置」。",
+          "downloadURL": "https://github.com/Reukix/Reloc/releases/download/v1.0.1/Reloc.ipa",
+          "size": 4441557,
+          "minOSVersion": "17.0"
+        }
+      ]
+    },
+    {
       "name": "Twitter",
       "bundleIdentifier": "com.atebits.Tweetie2",
       "developerName": "Local",
@@ -403,11 +422,11 @@
       "tintColor": "#1E8FC7",
       "versions": [
         {
-          "version": "0.9.20",
-          "date": "2026-11-21T21:41:37Z",
-          "localizedDescription": "> **Requires:** iOS 26.0 – 26.7.2, or iOS 27.0 up to 27.3 beta 1. **Not supported:** iOS 27.3 beta 2 and later, where Apple patched worse_query. Tested on iOS 27.0.1, 27.2.1, 27.3 beta 1 (confirmed by a user) and 26.7.1; see [Tested devices](https://github.com/kolbicz/WQFiles#tested-devices).\n> **Needs:** a sideloading tool that keeps the App Group entitlement; see [Signing](https://github.com/kolbicz/WQFiles#signing-the-app-group) in the README.\n\n# Worse Query Files 0.9.20\n\nApps Manager backups, and safer handling of databases that are in use.\n\n## New\n\n- **Import Apps Manager backups** ([#19](https://github.com/kolbicz/WQFiles/issues/19)): **Apps** → tap the app → **Import as Backup…** now accepts `.adbk` files from Apps Manager. The app's data is saved as a normal WQ Files backup, ready to restore.\n  - Only the app's own data folder is imported. App Group data in the file isn't, because WQ Files backups don't include App Groups. The keychain items Apps Manager saves are encrypted, so they can't be imported either. When you import, WQ Files lists what it left out.\n  - If the file says it belongs to a different app than the one you tapped, WQ Files asks first, as with any other import.\n  - Opening an `.adbk` from the Files app or the share sheet doesn't start an import; start it from Apps.\n\n## Fixed\n\n- **Files another app is using:** deleting or replacing them, for example an app's database in its App Group while the app runs, failed with \"Resource temporarily unavailable (errno 35)\". WQ Files now says another app is using the file and that quitting that app and trying again should work. Its extensions or widgets can keep the file open even after you quit it.\n- **Databases in use stay intact:** an app's database comes with `-wal` and `-shm` files next to it, and while the app runs, iOS doesn't lock the `-wal` file. WQ Files could delete or replace it while refusing the database file, which lost the app's newest data. Now a database and its `-wal`, `-shm` and `-journal` files are only changed together: if one of them is in use, none of them is touched. This applies to deleting (also whole folders), replacing on import and editing.\n- **Deleting or importing several files at once:** each database is handled before its `-wal` and `-shm` files, which are skipped if the database itself couldn't be deleted or replaced. \"N of M files were imported\" is translated now.\n\n## Credit\n\nNew design: GpGp700. Sandbox technique: [worse_query](https://github.com/forcequitOS/worse_query) by Taj C (forcequit). Container enumeration: [KAMUI](https://github.com/murk-sus/kamui-escape) by murk-sus. Resumable scans: hhh2210. Custom inspectors idea: deltaII. Translations: iosrxwy and FrogTool (Simplified Chinese), kinboy56 (Japanese), hfip (Arabic), hooray804 (Korean), Reinascape (Russian), romlayvn-93 (Vietnamese), buraakkcayir (Turkish review). Thanks to braless for the Apps Manager sample, and to everyone who sent screenshots and Logs. GPL-3.0-or-later.\n\nSHA-256 of WQFiles.ipa: `9ddfa3c1ff01de4d76f601d3b6b76390436136d529f029b9bfaa48c501cfe197`",
-          "downloadURL": "https://github.com/kolbicz/WQFiles/releases/download/v0.9.20/WQFiles.ipa",
-          "size": 2199929,
+          "version": "0.9.30",
+          "date": "2026-11-26T11:23:07Z",
+          "localizedDescription": "> **Requires:** iOS 26.0 – 26.7.2, or iOS 27.0 up to 27.3 beta 1. **Not supported:** iOS 27.3 beta 2 and later, where Apple patched worse_query. Tested on iOS 27.0.1, 27.2.1, 27.3 beta 1 (confirmed by a user) and 26.7.1; see [Tested devices](https://github.com/kolbicz/WQFiles#tested-devices).\n> **Needs:** a sideloading tool that keeps the App Group entitlement; see [Signing](https://github.com/kolbicz/WQFiles#signing-the-app-group) in the README.\n\n# Worse Query Files 0.9.30\n\nShortcuts actions, and a round of fixes after a full review of the code: safer restores and imports, fewer hangs, and faster lists.\n\n## New\n\n- **Shortcuts actions:** WQ Files now adds actions to the Shortcuts app, for shortcuts and automations.\n  - **Files:** List Folder, Get File, Save File, Copy, Move, Rename, New Folder and Delete. They take full paths and work in any app's container, like the file browser.\n  - **Apps:** Clean App Caches and Back Up App Data, by bundle identifier. Clean App Caches also takes the identifier of an app extension, as the Cache Cleaner lists them.\n  - List Folder and Get File always work. Everything that changes files needs **Settings → Allow Shortcuts to Change Files**, which is off until you turn it on. Deleting and cleaning also need **Allow Deleting**.\n  - The actions follow the app's rules: deleted files go to Recently Deleted, a replaced file is kept in Backups, and nothing is replaced by accident: Copy and Save File give \"Name 2\" for a name that is taken, and Move, Rename and New Folder refuse it.\n  - An action that had to wait more than 20 seconds because WQ Files was busy is not run, so nothing is changed after Shortcuts has reported a failure.\n  - Most action names and descriptions in the Shortcuts app are in English for now.\n  - See [Shortcuts](https://github.com/kolbicz/WQFiles#shortcuts) in the README.\n- **Cache Cleaner:** the long-press menu of an app has **Copy Bundle ID**, handy for the Shortcuts actions.\n\n## Fixed\n\n### Files and folders\n\n- **Sort by Size:** when folder sizes finished measuring, the list was put in the new order but the rows on screen weren't. A tap, a swipe to delete or the long-press menu could then act on a different item than the row showed. The rows follow the order now.\n- **Folder sizes after an error:** after pulling down on a folder that first couldn't be listed, sizes were not measured until you left and came back.\n- **Folders with é, ü, Korean or similar characters in their path** could leave the access cache stuck, so every folder was refused until **Settings → Reset Access Cache**. They open normally now, and a cache that is already stuck is repaired on its own.\n- **Folders WQ Files couldn't open** were sometimes reported as cleaned or deleted, with nothing removed. They are reported as not accessible.\n- **Pictures over 4 MB** showed cut off, or as a hex dump. They are read whole and scaled down for viewing.\n- **Alphabet index** with Folders on Top listed its letters out of order in folders that hold both folders and files.\n- **Container roots and WQ Files' own backup folders** could be moved or renamed in the file browser. They are refused, as deleting them already was.\n- **Renaming, moving or uploading a file to a `-wal` or `-journal` name** next to a database another app has open is refused, as creating one already was.\n- **Importing several files with Keep Both:** when a database got a new name (\"db 2.sqlite\"), its `-wal` and `-shm` files kept their old names and landed next to the database that was already there, which could damage it. They now get the same new name.\n\n### Apps and backups\n\n- **Import as Backup:** on some devices nothing could be selected in the Files sheet ([#72](https://github.com/kolbicz/WQFiles/issues/72)). It now asks first whether you want to pick a file or a folder, and writes to the Log what the Files sheet returned.\n- **An interrupted restore that can't be undone** (the app was removed or reinstalled since, or its safety backup was deleted) blocked every restore of every app, with the same message at each launch. It is closed with a note that says where the data from before is.\n- **Imported backups with only Documents or only Library:** restoring one emptied the other folder of the app. It is left as it is now, and the import says when a folder is missing.\n- **Import as Backup** says how many symbolic links in the ZIP were left out, instead of calling the result verified without a word.\n- **A restore that was refused before it started** left a full \"Before restore\" copy of the app behind while saying nothing was changed.\n- **Selecting backups to delete:** a checked backup couldn't be unchecked.\n- **Cache Cleaner:** rows you unchecked were checked again by the rescan that starts on its own after 10 minutes or after cleaning. They stay unchecked; pull down to start over.\n- **Recently Deleted:** a database is restored together with its `-wal` and `-shm` files or not at all. Before, a failed restore could still leave the database in place. A `-wal` that was deleted together with its database now comes back with it; before, the database was restored without its latest changes.\n- **Apps reinstalled or updated since the app database was written:** the app's icon, its installed/offloaded state and **Open App Bundle** could point at the bundle of an earlier install. The bundle that exists is used.\n- **Your own Cache Cleaner entries** were offered as \"Add to Cache Cleaner\" again in the file browser after the app was reinstalled. They are recognised by app.\n- **An interrupted restore** could be closed at launch as \"app removed\" when the app's folder only couldn't be seen yet. Access is asked for before that is decided.\n\n### Viewers and editors\n\n- **Custom inspectors:** a faulty script could close WQ Files, or keep every later inspector waiting behind it. Scripts are stopped after about twice the time limit in total, and a replacement that doesn't load puts the inspector from before back. Where iOS offers no time limit for scripts, inspectors are not run.\n- **Syntax colors** stopped at the first very long text value (for example an embedded image in JSON), and a CSS file with a large embedded image could take minutes. Both are colored quickly and completely.\n- **SQLite:**\n  - Tapping **Edit** on a large database froze WQ Files until all row counts were done.\n  - A whole number too large for the database was stored as a different number without a warning.\n  - Scripts whose later statements need the earlier ones (create a table, then fill it) were refused.\n  - Scrolling far into a large table got slower with every page.\n- **Property lists:** negative numbers and numbers with \"e\" couldn't be typed into a Real value on iPhone, and \"1,5\" was refused in regions that write decimals with a comma.\n- **Hex editor on iPad:** changing bytes after rotating or resizing the window could close WQ Files.\n\n### Wi-Fi Sharing\n\n- The sharing screen now says that the connection is **not encrypted**: others on the same network can read the password and the files, so share only on a network you trust.\n- An upload is refused at the start when the device doesn't have room for it, and only one ZIP is prepared at a time, so a browser can't fill the device's storage.\n- A browser that connects and then sends nothing no longer holds a connection for good.\n\n### Start screen and settings\n\n- **Check for Updates** never reported a new version: it looked for the version in the wrong place of the update list. Versions after this one are announced on the start screen.\n- **Sharing Password** in the new design's Settings kept showing the old state after it was changed.\n- **Theme export:** the temporary copy stayed until the next launch after sharing.\n- **Reopen Last Folder** was skipped when the \"Not everything works here\" notice was shown.\n- **Switching New Design** after a failed access check showed \"Access check passed\", and hid the update notice until the next launch.\n- **App Store Icons:** turning the setting on had no effect on lists that were already loaded. Turning it off stops the requests that are under way.\n- **Themes** named \"Default\" or \"Color\" could be imported but never used.\n- **The scan question** (\"Scan all files?\") could disappear without an answer and leave the Apps and Cache scans waiting until WQ Files was restarted.\n\n## Faster\n\n- **Interrupted scans resume:** measuring an app's folder started from the beginning after every interruption. It continues where it stopped.\n- **Less memory** while measuring, cleaning, backing up and restoring large apps.\n- **Sharing a folder** no longer holds up folder listings and the Apps and Cache scans while the ZIP is made.\n- **Backup folders** and the **Backed Up** filter read the disk once per listing, not on every tap and keystroke.\n\n## Housekeeping\n\n- Temporary copies left behind when WQ Files was closed by iOS (database copies, uploads, ZIPs) are removed at the next launch.\n- The in-app Log keeps the newest lines, about 1 MB, and says how many earlier lines it left out.\n\n## Credit\n\nNew design: GpGp700. Sandbox technique: [worse_query](https://github.com/forcequitOS/worse_query) by Taj C (forcequit). Container enumeration: [KAMUI](https://github.com/murk-sus/kamui-escape) by murk-sus. Resumable scans: hhh2210. Custom inspectors idea: deltaII. Translations: iosrxwy and FrogTool (Simplified Chinese), kinboy56 (Japanese), hfip (Arabic), hooray804 (Korean), Reinascape (Russian), romlayvn-93 (Vietnamese), buraakkcayir (Turkish review). Thanks to everyone who sent screenshots and Logs. GPL-3.0-or-later.\n\nSHA-256 of WQFiles.ipa: `28deac3c001962a0431532644452efdba24d97c1913a5d9193f5339aba7b9a11`",
+          "downloadURL": "https://github.com/kolbicz/WQFiles/releases/download/v0.9.30/WQFiles.ipa",
+          "size": 2268148,
           "minOSVersion": "26.0"
         }
       ]
@@ -453,11 +472,11 @@
       "tintColor": "#1060F0",
       "versions": [
         {
-          "version": "1.0.26",
-          "date": "2026-11-24T07:09:57Z",
-          "localizedDescription": "## WrapPin 1.0.26（Build 96）\n\n- **当前模拟目标** · 固定模拟时，地图单独标出当前目标。选中其他地点后，点「查看模拟位置」可以回到当前目标。#57\n- **精确选点** · 打开地图上的准星按钮，拖动地图或用摇杆微调。点「确认选点」后，再点「开始模拟定位」或「更换模拟位置」应用坐标。#58 #59\n- **选点面板** · 地点标题、收藏和清除按钮固定在面板上方。空间不足时可以滚动下方选项。\n- **收藏重命名** · 在「收藏与历史」里点收藏旁的铅笔，改名后保留原坐标和地址。#61\n\n### 安装\n\n- **Standard** · 使用 SideStore 等工具签装，运行时使用兼容的外部设备隧道。\n- **Tunnel** · 主 App 和内置扩展都需要支持 Packet Tunnel 的签名配置。\n\n两版均为未签名 IPA，支持 iOS/iPadOS 18.0 及以上。覆盖升级时使用原版本类型和签名身份。[安装说明](https://github.com/suversal/WrapPin/blob/v1.0.26/Documentation/Installation.zh-CN.md)\n\n[简体中文更新说明](https://github.com/suversal/WrapPin/blob/v1.0.26/Documentation/Release-1.0.26.zh-CN.md) · [English release notes](https://github.com/suversal/WrapPin/blob/v1.0.26/Documentation/Release-1.0.26.md)",
-          "downloadURL": "https://github.com/suversal/WrapPin/releases/download/v1.0.26/WrapPin-Standard-1.0.26-build96-unsigned.ipa",
-          "size": 7161177,
+          "version": "1.0.27",
+          "date": "2026-11-26T14:45:47Z",
+          "localizedDescription": "## WrapPin 1.0.27（Build 106）\n\n### 更新内容\n- **支持保存自定义路线**：可在“收藏与历史”中管理、重命名或删除已保存的自定义路线，一键载入路线途经点、坐标模式与速度。\n- **地图最近搜索记录**：在搜索框下方展示近期搜过的地点，点击即可快速复用。\n- **iOS 26+ Liquid Glass 与交互打磨**：适配 Liquid Glass 视觉风格，优化底部面板拖拽物理手感，以及首页地图、路线编辑和精确选点的浮层细节。\n\n### What's New\n- **Saved Custom Routes**: Save custom routes for reuse, rename or delete them in Saved Places, and reload their waypoints, coordinate mode and speed in one tap.\n- **Recent Map Searches**: Show recent searches below the map search bar for quick reuse without retyping.\n- **iOS 26+ Liquid Glass & Interaction Polish**: Refined Liquid Glass styling, smoother bottom-dock drag physics, and cleaner map overlays across the home map, route editors and precision picker.\n\n### 安装包与校验（iOS/iPadOS 18.0+，未签名）\n- **Standard（SideStore 推荐）**：`WrapPin-Standard-1.0.27-build106-unsigned.ipa`\n  - SHA-256: `e4391ec3f1c0bdc04d90551363fd85212e593cb74a0a40a1b4fec27611ecac1a`\n- **Tunnel（内置隧道，需匹配 Packet Tunnel 签名配置）**：`WrapPin-Tunnel-1.0.27-build106-unsigned.ipa`\n  - SHA-256: `4c20b5b1438e4da4aba38bc1cf0ddac716d008715f6d6d1330c51d260e665653`",
+          "downloadURL": "https://github.com/suversal/WrapPin/releases/download/v1.0.27/WrapPin-Standard-1.0.27-build106-unsigned.ipa",
+          "size": 7254821,
           "minOSVersion": "27.0"
         }
       ]
@@ -548,6 +567,39 @@
   ],
   "news": [
     {
+      "appID": "com.suversal.wrappin",
+      "title": "WrapPin 1.0.27 · 26 Nov 2026",
+      "identifier": "WrapPin-release-v1.0.27",
+      "caption": "WrapPin 1.0.27 is available.",
+      "date": "2026-11-26T14:45:47Z",
+      "tintColor": "#1060F0",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/news.png",
+      "notify": true,
+      "url": "https://github.com/suversal/WrapPin/releases/tag/v1.0.27"
+    },
+    {
+      "appID": "dev.reloc.ios",
+      "title": "Reloc 1.0.1 · 26 Nov 2026",
+      "identifier": "Reloc-release-v1.0.1",
+      "caption": "Reloc 1.0.1 is available.",
+      "date": "2026-11-26T11:35:53Z",
+      "tintColor": "#0A84FF",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Reloc/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Reukix/Reloc/releases/tag/v1.0.1"
+    },
+    {
+      "appID": "cz.kolbi.wqfiles",
+      "title": "WQ Files 0.9.30 · 26 Nov 2026",
+      "identifier": "WQ Files-release-v0.9.30",
+      "caption": "WQ Files 0.9.30 is available.",
+      "date": "2026-11-26T11:23:07Z",
+      "tintColor": "#1E8FC7",
+      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WQFiles/images/news.png",
+      "notify": true,
+      "url": "https://github.com/kolbicz/WQFiles/releases/tag/v0.9.30"
+    },
+    {
       "appID": "com.jbdotparty.Erosion",
       "title": "Erosion-CN 1.0.7 · 25 Nov 2026",
       "identifier": "Erosion-CN-release-v1.0.7",
@@ -557,17 +609,6 @@
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Erosion-CN/images/news.png",
       "notify": true,
       "url": "https://github.com/Kianuni/Erosion-CN/releases/tag/v1.0.7"
-    },
-    {
-      "appID": "com.suversal.wrappin",
-      "title": "WrapPin 1.0.26 · 24 Nov 2026",
-      "identifier": "WrapPin-release-v1.0.26",
-      "caption": "WrapPin 1.0.26 is available.",
-      "date": "2026-11-24T07:09:57Z",
-      "tintColor": "#1060F0",
-      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WrapPin/images/news.png",
-      "notify": true,
-      "url": "https://github.com/suversal/WrapPin/releases/tag/v1.0.26"
     },
     {
       "appID": "nsk-1695.v-team.cn",
@@ -601,17 +642,6 @@
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Kumone/images/news.png",
       "notify": true,
       "url": "https://github.com/missuo/kumone/releases/tag/v0.3.38"
-    },
-    {
-      "appID": "cz.kolbi.wqfiles",
-      "title": "WQ Files 0.9.20 · 21 Nov 2026",
-      "identifier": "WQ Files-release-v0.9.20",
-      "caption": "WQ Files 0.9.20 is available.",
-      "date": "2026-11-21T21:41:37Z",
-      "tintColor": "#1E8FC7",
-      "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/WQFiles/images/news.png",
-      "notify": true,
-      "url": "https://github.com/kolbicz/WQFiles/releases/tag/v0.9.20"
     },
     {
       "appID": "com.kianuni.Camlo",

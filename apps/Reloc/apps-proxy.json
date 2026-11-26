@@ -1,0 +1,42 @@
+{
+  "name": "Reloc",
+  "subtitle": "Reloc AltStore source by soft_collections & altgen",
+  "description": "Auto-updated AltStore source for Reloc",
+  "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Reloc/icon.png",
+  "website": "https://github.com/Reukix/Reloc",
+  "tintColor": "#0A84FF",
+  "apps": [
+    {
+      "name": "Reloc",
+      "bundleIdentifier": "dev.reloc.ios",
+      "developerName": "Reukix",
+      "subtitle": "面向 iPhone 的外设级定位模拟工具",
+      "localizedDescription": "基于 Swift / ObjC / Rust FFI 构建的 iOS 外设级定位模拟工具，通过本机回环注入 iAP2 / MFi-v3 / NMEA 报文，让系统以标准外设 GPS 身份接收实时坐标；支持地图选点、多源地图与纠偏、后台保活与本机配对（iOS 17+，仅 iPhone）。",
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Reloc/icon.png",
+      "tintColor": "#0A84FF",
+      "versions": [
+        {
+          "version": "1.0.1",
+          "date": "2026-11-26T11:35:53Z",
+          "localizedDescription": "## Reloc v1.0.1\n\n修复配对文件导入、地名解析与停止恢复定位问题，新增纯 WGS-84 国际地图可选项、极速自动触发与一键画中画（PiP）定位刷新闭环，并增加 iPad 不支持提示。\n\n### 本次更新\n\n- **修复配对文件无法选择**：改用原生 UIDocumentPickerViewController 副本导入模式，在 Info.plist 中声明 .rppairing / .mobiledevicepairing / .mobilepair 文档类型，解决文件置灰无法点选的问题，并支持「用 Reloc 打开」直接导入。\n- **多源地图与无高德选项**：保留 Apple 地图（系统默认），同时新增完全独立于 MKMapView 的纯原生 UIKit WGS-84 瓦片地图（全球街道图 Esri / OpenStreetMap / 全球卫星图），全部免 API Key、无高德地图字样与 GCJ-02 偏移。\n- **修复地名一直解析卡住**：新增 CLGeocoder（2 秒超时）→ OpenStreetMap Nominatim → BigDataCloud → 坐标兜底的四级联反地理编码，解决海外坐标长期卡在「正在解析地名…」的问题。\n- **极速触发与一键 PiP 刷新**：iAP2 鉴权成功后延迟拉起 CoreLocation + 自动脉冲订阅 0xFFFA + 初始高速锁定突发，首页实时显示外设生效状态；若系统沿用旧缓存，可一键启动画中画（PiP）悬浮 5 秒倒计时指引并直达系统「定位服务」（已修复未关定位误闪 5 秒与过渡卡顿）。\n- **修复停止定位后未恢复真实位置**：停止时先下发标准 NMEA 失效报文（GPGGA quality=0 / GPRMC status=V）与 iAP2 RST 链路复位包，随后自动唤醒本机真实 GPS 覆盖缓存，室内弱信号时同样提供一键刷新恢复入口。\n- **新增 iPad 设备检测**：因 iPadOS 不提供 CarPlay / com.apple.carkit.service 外设通道，在 iPad 上启动时将直接提示设备不可用（仅支持 iPhone）。\n\n### 安装说明\n\n- 附件 Reloc.ipa 为未签名 Release 构建产物，请使用个人证书或自签工具签名后安装（仅支持 iPhone）。\n- 建议安装后在系统「设置 → 隐私与安全性 → 定位服务 → Reloc」将定位权限设为「始终」并开启「精确位置」。",
+          "downloadURL": "https://gh-proxy.com/https://github.com/Reukix/Reloc/releases/download/v1.0.1/Reloc.ipa",
+          "size": 4441557,
+          "minOSVersion": "17.0"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "appID": "dev.reloc.ios",
+      "title": "Reloc 1.0.1 · 26 Nov 2026",
+      "identifier": "Reloc-release-v1.0.1",
+      "caption": "Reloc 1.0.1 is available.",
+      "date": "2026-11-26T11:35:53Z",
+      "tintColor": "#0A84FF",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Reloc/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Reukix/Reloc/releases/tag/v1.0.1"
+    }
+  ]
+}
