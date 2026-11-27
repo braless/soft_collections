@@ -16,11 +16,11 @@
       "tintColor": "#0A84FF",
       "versions": [
         {
-          "version": "1.0.2",
-          "date": "2026-11-26T17:31:32Z",
-          "localizedDescription": "## What's Changed\n\n### 地图搜索与交互优化\n- 新增基于当前地图视野范围的实时搜索联想（`MKLocalSearchCompleter` + 当前可视区域同步 + 自动回退 `MKLocalSearch`），支持 Apple 地图与纯 WGS-84 全球图源\n- 修复点击搜索框、下拉联想卡片与底部卡片边缘时触摸穿透到底层地图误改定位的问题；搜索态下点击地图先收起键盘/下拉列表\n- 合并 #11 搜索栏键盘避让与布局稳定化修复，补充无结果/网络错误提示，修复 iOS 26/27 SDK 下按钮着色与下拉副标题渲染问题\n- 优化地图重绘性能，消除定位监控每秒触发整页刷新，支持手动坐标范围校验与中文逗号坐标解析\n\n### 定位注入与连接稳定性\n- 优化 NMEA 注入锁定速度（5Hz 初始捕获脉冲、DGPS 质量标志、远距离跳点滤波重置）与停止时高 HDOP 优雅退化恢复\n- 增强回环通道健壮性：`RLTLSSocket.nudge()`、自动 RST 软重连、`waitingSubscription` 订阅看门狗、无损 CoreLocation 唤醒与「精确位置」关闭提醒\n- 音频保活设置实时生效，修复后台任务到期回调隔离问题，并保留意外中断会话恢复记录直到重连成功\n\n### 安全与存储\n- 启用 Lockdown TLS 证书固定（Certificate Pinning），加固 ObjC/iAP2 协议解析边界与并发安全\n- 配对记录迁移至 Keychain 存储，重新配对时复用 Host 身份避免重复弹窗\n\n### 下载说明\n- 附件 `Reloc.ipa` 为未签名 Release 包，请使用自签工具（如 SideStore / AltStore / TrollStore 等）安装。",
-          "downloadURL": "https://github.com/Reukix/Reloc/releases/download/v1.0.2/Reloc.ipa",
-          "size": 4533520,
+          "version": "1.0.4",
+          "date": "2026-11-27T11:22:31Z",
+          "localizedDescription": "## Reloc v1.0.4\n\n### 更新\n- **正式支持 iPad**：移除原有的仅限 iPhone 限制，现已支持 iPad（iPadOS 17.0+）直接使用，真机实测正常。\n\n---\n\n### What's New\n- **iPad Support**: Removed the iPhone-only restriction — Reloc now supports iPad (iPadOS 17.0+) and has been verified on real iPad hardware.",
+          "downloadURL": "https://github.com/Reukix/Reloc/releases/download/v1.0.4/Reloc.ipa",
+          "size": 3475407,
           "minOSVersion": "17.0"
         }
       ]
@@ -29,14 +29,14 @@
   "news": [
     {
       "appID": "dev.reloc.ios",
-      "title": "Reloc 1.0.2 · 26 Nov 2026",
-      "identifier": "Reloc-release-v1.0.2",
-      "caption": "Reloc 1.0.2 is available.",
-      "date": "2026-11-26T17:31:32Z",
+      "title": "Reloc 1.0.4 · 27 Nov 2026",
+      "identifier": "Reloc-release-v1.0.4",
+      "caption": "Reloc 1.0.4 is available.",
+      "date": "2026-11-27T11:22:31Z",
       "tintColor": "#0A84FF",
       "imageURL": "https://raw.githubusercontent.com/braless/soft_collections/refs/heads/main/apps/Reloc/images/news.png",
       "notify": true,
-      "url": "https://github.com/Reukix/Reloc/releases/tag/v1.0.2"
+      "url": "https://github.com/Reukix/Reloc/releases/tag/v1.0.4"
     }
   ]
 }
